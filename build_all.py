@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 """打包所有遊戲到 docs/（GitHub Pages 發佈這個資料夾）
 用法：python3 build_all.py
-每個 games/<slug>/ 需要 game.json；成語遊戲另有 merge.py、validate.py、build.py。"""
-import json, subprocess, sys, html
+
+每個遊戲是 games/<資料夾>/，必須有 game.json（標題、說明等），再選一種打包方式：
+  A. 有 build_game.py：執行 `python3 build_game.py <輸出資料夾>`，由它產生 index.html 等檔案
+     （適合需要合併、檢查資料的遊戲，例如成語小達人）
+  B. 沒有 build_game.py、只有 index.html：直接複製 index.html；有 assets/ 也一起複製
+     （適合單一 HTML 檔就能玩的遊戲）
+game.json 的 "status" 設成 "草稿" 時不打包、不放上首頁。
+任何一個遊戲打包失敗，整個流程就停下來，不會產生不完整的網站。"""
+import json, shutil, subprocess, sys, html
 from pathlib import Path
 
 root = Path(__file__).parent
@@ -10,20 +17,25 @@ docs = root / "docs"
 games = []
 for g in sorted((root / "games").iterdir()):
     cfg = g / "game.json"
-    if not cfg.exists():
+    if not g.is_dir() or not cfg.exists():
         continue
     meta = json.loads(cfg.read_text(encoding="utf-8")); meta["slug"] = g.name
+    if meta.get("status") == "草稿":
+        print(f"[{g.name}] 草稿，略過"); continue
     out = docs / g.name; out.mkdir(parents=True, exist_ok=True)
-    run = lambda *a: subprocess.run([sys.executable, *a], cwd=g, check=True)
-    run("merge.py")
-    r = subprocess.run([sys.executable, "validate.py", "data/idioms.json", "--list", "list/idiom-list-500.json"],
-                       cwd=g, capture_output=True, text=True)
-    last = r.stdout.strip().splitlines()[-1]; print(f"[{g.name}] {last}")
-    if r.returncode != 0:
-        print(r.stdout); sys.exit(f"[{g.name}] 資料檢查有錯誤，停止打包")
-    run("build.py", "data/idioms.json", str(out / "index.html"))
-    if (g / "build_tts_check.py").exists():
-        run("build_tts_check.py", "data/idioms.json", str(out / "tts-check.html"))
+    if (g / "build_game.py").exists():
+        r = subprocess.run([sys.executable, "build_game.py", str(out)], cwd=g)
+        if r.returncode != 0:
+            sys.exit(f"[{g.name}] 打包失敗，停止")
+    elif (g / "index.html").exists():
+        shutil.copy2(g / "index.html", out / "index.html")
+        if (g / "assets").is_dir():
+            shutil.copytree(g / "assets", out / "assets", dirs_exist_ok=True)
+    else:
+        sys.exit(f"[{g.name}] 找不到 build_game.py 或 index.html，不知道怎麼打包")
+    if not (out / "index.html").exists():
+        sys.exit(f"[{g.name}] 打包後沒有產生 index.html，停止")
+    print(f"[{g.name}] 完成")
     games.append(meta)
 
 cards = "\n".join(

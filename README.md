@@ -20,6 +20,8 @@ build_all.py       檢查並打包所有遊戲、產生首頁
 2. `python3 build_all.py`（會自動合併、檢查、打包；檢查有錯就不會打包）
 3. commit 並 push，GitHub Pages 約 1～2 分鐘後更新
 
+新增遊戲：在 `games/` 開一個資料夾，放 `game.json`，再放一個 `index.html`（單檔遊戲）或 `build_game.py`（需要打包的遊戲）。詳見 `build_all.py` 開頭說明。
+
 需要 Python 3；資料格式檢查若要完整，需 `pip install jsonschema`。
 
 ## 說明
