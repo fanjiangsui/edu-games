@@ -1,0 +1,405 @@
+{
+ "batch": "01",
+ "items": [
+  {
+   "id": "cy0011",
+   "idiom": "對牛彈琴",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0012",
+   "idiom": "雞飛狗跳",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0013",
+   "idiom": "虎頭蛇尾",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0014",
+   "idiom": "馬到成功",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0015",
+   "idiom": "畫龍點睛",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0016",
+   "idiom": "生龍活虎",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0017",
+   "idiom": "鳥語花香",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0018",
+   "idiom": "笨鳥先飛",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0019",
+   "idiom": "鴉雀無聲",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0020",
+   "idiom": "膽小如鼠",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0021",
+   "idiom": "順手牽羊",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0022",
+   "idiom": "盲人摸象",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0023",
+   "idiom": "狼吞虎嚥",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0024",
+   "idiom": "蜻蜓點水",
+   "level": 1,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0025",
+   "idiom": "一心一意",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0026",
+   "idiom": "一舉兩得",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0027",
+   "idiom": "一目了然",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0028",
+   "idiom": "一模一樣",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0029",
+   "idiom": "一言為定",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0030",
+   "idiom": "一帆風順",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0031",
+   "idiom": "一無所有",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0032",
+   "idiom": "一路平安",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0033",
+   "idiom": "一路順風",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0034",
+   "idiom": "一乾二淨",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0035",
+   "idiom": "一清二楚",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0036",
+   "idiom": "一五一十",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0037",
+   "idiom": "二話不說",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0038",
+   "idiom": "獨一無二",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0039",
+   "idiom": "數一數二",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0040",
+   "idiom": "三言兩語",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0041",
+   "idiom": "三五成群",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0042",
+   "idiom": "三更半夜",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0043",
+   "idiom": "三三兩兩",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0044",
+   "idiom": "接二連三",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0045",
+   "idiom": "丟三落四",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0046",
+   "idiom": "四面八方",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0047",
+   "idiom": "五顏六色",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0048",
+   "idiom": "五花八門",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0049",
+   "idiom": "七上八下",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0050",
+   "idiom": "七嘴八舌",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0051",
+   "idiom": "七手八腳",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0052",
+   "idiom": "亂七八糟",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0053",
+   "idiom": "十全十美",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0054",
+   "idiom": "十萬火急",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0055",
+   "idiom": "百發百中",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0056",
+   "idiom": "千辛萬苦",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0057",
+   "idiom": "千變萬化",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0058",
+   "idiom": "千真萬確",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0059",
+   "idiom": "千山萬水",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0060",
+   "idiom": "千言萬語",
+   "level": 1,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  }
+ ]
+}

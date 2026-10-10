@@ -1,0 +1,4009 @@
+{
+ "version": "0.1.0",
+ "items": [
+  {
+   "id": "cy0001",
+   "idiom": "守株待兔",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0002",
+   "idiom": "畫蛇添足",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0003",
+   "idiom": "狐假虎威",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0004",
+   "idiom": "井底之蛙",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0005",
+   "idiom": "三心二意",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0006",
+   "idiom": "亡羊補牢",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0007",
+   "idiom": "自相矛盾",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0008",
+   "idiom": "半途而廢",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0009",
+   "idiom": "再接再厲",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0010",
+   "idiom": "一暴十寒",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0011",
+   "idiom": "對牛彈琴",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0012",
+   "idiom": "雞飛狗跳",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0013",
+   "idiom": "虎頭蛇尾",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0014",
+   "idiom": "馬到成功",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0015",
+   "idiom": "畫龍點睛",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0016",
+   "idiom": "生龍活虎",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0017",
+   "idiom": "鳥語花香",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0018",
+   "idiom": "笨鳥先飛",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0019",
+   "idiom": "鴉雀無聲",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0020",
+   "idiom": "膽小如鼠",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0021",
+   "idiom": "順手牽羊",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0022",
+   "idiom": "盲人摸象",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0023",
+   "idiom": "狼吞虎嚥",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0024",
+   "idiom": "蜻蜓點水",
+   "level": 1,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0025",
+   "idiom": "一心一意",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0026",
+   "idiom": "一舉兩得",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0027",
+   "idiom": "一目了然",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0028",
+   "idiom": "一模一樣",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0029",
+   "idiom": "一言為定",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0030",
+   "idiom": "一帆風順",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0031",
+   "idiom": "一無所有",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0032",
+   "idiom": "一路平安",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0033",
+   "idiom": "一路順風",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0034",
+   "idiom": "一乾二淨",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0035",
+   "idiom": "一清二楚",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0036",
+   "idiom": "一五一十",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0037",
+   "idiom": "二話不說",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0038",
+   "idiom": "獨一無二",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0039",
+   "idiom": "數一數二",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0040",
+   "idiom": "三言兩語",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0041",
+   "idiom": "三五成群",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0042",
+   "idiom": "三更半夜",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0043",
+   "idiom": "三三兩兩",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0044",
+   "idiom": "接二連三",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0045",
+   "idiom": "丟三落四",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0046",
+   "idiom": "四面八方",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0047",
+   "idiom": "五顏六色",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0048",
+   "idiom": "五花八門",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0049",
+   "idiom": "七上八下",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0050",
+   "idiom": "七嘴八舌",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0051",
+   "idiom": "七手八腳",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0052",
+   "idiom": "亂七八糟",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0053",
+   "idiom": "十全十美",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0054",
+   "idiom": "十萬火急",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0055",
+   "idiom": "百發百中",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0056",
+   "idiom": "千辛萬苦",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0057",
+   "idiom": "千變萬化",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0058",
+   "idiom": "千真萬確",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0059",
+   "idiom": "千山萬水",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0060",
+   "idiom": "千言萬語",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0061",
+   "idiom": "萬紫千紅",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0062",
+   "idiom": "萬事如意",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0063",
+   "idiom": "萬里無雲",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0064",
+   "idiom": "半信半疑",
+   "level": 1,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0065",
+   "idiom": "目不轉睛",
+   "level": 1,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0066",
+   "idiom": "熟能生巧",
+   "level": 1,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0067",
+   "idiom": "腳踏實地",
+   "level": 1,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0068",
+   "idiom": "粗心大意",
+   "level": 1,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0069",
+   "idiom": "馬馬虎虎",
+   "level": 1,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0070",
+   "idiom": "知錯能改",
+   "level": 1,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0071",
+   "idiom": "光明正大",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0072",
+   "idiom": "助人為樂",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0073",
+   "idiom": "自高自大",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0074",
+   "idiom": "目中無人",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0075",
+   "idiom": "自作聰明",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0076",
+   "idiom": "自作自受",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0077",
+   "idiom": "自言自語",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0078",
+   "idiom": "自由自在",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0079",
+   "idiom": "勇往直前",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0080",
+   "idiom": "相親相愛",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0081",
+   "idiom": "齊心協力",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0082",
+   "idiom": "同心協力",
+   "level": 1,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0083",
+   "idiom": "坐井觀天",
+   "level": 1,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0084",
+   "idiom": "喜出望外",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0085",
+   "idiom": "歡天喜地",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0086",
+   "idiom": "興高采烈",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0087",
+   "idiom": "眉開眼笑",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0088",
+   "idiom": "心花怒放",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0089",
+   "idiom": "手舞足蹈",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0090",
+   "idiom": "悶悶不樂",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0091",
+   "idiom": "愁眉苦臉",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0092",
+   "idiom": "垂頭喪氣",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0093",
+   "idiom": "無精打采",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0094",
+   "idiom": "淚流滿面",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0095",
+   "idiom": "火冒三丈",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0096",
+   "idiom": "怒氣沖沖",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0097",
+   "idiom": "心滿意足",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0098",
+   "idiom": "手忙腳亂",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0099",
+   "idiom": "大驚小怪",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0100",
+   "idiom": "目瞪口呆",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0101",
+   "idiom": "依依不捨",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0102",
+   "idiom": "迫不及待",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0103",
+   "idiom": "津津有味",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0104",
+   "idiom": "愛不釋手",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0105",
+   "idiom": "得意洋洋",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0106",
+   "idiom": "面紅耳赤",
+   "level": 1,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0107",
+   "idiom": "胡說八道",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0108",
+   "idiom": "甜言蜜語",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0109",
+   "idiom": "異口同聲",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0110",
+   "idiom": "輕聲細語",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0111",
+   "idiom": "無話可說",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0112",
+   "idiom": "不可思議",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0113",
+   "idiom": "莫名其妙",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0114",
+   "idiom": "議論紛紛",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0115",
+   "idiom": "讚不絕口",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0116",
+   "idiom": "交頭接耳",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0117",
+   "idiom": "輕而易舉",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0118",
+   "idiom": "大功告成",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0119",
+   "idiom": "不約而同",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0120",
+   "idiom": "多此一舉",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0121",
+   "idiom": "全力以赴",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0122",
+   "idiom": "盡心盡力",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0123",
+   "idiom": "爭分奪秒",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0124",
+   "idiom": "分秒必爭",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0125",
+   "idiom": "爭先恐後",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0126",
+   "idiom": "不慌不忙",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0127",
+   "idiom": "風和日麗",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0128",
+   "idiom": "春暖花開",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0129",
+   "idiom": "秋高氣爽",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0130",
+   "idiom": "冰天雪地",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0131",
+   "idiom": "天寒地凍",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0132",
+   "idiom": "傾盆大雨",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0133",
+   "idiom": "狂風暴雨",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0134",
+   "idiom": "風雨交加",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0135",
+   "idiom": "晴空萬里",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0136",
+   "idiom": "風平浪靜",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0137",
+   "idiom": "山清水秀",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0138",
+   "idiom": "青山綠水",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0139",
+   "idiom": "一望無際",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0140",
+   "idiom": "無邊無際",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0141",
+   "idiom": "濃眉大眼",
+   "level": 1,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0142",
+   "idiom": "聰明伶俐",
+   "level": 1,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0143",
+   "idiom": "心靈手巧",
+   "level": 1,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0144",
+   "idiom": "多才多藝",
+   "level": 1,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0145",
+   "idiom": "與眾不同",
+   "level": 1,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0146",
+   "idiom": "光陰似箭",
+   "level": 1,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0147",
+   "idiom": "日月如梭",
+   "level": 1,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0148",
+   "idiom": "日積月累",
+   "level": 1,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0149",
+   "idiom": "年復一年",
+   "level": 1,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0150",
+   "idiom": "日復一日",
+   "level": 1,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0151",
+   "idiom": "夜深人靜",
+   "level": 1,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0152",
+   "idiom": "早出晚歸",
+   "level": 1,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0153",
+   "idiom": "人山人海",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0154",
+   "idiom": "形影不離",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0155",
+   "idiom": "東張西望",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0156",
+   "idiom": "應有盡有",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0157",
+   "idiom": "各式各樣",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0158",
+   "idiom": "千奇百怪",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0159",
+   "idiom": "奇形怪狀",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0160",
+   "idiom": "調皮搗蛋",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0161",
+   "idiom": "平安無事",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0162",
+   "idiom": "無影無蹤",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0163",
+   "idiom": "小心翼翼",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0164",
+   "idiom": "大搖大擺",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0165",
+   "idiom": "偷偷摸摸",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0166",
+   "idiom": "好吃懶做",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0167",
+   "idiom": "省吃儉用",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0168",
+   "idiom": "物美價廉",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0169",
+   "idiom": "貨真價實",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0170",
+   "idiom": "鶴立雞群",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0171",
+   "idiom": "老馬識途",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0172",
+   "idiom": "塞翁失馬",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0173",
+   "idiom": "指鹿為馬",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0174",
+   "idiom": "葉公好龍",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0175",
+   "idiom": "望子成龍",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0176",
+   "idiom": "如虎添翼",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0177",
+   "idiom": "虎背熊腰",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0178",
+   "idiom": "驚弓之鳥",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0179",
+   "idiom": "一石二鳥",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0180",
+   "idiom": "聞雞起舞",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0181",
+   "idiom": "雞毛蒜皮",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0182",
+   "idiom": "殺雞儆猴",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0183",
+   "idiom": "呆若木雞",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0184",
+   "idiom": "杯弓蛇影",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0185",
+   "idiom": "打草驚蛇",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0186",
+   "idiom": "害群之馬",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0187",
+   "idiom": "走馬看花",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0188",
+   "idiom": "朝三暮四",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0189",
+   "idiom": "鷸蚌相爭",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0190",
+   "idiom": "如魚得水",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0191",
+   "idiom": "一箭雙鵰",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0192",
+   "idiom": "鵬程萬里",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0193",
+   "idiom": "車水馬龍",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0194",
+   "idiom": "青梅竹馬",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0195",
+   "idiom": "漁翁得利",
+   "level": 2,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0196",
+   "idiom": "一知半解",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0197",
+   "idiom": "一諾千金",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0198",
+   "idiom": "一鳴驚人",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0199",
+   "idiom": "一毛不拔",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0200",
+   "idiom": "一臂之力",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0201",
+   "idiom": "一針見血",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0202",
+   "idiom": "一絲不苟",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0203",
+   "idiom": "一鼓作氣",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0204",
+   "idiom": "一氣呵成",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0205",
+   "idiom": "三思而行",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0206",
+   "idiom": "三頭六臂",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0207",
+   "idiom": "舉一反三",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0208",
+   "idiom": "九死一生",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0209",
+   "idiom": "十拿九穩",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0210",
+   "idiom": "百花齊放",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0211",
+   "idiom": "千方百計",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0212",
+   "idiom": "萬眾一心",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0213",
+   "idiom": "萬無一失",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0214",
+   "idiom": "事半功倍",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0215",
+   "idiom": "雙管齊下",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0216",
+   "idiom": "兩全其美",
+   "level": 2,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0217",
+   "idiom": "持之以恆",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0218",
+   "idiom": "專心致志",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0219",
+   "idiom": "全神貫注",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0220",
+   "idiom": "聚精會神",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0221",
+   "idiom": "心不在焉",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0222",
+   "idiom": "廢寢忘食",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0223",
+   "idiom": "溫故知新",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0224",
+   "idiom": "精益求精",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0225",
+   "idiom": "勤能補拙",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0226",
+   "idiom": "見多識廣",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0227",
+   "idiom": "磨杵成針",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0228",
+   "idiom": "胸有成竹",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0229",
+   "idiom": "井井有條",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0230",
+   "idiom": "有始有終",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0231",
+   "idiom": "堅持不懈",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0232",
+   "idiom": "力爭上游",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0233",
+   "idiom": "愚公移山",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0234",
+   "idiom": "水滴石穿",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0235",
+   "idiom": "苦盡甘來",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0236",
+   "idiom": "捨己為人",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0237",
+   "idiom": "見義勇為",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0238",
+   "idiom": "雪中送炭",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0239",
+   "idiom": "錦上添花",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0240",
+   "idiom": "落井下石",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0241",
+   "idiom": "恩將仇報",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0242",
+   "idiom": "言而有信",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0243",
+   "idiom": "口是心非",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0244",
+   "idiom": "笑裡藏刀",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0245",
+   "idiom": "驕傲自滿",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0246",
+   "idiom": "自暴自棄",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0247",
+   "idiom": "自食其力",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0248",
+   "idiom": "臨危不亂",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0249",
+   "idiom": "知難而退",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0250",
+   "idiom": "斤斤計較",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0251",
+   "idiom": "尊師重道",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0252",
+   "idiom": "志同道合",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0253",
+   "idiom": "將心比心",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0254",
+   "idiom": "彬彬有禮",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0255",
+   "idiom": "望梅止渴",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0256",
+   "idiom": "濫竽充數",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0257",
+   "idiom": "刻舟求劍",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0258",
+   "idiom": "掩耳盜鈴",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0259",
+   "idiom": "揠苗助長",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0260",
+   "idiom": "杞人憂天",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0261",
+   "idiom": "畫餅充飢",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0262",
+   "idiom": "開天闢地",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0263",
+   "idiom": "世外桃源",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0264",
+   "idiom": "天衣無縫",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0265",
+   "idiom": "笑逐顏開",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0266",
+   "idiom": "捧腹大笑",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0267",
+   "idiom": "哭笑不得",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0268",
+   "idiom": "心灰意冷",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0269",
+   "idiom": "暴跳如雷",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0270",
+   "idiom": "大發雷霆",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0271",
+   "idiom": "心曠神怡",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0272",
+   "idiom": "提心吊膽",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0273",
+   "idiom": "驚慌失措",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0274",
+   "idiom": "不知所措",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0275",
+   "idiom": "啞口無言",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0276",
+   "idiom": "坐立不安",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0277",
+   "idiom": "念念不忘",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0278",
+   "idiom": "歸心似箭",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0279",
+   "idiom": "恍然大悟",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0280",
+   "idiom": "若無其事",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0281",
+   "idiom": "興致勃勃",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0282",
+   "idiom": "得意忘形",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0283",
+   "idiom": "理直氣壯",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0284",
+   "idiom": "做賊心虛",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0285",
+   "idiom": "能言善道",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0286",
+   "idiom": "滔滔不絕",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0287",
+   "idiom": "信口開河",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0288",
+   "idiom": "花言巧語",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0289",
+   "idiom": "強詞奪理",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0290",
+   "idiom": "開門見山",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0291",
+   "idiom": "心直口快",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0292",
+   "idiom": "言歸正傳",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0293",
+   "idiom": "守口如瓶",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0294",
+   "idiom": "對答如流",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0295",
+   "idiom": "易如反掌",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0296",
+   "idiom": "有備無患",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0297",
+   "idiom": "隨機應變",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0298",
+   "idiom": "異想天開",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0299",
+   "idiom": "得不償失",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0300",
+   "idiom": "猶豫不決",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0301",
+   "idiom": "進退兩難",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0302",
+   "idiom": "無可奈何",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0303",
+   "idiom": "束手無策",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0304",
+   "idiom": "弄巧成拙",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0305",
+   "idiom": "徒勞無功",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0306",
+   "idiom": "絞盡腦汁",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0307",
+   "idiom": "竭盡全力",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0308",
+   "idiom": "任勞任怨",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0309",
+   "idiom": "慢條斯理",
+   "level": 2,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0310",
+   "idiom": "春光明媚",
+   "level": 2,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0311",
+   "idiom": "汗流浹背",
+   "level": 2,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0312",
+   "idiom": "波濤洶湧",
+   "level": 2,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0313",
+   "idiom": "高聳入雲",
+   "level": 2,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0314",
+   "idiom": "日新月異",
+   "level": 2,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0315",
+   "idiom": "天翻地覆",
+   "level": 2,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0316",
+   "idiom": "雨後春筍",
+   "level": 2,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0317",
+   "idiom": "雪上加霜",
+   "level": 2,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0318",
+   "idiom": "水落石出",
+   "level": 2,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0319",
+   "idiom": "火上加油",
+   "level": 2,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0320",
+   "idiom": "亭亭玉立",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0321",
+   "idiom": "骨瘦如柴",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0322",
+   "idiom": "精神抖擻",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0323",
+   "idiom": "天真爛漫",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0324",
+   "idiom": "文武雙全",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0325",
+   "idiom": "足智多謀",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0326",
+   "idiom": "大名鼎鼎",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0327",
+   "idiom": "名不虛傳",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0328",
+   "idiom": "名副其實",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0329",
+   "idiom": "平易近人",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0330",
+   "idiom": "和藹可親",
+   "level": 2,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0331",
+   "idiom": "來日方長",
+   "level": 2,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0332",
+   "idiom": "後會有期",
+   "level": 2,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0333",
+   "idiom": "朝思暮想",
+   "level": 2,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0334",
+   "idiom": "一朝一夕",
+   "level": 2,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0335",
+   "idiom": "古往今來",
+   "level": 2,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0336",
+   "idiom": "前所未有",
+   "level": 2,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0337",
+   "idiom": "川流不息",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0338",
+   "idiom": "座無虛席",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0339",
+   "idiom": "家喻戶曉",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0340",
+   "idiom": "眾所周知",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0341",
+   "idiom": "舉世聞名",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0342",
+   "idiom": "名列前茅",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0343",
+   "idiom": "不相上下",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0344",
+   "idiom": "大同小異",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0345",
+   "idiom": "天涯海角",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0346",
+   "idiom": "來龍去脈",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0347",
+   "idiom": "金碧輝煌",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0348",
+   "idiom": "不計其數",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0349",
+   "idiom": "屈指可數",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0350",
+   "idiom": "微不足道",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0351",
+   "idiom": "小題大作",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0352",
+   "idiom": "理所當然",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0353",
+   "idiom": "無理取鬧",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0354",
+   "idiom": "胡作非為",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0355",
+   "idiom": "無法無天",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0356",
+   "idiom": "橫行霸道",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0357",
+   "idiom": "安居樂業",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0358",
+   "idiom": "國泰民安",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0359",
+   "idiom": "風調雨順",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0360",
+   "idiom": "豐衣足食",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0361",
+   "idiom": "五穀豐登",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0362",
+   "idiom": "有驚無險",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0363",
+   "idiom": "死裡逃生",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0364",
+   "idiom": "藥到病除",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0365",
+   "idiom": "苦中作樂",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0366",
+   "idiom": "自得其樂",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0367",
+   "idiom": "知足常樂",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0368",
+   "idiom": "物歸原主",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0369",
+   "idiom": "失而復得",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0370",
+   "idiom": "不翼而飛",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0371",
+   "idiom": "真相大白",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0372",
+   "idiom": "粗枝大葉",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0373",
+   "idiom": "鬼鬼祟祟",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0374",
+   "idiom": "不勞而獲",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0375",
+   "idiom": "坐享其成",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0376",
+   "idiom": "遊手好閒",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0377",
+   "idiom": "無所事事",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0378",
+   "idiom": "精打細算",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0379",
+   "idiom": "狡兔三窟",
+   "level": 3,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0380",
+   "idiom": "庖丁解牛",
+   "level": 3,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0381",
+   "idiom": "螳臂當車",
+   "level": 3,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0382",
+   "idiom": "黔驢技窮",
+   "level": 3,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0383",
+   "idiom": "金蟬脫殼",
+   "level": 3,
+   "topic": "動物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0384",
+   "idiom": "一意孤行",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0385",
+   "idiom": "一籌莫展",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0386",
+   "idiom": "一勞永逸",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0387",
+   "idiom": "三顧茅廬",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0388",
+   "idiom": "三人成虎",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0389",
+   "idiom": "四面楚歌",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0390",
+   "idiom": "百折不撓",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0391",
+   "idiom": "百感交集",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0392",
+   "idiom": "千鈞一髮",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0393",
+   "idiom": "千篇一律",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0394",
+   "idiom": "千載難逢",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0395",
+   "idiom": "兩敗俱傷",
+   "level": 3,
+   "topic": "數字",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0396",
+   "idiom": "鍥而不捨",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0397",
+   "idiom": "不恥下問",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0398",
+   "idiom": "鑿壁偷光",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0399",
+   "idiom": "懸梁刺股",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0400",
+   "idiom": "手不釋卷",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0401",
+   "idiom": "融會貫通",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0402",
+   "idiom": "囫圇吞棗",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0403",
+   "idiom": "有條不紊",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0404",
+   "idiom": "自強不息",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0405",
+   "idiom": "精衛填海",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0406",
+   "idiom": "青出於藍",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0407",
+   "idiom": "大器晚成",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0408",
+   "idiom": "因材施教",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0409",
+   "idiom": "實事求是",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0410",
+   "idiom": "以德報怨",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0411",
+   "idiom": "出爾反爾",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0412",
+   "idiom": "口蜜腹劍",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0413",
+   "idiom": "夜郎自大",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0414",
+   "idiom": "從容不迫",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0415",
+   "idiom": "相敬如賓",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0416",
+   "idiom": "同舟共濟",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0417",
+   "idiom": "設身處地",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0418",
+   "idiom": "精忠報國",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0419",
+   "idiom": "成人之美",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0420",
+   "idiom": "負荊請罪",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0421",
+   "idiom": "完璧歸趙",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0422",
+   "idiom": "高山流水",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0423",
+   "idiom": "孟母三遷",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0424",
+   "idiom": "臥薪嘗膽",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0425",
+   "idiom": "破釜沉舟",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0426",
+   "idiom": "背水一戰",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0427",
+   "idiom": "紙上談兵",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0428",
+   "idiom": "草木皆兵",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0429",
+   "idiom": "毛遂自薦",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0430",
+   "idiom": "脫穎而出",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0431",
+   "idiom": "東施效顰",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0432",
+   "idiom": "買櫝還珠",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0433",
+   "idiom": "南轅北轍",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0434",
+   "idiom": "望洋興嘆",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0435",
+   "idiom": "夸父追日",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0436",
+   "idiom": "女媧補天",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0437",
+   "idiom": "班門弄斧",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0438",
+   "idiom": "入木三分",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0439",
+   "idiom": "杯水車薪",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0440",
+   "idiom": "唇亡齒寒",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0441",
+   "idiom": "名落孫山",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0442",
+   "idiom": "門庭若市",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0443",
+   "idiom": "病入膏肓",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0444",
+   "idiom": "豁然開朗",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": true
+  },
+  {
+   "id": "cy0445",
+   "idiom": "曇花一現",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0446",
+   "idiom": "忐忑不安",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0447",
+   "idiom": "如釋重負",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0448",
+   "idiom": "刻骨銘心",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0449",
+   "idiom": "茅塞頓開",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0450",
+   "idiom": "意猶未盡",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0451",
+   "idiom": "樂此不疲",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0452",
+   "idiom": "口若懸河",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0453",
+   "idiom": "言簡意賅",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0454",
+   "idiom": "語重心長",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0455",
+   "idiom": "直截了當",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0456",
+   "idiom": "不言而喻",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0457",
+   "idiom": "言外之意",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0458",
+   "idiom": "人云亦云",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0459",
+   "idiom": "道聽塗說",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0460",
+   "idiom": "眾說紛紜",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0461",
+   "idiom": "功虧一簣",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0462",
+   "idiom": "前功盡棄",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0463",
+   "idiom": "未雨綢繆",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0464",
+   "idiom": "別出心裁",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0465",
+   "idiom": "本末倒置",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0466",
+   "idiom": "當務之急",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0467",
+   "idiom": "迫在眉睫",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0468",
+   "idiom": "刻不容緩",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0469",
+   "idiom": "當機立斷",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0470",
+   "idiom": "山窮水盡",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0471",
+   "idiom": "柳暗花明",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0472",
+   "idiom": "迎刃而解",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0473",
+   "idiom": "事與願違",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0474",
+   "idiom": "適得其反",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0475",
+   "idiom": "驚濤駭浪",
+   "level": 3,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0476",
+   "idiom": "一葉知秋",
+   "level": 3,
+   "topic": "自然景物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0477",
+   "idiom": "文質彬彬",
+   "level": 3,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0478",
+   "idiom": "神采奕奕",
+   "level": 3,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0479",
+   "idiom": "德高望重",
+   "level": 3,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0480",
+   "idiom": "金榜題名",
+   "level": 3,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0481",
+   "idiom": "出類拔萃",
+   "level": 3,
+   "topic": "形容人物",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0482",
+   "idiom": "稍縱即逝",
+   "level": 3,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0483",
+   "idiom": "史無前例",
+   "level": 3,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0484",
+   "idiom": "空前絕後",
+   "level": 3,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0485",
+   "idiom": "與時俱進",
+   "level": 3,
+   "topic": "時間",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0486",
+   "idiom": "絡繹不絕",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0487",
+   "idiom": "無與倫比",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0488",
+   "idiom": "旗鼓相當",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0489",
+   "idiom": "勢均力敵",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0490",
+   "idiom": "截然不同",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0491",
+   "idiom": "如出一轍",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0492",
+   "idiom": "琳瑯滿目",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0493",
+   "idiom": "層出不窮",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0494",
+   "idiom": "舉足輕重",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0495",
+   "idiom": "大材小用",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0496",
+   "idiom": "物以類聚",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0497",
+   "idiom": "為所欲為",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0498",
+   "idiom": "安然無恙",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0499",
+   "idiom": "起死回生",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  },
+  {
+   "id": "cy0500",
+   "idiom": "對症下藥",
+   "level": 3,
+   "topic": "生活百態",
+   "status": "已有資料",
+   "story_guess": false
+  }
+ ],
+ "notes": {
+  "level": "遊戲自訂難度：1=入門 2=進階 3=高階，非教育部年級規定",
+  "story_guess": "是否有典故故事為 AI 推測，未查證"
+ }
+}

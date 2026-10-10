@@ -1,0 +1,253 @@
+{
+ "batch": "11",
+ "items": [
+  {
+   "id": "cy0441",
+   "idiom": "名落孫山",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0442",
+   "idiom": "門庭若市",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0443",
+   "idiom": "病入膏肓",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0444",
+   "idiom": "豁然開朗",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0445",
+   "idiom": "曇花一現",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0446",
+   "idiom": "忐忑不安",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0447",
+   "idiom": "如釋重負",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0448",
+   "idiom": "刻骨銘心",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0449",
+   "idiom": "茅塞頓開",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0450",
+   "idiom": "意猶未盡",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0451",
+   "idiom": "樂此不疲",
+   "level": 3,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0452",
+   "idiom": "口若懸河",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0453",
+   "idiom": "言簡意賅",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0454",
+   "idiom": "語重心長",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0455",
+   "idiom": "直截了當",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0456",
+   "idiom": "不言而喻",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0457",
+   "idiom": "言外之意",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0458",
+   "idiom": "人云亦云",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0459",
+   "idiom": "道聽塗說",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0460",
+   "idiom": "眾說紛紜",
+   "level": 3,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0461",
+   "idiom": "功虧一簣",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0462",
+   "idiom": "前功盡棄",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0463",
+   "idiom": "未雨綢繆",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0464",
+   "idiom": "別出心裁",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0465",
+   "idiom": "本末倒置",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0466",
+   "idiom": "當務之急",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0467",
+   "idiom": "迫在眉睫",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0468",
+   "idiom": "刻不容緩",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0469",
+   "idiom": "當機立斷",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0470",
+   "idiom": "山窮水盡",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0471",
+   "idiom": "柳暗花明",
+   "level": 3,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  }
+ ]
+}

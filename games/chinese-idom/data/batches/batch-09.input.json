@@ -1,0 +1,253 @@
+{
+ "batch": "09",
+ "items": [
+  {
+   "id": "cy0379",
+   "idiom": "狡兔三窟",
+   "level": 3,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0380",
+   "idiom": "庖丁解牛",
+   "level": 3,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0381",
+   "idiom": "螳臂當車",
+   "level": 3,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0382",
+   "idiom": "黔驢技窮",
+   "level": 3,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0383",
+   "idiom": "金蟬脫殼",
+   "level": 3,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0384",
+   "idiom": "一意孤行",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0385",
+   "idiom": "一籌莫展",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0386",
+   "idiom": "一勞永逸",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0387",
+   "idiom": "三顧茅廬",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0388",
+   "idiom": "三人成虎",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0389",
+   "idiom": "四面楚歌",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0390",
+   "idiom": "百折不撓",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0391",
+   "idiom": "百感交集",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0392",
+   "idiom": "千鈞一髮",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0393",
+   "idiom": "千篇一律",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0394",
+   "idiom": "千載難逢",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0395",
+   "idiom": "兩敗俱傷",
+   "level": 3,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0396",
+   "idiom": "鍥而不捨",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0397",
+   "idiom": "不恥下問",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0398",
+   "idiom": "鑿壁偷光",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0399",
+   "idiom": "懸梁刺股",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0400",
+   "idiom": "手不釋卷",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0401",
+   "idiom": "融會貫通",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0402",
+   "idiom": "囫圇吞棗",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0403",
+   "idiom": "有條不紊",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0404",
+   "idiom": "自強不息",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0405",
+   "idiom": "精衛填海",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0406",
+   "idiom": "青出於藍",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0407",
+   "idiom": "大器晚成",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0408",
+   "idiom": "因材施教",
+   "level": 3,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0409",
+   "idiom": "實事求是",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  }
+ ]
+}

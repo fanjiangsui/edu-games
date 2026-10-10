@@ -1,0 +1,373 @@
+{
+ "batch": "04",
+ "items": [
+  {
+   "id": "cy0155",
+   "idiom": "東張西望",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0156",
+   "idiom": "應有盡有",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0157",
+   "idiom": "各式各樣",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0158",
+   "idiom": "千奇百怪",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0159",
+   "idiom": "奇形怪狀",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0160",
+   "idiom": "調皮搗蛋",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0161",
+   "idiom": "平安無事",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0162",
+   "idiom": "無影無蹤",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0163",
+   "idiom": "小心翼翼",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0164",
+   "idiom": "大搖大擺",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0165",
+   "idiom": "偷偷摸摸",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0166",
+   "idiom": "好吃懶做",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0167",
+   "idiom": "省吃儉用",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0168",
+   "idiom": "物美價廉",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0169",
+   "idiom": "貨真價實",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0170",
+   "idiom": "鶴立雞群",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0171",
+   "idiom": "老馬識途",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0172",
+   "idiom": "塞翁失馬",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0173",
+   "idiom": "指鹿為馬",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0174",
+   "idiom": "葉公好龍",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0175",
+   "idiom": "望子成龍",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0176",
+   "idiom": "如虎添翼",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0177",
+   "idiom": "虎背熊腰",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0178",
+   "idiom": "驚弓之鳥",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0179",
+   "idiom": "一石二鳥",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0180",
+   "idiom": "聞雞起舞",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0181",
+   "idiom": "雞毛蒜皮",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0182",
+   "idiom": "殺雞儆猴",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0183",
+   "idiom": "呆若木雞",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0184",
+   "idiom": "杯弓蛇影",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0185",
+   "idiom": "打草驚蛇",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0186",
+   "idiom": "害群之馬",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0187",
+   "idiom": "走馬看花",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0188",
+   "idiom": "朝三暮四",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0189",
+   "idiom": "鷸蚌相爭",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0190",
+   "idiom": "如魚得水",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0191",
+   "idiom": "一箭雙鵰",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0192",
+   "idiom": "鵬程萬里",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0193",
+   "idiom": "車水馬龍",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0194",
+   "idiom": "青梅竹馬",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0195",
+   "idiom": "漁翁得利",
+   "level": 2,
+   "topic": "動物",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0196",
+   "idiom": "一知半解",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0197",
+   "idiom": "一諾千金",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0198",
+   "idiom": "一鳴驚人",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0199",
+   "idiom": "一毛不拔",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0200",
+   "idiom": "一臂之力",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  }
+ ]
+}

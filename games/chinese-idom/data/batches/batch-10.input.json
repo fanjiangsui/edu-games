@@ -1,0 +1,253 @@
+{
+ "batch": "10",
+ "items": [
+  {
+   "id": "cy0410",
+   "idiom": "以德報怨",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0411",
+   "idiom": "出爾反爾",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0412",
+   "idiom": "口蜜腹劍",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0413",
+   "idiom": "夜郎自大",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0414",
+   "idiom": "從容不迫",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0415",
+   "idiom": "相敬如賓",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0416",
+   "idiom": "同舟共濟",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0417",
+   "idiom": "設身處地",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0418",
+   "idiom": "精忠報國",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0419",
+   "idiom": "成人之美",
+   "level": 3,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0420",
+   "idiom": "負荊請罪",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0421",
+   "idiom": "完璧歸趙",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0422",
+   "idiom": "高山流水",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0423",
+   "idiom": "孟母三遷",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0424",
+   "idiom": "臥薪嘗膽",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0425",
+   "idiom": "破釜沉舟",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0426",
+   "idiom": "背水一戰",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0427",
+   "idiom": "紙上談兵",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0428",
+   "idiom": "草木皆兵",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0429",
+   "idiom": "毛遂自薦",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0430",
+   "idiom": "脫穎而出",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0431",
+   "idiom": "東施效顰",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0432",
+   "idiom": "買櫝還珠",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0433",
+   "idiom": "南轅北轍",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0434",
+   "idiom": "望洋興嘆",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0435",
+   "idiom": "夸父追日",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0436",
+   "idiom": "女媧補天",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0437",
+   "idiom": "班門弄斧",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0438",
+   "idiom": "入木三分",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0439",
+   "idiom": "杯水車薪",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0440",
+   "idiom": "唇亡齒寒",
+   "level": 3,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  }
+ ]
+}

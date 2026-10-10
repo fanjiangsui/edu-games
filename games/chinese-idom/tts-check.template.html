@@ -1,0 +1,212 @@
+<title>成語朗讀檢查</title>
+<style>
+/* 版面：單欄清單，上方固定工具列；每列 = 成語（含注音）＋破音字提示＋播放＋念錯勾選 */
+:root {
+  --bg: #fbf7f0; --card: #ffffff; --ink: #2b2420; --muted: #7a6e64; --line: #e8dfd3;
+  --accent: #c0392b; --accent-soft: #fbe9e6; --bad: #b03a2e; --bad-soft: #fbe5e2; --good: #2e7d4f;
+  --font: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Heiti TC", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #1d1916; --card: #2a2420; --ink: #f2ebe3; --muted: #b3a597; --line: #3d342d;
+  --accent: #e8735f; --accent-soft: #3d2622; --bad: #f08a7c; --bad-soft: #3d2420; --good: #6cc792; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #1d1916; --card: #2a2420; --ink: #f2ebe3; --muted: #b3a597; --line: #3d342d;
+  --accent: #e8735f; --accent-soft: #3d2622; --bad: #f08a7c; --bad-soft: #3d2420; --good: #6cc792; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.6; margin: 0; }
+.wrap { max-width: 680px; margin: 0 auto; padding-inline: 16px; padding-block: 12px 48px; }
+h1 { font-size: 22px; margin: 4px 0 4px; color: var(--accent); letter-spacing: 2px; }
+.lead { color: var(--muted); font-size: 15px; margin: 0 0 12px; }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+  padding-block: 10px; border-bottom: 1px solid var(--line); display: grid; gap: 8px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+select, button { font: inherit; color: var(--ink); }
+select { min-width: 0; flex: 1 1 200px; padding: 8px 10px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--card); }
+button { cursor: pointer; border-radius: 10px; border: 1.5px solid var(--line); background: var(--card); padding: 8px 14px;
+  transition: transform .12s, border-color .12s, background-color .12s, box-shadow .12s; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+@media (hover: hover) {
+  button:hover { transform: translateY(-2px); border-color: var(--accent); background-color: var(--accent-soft); box-shadow: 0 4px 12px rgba(0,0,0,.12); }
+  button.primary:hover { background-color: var(--accent); filter: brightness(.92); }
+  .chip.on:hover { background-color: var(--accent); color: #fff; filter: brightness(.92); }
+}
+button:active { transform: scale(.97); }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.chip { padding: 4px 12px; border-radius: 999px; font-size: 14px; }
+.chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.stat { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.stat b { color: var(--bad); }
+ul.list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
+li.item { background: var(--card); border: 1.5px solid var(--line); border-radius: 14px; padding: 10px 12px;
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; }
+li.item.wrong { border-color: var(--bad); background: var(--bad-soft); }
+li.item.playing { box-shadow: 0 0 0 3px var(--accent); }
+.word { font-size: 26px; font-weight: 800; letter-spacing: 4px; min-width: 0; }
+rt { font-size: .38em; color: var(--muted); font-weight: 400; letter-spacing: 0; }
+.hint { grid-column: 1 / 2; font-size: 14px; color: var(--muted); min-width: 0; }
+.hint b { color: var(--ink); }
+.fix { color: var(--good); font-weight: 700; }
+.ctrls { grid-row: 1 / span 2; grid-column: 2; display: flex; flex-direction: column; gap: 6px; align-items: stretch; }
+.ctrls label { display: flex; align-items: center; gap: 6px; font-size: 14px; cursor: pointer; padding: 6px 10px;
+  border: 1.5px solid var(--line); border-radius: 10px; background: var(--card); }
+.ctrls input { width: 18px; height: 18px; accent-color: var(--bad); }
+.out { margin-top: 16px; display: grid; gap: 8px; }
+textarea { width: 100%; min-height: 140px; font: 14px/1.5 ui-monospace, Menlo, monospace; color: var(--ink);
+  background: var(--card); border: 1.5px solid var(--line); border-radius: 10px; padding: 10px; }
+.note { font-size: 14px; color: var(--muted); }
+.warn { color: var(--bad); font-weight: 700; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <h1>成語朗讀檢查</h1>
+  <p class="lead">第二輪：預設只列出上次念錯、已改用同音字朗讀的 22 個成語，請再聽一次。逐一按「▶ 念」，聽到讀音和注音不同，就勾「念錯了」。全部聽完後按「產生結果」，把文字複製貼回給 Claude。勾選會記在這台裝置的瀏覽器裡。</p>
+
+  <div class="bar">
+    <div class="row">
+      <select id="voice" aria-label="語音"></select>
+      <select id="rate" aria-label="語速">
+        <option value="0.8">語速：遊戲用（0.8）</option>
+        <option value="0.6">語速：慢（0.6）</option>
+        <option value="1">語速：正常（1.0）</option>
+      </select>
+    </div>
+    <div class="row">
+      <button id="playAll" class="primary">連續播放</button>
+      <button class="chip on" data-f="fixed">已換字</button>
+      <button class="chip" data-f="all">全部</button>
+      <button class="chip" data-f="wrong">只看念錯</button>
+      <button class="chip" data-f="todo">只看沒聽過</button>
+      <span class="stat" id="stat"></span>
+    </div>
+    <div id="voiceWarn" class="note" hidden></div>
+  </div>
+
+  <ul class="list" id="list"></ul>
+
+  <div class="out">
+    <button id="make" class="primary">產生結果</button>
+    <textarea id="result" readonly placeholder="按「產生結果」後，念錯的清單會出現在這裡。"></textarea>
+    <div class="row">
+      <button id="copy">複製結果</button>
+      <button id="reset">清除所有勾選</button>
+      <span class="note" id="copyMsg"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA = /*__DATA__*/[];
+const KEY = "chengyu-tts-check-v2";
+const $ = s => document.querySelector(s);
+const list = $("#list");
+let wrong = new Set(), heard = new Set(), filter = "fixed";
+
+// 讀寫勾選紀錄（瀏覽器儲存可能不可用，失敗就只存在畫面上）
+function load() { try { const o = JSON.parse(localStorage.getItem(KEY) || "{}"); wrong = new Set(o.wrong || []); heard = new Set(o.heard || []); } catch (e) {} }
+function save() { try { localStorage.setItem(KEY, JSON.stringify({ wrong: [...wrong], heard: [...heard] })); } catch (e) {} }
+
+/* ---------- 語音 ---------- */
+const canSpeak = "speechSynthesis" in window;
+let voices = [];
+function fillVoices() {
+  if (!canSpeak) return;
+  voices = speechSynthesis.getVoices().filter(v => /^zh|cmn|yue/i.test(v.lang));
+  const sel = $("#voice"), prev = sel.value;
+  sel.replaceChildren(...voices.map((v, i) => { const o = document.createElement("option"); o.value = i; o.textContent = `${v.name}（${v.lang}）`; return o; }));
+  const tw = voices.findIndex(v => /zh[-_]TW/i.test(v.lang));
+  sel.value = prev && voices[prev] ? prev : (tw >= 0 ? tw : 0);
+  const w = $("#voiceWarn");
+  if (!voices.length) { w.hidden = false; w.innerHTML = '<span class="warn">這台裝置找不到中文語音。</span>遊戲的朗讀功能在這台裝置上會沒有聲音或念不出中文。'; }
+  else if (tw < 0) { w.hidden = false; w.textContent = "找不到台灣中文（zh-TW）語音，目前用的是其他中文語音，讀音可能和台灣標準不同。"; }
+  else w.hidden = true;
+}
+if (canSpeak) { fillVoices(); speechSynthesis.onvoiceschanged = fillVoices; }
+else { $("#voiceWarn").hidden = false; $("#voiceWarn").innerHTML = '<span class="warn">這個瀏覽器不支援朗讀。</span>'; }
+
+function speak(text, onend) {
+  if (!canSpeak) return onend && onend();
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  const v = voices[$("#voice").value];
+  u.lang = v ? v.lang : "zh-TW"; if (v) u.voice = v;
+  u.rate = parseFloat($("#rate").value);
+  if (onend) { u.onend = onend; u.onerror = onend; }
+  speechSynthesis.speak(u);
+}
+
+/* ---------- 清單 ---------- */
+function rowFor(d) {
+  const li = document.createElement("li");
+  li.className = "item" + (wrong.has(d.id) ? " wrong" : ""); li.dataset.id = d.id;
+  const word = document.createElement("div"); word.className = "word";
+  [...d.w].forEach((ch, i) => { const r = document.createElement("ruby"); r.append(ch); const rt = document.createElement("rt"); rt.textContent = d.z[i] || ""; r.append(rt); word.append(r); });
+  const hint = document.createElement("div"); hint.className = "hint";
+  hint.innerHTML = (d.t ? `<span class="fix">已換字朗讀：${d.t}</span>　` : "") + d.p.map(([c, here, other]) => `「<b>${c}</b>」應念 <b>${here}</b>，不是 ${other}`).join("；");
+  const ctrls = document.createElement("div"); ctrls.className = "ctrls";
+  const btn = document.createElement("button"); btn.textContent = "▶ 念";
+  btn.addEventListener("click", () => { markHeard(d.id); speak(d.t || d.w); });
+  const lab = document.createElement("label");
+  const cb = document.createElement("input"); cb.type = "checkbox"; cb.id = "cb-" + d.id; cb.checked = wrong.has(d.id);
+  cb.addEventListener("change", () => { cb.checked ? wrong.add(d.id) : wrong.delete(d.id); markHeard(d.id); li.classList.toggle("wrong", cb.checked); save(); stat(); });
+  lab.append(cb, "念錯了");
+  ctrls.append(btn, lab);
+  li.append(word, ctrls, hint);
+  return li;
+}
+function markHeard(id) { if (!heard.has(id)) { heard.add(id); save(); stat(); } }
+function visible() { return DATA.filter(d => filter === "all" || (filter === "fixed" ? !!d.t : filter === "wrong" ? wrong.has(d.id) : !heard.has(d.id))); }
+function render() { list.replaceChildren(...visible().map(rowFor)); stat(); }
+function stat() { $("#stat").innerHTML = `已聽 ${heard.size}／${DATA.length}・念錯 <b>${wrong.size}</b>`; }
+
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.f; document.querySelectorAll(".chip").forEach(x => x.classList.toggle("on", x === b)); render();
+}));
+
+/* ---------- 連續播放 ---------- */
+let playing = false;
+$("#playAll").addEventListener("click", () => {
+  if (playing) { playing = false; speechSynthesis.cancel(); $("#playAll").textContent = "連續播放"; document.querySelectorAll(".playing").forEach(e => e.classList.remove("playing")); return; }
+  const items = [...list.querySelectorAll("li.item")];
+  if (!items.length) return;
+  playing = true; $("#playAll").textContent = "停止";
+  let i = 0;
+  const next = () => {
+    document.querySelectorAll(".playing").forEach(e => e.classList.remove("playing"));
+    if (!playing || i >= items.length) { playing = false; $("#playAll").textContent = "連續播放"; return; }
+    const li = items[i++], d = DATA.find(x => x.id === li.dataset.id);
+    li.classList.add("playing"); li.scrollIntoView({ block: "center", behavior: "smooth" });
+    markHeard(d.id);
+    speak(d.t || d.w, () => setTimeout(next, 1200));   // 每個成語之間停 1.2 秒，來得及勾選
+  };
+  next();
+});
+
+/* ---------- 結果 ---------- */
+$("#make").addEventListener("click", () => {
+  const v = voices[$("#voice").value];
+  const lines = [
+    "【成語朗讀檢查結果・第二輪（同音字）】",
+    `裝置：${navigator.userAgent}`,
+    `語音：${v ? v.name + "（" + v.lang + "）" : "無"}・語速 ${$("#rate").value}`,
+    `已聽 ${heard.size}／${DATA.length}，念錯 ${wrong.size} 個：`,
+    ...DATA.filter(d => wrong.has(d.id)).map(d => `${d.id} ${d.w}（${d.z.join(" ")}）`)
+  ];
+  $("#result").value = lines.join("\n");
+  $("#copyMsg").textContent = "";
+});
+$("#copy").addEventListener("click", async () => {
+  if (!$("#result").value) $("#make").click();
+  const ta = $("#result");
+  try { await navigator.clipboard.writeText(ta.value); $("#copyMsg").textContent = "已複製"; }
+  catch (e) { ta.focus(); ta.select(); $("#copyMsg").textContent = "請長按文字框，選「全選」後複製"; }
+});
+let resetArmed = false;
+$("#reset").addEventListener("click", () => {
+  if (!resetArmed) { resetArmed = true; $("#reset").textContent = "再按一次確認清除"; setTimeout(() => { resetArmed = false; $("#reset").textContent = "清除所有勾選"; }, 3000); return; }
+  resetArmed = false; $("#reset").textContent = "清除所有勾選";
+  wrong.clear(); heard.clear(); save(); render(); $("#result").value = "";
+});
+
+load(); render();
+</script>

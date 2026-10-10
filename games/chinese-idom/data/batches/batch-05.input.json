@@ -1,0 +1,365 @@
+{
+ "batch": "05",
+ "items": [
+  {
+   "id": "cy0201",
+   "idiom": "一針見血",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0202",
+   "idiom": "一絲不苟",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0203",
+   "idiom": "一鼓作氣",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0204",
+   "idiom": "一氣呵成",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0205",
+   "idiom": "三思而行",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0206",
+   "idiom": "三頭六臂",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0207",
+   "idiom": "舉一反三",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0208",
+   "idiom": "九死一生",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0209",
+   "idiom": "十拿九穩",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0210",
+   "idiom": "百花齊放",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0211",
+   "idiom": "千方百計",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0212",
+   "idiom": "萬眾一心",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0213",
+   "idiom": "萬無一失",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0214",
+   "idiom": "事半功倍",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0215",
+   "idiom": "雙管齊下",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0216",
+   "idiom": "兩全其美",
+   "level": 2,
+   "topic": "數字",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0217",
+   "idiom": "持之以恆",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0218",
+   "idiom": "專心致志",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0219",
+   "idiom": "全神貫注",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0220",
+   "idiom": "聚精會神",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0221",
+   "idiom": "心不在焉",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0222",
+   "idiom": "廢寢忘食",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0223",
+   "idiom": "溫故知新",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0224",
+   "idiom": "精益求精",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0225",
+   "idiom": "勤能補拙",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0226",
+   "idiom": "見多識廣",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0227",
+   "idiom": "磨杵成針",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0228",
+   "idiom": "胸有成竹",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0229",
+   "idiom": "井井有條",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0230",
+   "idiom": "有始有終",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0231",
+   "idiom": "堅持不懈",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0232",
+   "idiom": "力爭上游",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0233",
+   "idiom": "愚公移山",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0234",
+   "idiom": "水滴石穿",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0235",
+   "idiom": "苦盡甘來",
+   "level": 2,
+   "topic": "學習態度",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0236",
+   "idiom": "捨己為人",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0237",
+   "idiom": "見義勇為",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0238",
+   "idiom": "雪中送炭",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0239",
+   "idiom": "錦上添花",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0240",
+   "idiom": "落井下石",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0241",
+   "idiom": "恩將仇報",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0242",
+   "idiom": "言而有信",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0243",
+   "idiom": "口是心非",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0244",
+   "idiom": "笑裡藏刀",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0245",
+   "idiom": "驕傲自滿",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  }
+ ]
+}

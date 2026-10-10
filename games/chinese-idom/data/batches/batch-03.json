@@ -1,0 +1,3325 @@
+{
+ "version": "0.2.0",
+ "items": [
+  {
+   "id": "cy0108",
+   "idiom": "甜言蜜語",
+   "zhuyin": [
+    "ㄊㄧㄢˊ",
+    "ㄧㄢˊ",
+    "ㄇㄧˋ",
+    "ㄩˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "說話溝通"
+   ],
+   "meaning": "像糖和蜂蜜一樣甜的好聽話。常指為了討好別人或哄騙別人而說的話。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "詐騙電話裡的人滿口甜言蜜語，我們一定要提高警覺。",
+    "弟弟想多玩一會兒電動，就對媽媽甜言蜜語，可是媽媽還是不答應。"
+   ],
+   "synonyms": [
+    "花言巧語"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "甜言密語",
+     "note": "是蜂蜜的「蜜」，不是祕密的「密」。"
+    },
+    {
+     "type": "誤用",
+     "wrong": "用來稱讚真心的鼓勵",
+     "note": "甜言蜜語常帶有討好或哄騙的意思，真誠的鼓勵不適合用它來形容。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「甜言蜜語」是什麼意思？",
+     "choices": [
+      "為了討好或哄人而說的好聽話",
+      "吃甜點時說的話",
+      "介紹蜂蜜的廣告詞",
+      "很難聽的罵人話"
+     ],
+     "answer_index": 0,
+     "explanation": "甜言蜜語是像糖和蜜一樣好聽的話，常用來討好或哄騙別人，不是真的在說吃的東西。"
+    },
+    "fill_blank": {
+     "sentence": "詐騙集團常用＿＿騙人，聽到太好的條件一定要先問家人。",
+     "choices": [
+      "五穀豐登",
+      "鶴立雞群",
+      "甜言蜜語",
+      "千山萬水"
+     ],
+     "answer_index": 2
+    },
+    "usage_check": {
+     "sentence": "詐騙電話裡的人滿口甜言蜜語，阿公差點就相信了。",
+     "correct": true,
+     "explanation": "對方用好聽的話哄騙人，正是甜言蜜語的意思，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0109",
+   "idiom": "異口同聲",
+   "zhuyin": [
+    "ㄧˋ",
+    "ㄎㄡˇ",
+    "ㄊㄨㄥˊ",
+    "ㄕㄥ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "說話溝通"
+   ],
+   "meaning": "不同的人說出同樣的話。形容大家的說法或意見一致。",
+   "key_chars": [
+    {
+     "char": "異",
+     "meaning": "不同的"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "老師問誰想去動物園，全班異口同聲地說：「我！」",
+    "大家異口同聲地說這次的營養午餐最好吃。"
+   ],
+   "synonyms": [],
+   "antonyms": [
+    "眾說紛紜"
+   ],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "用在沒有說話的動作上",
+     "note": "異口同聲一定和「說話」有關；大家同時做同一個動作，要用「不約而同」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「異口同聲」是什麼意思？",
+     "choices": [
+      "很多人說出一樣的話",
+      "嘴巴的形狀很奇怪",
+      "聲音又大又吵",
+      "一個人用不同的聲音說話"
+     ],
+     "answer_index": 0,
+     "explanation": "「異口」是不同的嘴，「同聲」是說出一樣的話，表示大家說法一致。"
+    },
+    "fill_blank": {
+     "sentence": "老師問：「明天要不要去校外教學？」全班＿＿地回答：「要！」",
+     "choices": [
+      "對牛彈琴",
+      "異口同聲",
+      "一毛不拔",
+      "骨瘦如柴"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "下課鐘一響，大家異口同聲地衝向操場。",
+     "correct": false,
+     "explanation": "衝向操場是動作，不是說話，應該用「不約而同」或「爭先恐後」。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0110",
+   "idiom": "輕聲細語",
+   "zhuyin": [
+    "ㄑㄧㄥ",
+    "ㄕㄥ",
+    "ㄒㄧˋ",
+    "ㄩˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "說話溝通",
+    "禮貌"
+   ],
+   "meaning": "說話的聲音小小的、柔柔的。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "在圖書館裡要輕聲細語，才不會吵到別人。",
+    "妹妹睡著了，媽媽輕聲細語地提醒我們小聲一點。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「輕聲細語」是形容什麼樣的說話方式？",
+     "choices": [
+      "說話又快又急",
+      "講話很細心、很有條理",
+      "用很輕的筆寫字",
+      "聲音小又溫柔"
+     ],
+     "answer_index": 3,
+     "explanation": "輕聲細語是說話聲音輕、語氣柔和，跟講話快慢或有沒有條理無關。"
+    },
+    "fill_blank": {
+     "sentence": "醫院裡有很多病人在休息，說話要＿＿。",
+     "choices": [
+      "名落孫山",
+      "火冒三丈",
+      "輕聲細語",
+      "狼吞虎嚥"
+     ],
+     "answer_index": 2
+    },
+    "usage_check": {
+     "sentence": "啦啦隊在場邊輕聲細語地大喊加油，整個球場都聽得到。",
+     "correct": false,
+     "explanation": "大喊加油、全場都聽得到，和「聲音小」正好相反，用錯了。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0111",
+   "idiom": "無話可說",
+   "zhuyin": [
+    "ㄨˊ",
+    "ㄏㄨㄚˋ",
+    "ㄎㄜˇ",
+    "ㄕㄨㄛ"
+   ],
+   "polyphones": [
+    {
+     "char": "說",
+     "here": "ㄕㄨㄛ",
+     "other": "ㄕㄨㄟˋ（遊說）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "說話溝通"
+   ],
+   "meaning": "沒有話可以再說了。常指找不到理由反駁，或覺得道理很清楚而沒有意見。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "證據都擺在眼前，打破花瓶的弟弟只好無話可說。",
+    "姐姐把道理說得很清楚，我聽了無話可說。"
+   ],
+   "synonyms": [
+    "啞口無言"
+   ],
+   "antonyms": [
+    "滔滔不絕"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「無話可說」是什麼意思？",
+     "choices": [
+      "沒有話可以再說，或無法反駁",
+      "還不會說話的小嬰兒",
+      "故意不跟人打招呼",
+      "說話說到口很渴"
+     ],
+     "answer_index": 0,
+     "explanation": "無話可說是找不到話可以再說，常用在理由說不過對方，或心服口服的時候。"
+    },
+    "fill_blank": {
+     "sentence": "我說沒寫功課是因為忘了帶課本，媽媽卻從我書包裡拿出課本，我頓時＿＿。",
+     "choices": [
+      "物美價廉",
+      "無話可說",
+      "春暖花開",
+      "萬紫千紅"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "隊長把每個人的工作分配得很公平，大家都無話可說。",
+     "correct": true,
+     "explanation": "分配公平，大家找不到理由反對，用「無話可說」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0112",
+   "idiom": "不可思議",
+   "zhuyin": [
+    "ㄅㄨˋ",
+    "ㄎㄜˇ",
+    "ㄙ",
+    "ㄧˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "說話溝通"
+   ],
+   "meaning": "原本是佛教用語，指道理深奧，無法想像和說明。現在多指事情非常奇妙，讓人難以想像。",
+   "key_chars": [
+    {
+     "char": "議",
+     "meaning": "談論、說明"
+    }
+   ],
+   "origin": {
+    "source": "《維摩詰所說經・不思議品》",
+    "quote": null,
+    "story": null,
+    "note": "原為佛教用語；出處篇名依常見辭典說法，原文待查證。"
+   },
+   "examples": [
+    "魔術師把硬幣變不見了，真是不可思議！",
+    "小小的種子竟然能長成大樹，真是不可思議。"
+   ],
+   "synonyms": [],
+   "antonyms": [
+    "理所當然"
+   ],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "不可思義",
+     "note": "是議論的「議」，不是意義的「義」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「不可思議」是什麼意思？",
+     "choices": [
+      "不准大家討論",
+      "非常奇妙，難以想像",
+      "不可以隨便亂想",
+      "想法很普通"
+     ],
+     "answer_index": 1,
+     "explanation": "不可思議不是「不准想」，而是事情奇妙到讓人想不透、說不出來。"
+    },
+    "fill_blank": {
+     "sentence": "那隻小狗竟然會自己按電梯回家，真是＿＿！",
+     "choices": [
+      "名落孫山",
+      "守株待兔",
+      "坐享其成",
+      "不可思議"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "上課時老師說「不可思議」，意思是叫大家不要胡思亂想。",
+     "correct": false,
+     "explanation": "不可思議是形容事情奇妙得難以想像，不是禁止大家亂想，這是照字面誤解。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0113",
+   "idiom": "莫名其妙",
+   "zhuyin": [
+    "ㄇㄛˋ",
+    "ㄇㄧㄥˊ",
+    "ㄑㄧˊ",
+    "ㄇㄧㄠˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "說話溝通"
+   ],
+   "meaning": "原指說不出其中的奧妙。現在多指事情很奇怪，讓人搞不清楚原因。",
+   "key_chars": [
+    {
+     "char": "莫",
+     "meaning": "沒有、不能"
+    },
+    {
+     "char": "名",
+     "meaning": "說出"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null,
+    "note": "也寫作「莫明其妙」。"
+   },
+   "examples": [
+    "我的橡皮擦莫名其妙不見了，找了半天都找不到。",
+    "弟弟莫名其妙地生起氣來，大家都不知道為什麼。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「莫名其妙」是什麼意思？",
+     "choices": [
+      "不知道對方叫什麼名字",
+      "奇怪得讓人搞不清楚原因",
+      "名字取得很好聽",
+      "東西非常美妙"
+     ],
+     "answer_index": 1,
+     "explanation": "「莫」是不能，「名」是說出，意思是說不出道理，現在指事情奇怪、找不出原因。"
+    },
+    "fill_blank": {
+     "sentence": "電視本來好好的，突然＿＿地自己關機了。",
+     "choices": [
+      "鵬程萬里",
+      "莫名其妙",
+      "尊師重道",
+      "一鳴驚人"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "姐姐考了一百分，因為她每天都認真複習，真是莫名其妙。",
+     "correct": false,
+     "explanation": "考一百分的原因很清楚，是認真複習，所以不能說莫名其妙。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0114",
+   "idiom": "議論紛紛",
+   "zhuyin": [
+    "ㄧˋ",
+    "ㄌㄨㄣˋ",
+    "ㄈㄣ",
+    "ㄈㄣ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "說話溝通"
+   ],
+   "meaning": "很多人你一言、我一語地討論，意見很多。",
+   "key_chars": [
+    {
+     "char": "紛紛",
+     "meaning": "多而雜亂的樣子"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "聽說下週要換新老師，同學們議論紛紛。",
+    "操場上突然停了一架直升機，大家議論紛紛。"
+   ],
+   "synonyms": [
+    "七嘴八舌",
+    "眾說紛紜"
+   ],
+   "antonyms": [
+    "鴉雀無聲"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「議論紛紛」是形容什麼情況？",
+     "choices": [
+      "落葉一片片飄下來",
+      "大家你一句我一句地討論",
+      "一個人自言自語",
+      "大家安靜地寫考卷"
+     ],
+     "answer_index": 1,
+     "explanation": "議論紛紛是很多人同時談論一件事，意見很多。"
+    },
+    "fill_blank": {
+     "sentence": "校長宣布今年的運動會延期，台下的學生立刻＿＿。",
+     "choices": [
+      "議論紛紛",
+      "對症下藥",
+      "愛不釋手",
+      "鶴立雞群"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "公布欄貼出新的午餐菜單，大家圍著看，議論紛紛。",
+     "correct": true,
+     "explanation": "很多人一起討論新菜單，用「議論紛紛」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0115",
+   "idiom": "讚不絕口",
+   "zhuyin": [
+    "ㄗㄢˋ",
+    "ㄅㄨˋ",
+    "ㄐㄩㄝˊ",
+    "ㄎㄡˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "說話溝通"
+   ],
+   "meaning": "不停地稱讚。形容非常欣賞、喜歡。",
+   "key_chars": [
+    {
+     "char": "絕",
+     "meaning": "停止"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "奶奶吃了我做的蛋餅，讚不絕口。",
+    "參觀的家長看了我們的畫展，個個讚不絕口。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「讚不絕口」是什麼意思？",
+     "choices": [
+      "稱讚的話全部說完了",
+      "一直不停地稱讚",
+      "不敢開口說話",
+      "嘴巴很會吃東西"
+     ],
+     "answer_index": 1,
+     "explanation": "「絕」是停止，讚不絕口就是稱讚個不停。"
+    },
+    "fill_blank": {
+     "sentence": "參觀的家長看了我們班的畫展，都＿＿。",
+     "choices": [
+      "掩耳盜鈴",
+      "讚不絕口",
+      "一毛不拔",
+      "杞人憂天"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "奶奶吃了我做的蛋餅，讚不絕口，一直說好吃。",
+     "correct": true,
+     "explanation": "一直說好吃就是不停稱讚，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0116",
+   "idiom": "交頭接耳",
+   "zhuyin": [
+    "ㄐㄧㄠ",
+    "ㄊㄡˊ",
+    "ㄐㄧㄝ",
+    "ㄦˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "說話溝通"
+   ],
+   "meaning": "彼此把頭靠近，在耳朵旁邊小聲說話。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "考試時不可以交頭接耳，要自己作答。",
+    "上課時他們兩個一直交頭接耳，被老師提醒了。"
+   ],
+   "synonyms": [
+    "竊竊私語"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「交頭接耳」是什麼意思？",
+     "choices": [
+      "互相靠近，小聲說話",
+      "交換頭上的帽子",
+      "頭和耳朵受傷了",
+      "大聲地吵架"
+     ],
+     "answer_index": 0,
+     "explanation": "交頭接耳是把頭湊近、在耳邊說悄悄話。"
+    },
+    "fill_blank": {
+     "sentence": "朝會時，後排有幾個同學在＿＿，不知道在說什麼悄悄話。",
+     "choices": [
+      "交頭接耳",
+      "開天闢地",
+      "金碧輝煌",
+      "苦盡甘來"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "兩個同學在走廊上交頭接耳，大聲地吵了起來。",
+     "correct": false,
+     "explanation": "交頭接耳是靠近小聲說話，大聲吵架不能用這個成語。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0117",
+   "idiom": "輕而易舉",
+   "zhuyin": [
+    "ㄑㄧㄥ",
+    "ㄦˊ",
+    "ㄧˋ",
+    "ㄐㄩˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "做事方法"
+   ],
+   "meaning": "形容事情很容易做到，一點也不費力。",
+   "key_chars": [
+    {
+     "char": "舉",
+     "meaning": "舉起，這裡指做到"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "對常練習的哥哥來說，連續跳繩一百下輕而易舉。",
+    "這道題目老師講過好多次，我輕而易舉就算出來了。"
+   ],
+   "synonyms": [
+    "易如反掌"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「輕而易舉」是什麼意思？",
+     "choices": [
+      "上課要舉手發言",
+      "東西很輕，可以舉起來",
+      "做事要輕手輕腳",
+      "事情很容易做到"
+     ],
+     "answer_index": 3,
+     "explanation": "輕而易舉不是真的在舉東西，而是比喻事情簡單、不費力。"
+    },
+    "fill_blank": {
+     "sentence": "這道題目老師講過很多次，對認真聽講的他來說＿＿。",
+     "choices": [
+      "輕而易舉",
+      "雪上加霜",
+      "四面楚歌",
+      "一毛不拔"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "對游泳選手來說，游完二十五公尺輕而易舉。",
+     "correct": true,
+     "explanation": "對選手來說很容易做到，用「輕而易舉」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0118",
+   "idiom": "大功告成",
+   "zhuyin": [
+    "ㄉㄚˋ",
+    "ㄍㄨㄥ",
+    "ㄍㄠˋ",
+    "ㄔㄥˊ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "做事方法"
+   ],
+   "meaning": "重要的工作或大事情終於完成了。",
+   "key_chars": [
+    {
+     "char": "告",
+     "meaning": "宣告、宣布"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "我們花了一整個下午拼完一千片拼圖，終於大功告成！",
+    "貼上最後一張海報，教室布置就大功告成了。"
+   ],
+   "synonyms": [],
+   "antonyms": [
+    "功虧一簣",
+    "前功盡棄"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「大功告成」是什麼意思？",
+     "choices": [
+      "告訴別人自己很厲害",
+      "工作剛剛開始",
+      "重要的事情終於完成了",
+      "立了大功要去告狀"
+     ],
+     "answer_index": 2,
+     "explanation": "「告」是宣告，大功告成就是宣布大事完成了。"
+    },
+    "fill_blank": {
+     "sentence": "最後貼上彩色紙，我們班的布告欄就＿＿了！",
+     "choices": [
+      "大功告成",
+      "骨瘦如柴",
+      "杯弓蛇影",
+      "守株待兔"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "專題報告才寫了第一頁，小組就說已經大功告成。",
+     "correct": false,
+     "explanation": "才寫了第一頁，事情還沒完成，不能說大功告成。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0119",
+   "idiom": "不約而同",
+   "zhuyin": [
+    "ㄅㄨˋ",
+    "ㄩㄝ",
+    "ㄦˊ",
+    "ㄊㄨㄥˊ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "做事方法"
+   ],
+   "meaning": "事先沒有約好，大家卻做了相同的事，或有相同的想法。",
+   "key_chars": [
+    {
+     "char": "約",
+     "meaning": "約定、說好"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "我和好朋友不約而同地穿了紅色衣服去上學。",
+    "下雨了，路上的人不約而同地打開雨傘。"
+   ],
+   "synonyms": [
+    "不謀而合"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "用在事先約好的事",
+     "note": "不約而同的重點是「沒有約好」，事先約好了就不能用。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「不約而同」是什麼意思？",
+     "choices": [
+      "約好了卻沒有來",
+      "事先沒約好，卻做了一樣的事",
+      "約好一起出門",
+      "大家都不遵守約定"
+     ],
+     "answer_index": 1,
+     "explanation": "「不約」是沒有約定，「而同」是卻相同。"
+    },
+    "fill_blank": {
+     "sentence": "聽到門外傳來冰淇淋車的音樂，我和弟弟＿＿地跑到門口。",
+     "choices": [
+      "指鹿為馬",
+      "斤斤計較",
+      "未雨綢繆",
+      "不約而同"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "我們上週就約好一起去公園，今天不約而同地在門口見面。",
+     "correct": false,
+     "explanation": "事先已經約好了，就不是「不約而同」。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0120",
+   "idiom": "多此一舉",
+   "zhuyin": [
+    "ㄉㄨㄛ",
+    "ㄘˇ",
+    "ㄧ",
+    "ㄐㄩˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "做事方法"
+   ],
+   "meaning": "做了不必要、多餘的事。",
+   "key_chars": [
+    {
+     "char": "舉",
+     "meaning": "舉動、行為"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "外面已經放晴了，還帶兩把傘出門，真是多此一舉。",
+    "姐姐已經把碗洗好了，你再洗一遍是多此一舉。"
+   ],
+   "synonyms": [
+    "畫蛇添足"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「多此一舉」是什麼意思？",
+     "choices": [
+      "多舉幾次手",
+      "多做運動身體好",
+      "做了不必要的事",
+      "一次舉起很多東西"
+     ],
+     "answer_index": 2,
+     "explanation": "「舉」是舉動，多此一舉就是多做了一件沒必要的事。"
+    },
+    "fill_blank": {
+     "sentence": "姐姐已經把碗洗乾淨了，你再洗一遍是＿＿。",
+     "choices": [
+      "青梅竹馬",
+      "國泰民安",
+      "金榜題名",
+      "多此一舉"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "冰箱已經有很多牛奶了，爸爸又買了兩瓶，真是多此一舉。",
+     "correct": true,
+     "explanation": "牛奶已經夠了還再買，是多餘的舉動，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0121",
+   "idiom": "全力以赴",
+   "zhuyin": [
+    "ㄑㄩㄢˊ",
+    "ㄌㄧˋ",
+    "ㄧˇ",
+    "ㄈㄨˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "做事方法",
+    "努力"
+   ],
+   "meaning": "用全部的力量去做一件事。",
+   "key_chars": [
+    {
+     "char": "赴",
+     "meaning": "前往，這裡指投入去做"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "下週就要比賽了，我們會全力以赴！",
+    "雖然對手很強，大家還是全力以赴。"
+   ],
+   "synonyms": [
+    "竭盡全力",
+    "盡心盡力"
+   ],
+   "antonyms": [
+    "敷衍了事"
+   ],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "全力以付",
+     "note": "是「赴」（前往），不是付錢的「付」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「全力以赴」是什麼意思？",
+     "choices": [
+      "用全部的力量去做",
+      "力氣用完了要休息",
+      "把力氣拿去換東西",
+      "全部的人一起去吃飯"
+     ],
+     "answer_index": 0,
+     "explanation": "「赴」是前往、投入，全力以赴就是拿出全部力量去做。"
+    },
+    "fill_blank": {
+     "sentence": "雖然對手很強，我們還是要＿＿，拿出最好的表現。",
+     "choices": [
+      "畫餅充飢",
+      "全力以赴",
+      "杞人憂天",
+      "塞翁失馬"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "這次合唱比賽，每位同學都全力以赴，每天放學都留下來練習。",
+     "correct": true,
+     "explanation": "每天留下來練習，表示拿出全部力量，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0122",
+   "idiom": "盡心盡力",
+   "zhuyin": [
+    "ㄐㄧㄣˋ",
+    "ㄒㄧㄣ",
+    "ㄐㄧㄣˋ",
+    "ㄌㄧˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "做事方法",
+    "努力"
+   ],
+   "meaning": "用盡所有的心思和力氣去做事。",
+   "key_chars": [
+    {
+     "char": "盡",
+     "meaning": "用完、全部拿出來"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "班長盡心盡力地照顧班上的小盆栽。",
+    "志工阿姨每天盡心盡力地照顧流浪狗。"
+   ],
+   "synonyms": [
+    "全力以赴",
+    "竭盡全力"
+   ],
+   "antonyms": [
+    "敷衍了事"
+   ],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "儘心儘力",
+     "note": "這裡的「盡」是用盡的意思，不是「儘量」的「儘」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「盡心盡力」是什麼意思？",
+     "choices": [
+      "盡量不要出力",
+      "把所有心思和力氣都用上",
+      "心裡很累，沒有力氣",
+      "只出一半的力氣"
+     ],
+     "answer_index": 1,
+     "explanation": "「盡」是用盡，盡心盡力就是把心思和力氣全部拿出來。"
+    },
+    "fill_blank": {
+     "sentence": "志工阿姨每天＿＿地照顧流浪狗，牠們都長得很健康。",
+     "choices": [
+      "狐假虎威",
+      "盡心盡力",
+      "南轅北轍",
+      "天涯海角"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "他打掃時隨便掃兩下就跑去玩，真是盡心盡力。",
+     "correct": false,
+     "explanation": "隨便掃兩下是敷衍，不是盡心盡力。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0123",
+   "idiom": "爭分奪秒",
+   "zhuyin": [
+    "ㄓㄥ",
+    "ㄈㄣ",
+    "ㄉㄨㄛˊ",
+    "ㄇㄧㄠˇ"
+   ],
+   "polyphones": [
+    {
+     "char": "分",
+     "here": "ㄈㄣ",
+     "other": "ㄈㄣˋ（本分）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "做事方法",
+    "時間"
+   ],
+   "meaning": "一分一秒都不放過。形容非常把握時間，動作很快。",
+   "key_chars": [
+    {
+     "char": "奪",
+     "meaning": "搶"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "比賽最後一分鐘，大家爭分奪秒地完成作品。",
+    "消防員爭分奪秒地趕到火災現場。"
+   ],
+   "synonyms": [
+    "分秒必爭"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「爭分奪秒」是什麼意思？",
+     "choices": [
+      "把握時間，一點都不浪費",
+      "搶走別人的手錶",
+      "為了分數跟人吵架",
+      "練習計算分和秒"
+     ],
+     "answer_index": 0,
+     "explanation": "爭分奪秒是連一分一秒都要搶來用，形容非常把握時間。"
+    },
+    "fill_blank": {
+     "sentence": "火災發生時，消防員＿＿地趕到現場救人。",
+     "choices": [
+      "三顧茅廬",
+      "爭分奪秒",
+      "物以類聚",
+      "一毛不拔"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "週末下午很悠閒，我們爭分奪秒地躺在沙發上發呆。",
+     "correct": false,
+     "explanation": "悠閒發呆不需要搶時間，和爭分奪秒的意思相反。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0124",
+   "idiom": "分秒必爭",
+   "zhuyin": [
+    "ㄈㄣ",
+    "ㄇㄧㄠˇ",
+    "ㄅㄧˋ",
+    "ㄓㄥ"
+   ],
+   "polyphones": [
+    {
+     "char": "分",
+     "here": "ㄈㄣ",
+     "other": "ㄈㄣˋ（本分）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "做事方法",
+    "時間"
+   ],
+   "meaning": "每一分、每一秒都要爭取。形容非常珍惜時間。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "考試前一天，哥哥分秒必爭地複習。",
+    "救護車分秒必爭地把病人送到醫院。"
+   ],
+   "synonyms": [
+    "爭分奪秒"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「分秒必爭」是什麼意思？",
+     "choices": [
+      "一定要爭第一名",
+      "時間過得很慢",
+      "每一分每一秒都要把握",
+      "為了一分鐘跟人吵架"
+     ],
+     "answer_index": 2,
+     "explanation": "分秒必爭是連很短的時間都要好好利用。"
+    },
+    "fill_blank": {
+     "sentence": "救護車載著受傷的人，＿＿地開往醫院。",
+     "choices": [
+      "錦上添花",
+      "分秒必爭",
+      "自相矛盾",
+      "夜郎自大"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "距離交作業只剩十分鐘，小華分秒必爭地寫完最後一題。",
+     "correct": true,
+     "explanation": "時間緊迫、把握每一分鐘，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0125",
+   "idiom": "爭先恐後",
+   "zhuyin": [
+    "ㄓㄥ",
+    "ㄒㄧㄢ",
+    "ㄎㄨㄥˇ",
+    "ㄏㄡˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "做事方法"
+   ],
+   "meaning": "搶著往前，害怕落在別人後面。",
+   "key_chars": [
+    {
+     "char": "恐",
+     "meaning": "害怕"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "下課鐘一響，同學們爭先恐後地跑去福利社。",
+    "老師說答對的人有貼紙，大家爭先恐後地舉手。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「爭先恐後」是什麼意思？",
+     "choices": [
+      "排隊時禮讓別人",
+      "走在後面覺得很害怕",
+      "搶著向前，怕落在後面",
+      "吵架吵得很恐怖"
+     ],
+     "answer_index": 2,
+     "explanation": "「恐」是害怕，爭先恐後就是搶著往前、怕輸給別人。"
+    },
+    "fill_blank": {
+     "sentence": "老師說答對的人可以拿貼紙，大家＿＿地舉手。",
+     "choices": [
+      "守口如瓶",
+      "安居樂業",
+      "爭先恐後",
+      "骨瘦如柴"
+     ],
+     "answer_index": 2
+    },
+    "usage_check": {
+     "sentence": "大家爭先恐後地排好隊，一個一個慢慢上車。",
+     "correct": false,
+     "explanation": "爭先恐後是搶著往前，和「排好隊、一個一個慢慢上車」矛盾。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0126",
+   "idiom": "不慌不忙",
+   "zhuyin": [
+    "ㄅㄨˋ",
+    "ㄏㄨㄤ",
+    "ㄅㄨˋ",
+    "ㄇㄤˊ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "做事方法"
+   ],
+   "meaning": "不慌張也不急忙。形容遇到事情時態度從容、很鎮定。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "發生地震時，老師不慌不忙地帶我們躲到桌子下。",
+    "雖然只剩幾分鐘，他還是不慌不忙地把答案檢查一遍。"
+   ],
+   "synonyms": [
+    "從容不迫"
+   ],
+   "antonyms": [
+    "手忙腳亂",
+    "驚慌失措"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「不慌不忙」是什麼意思？",
+     "choices": [
+      "什麼事都不想做",
+      "心裡又慌又忙",
+      "態度從容，不慌張",
+      "動作很慢，很懶惰"
+     ],
+     "answer_index": 2,
+     "explanation": "不慌不忙是遇事鎮定、有條理，不是偷懶。"
+    },
+    "fill_blank": {
+     "sentence": "雖然只剩下幾分鐘，他還是＿＿地把答案檢查一遍。",
+     "choices": [
+      "狐假虎威",
+      "不慌不忙",
+      "一箭雙鵰",
+      "五穀豐登"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "上台前，小美深吸一口氣，不慌不忙地開始演講。",
+     "correct": true,
+     "explanation": "深呼吸後鎮定地開始，表現從容，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0127",
+   "idiom": "風和日麗",
+   "zhuyin": [
+    "ㄈㄥ",
+    "ㄏㄜˊ",
+    "ㄖˋ",
+    "ㄌㄧˋ"
+   ],
+   "polyphones": [
+    {
+     "char": "和",
+     "here": "ㄏㄜˊ",
+     "other": "ㄏㄜˋ（附和）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "自然景物",
+    "天氣"
+   ],
+   "meaning": "微風溫和，陽光明亮。形容天氣晴朗舒適。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "今天風和日麗，全家一起去公園野餐。",
+    "風和日麗的星期天，我們騎腳踏車到河濱公園。"
+   ],
+   "synonyms": [],
+   "antonyms": [
+    "狂風暴雨",
+    "風雨交加"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「風和日麗」是形容什麼？",
+     "choices": [
+      "日子過得很美麗",
+      "天氣溫和，陽光很好",
+      "風很大，太陽很毒",
+      "風和太陽在比賽"
+     ],
+     "answer_index": 1,
+     "explanation": "「和」是溫和，「麗」是明亮美好，形容好天氣。"
+    },
+    "fill_blank": {
+     "sentence": "＿＿的星期天，我們騎著腳踏車到河濱公園玩。",
+     "choices": [
+      "名落孫山",
+      "打草驚蛇",
+      "千鈞一髮",
+      "風和日麗"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "颱風來了，外面風和日麗，學校宣布停課。",
+     "correct": false,
+     "explanation": "颱風天風大雨大，不能用形容好天氣的「風和日麗」。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0128",
+   "idiom": "春暖花開",
+   "zhuyin": [
+    "ㄔㄨㄣ",
+    "ㄋㄨㄢˇ",
+    "ㄏㄨㄚ",
+    "ㄎㄞ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物",
+    "季節"
+   ],
+   "meaning": "春天天氣變暖和，花朵紛紛開放。形容春天美好的景色。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "春暖花開的時候，陽明山上開滿了花。",
+    "等到春暖花開，我們再一起去賞花吧！"
+   ],
+   "synonyms": [
+    "鳥語花香",
+    "春光明媚"
+   ],
+   "antonyms": [
+    "天寒地凍"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「春暖花開」是形容什麼？",
+     "choices": [
+      "花開在溫暖的屋子裡",
+      "冬天下大雪",
+      "春天要開暖氣",
+      "春天天氣溫暖、花都開了"
+     ],
+     "answer_index": 3,
+     "explanation": "春暖花開描寫春天溫暖、百花開放的美景。"
+    },
+    "fill_blank": {
+     "sentence": "到了＿＿的季節，校園裡的杜鵑花都開了。",
+     "choices": [
+      "春暖花開",
+      "狼吞虎嚥",
+      "一諾千金",
+      "指鹿為馬"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "三月春暖花開，爸爸帶我們去看櫻花。",
+     "correct": true,
+     "explanation": "三月是春天，天氣變暖、花開了，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0129",
+   "idiom": "秋高氣爽",
+   "zhuyin": [
+    "ㄑㄧㄡ",
+    "ㄍㄠ",
+    "ㄑㄧˋ",
+    "ㄕㄨㄤˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物",
+    "季節"
+   ],
+   "meaning": "秋天天空看起來又高又遠，空氣清新涼爽。形容秋天天氣晴朗舒服。",
+   "key_chars": [
+    {
+     "char": "爽",
+     "meaning": "清涼、舒服"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "秋高氣爽的十月，最適合去爬山。",
+    "趁著秋高氣爽，全家到郊外踏青。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「秋高氣爽」是形容什麼？",
+     "choices": [
+      "秋天氣溫很高、很熱",
+      "高山上空氣很稀薄",
+      "秋天天空高遠、天氣清爽",
+      "秋天心情很爽快"
+     ],
+     "answer_index": 2,
+     "explanation": "「高」指天空高遠，「爽」指清涼舒服，不是氣溫高。"
+    },
+    "fill_blank": {
+     "sentence": "＿＿的季節，學校舉辦了秋季遠足。",
+     "choices": [
+      "杯弓蛇影",
+      "秋高氣爽",
+      "唇亡齒寒",
+      "好吃懶做"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "十月秋高氣爽，我們全班去郊外遠足。",
+     "correct": true,
+     "explanation": "十月是秋天，天氣涼爽適合出遊，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0130",
+   "idiom": "冰天雪地",
+   "zhuyin": [
+    "ㄅㄧㄥ",
+    "ㄊㄧㄢ",
+    "ㄒㄩㄝˇ",
+    "ㄉㄧˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物",
+    "天氣"
+   ],
+   "meaning": "到處都是冰和雪。形容非常寒冷的地方或天氣。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "北極熊住在冰天雪地的北極。",
+    "在冰天雪地裡，企鵝們擠在一起取暖。"
+   ],
+   "synonyms": [
+    "天寒地凍"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「冰天雪地」是形容什麼？",
+     "choices": [
+      "雪白色的天空",
+      "到處是冰雪，非常寒冷",
+      "天上會掉下冰塊",
+      "在冰上玩遊戲"
+     ],
+     "answer_index": 1,
+     "explanation": "冰天雪地是形容冰雪覆蓋、極冷的環境。"
+    },
+    "fill_blank": {
+     "sentence": "企鵝們在南極＿＿的環境中，靠擠在一起取暖。",
+     "choices": [
+      "一鳴驚人",
+      "冰天雪地",
+      "樂此不疲",
+      "喜出望外"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "電視上的北海道冰天雪地，路上積了厚厚的雪。",
+     "correct": true,
+     "explanation": "到處是冰雪、很寒冷，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0131",
+   "idiom": "天寒地凍",
+   "zhuyin": [
+    "ㄊㄧㄢ",
+    "ㄏㄢˊ",
+    "ㄉㄧˋ",
+    "ㄉㄨㄥˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物",
+    "天氣"
+   ],
+   "meaning": "天氣寒冷，大地都結冰了。形容非常冷。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "天寒地凍的早上，我真不想離開被窩。",
+    "寒流來襲，天寒地凍，奶奶叫我出門一定要戴圍巾。"
+   ],
+   "synonyms": [
+    "冰天雪地"
+   ],
+   "antonyms": [
+    "春暖花開"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「天寒地凍」是什麼意思？",
+     "choices": [
+      "天氣非常寒冷",
+      "天空和土地裂開了",
+      "地上有很多冰淇淋",
+      "冰箱裡的食物"
+     ],
+     "answer_index": 0,
+     "explanation": "天寒地凍是天冷到地面都結冰，形容非常冷。"
+    },
+    "fill_blank": {
+     "sentence": "寒流來襲，＿＿，奶奶叫我出門一定要戴圍巾。",
+     "choices": [
+      "指鹿為馬",
+      "如魚得水",
+      "走馬看花",
+      "天寒地凍"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "天寒地凍的夏天，我們在海邊游泳、吃冰。",
+     "correct": false,
+     "explanation": "夏天在海邊游泳很熱，不能說天寒地凍。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0132",
+   "idiom": "傾盆大雨",
+   "zhuyin": [
+    "ㄑㄧㄥ",
+    "ㄆㄣˊ",
+    "ㄉㄚˋ",
+    "ㄩˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物",
+    "天氣"
+   ],
+   "meaning": "雨大得像把整盆水倒下來一樣。形容雨下得又大又急。",
+   "key_chars": [
+    {
+     "char": "傾",
+     "meaning": "倒出來"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "放學時突然下起傾盆大雨，我全身都淋濕了。",
+    "午後雷陣雨來得很快，一下子就變成傾盆大雨。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "頃盆大雨",
+     "note": "「傾」有人字旁，是傾倒的意思；「頃」是時間很短的意思。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「傾盆大雨」是形容什麼？",
+     "choices": [
+      "雨下得非常大",
+      "下著毛毛細雨",
+      "用盆子接雨水",
+      "盆子被雨打翻了"
+     ],
+     "answer_index": 0,
+     "explanation": "「傾」是倒出來，雨大得像整盆水倒下來。"
+    },
+    "fill_blank": {
+     "sentence": "午後雷陣雨來得很快，一下子就變成＿＿。",
+     "choices": [
+      "千真萬確",
+      "自言自語",
+      "守株待兔",
+      "傾盆大雨"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "外面正下著傾盆大雨，我們只撐小傘就出門，結果全身濕透。",
+     "correct": true,
+     "explanation": "雨大到撐傘也濕透，用「傾盆大雨」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0133",
+   "idiom": "狂風暴雨",
+   "zhuyin": [
+    "ㄎㄨㄤˊ",
+    "ㄈㄥ",
+    "ㄅㄠˋ",
+    "ㄩˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物",
+    "天氣"
+   ],
+   "meaning": "又猛又強的風和又急又大的雨。也比喻危險、艱難的處境。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "颱風帶來狂風暴雨，路邊的樹被吹倒了。",
+    "外面狂風暴雨，大家都待在家裡不出門。"
+   ],
+   "synonyms": [
+    "風雨交加"
+   ],
+   "antonyms": [
+    "風和日麗",
+    "風平浪靜"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「狂風暴雨」是什麼意思？",
+     "choices": [
+      "微風加上細雨",
+      "下雨時心情很暴躁",
+      "很瘋狂的人在淋雨",
+      "又強又猛的風和大雨"
+     ],
+     "answer_index": 3,
+     "explanation": "「狂」「暴」都是猛烈的意思，形容風雨非常大。"
+    },
+    "fill_blank": {
+     "sentence": "颱風登陸那天，外面＿＿，大家都待在家裡。",
+     "choices": [
+      "對答如流",
+      "尊師重道",
+      "狂風暴雨",
+      "一知半解"
+     ],
+     "answer_index": 2
+    },
+    "usage_check": {
+     "sentence": "狂風暴雨的天氣，正適合去海邊放風箏。",
+     "correct": false,
+     "explanation": "狂風暴雨很危險，不適合出門玩，句子意思不合理。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0134",
+   "idiom": "風雨交加",
+   "zhuyin": [
+    "ㄈㄥ",
+    "ㄩˇ",
+    "ㄐㄧㄠ",
+    "ㄐㄧㄚ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物",
+    "天氣"
+   ],
+   "meaning": "又颳風又下雨，風雨一起來。",
+   "key_chars": [
+    {
+     "char": "交",
+     "meaning": "同時、一起"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "風雨交加的夜晚，爸爸還是開車去接加班的媽媽。",
+    "那天風雨交加，我們的雨傘都被吹壞了。"
+   ],
+   "synonyms": [
+    "狂風暴雨"
+   ],
+   "antonyms": [
+    "風和日麗"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「風雨交加」是什麼意思？",
+     "choices": [
+      "風雨過後出太陽",
+      "雨停了，風也停了",
+      "又颳風又下雨",
+      "風和雨在打架"
+     ],
+     "answer_index": 2,
+     "explanation": "「交加」是同時出現，風雨交加就是風和雨一起來。"
+    },
+    "fill_blank": {
+     "sentence": "那天＿＿，我們的雨傘都被吹壞了。",
+     "choices": [
+      "鶴立雞群",
+      "風雨交加",
+      "毛遂自薦",
+      "精打細算"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "外面風雨交加，媽媽提醒我們關好門窗。",
+     "correct": true,
+     "explanation": "風大雨大要關好門窗，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0135",
+   "idiom": "晴空萬里",
+   "zhuyin": [
+    "ㄑㄧㄥˊ",
+    "ㄎㄨㄥ",
+    "ㄨㄢˋ",
+    "ㄌㄧˇ"
+   ],
+   "polyphones": [
+    {
+     "char": "空",
+     "here": "ㄎㄨㄥ",
+     "other": "ㄎㄨㄥˋ（空白）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "自然景物",
+    "天氣"
+   ],
+   "meaning": "天氣晴朗，廣闊的天空沒有一點雲。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "晴空萬里的日子，最適合去放風箏。",
+    "颱風過後，天氣變得晴空萬里。"
+   ],
+   "synonyms": [
+    "萬里無雲"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「晴空萬里」是形容什麼？",
+     "choices": [
+      "天氣晴朗，天空廣闊無雲",
+      "天空離我們一萬里",
+      "坐飛機飛了一萬里",
+      "天空布滿烏雲"
+     ],
+     "answer_index": 0,
+     "explanation": "晴空萬里是形容大晴天，天空又廣又沒有雲。"
+    },
+    "fill_blank": {
+     "sentence": "颱風過後，天氣變得＿＿，一朵雲都看不到。",
+     "choices": [
+      "晴空萬里",
+      "守口如瓶",
+      "刻舟求劍",
+      "臥薪嘗膽"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "天空烏雲密布、晴空萬里，看樣子快要下雨了。",
+     "correct": false,
+     "explanation": "烏雲密布和晴空萬里互相矛盾。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0136",
+   "idiom": "風平浪靜",
+   "zhuyin": [
+    "ㄈㄥ",
+    "ㄆㄧㄥˊ",
+    "ㄌㄤˋ",
+    "ㄐㄧㄥˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物"
+   ],
+   "meaning": "沒有風也沒有浪，水面很平靜。也比喻平安無事。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "今天海上風平浪靜，我們坐船去看海豚。",
+    "吵了一整天，家裡終於風平浪靜了。"
+   ],
+   "synonyms": [],
+   "antonyms": [
+    "波濤洶湧",
+    "驚濤駭浪"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「風平浪靜」是什麼意思？",
+     "choices": [
+      "風把海浪吹得很高",
+      "浪花很漂亮",
+      "沒有風浪很平靜，也比喻平安無事",
+      "平靜地吹口哨"
+     ],
+     "answer_index": 2,
+     "explanation": "風平浪靜原指海面平靜，也可以比喻事情平息、平安無事。"
+    },
+    "fill_blank": {
+     "sentence": "早上還在下大雨，到了下午，海面已經＿＿，漁船都出海了。",
+     "choices": [
+      "囫圇吞棗",
+      "毛遂自薦",
+      "狐假虎威",
+      "風平浪靜"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "颱風把漁船吹得搖來晃去，海面風平浪靜。",
+     "correct": false,
+     "explanation": "漁船被吹得搖晃，表示風浪很大，不是風平浪靜。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0137",
+   "idiom": "山清水秀",
+   "zhuyin": [
+    "ㄕㄢ",
+    "ㄑㄧㄥ",
+    "ㄕㄨㄟˇ",
+    "ㄒㄧㄡˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物"
+   ],
+   "meaning": "山色清新，水流秀麗。形容風景優美。",
+   "key_chars": [
+    {
+     "char": "秀",
+     "meaning": "美麗"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "外婆家在山清水秀的鄉下，空氣很新鮮。",
+    "日月潭山清水秀，每年都吸引很多遊客。"
+   ],
+   "synonyms": [
+    "青山綠水"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「山清水秀」是形容什麼？",
+     "choices": [
+      "水裡的魚很秀氣",
+      "風景優美",
+      "山很高、水很深",
+      "山上的水可以直接喝"
+     ],
+     "answer_index": 1,
+     "explanation": "山清水秀是說山和水都很美，用來形容好風景。"
+    },
+    "fill_blank": {
+     "sentence": "日月潭＿＿，每年都吸引很多遊客。",
+     "choices": [
+      "自暴自棄",
+      "山清水秀",
+      "掩耳盜鈴",
+      "雞毛蒜皮"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "垃圾場旁邊又臭又髒，真是山清水秀。",
+     "correct": false,
+     "explanation": "又臭又髒不是美麗的風景，用錯了。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0138",
+   "idiom": "青山綠水",
+   "zhuyin": [
+    "ㄑㄧㄥ",
+    "ㄕㄢ",
+    "ㄌㄩˋ",
+    "ㄕㄨㄟˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物"
+   ],
+   "meaning": "青翠的山和碧綠的水。形容美麗的自然風景。",
+   "key_chars": [
+    {
+     "char": "青",
+     "meaning": "深綠色"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "我們騎腳踏車經過一片青山綠水，心情好舒暢。",
+    "爺爺喜歡住在青山綠水的鄉下。"
+   ],
+   "synonyms": [
+    "山清水秀"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「青山綠水」是形容什麼？",
+     "choices": [
+      "山上種了很多青菜",
+      "水被汙染變綠了",
+      "美麗的自然風景",
+      "綠色的顏料"
+     ],
+     "answer_index": 2,
+     "explanation": "青山綠水是用青翠的山、碧綠的水來形容好風景。"
+    },
+    "fill_blank": {
+     "sentence": "爺爺喜歡住在＿＿的鄉下，每天散步、種菜。",
+     "choices": [
+      "兩敗俱傷",
+      "半途而廢",
+      "青山綠水",
+      "東施效顰"
+     ],
+     "answer_index": 2
+    },
+    "usage_check": {
+     "sentence": "放假時我們到花東旅行，一路上都是青山綠水。",
+     "correct": true,
+     "explanation": "花東風景優美，用「青山綠水」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0139",
+   "idiom": "一望無際",
+   "zhuyin": [
+    "ㄧ",
+    "ㄨㄤˋ",
+    "ㄨˊ",
+    "ㄐㄧˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物"
+   ],
+   "meaning": "一眼望過去看不到邊。形容非常遼闊。",
+   "key_chars": [
+    {
+     "char": "際",
+     "meaning": "邊、盡頭"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "站在海邊，一望無際的大海讓人心情開闊。",
+    "車子開過一望無際的稻田，綠油油的好美。"
+   ],
+   "synonyms": [
+    "無邊無際"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "一望無跡",
+     "note": "「際」是邊界的意思，不是痕跡的「跡」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「一望無際」是什麼意思？",
+     "choices": [
+      "眼睛看不清楚",
+      "只能看一眼",
+      "遠方什麼都沒有",
+      "一眼看不到盡頭，非常廣大"
+     ],
+     "answer_index": 3,
+     "explanation": "「際」是邊，一望無際就是看過去沒有邊，形容很遼闊。"
+    },
+    "fill_blank": {
+     "sentence": "車子開過＿＿的稻田，綠油油的一片好美。",
+     "choices": [
+      "一毛不拔",
+      "一鳴驚人",
+      "一諾千金",
+      "一望無際"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "我家的小陽台一望無際，只放得下兩盆花。",
+     "correct": false,
+     "explanation": "小陽台很窄，不能說一望無際。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0140",
+   "idiom": "無邊無際",
+   "zhuyin": [
+    "ㄨˊ",
+    "ㄅㄧㄢ",
+    "ㄨˊ",
+    "ㄐㄧˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "自然景物"
+   ],
+   "meaning": "沒有邊界。形容非常廣大。",
+   "key_chars": [
+    {
+     "char": "際",
+     "meaning": "邊、盡頭"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "晚上看著無邊無際的星空，覺得自己好渺小。",
+    "太空無邊無際，科學家還在努力探索。"
+   ],
+   "synonyms": [
+    "一望無際"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "無邊無跡",
+     "note": "「際」是邊界的意思，不是痕跡的「跡」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「無邊無際」是什麼意思？",
+     "choices": [
+      "非常廣大，沒有邊界",
+      "沒有交到朋友",
+      "桌子沒有邊角",
+      "很快就走到盡頭"
+     ],
+     "answer_index": 0,
+     "explanation": "無邊無際就是找不到邊界，形容非常廣大。"
+    },
+    "fill_blank": {
+     "sentence": "太空是＿＿的，科學家還在努力探索。",
+     "choices": [
+      "負荊請罪",
+      "三人成虎",
+      "對症下藥",
+      "無邊無際"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "沙漠無邊無際，走了好幾天都看不到盡頭。",
+     "correct": true,
+     "explanation": "走好幾天都看不到盡頭，用「無邊無際」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0141",
+   "idiom": "濃眉大眼",
+   "zhuyin": [
+    "ㄋㄨㄥˊ",
+    "ㄇㄟˊ",
+    "ㄉㄚˋ",
+    "ㄧㄢˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "形容人物",
+    "外表"
+   ],
+   "meaning": "眉毛又黑又密，眼睛很大。形容人的五官很有精神。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "新來的轉學生濃眉大眼，看起來很有精神。",
+    "弟弟長得濃眉大眼，大家都說他像爸爸。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「濃眉大眼」是形容什麼？",
+     "choices": [
+      "眼睛哭得又紅又腫",
+      "眼睛一直瞪著別人",
+      "眉毛濃密、眼睛很大",
+      "臉上化了很濃的妝"
+     ],
+     "answer_index": 2,
+     "explanation": "濃眉大眼是描寫人的長相：眉毛濃、眼睛大，看起來有精神。"
+    },
+    "fill_blank": {
+     "sentence": "弟弟長得＿＿，大家都說他像爸爸。",
+     "choices": [
+      "狼吞虎嚥",
+      "塞翁失馬",
+      "濃眉大眼",
+      "杞人憂天"
+     ],
+     "answer_index": 2
+    },
+    "usage_check": {
+     "sentence": "照片裡的小男孩濃眉大眼，笑得很開心。",
+     "correct": true,
+     "explanation": "描寫小男孩的長相，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0142",
+   "idiom": "聰明伶俐",
+   "zhuyin": [
+    "ㄘㄨㄥ",
+    "ㄇㄧㄥˊ",
+    "ㄌㄧㄥˊ",
+    "ㄌㄧˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "形容人物"
+   ],
+   "meaning": "頭腦聰明，反應又快又靈活。",
+   "key_chars": [
+    {
+     "char": "伶俐",
+     "meaning": "機靈、反應快"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "表妹聰明伶俐，什麼東西一教就會。",
+    "這隻小狗聰明伶俐，聽得懂好多指令。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "聰明伶利",
+     "note": "「俐」有人字旁，不是利益的「利」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「聰明伶俐」是什麼意思？",
+     "choices": [
+      "很會唱歌跳舞",
+      "很會說謊騙人",
+      "聰明又反應快",
+      "長得很漂亮"
+     ],
+     "answer_index": 2,
+     "explanation": "伶俐是機靈、反應快，聰明伶俐就是頭腦好又靈活。"
+    },
+    "fill_blank": {
+     "sentence": "這隻小狗＿＿，聽得懂好多指令。",
+     "choices": [
+      "杯水車薪",
+      "聰明伶俐",
+      "唇亡齒寒",
+      "千篇一律"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "他聰明伶俐，同一題教了十次還是學不會。",
+     "correct": false,
+     "explanation": "教十次還學不會，和「聰明伶俐」的意思矛盾。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0143",
+   "idiom": "心靈手巧",
+   "zhuyin": [
+    "ㄒㄧㄣ",
+    "ㄌㄧㄥˊ",
+    "ㄕㄡˇ",
+    "ㄑㄧㄠˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "形容人物"
+   ],
+   "meaning": "心思靈活，雙手靈巧。形容很會動腦又很會動手做東西。",
+   "key_chars": [
+    {
+     "char": "靈",
+     "meaning": "靈活、聰明"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "姐姐心靈手巧，用紙箱做出一座漂亮的城堡。",
+    "奶奶心靈手巧，用舊衣服縫成好看的提袋。"
+   ],
+   "synonyms": [],
+   "antonyms": [
+    "笨手笨腳"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「心靈手巧」是什麼意思？",
+     "choices": [
+      "腦筋靈活、手又靈巧",
+      "心地很善良",
+      "心靈很純潔",
+      "手很大、很有力氣"
+     ],
+     "answer_index": 0,
+     "explanation": "心靈手巧的「靈」是靈活，形容又會想又會做，不是在說品德。"
+    },
+    "fill_blank": {
+     "sentence": "奶奶＿＿，用舊衣服縫成了好看的提袋。",
+     "choices": [
+      "水落石出",
+      "雞毛蒜皮",
+      "心靈手巧",
+      "打草驚蛇"
+     ],
+     "answer_index": 2
+    },
+    "usage_check": {
+     "sentence": "阿姨心靈手巧，摺紙、編織、做蛋糕都難不倒她。",
+     "correct": true,
+     "explanation": "很會動手做各種東西，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0144",
+   "idiom": "多才多藝",
+   "zhuyin": [
+    "ㄉㄨㄛ",
+    "ㄘㄞˊ",
+    "ㄉㄨㄛ",
+    "ㄧˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "形容人物"
+   ],
+   "meaning": "有很多方面的才能和技藝。",
+   "key_chars": [
+    {
+     "char": "藝",
+     "meaning": "技藝、本領"
+    }
+   ],
+   "origin": {
+    "source": "《尚書・金縢》",
+    "quote": null,
+    "story": null,
+    "note": "原文寫作「多材多藝」；原句待查證。"
+   },
+   "examples": [
+    "哥哥多才多藝，會彈鋼琴、會畫畫，還是籃球隊隊長。",
+    "多才多藝的小芳，在才藝表演中又唱歌又跳舞。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「多才多藝」是什麼意思？",
+     "choices": [
+      "有很多種才能和本領",
+      "很有才華但是很懶",
+      "家裡有很多錢財",
+      "要上很多才藝班"
+     ],
+     "answer_index": 0,
+     "explanation": "多才多藝是會的本領很多，不是說上很多才藝班。"
+    },
+    "fill_blank": {
+     "sentence": "＿＿的小芳，在才藝表演中又唱歌又跳舞。",
+     "choices": [
+      "多才多藝",
+      "畫蛇添足",
+      "坐井觀天",
+      "好吃懶做"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "他多才多藝，除了打電動以外什麼都不會。",
+     "correct": false,
+     "explanation": "只會一樣東西，和「多才多藝」的意思相反。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0145",
+   "idiom": "與眾不同",
+   "zhuyin": [
+    "ㄩˇ",
+    "ㄓㄨㄥˋ",
+    "ㄅㄨˋ",
+    "ㄊㄨㄥˊ"
+   ],
+   "polyphones": [
+    {
+     "char": "與",
+     "here": "ㄩˇ",
+     "other": "ㄩˋ（參與）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "形容人物"
+   ],
+   "meaning": "和大家都不一樣。形容很特別。",
+   "key_chars": [
+    {
+     "char": "眾",
+     "meaning": "大家、很多人"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "她的畫用了很特別的顏色，看起來與眾不同。",
+    "小明的科展作品很有創意，想法與眾不同。"
+   ],
+   "synonyms": [
+    "獨一無二"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「與眾不同」是什麼意思？",
+     "choices": [
+      "和很多人吵架",
+      "和大家一起行動",
+      "和別人都不一樣，很特別",
+      "不喜歡跟大家一起玩"
+     ],
+     "answer_index": 2,
+     "explanation": "「眾」是大家，與眾不同就是跟大家不一樣、很特別。"
+    },
+    "fill_blank": {
+     "sentence": "小明的科展作品很有創意，想法＿＿。",
+     "choices": [
+      "刻舟求劍",
+      "東施效顰",
+      "鷸蚌相爭",
+      "與眾不同"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "全班都穿制服，只有他穿恐龍裝參加萬聖節活動，真是與眾不同。",
+     "correct": true,
+     "explanation": "大家穿得一樣，只有他很特別，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0146",
+   "idiom": "光陰似箭",
+   "zhuyin": [
+    "ㄍㄨㄤ",
+    "ㄧㄣ",
+    "ㄙˋ",
+    "ㄐㄧㄢˋ"
+   ],
+   "polyphones": [
+    {
+     "char": "似",
+     "here": "ㄙˋ",
+     "other": "ㄕˋ（似的）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "時間"
+   ],
+   "meaning": "時間過得像射出去的箭一樣快。",
+   "key_chars": [
+    {
+     "char": "光陰",
+     "meaning": "時間"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "光陰似箭，一轉眼我就要升上六年級了。",
+    "光陰似箭，好像昨天才剛入學，現在就要畢業了。"
+   ],
+   "synonyms": [
+    "日月如梭"
+   ],
+   "antonyms": [
+    "度日如年"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「光陰似箭」是什麼意思？",
+     "choices": [
+      "影子移動得很慢",
+      "陽光像箭一樣刺眼",
+      "在比賽射箭",
+      "時間過得很快"
+     ],
+     "answer_index": 3,
+     "explanation": "「光陰」是時間，光陰似箭是說時間像飛箭一樣快速過去。"
+    },
+    "fill_blank": {
+     "sentence": "＿＿，好像昨天才剛入學，現在就要畢業了。",
+     "choices": [
+      "光陰似箭",
+      "自相矛盾",
+      "狐假虎威",
+      "畫餅充飢"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "兩個月的暑假一下子就過完了，真是光陰似箭。",
+     "correct": true,
+     "explanation": "感覺時間過得很快，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0147",
+   "idiom": "日月如梭",
+   "zhuyin": [
+    "ㄖˋ",
+    "ㄩㄝˋ",
+    "ㄖㄨˊ",
+    "ㄙㄨㄛ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "時間"
+   ],
+   "meaning": "太陽和月亮像織布的梭子一樣來回穿梭。形容時間過得很快。",
+   "key_chars": [
+    {
+     "char": "梭",
+     "meaning": "織布時帶著線來回穿過的工具"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "日月如梭，爺爺種的小樹已經長得比我還高了。",
+    "日月如梭，轉眼間妹妹已經是小學生了。"
+   ],
+   "synonyms": [
+    "光陰似箭"
+   ],
+   "antonyms": [
+    "度日如年"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「日月如梭」是什麼意思？",
+     "choices": [
+      "月亮像梭子一樣彎彎的",
+      "時間過得很快",
+      "每天都要織布",
+      "太陽和月亮同時出現"
+     ],
+     "answer_index": 1,
+     "explanation": "梭子在織布機上來回得很快，用來比喻日子飛快過去。"
+    },
+    "fill_blank": {
+     "sentence": "＿＿，轉眼間妹妹已經從小嬰兒長成小學生了。",
+     "choices": [
+      "一毛不拔",
+      "掩耳盜鈴",
+      "日月如梭",
+      "打草驚蛇"
+     ],
+     "answer_index": 2
+    },
+    "usage_check": {
+     "sentence": "等公車等了好久，真是日月如梭。",
+     "correct": false,
+     "explanation": "等很久覺得時間很慢，應該說「度日如年」，不是日月如梭。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0148",
+   "idiom": "日積月累",
+   "zhuyin": [
+    "ㄖˋ",
+    "ㄐㄧ",
+    "ㄩㄝˋ",
+    "ㄌㄟˇ"
+   ],
+   "polyphones": [
+    {
+     "char": "累",
+     "here": "ㄌㄟˇ",
+     "other": "ㄌㄟˋ（很累）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "時間",
+    "學習"
+   ],
+   "meaning": "一天天、一月月地累積。形容經過長時間慢慢累積起來。",
+   "key_chars": [
+    {
+     "char": "累",
+     "meaning": "堆積、累積"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "每天背兩個英文單字，日積月累就會認識很多字。",
+    "外公的郵票是日積月累收集來的，已經有好幾大本。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "讀音",
+     "wrong": "ㄌㄟˋ",
+     "note": "這裡的「累」是累積，讀 ㄌㄟˇ，不是很累的 ㄌㄟˋ。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「日積月累」是什麼意思？",
+     "choices": [
+      "把太陽和月亮堆在一起",
+      "長時間一點一點地累積",
+      "一天就能完成",
+      "每天都覺得很累"
+     ],
+     "answer_index": 1,
+     "explanation": "「累」是累積，日積月累是說時間久了，一點一滴慢慢累積。"
+    },
+    "fill_blank": {
+     "sentence": "外公的郵票是＿＿收集來的，已經有好幾大本。",
+     "choices": [
+      "對牛彈琴",
+      "日積月累",
+      "自相矛盾",
+      "指鹿為馬"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "他昨晚才開始練琴，日積月累，今天就成了鋼琴家。",
+     "correct": false,
+     "explanation": "日積月累需要很長的時間，一個晚上不能算。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0149",
+   "idiom": "年復一年",
+   "zhuyin": [
+    "ㄋㄧㄢˊ",
+    "ㄈㄨˋ",
+    "ㄧ",
+    "ㄋㄧㄢˊ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "時間"
+   ],
+   "meaning": "一年又一年。形容時間一年年過去，常帶有一直重複的意思。",
+   "key_chars": [
+    {
+     "char": "復",
+     "meaning": "又、再"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "導護志工阿伯年復一年地在路口指揮交通。",
+    "燕子年復一年地回到我家屋簷下築巢。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "年複一年",
+     "note": "「復」是又、再的意思，不是複雜的「複」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「年復一年」是什麼意思？",
+     "choices": [
+      "回到去年的時候",
+      "一年只有一次",
+      "新的一年又開始了",
+      "一年又一年地過去"
+     ],
+     "answer_index": 3,
+     "explanation": "「復」是又、再，年復一年就是一年接著一年。"
+    },
+    "fill_blank": {
+     "sentence": "那棵老榕樹＿＿地站在廟口，看著村子裡的孩子長大。",
+     "choices": [
+      "恍然大悟",
+      "年復一年",
+      "狼吞虎嚥",
+      "喜出望外"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "燕子年復一年地在我家屋簷下築巢。",
+     "correct": true,
+     "explanation": "每年都重複回來築巢，用得正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0150",
+   "idiom": "日復一日",
+   "zhuyin": [
+    "ㄖˋ",
+    "ㄈㄨˋ",
+    "ㄧ",
+    "ㄖˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "時間"
+   ],
+   "meaning": "一天又一天。形容時間一天天過去，常指一直重複做同樣的事。",
+   "key_chars": [
+    {
+     "char": "復",
+     "meaning": "又、再"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "媽媽日復一日地準備早餐，從來沒有喊累。",
+    "他日復一日地練習投籃，終於進了校隊。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "日複一日",
+     "note": "「復」是又、再的意思，不是複雜的「複」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「日復一日」是什麼意思？",
+     "choices": [
+      "一天又一天地重複",
+      "只有短短一天",
+      "太陽又出來了",
+      "一天比一天進步"
+     ],
+     "answer_index": 0,
+     "explanation": "日復一日就是一天接著一天，常指長時間重複做同樣的事。"
+    },
+    "fill_blank": {
+     "sentence": "小農夫＿＿地照顧菜園，終於等到收成。",
+     "choices": [
+      "三人成虎",
+      "杯弓蛇影",
+      "日復一日",
+      "天衣無縫"
+     ],
+     "answer_index": 2
+    },
+    "usage_check": {
+     "sentence": "他說要日復一日地練習投籃，結果今天只練了一次就放棄了。",
+     "correct": false,
+     "explanation": "只練一次就放棄，沒有一天接一天地持續，不符合日復一日。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0151",
+   "idiom": "夜深人靜",
+   "zhuyin": [
+    "ㄧㄝˋ",
+    "ㄕㄣ",
+    "ㄖㄣˊ",
+    "ㄐㄧㄥˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "時間"
+   ],
+   "meaning": "夜已經很深了，四周非常安靜。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "夜深人靜時，只聽得到窗外的蟲叫聲。",
+    "夜深人靜的時候，爸爸還在書房裡加班。"
+   ],
+   "synonyms": [
+    "三更半夜"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「夜深人靜」是形容什麼？",
+     "choices": [
+      "白天很熱鬧",
+      "晚上大家小聲聊天",
+      "很深很暗的山洞",
+      "深夜時四周很安靜"
+     ],
+     "answer_index": 3,
+     "explanation": "夜深人靜是描寫深夜裡大家都睡了、非常安靜的樣子。"
+    },
+    "fill_blank": {
+     "sentence": "＿＿的時候，爸爸還在書房裡加班。",
+     "choices": [
+      "狐假虎威",
+      "夜深人靜",
+      "囫圇吞棗",
+      "一石二鳥"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "早上十點，菜市場夜深人靜，人來人往。",
+     "correct": false,
+     "explanation": "早上十點不是深夜，人來人往也不安靜，用錯了。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0152",
+   "idiom": "早出晚歸",
+   "zhuyin": [
+    "ㄗㄠˇ",
+    "ㄔㄨ",
+    "ㄨㄢˇ",
+    "ㄍㄨㄟ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "時間",
+    "生活"
+   ],
+   "meaning": "很早就出門，很晚才回家。形容工作或生活很忙碌辛苦。",
+   "key_chars": [
+    {
+     "char": "歸",
+     "meaning": "回來、回家"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "爸爸為了工作早出晚歸，週末我們都會陪他好好吃頓飯。",
+    "農忙時期，叔叔每天早出晚歸，在田裡工作。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「早出晚歸」是什麼意思？",
+     "choices": [
+      "早上出生的人",
+      "晚一點再出門",
+      "很早出門、很晚回家",
+      "出門總是遲到"
+     ],
+     "answer_index": 2,
+     "explanation": "早出晚歸是天一亮就出門、天黑了才回來，形容很忙碌。"
+    },
+    "fill_blank": {
+     "sentence": "農忙時期，叔叔每天＿＿，在田裡工作。",
+     "choices": [
+      "畫蛇添足",
+      "早出晚歸",
+      "掩耳盜鈴",
+      "守口如瓶"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "阿姨早出晚歸，每天中午就下班回家睡午覺。",
+     "correct": false,
+     "explanation": "中午就回家不是「晚歸」，用錯了。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0153",
+   "idiom": "人山人海",
+   "zhuyin": [
+    "ㄖㄣˊ",
+    "ㄕㄢ",
+    "ㄖㄣˊ",
+    "ㄏㄞˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態"
+   ],
+   "meaning": "人多得像山、像海一樣。形容聚集的人非常多。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "跨年晚會現場人山人海，擠得動彈不得。",
+    "週末的夜市人山人海，我們排了好久才買到雞排。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「人山人海」是什麼意思？",
+     "choices": [
+      "一個人去爬山和游泳",
+      "山和海都很大",
+      "有人在山上，有人在海邊",
+      "聚集的人非常多"
+     ],
+     "answer_index": 3,
+     "explanation": "人山人海是用山和海的大，比喻人非常多。"
+    },
+    "fill_blank": {
+     "sentence": "週末的夜市＿＿，我們排了好久才買到雞排。",
+     "choices": [
+      "人山人海",
+      "鑿壁偷光",
+      "自暴自棄",
+      "一知半解"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "煙火晚會的會場人山人海，大家都擠著看煙火。",
+     "correct": true,
+     "explanation": "會場擠滿了人，用「人山人海」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0154",
+   "idiom": "形影不離",
+   "zhuyin": [
+    "ㄒㄧㄥˊ",
+    "ㄧㄥˇ",
+    "ㄅㄨˋ",
+    "ㄌㄧˊ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "友情"
+   ],
+   "meaning": "像身體和影子一樣分不開。形容關係很親密，常常在一起。",
+   "key_chars": [
+    {
+     "char": "形",
+     "meaning": "身體"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "小華和小明是好朋友，下課總是形影不離。",
+    "妹妹和她的小熊娃娃形影不離，連睡覺都抱著。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「形影不離」是什麼意思？",
+     "choices": [
+      "常常在一起，分不開",
+      "照片和影片放在一起",
+      "形狀很奇怪",
+      "影子不見了"
+     ],
+     "answer_index": 0,
+     "explanation": "「形」是身體，人走到哪裡影子就跟到哪裡，比喻兩個人總是在一起。"
+    },
+    "fill_blank": {
+     "sentence": "妹妹和她的小熊娃娃＿＿，連睡覺都抱著。",
+     "choices": [
+      "黔驢技窮",
+      "南轅北轍",
+      "草木皆兵",
+      "形影不離"
+     ],
+     "answer_index": 3
+    },
+    "usage_check": {
+     "sentence": "我家的小狗和我形影不離，我走到哪裡牠就跟到哪裡。",
+     "correct": true,
+     "explanation": "小狗總是跟著我，用「形影不離」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  }
+ ]
+}

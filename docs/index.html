@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>學習小遊戲</title>
+<style>
+:root { --bg:#fbf7f0; --card:#fff; --ink:#2b2420; --muted:#7a6e64; --line:#e8dfd3; --accent:#c0392b; --accent-soft:#fbe9e6; }
+@media (prefers-color-scheme: dark) { :root { --bg:#1d1916; --card:#2a2420; --ink:#f2ebe3; --muted:#b3a597; --line:#3d342d; --accent:#e8735f; --accent-soft:#3d2622; color-scheme: dark; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif; line-height:1.6; }
+main { max-width:640px; margin:0 auto; padding-inline:16px; padding-block:32px 48px; }
+h1 { color:var(--accent); letter-spacing:2px; margin:0 0 4px; }
+p { color:var(--muted); margin:0 0 20px; }
+.list { display:grid; gap:12px; }
+.game { display:grid; gap:4px; padding:16px; border:1.5px solid var(--line); border-radius:14px; background:var(--card); color:inherit; text-decoration:none;
+  transition: transform .12s, border-color .12s, background-color .12s, box-shadow .12s; }
+.game b { font-size:20px; }
+.game small { color:var(--muted); }
+.game:hover { transform:translateY(-3px); border-color:var(--accent); background:var(--accent-soft); box-shadow:0 6px 16px rgba(0,0,0,.12); }
+.game:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+footer { margin-top:24px; font-size:14px; color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>學習小遊戲</h1>
+  <p>給孩子玩的離線學習遊戲，用手機或電腦的瀏覽器打開就能玩。</p>
+  <div class="list">
+    <a class="game" href="chinese-idom/">
+      <b>成語小達人</b>
+      <span>500 個常用成語的闖關遊戲，有注音、故事、計時與計分。</span>
+      <small>國小學生・內容由 AI 協助整理，未逐條人工校對</small>
+    </a>
+  </div>
+  <footer>內容由 AI 協助整理，可能有誤；發現錯誤歡迎回報。</footer>
+</main>
+</body>
+</html>

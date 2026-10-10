@@ -1,0 +1,350 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "idiom-game/schema.json",
+  "title": "成語遊戲資料檔",
+  "type": "object",
+  "required": [
+    "version",
+    "items"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "資料版本，例如 0.1.0"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/idiom"
+      }
+    }
+  },
+  "$defs": {
+    "idiom": {
+      "type": "object",
+      "required": [
+        "id",
+        "idiom",
+        "zhuyin",
+        "level",
+        "tags",
+        "meaning",
+        "key_chars",
+        "origin",
+        "examples",
+        "synonyms",
+        "antonyms",
+        "common_mistakes",
+        "quiz",
+        "review"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^cy[0-9]{4}$",
+          "description": "唯一編號，例如 cy0001"
+        },
+        "idiom": {
+          "type": "string",
+          "minLength": 2,
+          "description": "成語本身"
+        },
+        "zhuyin": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "逐字注音，長度須與成語字數相同；採本調、不標變調，一聲不標符號"
+        },
+        "polyphones": {
+          "type": "array",
+          "description": "本成語中的破音字提醒",
+          "items": {
+            "type": "object",
+            "required": [
+              "char",
+              "here",
+              "other"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "char": {
+                "type": "string"
+              },
+              "here": {
+                "type": "string",
+                "description": "在本成語中的讀音"
+              },
+              "other": {
+                "type": "string",
+                "description": "容易混淆的其他讀音"
+              }
+            }
+          }
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3,
+          "description": "遊戲自訂難度（非官方年級）：1=入門 2=進階 3=高階"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "主題標籤，例如 動物、數字、學習態度"
+        },
+        "meaning": {
+          "type": "string",
+          "description": "給孩子看的白話解釋"
+        },
+        "key_chars": {
+          "type": "array",
+          "description": "關鍵字的字義（孩子容易誤解的字）",
+          "items": {
+            "type": "object",
+            "required": [
+              "char",
+              "meaning"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "char": {
+                "type": "string"
+              },
+              "meaning": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "origin": {
+          "type": "object",
+          "required": [
+            "source",
+            "quote",
+            "story"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "出處書名篇名；不明確則為 null"
+            },
+            "quote": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "原文摘句"
+            },
+            "story": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "required": [
+                "title",
+                "text"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string",
+                  "description": "改寫給孩子的故事"
+                }
+              }
+            },
+            "note": {
+              "type": "string"
+            }
+          }
+        },
+        "examples": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          },
+          "description": "例句，貼近孩子生活"
+        },
+        "synonyms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "antonyms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "common_mistakes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "type",
+              "wrong",
+              "note"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "enum": [
+                  "錯字",
+                  "誤用",
+                  "讀音"
+                ]
+              },
+              "wrong": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "quiz": {
+          "type": "object",
+          "required": [
+            "meaning_mcq",
+            "fill_blank",
+            "usage_check"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "meaning_mcq": {
+              "$ref": "#/$defs/mcq",
+              "description": "選出正確意思"
+            },
+            "fill_blank": {
+              "type": "object",
+              "required": [
+                "sentence",
+                "choices",
+                "answer_index"
+              ],
+              "additionalProperties": false,
+              "description": "句子中以＿＿表示空格，從成語中選一個填入",
+              "properties": {
+                "sentence": {
+                  "type": "string"
+                },
+                "choices": {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "answer_index": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            "usage_check": {
+              "type": "object",
+              "required": [
+                "sentence",
+                "correct",
+                "explanation"
+              ],
+              "additionalProperties": false,
+              "description": "判斷這句話成語用得對不對",
+              "properties": {
+                "sentence": {
+                  "type": "string"
+                },
+                "correct": {
+                  "type": "boolean"
+                },
+                "explanation": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "review": {
+          "type": "object",
+          "required": [
+            "status",
+            "checked"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "draft",
+                "checked"
+              ]
+            },
+            "checked": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "zhuyin",
+                  "origin",
+                  "meaning",
+                  "quiz"
+                ]
+              },
+              "description": "已人工校對的欄位"
+            },
+            "note": {
+              "type": "string"
+            }
+          }
+        },
+        "tts": {
+          "type": "string",
+          "description": "朗讀用文字：手機語音會念錯時，改送同音字給語音引擎（畫面仍顯示原字）"
+        }
+      }
+    },
+    "mcq": {
+      "type": "object",
+      "required": [
+        "question",
+        "choices",
+        "answer_index",
+        "explanation"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "question": {
+          "type": "string"
+        },
+        "choices": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 4,
+          "items": {
+            "type": "string"
+          }
+        },
+        "answer_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "explanation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,349 @@
+{
+ "batch": "08",
+ "items": [
+  {
+   "id": "cy0336",
+   "idiom": "前所未有",
+   "level": 2,
+   "topic": "時間",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0337",
+   "idiom": "川流不息",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0338",
+   "idiom": "座無虛席",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0339",
+   "idiom": "家喻戶曉",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0340",
+   "idiom": "眾所周知",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0341",
+   "idiom": "舉世聞名",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0342",
+   "idiom": "名列前茅",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0343",
+   "idiom": "不相上下",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0344",
+   "idiom": "大同小異",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0345",
+   "idiom": "天涯海角",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0346",
+   "idiom": "來龍去脈",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0347",
+   "idiom": "金碧輝煌",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0348",
+   "idiom": "不計其數",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0349",
+   "idiom": "屈指可數",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0350",
+   "idiom": "微不足道",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0351",
+   "idiom": "小題大作",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0352",
+   "idiom": "理所當然",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0353",
+   "idiom": "無理取鬧",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0354",
+   "idiom": "胡作非為",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0355",
+   "idiom": "無法無天",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0356",
+   "idiom": "橫行霸道",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0357",
+   "idiom": "安居樂業",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0358",
+   "idiom": "國泰民安",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0359",
+   "idiom": "風調雨順",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0360",
+   "idiom": "豐衣足食",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0361",
+   "idiom": "五穀豐登",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0362",
+   "idiom": "有驚無險",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0363",
+   "idiom": "死裡逃生",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0364",
+   "idiom": "藥到病除",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0365",
+   "idiom": "苦中作樂",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0366",
+   "idiom": "自得其樂",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0367",
+   "idiom": "知足常樂",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0368",
+   "idiom": "物歸原主",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0369",
+   "idiom": "失而復得",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0370",
+   "idiom": "不翼而飛",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0371",
+   "idiom": "真相大白",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0372",
+   "idiom": "粗枝大葉",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0373",
+   "idiom": "鬼鬼祟祟",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0374",
+   "idiom": "不勞而獲",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0375",
+   "idiom": "坐享其成",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0376",
+   "idiom": "遊手好閒",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0377",
+   "idiom": "無所事事",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0378",
+   "idiom": "精打細算",
+   "level": 2,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  }
+ ]
+}

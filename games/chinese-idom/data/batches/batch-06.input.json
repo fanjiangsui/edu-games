@@ -1,0 +1,365 @@
+{
+ "batch": "06",
+ "items": [
+  {
+   "id": "cy0246",
+   "idiom": "自暴自棄",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0247",
+   "idiom": "自食其力",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0248",
+   "idiom": "臨危不亂",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0249",
+   "idiom": "知難而退",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0250",
+   "idiom": "斤斤計較",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0251",
+   "idiom": "尊師重道",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0252",
+   "idiom": "志同道合",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0253",
+   "idiom": "將心比心",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0254",
+   "idiom": "彬彬有禮",
+   "level": 2,
+   "topic": "品格人際",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0255",
+   "idiom": "望梅止渴",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0256",
+   "idiom": "濫竽充數",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0257",
+   "idiom": "刻舟求劍",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0258",
+   "idiom": "掩耳盜鈴",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0259",
+   "idiom": "揠苗助長",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0260",
+   "idiom": "杞人憂天",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0261",
+   "idiom": "畫餅充飢",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0262",
+   "idiom": "開天闢地",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0263",
+   "idiom": "世外桃源",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0264",
+   "idiom": "天衣無縫",
+   "level": 2,
+   "topic": "典故故事",
+   "status": "待產生",
+   "story_guess": true
+  },
+  {
+   "id": "cy0265",
+   "idiom": "笑逐顏開",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0266",
+   "idiom": "捧腹大笑",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0267",
+   "idiom": "哭笑不得",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0268",
+   "idiom": "心灰意冷",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0269",
+   "idiom": "暴跳如雷",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0270",
+   "idiom": "大發雷霆",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0271",
+   "idiom": "心曠神怡",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0272",
+   "idiom": "提心吊膽",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0273",
+   "idiom": "驚慌失措",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0274",
+   "idiom": "不知所措",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0275",
+   "idiom": "啞口無言",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0276",
+   "idiom": "坐立不安",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0277",
+   "idiom": "念念不忘",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0278",
+   "idiom": "歸心似箭",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0279",
+   "idiom": "恍然大悟",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0280",
+   "idiom": "若無其事",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0281",
+   "idiom": "興致勃勃",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0282",
+   "idiom": "得意忘形",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0283",
+   "idiom": "理直氣壯",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0284",
+   "idiom": "做賊心虛",
+   "level": 2,
+   "topic": "情緒心情",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0285",
+   "idiom": "能言善道",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0286",
+   "idiom": "滔滔不絕",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0287",
+   "idiom": "信口開河",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0288",
+   "idiom": "花言巧語",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0289",
+   "idiom": "強詞奪理",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0290",
+   "idiom": "開門見山",
+   "level": 2,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  }
+ ]
+}

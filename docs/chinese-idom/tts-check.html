@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>成語朗讀檢查</title>
+<style>
+/* 版面：單欄清單，上方固定工具列；每列 = 成語（含注音）＋破音字提示＋播放＋念錯勾選 */
+:root {
+  --bg: #fbf7f0; --card: #ffffff; --ink: #2b2420; --muted: #7a6e64; --line: #e8dfd3;
+  --accent: #c0392b; --accent-soft: #fbe9e6; --bad: #b03a2e; --bad-soft: #fbe5e2; --good: #2e7d4f;
+  --font: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Heiti TC", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #1d1916; --card: #2a2420; --ink: #f2ebe3; --muted: #b3a597; --line: #3d342d;
+  --accent: #e8735f; --accent-soft: #3d2622; --bad: #f08a7c; --bad-soft: #3d2420; --good: #6cc792; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #1d1916; --card: #2a2420; --ink: #f2ebe3; --muted: #b3a597; --line: #3d342d;
+  --accent: #e8735f; --accent-soft: #3d2622; --bad: #f08a7c; --bad-soft: #3d2420; --good: #6cc792; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.6; margin: 0; }
+.wrap { max-width: 680px; margin: 0 auto; padding-inline: 16px; padding-block: 12px 48px; }
+h1 { font-size: 22px; margin: 4px 0 4px; color: var(--accent); letter-spacing: 2px; }
+.lead { color: var(--muted); font-size: 15px; margin: 0 0 12px; }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+  padding-block: 10px; border-bottom: 1px solid var(--line); display: grid; gap: 8px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+select, button { font: inherit; color: var(--ink); }
+select { min-width: 0; flex: 1 1 200px; padding: 8px 10px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--card); }
+button { cursor: pointer; border-radius: 10px; border: 1.5px solid var(--line); background: var(--card); padding: 8px 14px;
+  transition: transform .12s, border-color .12s, background-color .12s, box-shadow .12s; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+@media (hover: hover) {
+  button:hover { transform: translateY(-2px); border-color: var(--accent); background-color: var(--accent-soft); box-shadow: 0 4px 12px rgba(0,0,0,.12); }
+  button.primary:hover { background-color: var(--accent); filter: brightness(.92); }
+  .chip.on:hover { background-color: var(--accent); color: #fff; filter: brightness(.92); }
+}
+button:active { transform: scale(.97); }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.chip { padding: 4px 12px; border-radius: 999px; font-size: 14px; }
+.chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.stat { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.stat b { color: var(--bad); }
+ul.list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
+li.item { background: var(--card); border: 1.5px solid var(--line); border-radius: 14px; padding: 10px 12px;
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; }
+li.item.wrong { border-color: var(--bad); background: var(--bad-soft); }
+li.item.playing { box-shadow: 0 0 0 3px var(--accent); }
+.word { font-size: 26px; font-weight: 800; letter-spacing: 4px; min-width: 0; }
+rt { font-size: .38em; color: var(--muted); font-weight: 400; letter-spacing: 0; }
+.hint { grid-column: 1 / 2; font-size: 14px; color: var(--muted); min-width: 0; }
+.hint b { color: var(--ink); }
+.fix { color: var(--good); font-weight: 700; }
+.ctrls { grid-row: 1 / span 2; grid-column: 2; display: flex; flex-direction: column; gap: 6px; align-items: stretch; }
+.ctrls label { display: flex; align-items: center; gap: 6px; font-size: 14px; cursor: pointer; padding: 6px 10px;
+  border: 1.5px solid var(--line); border-radius: 10px; background: var(--card); }
+.ctrls input { width: 18px; height: 18px; accent-color: var(--bad); }
+.out { margin-top: 16px; display: grid; gap: 8px; }
+textarea { width: 100%; min-height: 140px; font: 14px/1.5 ui-monospace, Menlo, monospace; color: var(--ink);
+  background: var(--card); border: 1.5px solid var(--line); border-radius: 10px; padding: 10px; }
+.note { font-size: 14px; color: var(--muted); }
+.warn { color: var(--bad); font-weight: 700; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <h1>成語朗讀檢查</h1>
+  <p class="lead">第二輪：預設只列出上次念錯、已改用同音字朗讀的 22 個成語，請再聽一次。逐一按「▶ 念」，聽到讀音和注音不同，就勾「念錯了」。全部聽完後按「產生結果」，把文字複製貼回給 Claude。勾選會記在這台裝置的瀏覽器裡。</p>
+
+  <div class="bar">
+    <div class="row">
+      <select id="voice" aria-label="語音"></select>
+      <select id="rate" aria-label="語速">
+        <option value="0.8">語速：遊戲用（0.8）</option>
+        <option value="0.6">語速：慢（0.6）</option>
+        <option value="1">語速：正常（1.0）</option>
+      </select>
+    </div>
+    <div class="row">
+      <button id="playAll" class="primary">連續播放</button>
+      <button class="chip on" data-f="fixed">已換字</button>
+      <button class="chip" data-f="all">全部</button>
+      <button class="chip" data-f="wrong">只看念錯</button>
+      <button class="chip" data-f="todo">只看沒聽過</button>
+      <span class="stat" id="stat"></span>
+    </div>
+    <div id="voiceWarn" class="note" hidden></div>
+  </div>
+
+  <ul class="list" id="list"></ul>
+
+  <div class="out">
+    <button id="make" class="primary">產生結果</button>
+    <textarea id="result" readonly placeholder="按「產生結果」後，念錯的清單會出現在這裡。"></textarea>
+    <div class="row">
+      <button id="copy">複製結果</button>
+      <button id="reset">清除所有勾選</button>
+      <span class="note" id="copyMsg"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA = [{"id":"cy0003","w":"狐假虎威","z":["ㄏㄨˊ","ㄐㄧㄚˇ","ㄏㄨˇ","ㄨㄟ"],"p":[["假","ㄐㄧㄚˇ","ㄐㄧㄚˋ（放假）"]],"t":"狐甲虎威"},{"id":"cy0007","w":"自相矛盾","z":["ㄗˋ","ㄒㄧㄤ","ㄇㄠˊ","ㄉㄨㄣˋ"],"p":[["相","ㄒㄧㄤ","ㄒㄧㄤˋ（照相）"]],"t":"自香矛盾"},{"id":"cy0010","w":"一暴十寒","z":["ㄧ","ㄆㄨˋ","ㄕˊ","ㄏㄢˊ"],"p":[["暴","ㄆㄨˋ","ㄅㄠˋ（暴風雨）"]],"t":"一瀑十寒"},{"id":"cy0011","w":"對牛彈琴","z":["ㄉㄨㄟˋ","ㄋㄧㄡˊ","ㄊㄢˊ","ㄑㄧㄣˊ"],"p":[["彈","ㄊㄢˊ","ㄉㄢˋ（子彈）"]],"t":null},{"id":"cy0019","w":"鴉雀無聲","z":["ㄧㄚ","ㄑㄩㄝˋ","ㄨˊ","ㄕㄥ"],"p":[["雀","ㄑㄩㄝˋ","ㄑㄧㄠˇ（家雀兒，口語讀音）"]],"t":null},{"id":"cy0027","w":"一目了然","z":["ㄧ","ㄇㄨˋ","ㄌㄧㄠˇ","ㄖㄢˊ"],"p":[["了","ㄌㄧㄠˇ","˙ㄌㄜ（好了）"]],"t":null},{"id":"cy0028","w":"一模一樣","z":["ㄧ","ㄇㄨˊ","ㄧ","ㄧㄤˋ"],"p":[["模","ㄇㄨˊ","ㄇㄛˊ（模範）"]],"t":null},{"id":"cy0029","w":"一言為定","z":["ㄧ","ㄧㄢˊ","ㄨㄟˊ","ㄉㄧㄥˋ"],"p":[["為","ㄨㄟˊ","ㄨㄟˋ（為了）"]],"t":null},{"id":"cy0034","w":"一乾二淨","z":["ㄧ","ㄍㄢ","ㄦˋ","ㄐㄧㄥˋ"],"p":[["乾","ㄍㄢ","ㄑㄧㄢˊ（乾坤）"]],"t":null},{"id":"cy0039","w":"數一數二","z":["ㄕㄨˇ","ㄧ","ㄕㄨˇ","ㄦˋ"],"p":[["數","ㄕㄨˇ","ㄕㄨˋ（數學）"]],"t":null},{"id":"cy0042","w":"三更半夜","z":["ㄙㄢ","ㄍㄥ","ㄅㄢˋ","ㄧㄝˋ"],"p":[["更","ㄍㄥ","ㄍㄥˋ（更加）"]],"t":null},{"id":"cy0045","w":"丟三落四","z":["ㄉㄧㄡ","ㄙㄢ","ㄌㄚˋ","ㄙˋ"],"p":[["落","ㄌㄚˋ","ㄌㄨㄛˋ（落葉）"]],"t":"丟三辣四"},{"id":"cy0047","w":"五顏六色","z":["ㄨˇ","ㄧㄢˊ","ㄌㄧㄡˋ","ㄙㄜˋ"],"p":[["色","ㄙㄜˋ","ㄕㄞˇ（掉色，口語讀音）"]],"t":null},{"id":"cy0055","w":"百發百中","z":["ㄅㄞˇ","ㄈㄚ","ㄅㄞˇ","ㄓㄨㄥˋ"],"p":[["中","ㄓㄨㄥˋ","ㄓㄨㄥ（中間）"]],"t":"百發百眾"},{"id":"cy0065","w":"目不轉睛","z":["ㄇㄨˋ","ㄅㄨˋ","ㄓㄨㄢˇ","ㄐㄧㄥ"],"p":[["轉","ㄓㄨㄢˇ","ㄓㄨㄢˋ（轉圈圈）"]],"t":null},{"id":"cy0066","w":"熟能生巧","z":["ㄕㄡˊ","ㄋㄥˊ","ㄕㄥ","ㄑㄧㄠˇ"],"p":[["熟","ㄕㄡˊ","ㄕㄨˊ（舊讀音）"]],"t":null},{"id":"cy0067","w":"腳踏實地","z":["ㄐㄧㄠˇ","ㄊㄚˋ","ㄕˊ","ㄉㄧˋ"],"p":[["地","ㄉㄧˋ","˙ㄉㄜ（慢慢地）"]],"t":null},{"id":"cy0072","w":"助人為樂","z":["ㄓㄨˋ","ㄖㄣˊ","ㄨㄟˊ","ㄌㄜˋ"],"p":[["為","ㄨㄟˊ","ㄨㄟˋ（為了）"],["樂","ㄌㄜˋ","ㄩㄝˋ（音樂）"]],"t":null},{"id":"cy0074","w":"目中無人","z":["ㄇㄨˋ","ㄓㄨㄥ","ㄨˊ","ㄖㄣˊ"],"p":[["中","ㄓㄨㄥ","ㄓㄨㄥˋ（中獎）"]],"t":null},{"id":"cy0080","w":"相親相愛","z":["ㄒㄧㄤ","ㄑㄧㄣ","ㄒㄧㄤ","ㄞˋ"],"p":[["相","ㄒㄧㄤ","ㄒㄧㄤˋ（照相）"],["親","ㄑㄧㄣ","ㄑㄧㄥˋ（親家）"]],"t":"香欽香愛"},{"id":"cy0083","w":"坐井觀天","z":["ㄗㄨㄛˋ","ㄐㄧㄥˇ","ㄍㄨㄢ","ㄊㄧㄢ"],"p":[["觀","ㄍㄨㄢ","ㄍㄨㄢˋ（道觀）"]],"t":null},{"id":"cy0086","w":"興高采烈","z":["ㄒㄧㄥˋ","ㄍㄠ","ㄘㄞˇ","ㄌㄧㄝˋ"],"p":[["興","ㄒㄧㄥˋ","ㄒㄧㄥ（興奮）"]],"t":null},{"id":"cy0090","w":"悶悶不樂","z":["ㄇㄣˋ","ㄇㄣˋ","ㄅㄨˋ","ㄌㄜˋ"],"p":[["悶","ㄇㄣˋ","ㄇㄣ（悶熱）"],["樂","ㄌㄜˋ","ㄩㄝˋ（音樂）"]],"t":"懣懣不勒"},{"id":"cy0092","w":"垂頭喪氣","z":["ㄔㄨㄟˊ","ㄊㄡˊ","ㄙㄤˋ","ㄑㄧˋ"],"p":[["喪","ㄙㄤˋ","ㄙㄤ（喪事）"]],"t":null},{"id":"cy0102","w":"迫不及待","z":["ㄆㄛˋ","ㄅㄨˋ","ㄐㄧˊ","ㄉㄞˋ"],"p":[["迫","ㄆㄛˋ","ㄆㄞˇ（迫擊砲）"]],"t":null},{"id":"cy0105","w":"得意洋洋","z":["ㄉㄜˊ","ㄧˋ","ㄧㄤˊ","ㄧㄤˊ"],"p":[["得","ㄉㄜˊ","ㄉㄟˇ（我得走了）"]],"t":null},{"id":"cy0107","w":"胡說八道","z":["ㄏㄨˊ","ㄕㄨㄛ","ㄅㄚ","ㄉㄠˋ"],"p":[["說","ㄕㄨㄛ","ㄕㄨㄟˋ（遊說）"]],"t":null},{"id":"cy0111","w":"無話可說","z":["ㄨˊ","ㄏㄨㄚˋ","ㄎㄜˇ","ㄕㄨㄛ"],"p":[["說","ㄕㄨㄛ","ㄕㄨㄟˋ（遊說）"]],"t":null},{"id":"cy0123","w":"爭分奪秒","z":["ㄓㄥ","ㄈㄣ","ㄉㄨㄛˊ","ㄇㄧㄠˇ"],"p":[["分","ㄈㄣ","ㄈㄣˋ（本分）"]],"t":null},{"id":"cy0124","w":"分秒必爭","z":["ㄈㄣ","ㄇㄧㄠˇ","ㄅㄧˋ","ㄓㄥ"],"p":[["分","ㄈㄣ","ㄈㄣˋ（本分）"]],"t":null},{"id":"cy0127","w":"風和日麗","z":["ㄈㄥ","ㄏㄜˊ","ㄖˋ","ㄌㄧˋ"],"p":[["和","ㄏㄜˊ","ㄏㄜˋ（附和）"]],"t":"風河日麗"},{"id":"cy0135","w":"晴空萬里","z":["ㄑㄧㄥˊ","ㄎㄨㄥ","ㄨㄢˋ","ㄌㄧˇ"],"p":[["空","ㄎㄨㄥ","ㄎㄨㄥˋ（空白）"]],"t":null},{"id":"cy0145","w":"與眾不同","z":["ㄩˇ","ㄓㄨㄥˋ","ㄅㄨˋ","ㄊㄨㄥˊ"],"p":[["與","ㄩˇ","ㄩˋ（參與）"]],"t":null},{"id":"cy0146","w":"光陰似箭","z":["ㄍㄨㄤ","ㄧㄣ","ㄙˋ","ㄐㄧㄢˋ"],"p":[["似","ㄙˋ","ㄕˋ（似的）"]],"t":null},{"id":"cy0148","w":"日積月累","z":["ㄖˋ","ㄐㄧ","ㄩㄝˋ","ㄌㄟˇ"],"p":[["累","ㄌㄟˇ","ㄌㄟˋ（很累）"]],"t":"日積月壘"},{"id":"cy0156","w":"應有盡有","z":["ㄧㄥ","ㄧㄡˇ","ㄐㄧㄣˋ","ㄧㄡˇ"],"p":[["應","ㄧㄥ","ㄧㄥˋ（反應）"]],"t":null},{"id":"cy0158","w":"千奇百怪","z":["ㄑㄧㄢ","ㄑㄧˊ","ㄅㄞˇ","ㄍㄨㄞˋ"],"p":[["奇","ㄑㄧˊ","ㄐㄧ（奇數）"]],"t":null},{"id":"cy0159","w":"奇形怪狀","z":["ㄑㄧˊ","ㄒㄧㄥˊ","ㄍㄨㄞˋ","ㄓㄨㄤˋ"],"p":[["奇","ㄑㄧˊ","ㄐㄧ（奇數）"]],"t":null},{"id":"cy0160","w":"調皮搗蛋","z":["ㄊㄧㄠˊ","ㄆㄧˊ","ㄉㄠˇ","ㄉㄢˋ"],"p":[["調","ㄊㄧㄠˊ","ㄉㄧㄠˋ（調查）"]],"t":null},{"id":"cy0166","w":"好吃懶做","z":["ㄏㄠˋ","ㄔ","ㄌㄢˇ","ㄗㄨㄛˋ"],"p":[["好","ㄏㄠˋ","ㄏㄠˇ（好人）"]],"t":null},{"id":"cy0167","w":"省吃儉用","z":["ㄕㄥˇ","ㄔ","ㄐㄧㄢˇ","ㄩㄥˋ"],"p":[["省","ㄕㄥˇ","ㄒㄧㄥˇ（反省）"]],"t":null},{"id":"cy0172","w":"塞翁失馬","z":["ㄙㄞˋ","ㄨㄥ","ㄕ","ㄇㄚˇ"],"p":[["塞","ㄙㄞˋ","ㄙㄜˋ（阻塞）、ㄙㄞ（塞車）"]],"t":null},{"id":"cy0173","w":"指鹿為馬","z":["ㄓˇ","ㄌㄨˋ","ㄨㄟˊ","ㄇㄚˇ"],"p":[["為","ㄨㄟˊ","ㄨㄟˋ（因為）"]],"t":null},{"id":"cy0174","w":"葉公好龍","z":["ㄕㄜˋ","ㄍㄨㄥ","ㄏㄠˋ","ㄌㄨㄥˊ"],"p":[["好","ㄏㄠˋ","ㄏㄠˇ（好人）"],["葉","ㄕㄜˋ","ㄧㄝˋ（樹葉）"]],"t":"攝公號龍"},{"id":"cy0177","w":"虎背熊腰","z":["ㄏㄨˇ","ㄅㄟˋ","ㄒㄩㄥˊ","ㄧㄠ"],"p":[["背","ㄅㄟˋ","ㄅㄟ（背書包）"]],"t":null},{"id":"cy0188","w":"朝三暮四","z":["ㄓㄠ","ㄙㄢ","ㄇㄨˋ","ㄙˋ"],"p":[["朝","ㄓㄠ","ㄔㄠˊ（朝代）"]],"t":"招三暮四"},{"id":"cy0193","w":"車水馬龍","z":["ㄔㄜ","ㄕㄨㄟˇ","ㄇㄚˇ","ㄌㄨㄥˊ"],"p":[["車","ㄔㄜ","ㄐㄩ（象棋的車）"]],"t":null},{"id":"cy0196","w":"一知半解","z":["ㄧ","ㄓ","ㄅㄢˋ","ㄐㄧㄝˇ"],"p":[["解","ㄐㄧㄝˇ","ㄒㄧㄝˋ（姓氏）"]],"t":null},{"id":"cy0200","w":"一臂之力","z":["ㄧ","ㄅㄧˋ","ㄓ","ㄌㄧˋ"],"p":[["臂","ㄅㄧˋ","˙ㄅㄟ（胳臂）"]],"t":null},{"id":"cy0201","w":"一針見血","z":["ㄧ","ㄓㄣ","ㄐㄧㄢˋ","ㄒㄧㄝˇ"],"p":[["血","ㄒㄧㄝˇ","ㄒㄩㄝˋ（血液）"]],"t":null},{"id":"cy0205","w":"三思而行","z":["ㄙㄢ","ㄙ","ㄦˊ","ㄒㄧㄥˊ"],"p":[["行","ㄒㄧㄥˊ","ㄏㄤˊ（銀行）"]],"t":null},{"id":"cy0206","w":"三頭六臂","z":["ㄙㄢ","ㄊㄡˊ","ㄌㄧㄡˋ","ㄅㄧˋ"],"p":[["臂","ㄅㄧˋ","˙ㄅㄟ（胳臂）"]],"t":null},{"id":"cy0220","w":"聚精會神","z":["ㄐㄩˋ","ㄐㄧㄥ","ㄏㄨㄟˋ","ㄕㄣˊ"],"p":[["會","ㄏㄨㄟˋ","ㄎㄨㄞˋ（會計）"]],"t":null},{"id":"cy0226","w":"見多識廣","z":["ㄐㄧㄢˋ","ㄉㄨㄛ","ㄕˋ","ㄍㄨㄤˇ"],"p":[["識","ㄕˋ","ㄓˋ（標識）"]],"t":null},{"id":"cy0227","w":"磨杵成針","z":["ㄇㄛˊ","ㄔㄨˇ","ㄔㄥˊ","ㄓㄣ"],"p":[["磨","ㄇㄛˊ","ㄇㄛˋ（石磨）"]],"t":"魔杵成針"},{"id":"cy0232","w":"力爭上游","z":["ㄌㄧˋ","ㄓㄥ","ㄕㄤˋ","ㄧㄡˊ"],"p":[["上","ㄕㄤˋ","ㄕㄤˇ（上聲）"]],"t":null},{"id":"cy0234","w":"水滴石穿","z":["ㄕㄨㄟˇ","ㄉㄧ","ㄕˊ","ㄔㄨㄢ"],"p":[["石","ㄕˊ","ㄉㄢˋ（一石米）"]],"t":null},{"id":"cy0236","w":"捨己為人","z":["ㄕㄜˇ","ㄐㄧˇ","ㄨㄟˋ","ㄖㄣˊ"],"p":[["為","ㄨㄟˋ","ㄨㄟˊ（行為）"]],"t":"捨己衛人"},{"id":"cy0237","w":"見義勇為","z":["ㄐㄧㄢˋ","ㄧˋ","ㄩㄥˇ","ㄨㄟˊ"],"p":[["為","ㄨㄟˊ","ㄨㄟˋ（為什麼）"]],"t":null},{"id":"cy0238","w":"雪中送炭","z":["ㄒㄩㄝˇ","ㄓㄨㄥ","ㄙㄨㄥˋ","ㄊㄢˋ"],"p":[["中","ㄓㄨㄥ","ㄓㄨㄥˋ（中獎）"]],"t":null},{"id":"cy0240","w":"落井下石","z":["ㄌㄨㄛˋ","ㄐㄧㄥˇ","ㄒㄧㄚˋ","ㄕˊ"],"p":[["落","ㄌㄨㄛˋ","ㄌㄚˋ（落了東西）"]],"t":null},{"id":"cy0241","w":"恩將仇報","z":["ㄣ","ㄐㄧㄤ","ㄔㄡˊ","ㄅㄠˋ"],"p":[["將","ㄐㄧㄤ","ㄐㄧㄤˋ（大將）"]],"t":null},{"id":"cy0244","w":"笑裡藏刀","z":["ㄒㄧㄠˋ","ㄌㄧˇ","ㄘㄤˊ","ㄉㄠ"],"p":[["藏","ㄘㄤˊ","ㄗㄤˋ（西藏）"]],"t":null},{"id":"cy0246","w":"自暴自棄","z":["ㄗˋ","ㄅㄠˋ","ㄗˋ","ㄑㄧˋ"],"p":[["暴","ㄅㄠˋ","ㄆㄨˋ（一暴十寒）"]],"t":null},{"id":"cy0247","w":"自食其力","z":["ㄗˋ","ㄕˊ","ㄑㄧˊ","ㄌㄧˋ"],"p":[["食","ㄕˊ","ㄙˋ（簞食瓢飲）"]],"t":null},{"id":"cy0249","w":"知難而退","z":["ㄓ","ㄋㄢˊ","ㄦˊ","ㄊㄨㄟˋ"],"p":[["難","ㄋㄢˊ","ㄋㄢˋ（災難）"]],"t":null},{"id":"cy0251","w":"尊師重道","z":["ㄗㄨㄣ","ㄕ","ㄓㄨㄥˋ","ㄉㄠˋ"],"p":[["重","ㄓㄨㄥˋ","ㄔㄨㄥˊ（重新）"]],"t":"尊師眾道"},{"id":"cy0253","w":"將心比心","z":["ㄐㄧㄤ","ㄒㄧㄣ","ㄅㄧˇ","ㄒㄧㄣ"],"p":[["將","ㄐㄧㄤ","ㄐㄧㄤˋ（將軍）"]],"t":null},{"id":"cy0256","w":"濫竽充數","z":["ㄌㄢˋ","ㄩˊ","ㄔㄨㄥ","ㄕㄨˋ"],"p":[["數","ㄕㄨˋ","ㄕㄨˇ（數一數二）"]],"t":null},{"id":"cy0259","w":"揠苗助長","z":["ㄧㄚˋ","ㄇㄧㄠˊ","ㄓㄨˋ","ㄓㄤˇ"],"p":[["長","ㄓㄤˇ","ㄔㄤˊ（長短）"]],"t":null},{"id":"cy0264","w":"天衣無縫","z":["ㄊㄧㄢ","ㄧ","ㄨˊ","ㄈㄥˋ"],"p":[["縫","ㄈㄥˋ","ㄈㄥˊ（縫衣服）"]],"t":null},{"id":"cy0269","w":"暴跳如雷","z":["ㄅㄠˋ","ㄊㄧㄠˋ","ㄖㄨˊ","ㄌㄟˊ"],"p":[["暴","ㄅㄠˋ","ㄆㄨˋ（一暴十寒）"]],"t":null},{"id":"cy0278","w":"歸心似箭","z":["ㄍㄨㄟ","ㄒㄧㄣ","ㄙˋ","ㄐㄧㄢˋ"],"p":[["似","ㄙˋ","ㄕˋ（似的）"]],"t":null},{"id":"cy0281","w":"興致勃勃","z":["ㄒㄧㄥˋ","ㄓˋ","ㄅㄛˊ","ㄅㄛˊ"],"p":[["興","ㄒㄧㄥˋ","ㄒㄧㄥ（興奮）"]],"t":null},{"id":"cy0289","w":"強詞奪理","z":["ㄑㄧㄤˇ","ㄘˊ","ㄉㄨㄛˊ","ㄌㄧˇ"],"p":[["強","ㄑㄧㄤˇ","ㄑㄧㄤˊ（強壯）"]],"t":null},{"id":"cy0292","w":"言歸正傳","z":["ㄧㄢˊ","ㄍㄨㄟ","ㄓㄥˋ","ㄓㄨㄢˋ"],"p":[["傳","ㄓㄨㄢˋ","ㄔㄨㄢˊ（傳球）"]],"t":null},{"id":"cy0294","w":"對答如流","z":["ㄉㄨㄟˋ","ㄉㄚˊ","ㄖㄨˊ","ㄌㄧㄡˊ"],"p":[["答","ㄉㄚˊ","ㄉㄚ（答應）"]],"t":null},{"id":"cy0297","w":"隨機應變","z":["ㄙㄨㄟˊ","ㄐㄧ","ㄧㄥˋ","ㄅㄧㄢˋ"],"p":[["應","ㄧㄥˋ","ㄧㄥ（應該）"]],"t":null},{"id":"cy0299","w":"得不償失","z":["ㄉㄜˊ","ㄅㄨˋ","ㄔㄤˊ","ㄕ"],"p":[["得","ㄉㄜˊ","ㄉㄟˇ（我得走了）"]],"t":null},{"id":"cy0301","w":"進退兩難","z":["ㄐㄧㄣˋ","ㄊㄨㄟˋ","ㄌㄧㄤˇ","ㄋㄢˊ"],"p":[["難","ㄋㄢˊ","ㄋㄢˋ（災難）"]],"t":null},{"id":"cy0304","w":"弄巧成拙","z":["ㄋㄨㄥˋ","ㄑㄧㄠˇ","ㄔㄥˊ","ㄓㄨㄛˊ"],"p":[["弄","ㄋㄨㄥˋ","ㄌㄨㄥˋ（弄堂）"]],"t":null},{"id":"cy0308","w":"任勞任怨","z":["ㄖㄣˋ","ㄌㄠˊ","ㄖㄣˋ","ㄩㄢˋ"],"p":[["任","ㄖㄣˋ","ㄖㄣˊ（姓氏）"]],"t":null},{"id":"cy0311","w":"汗流浹背","z":["ㄏㄢˋ","ㄌㄧㄡˊ","ㄐㄧㄚˊ","ㄅㄟˋ"],"p":[["背","ㄅㄟˋ","ㄅㄟ（背書包）"]],"t":null},{"id":"cy0315","w":"天翻地覆","z":["ㄊㄧㄢ","ㄈㄢ","ㄉㄧˋ","ㄈㄨˋ"],"p":[["地","ㄉㄧˋ","˙ㄉㄜ（慢慢地）"]],"t":null},{"id":"cy0318","w":"水落石出","z":["ㄕㄨㄟˇ","ㄌㄨㄛˋ","ㄕˊ","ㄔㄨ"],"p":[["落","ㄌㄨㄛˋ","ㄌㄠˋ（落枕）"]],"t":null},{"id":"cy0326","w":"大名鼎鼎","z":["ㄉㄚˋ","ㄇㄧㄥˊ","ㄉㄧㄥˇ","ㄉㄧㄥˇ"],"p":[["大","ㄉㄚˋ","ㄉㄞˋ（大夫）"]],"t":null},{"id":"cy0327","w":"名不虛傳","z":["ㄇㄧㄥˊ","ㄅㄨˋ","ㄒㄩ","ㄔㄨㄢˊ"],"p":[["傳","ㄔㄨㄢˊ","ㄓㄨㄢˋ（傳記）"]],"t":null},{"id":"cy0330","w":"和藹可親","z":["ㄏㄜˊ","ㄞˇ","ㄎㄜˇ","ㄑㄧㄣ"],"p":[["和","ㄏㄜˊ","ㄏㄜˋ（附和）"]],"t":null},{"id":"cy0331","w":"來日方長","z":["ㄌㄞˊ","ㄖˋ","ㄈㄤ","ㄔㄤˊ"],"p":[["長","ㄔㄤˊ","ㄓㄤˇ（長大）"]],"t":null},{"id":"cy0332","w":"後會有期","z":["ㄏㄡˋ","ㄏㄨㄟˋ","ㄧㄡˇ","ㄑㄧˊ"],"p":[["會","ㄏㄨㄟˋ","ㄎㄨㄞˋ（會計）"]],"t":null},{"id":"cy0333","w":"朝思暮想","z":["ㄓㄠ","ㄙ","ㄇㄨˋ","ㄒㄧㄤˇ"],"p":[["朝","ㄓㄠ","ㄔㄠˊ（朝代）"]],"t":"招思暮想"},{"id":"cy0334","w":"一朝一夕","z":["ㄧ","ㄓㄠ","ㄧ","ㄒㄧˋ"],"p":[["朝","ㄓㄠ","ㄔㄠˊ（朝代）"]],"t":null},{"id":"cy0343","w":"不相上下","z":["ㄅㄨˋ","ㄒㄧㄤ","ㄕㄤˋ","ㄒㄧㄚˋ"],"p":[["相","ㄒㄧㄤ","ㄒㄧㄤˋ（相貌）"]],"t":null},{"id":"cy0345","w":"天涯海角","z":["ㄊㄧㄢ","ㄧㄚˊ","ㄏㄞˇ","ㄐㄧㄠˇ"],"p":[["角","ㄐㄧㄠˇ","ㄐㄩㄝˊ（角色）"]],"t":null},{"id":"cy0346","w":"來龍去脈","z":["ㄌㄞˊ","ㄌㄨㄥˊ","ㄑㄩˋ","ㄇㄞˋ"],"p":[["脈","ㄇㄞˋ","ㄇㄛˋ（脈脈含情）"]],"t":null},{"id":"cy0348","w":"不計其數","z":["ㄅㄨˋ","ㄐㄧˋ","ㄑㄧˊ","ㄕㄨˋ"],"p":[["數","ㄕㄨˋ","ㄕㄨˇ（數數）"]],"t":null},{"id":"cy0349","w":"屈指可數","z":["ㄑㄩ","ㄓˇ","ㄎㄜˇ","ㄕㄨˇ"],"p":[["數","ㄕㄨˇ","ㄕㄨˋ（數字）"]],"t":null},{"id":"cy0352","w":"理所當然","z":["ㄌㄧˇ","ㄙㄨㄛˇ","ㄉㄤ","ㄖㄢˊ"],"p":[["當","ㄉㄤ","ㄉㄤˋ（恰當）"]],"t":null},{"id":"cy0354","w":"胡作非為","z":["ㄏㄨˊ","ㄗㄨㄛˋ","ㄈㄟ","ㄨㄟˊ"],"p":[["為","ㄨㄟˊ","ㄨㄟˋ（因為）"]],"t":null},{"id":"cy0356","w":"橫行霸道","z":["ㄏㄥˊ","ㄒㄧㄥˊ","ㄅㄚˋ","ㄉㄠˋ"],"p":[["橫","ㄏㄥˊ","ㄏㄥˋ（蠻橫）"],["行","ㄒㄧㄥˊ","ㄏㄤˊ（銀行）"]],"t":"恆形霸道"},{"id":"cy0357","w":"安居樂業","z":["ㄢ","ㄐㄩ","ㄌㄜˋ","ㄧㄝˋ"],"p":[["樂","ㄌㄜˋ","ㄩㄝˋ（音樂）"]],"t":null},{"id":"cy0359","w":"風調雨順","z":["ㄈㄥ","ㄊㄧㄠˊ","ㄩˇ","ㄕㄨㄣˋ"],"p":[["調","ㄊㄧㄠˊ","ㄉㄧㄠˋ（聲調）"]],"t":"風條雨順"},{"id":"cy0365","w":"苦中作樂","z":["ㄎㄨˇ","ㄓㄨㄥ","ㄗㄨㄛˋ","ㄌㄜˋ"],"p":[["樂","ㄌㄜˋ","ㄩㄝˋ（音樂）"]],"t":null},{"id":"cy0366","w":"自得其樂","z":["ㄗˋ","ㄉㄜˊ","ㄑㄧˊ","ㄌㄜˋ"],"p":[["樂","ㄌㄜˋ","ㄩㄝˋ（音樂）"]],"t":null},{"id":"cy0367","w":"知足常樂","z":["ㄓ","ㄗㄨˊ","ㄔㄤˊ","ㄌㄜˋ"],"p":[["樂","ㄌㄜˋ","ㄩㄝˋ（音樂）"]],"t":null},{"id":"cy0371","w":"真相大白","z":["ㄓㄣ","ㄒㄧㄤˋ","ㄉㄚˋ","ㄅㄞˊ"],"p":[["相","ㄒㄧㄤˋ","ㄒㄧㄤ（相同）"]],"t":null},{"id":"cy0376","w":"遊手好閒","z":["ㄧㄡˊ","ㄕㄡˇ","ㄏㄠˋ","ㄒㄧㄢˊ"],"p":[["好","ㄏㄠˋ","ㄏㄠˇ（好人）"]],"t":"遊手號閒"},{"id":"cy0380","w":"庖丁解牛","z":["ㄆㄠˊ","ㄉㄧㄥ","ㄐㄧㄝˇ","ㄋㄧㄡˊ"],"p":[["解","ㄐㄧㄝˇ","ㄒㄧㄝˋ（姓解）"]],"t":null},{"id":"cy0381","w":"螳臂當車","z":["ㄊㄤˊ","ㄅㄧˋ","ㄉㄤ","ㄔㄜ"],"p":[["當","ㄉㄤ","ㄉㄤˋ（妥當）"],["臂","ㄅㄧˋ","˙ㄅㄟ（胳臂）"]],"t":null},{"id":"cy0384","w":"一意孤行","z":["ㄧ","ㄧˋ","ㄍㄨ","ㄒㄧㄥˊ"],"p":[["行","ㄒㄧㄥˊ","ㄏㄤˊ（銀行）"]],"t":null},{"id":"cy0390","w":"百折不撓","z":["ㄅㄞˇ","ㄓㄜˊ","ㄅㄨˋ","ㄋㄠˊ"],"p":[["折","ㄓㄜˊ","ㄕㄜˊ（折本）"]],"t":null},{"id":"cy0394","w":"千載難逢","z":["ㄑㄧㄢ","ㄗㄞˇ","ㄋㄢˊ","ㄈㄥˊ"],"p":[["載","ㄗㄞˇ","ㄗㄞˋ（載重）"],["難","ㄋㄢˊ","ㄋㄢˋ（災難）"]],"t":null},{"id":"cy0400","w":"手不釋卷","z":["ㄕㄡˇ","ㄅㄨˋ","ㄕˋ","ㄐㄩㄢˋ"],"p":[["卷","ㄐㄩㄢˋ","ㄐㄩㄢˇ（卷起）"]],"t":null},{"id":"cy0401","w":"融會貫通","z":["ㄖㄨㄥˊ","ㄏㄨㄟˋ","ㄍㄨㄢˋ","ㄊㄨㄥ"],"p":[["會","ㄏㄨㄟˋ","ㄎㄨㄞˋ（會計）"]],"t":null},{"id":"cy0404","w":"自強不息","z":["ㄗˋ","ㄑㄧㄤˊ","ㄅㄨˋ","ㄒㄧˊ"],"p":[["強","ㄑㄧㄤˊ","ㄑㄧㄤˇ（勉強）"]],"t":null},{"id":"cy0408","w":"因材施教","z":["ㄧㄣ","ㄘㄞˊ","ㄕ","ㄐㄧㄠˋ"],"p":[["教","ㄐㄧㄠˋ","ㄐㄧㄠ（教書）"]],"t":null},{"id":"cy0415","w":"相敬如賓","z":["ㄒㄧㄤ","ㄐㄧㄥˋ","ㄖㄨˊ","ㄅㄧㄣ"],"p":[["相","ㄒㄧㄤ","ㄒㄧㄤˋ（相貌）"]],"t":null},{"id":"cy0416","w":"同舟共濟","z":["ㄊㄨㄥˊ","ㄓㄡ","ㄍㄨㄥˋ","ㄐㄧˋ"],"p":[["濟","ㄐㄧˋ","ㄐㄧˇ（人才濟濟）"]],"t":null},{"id":"cy0417","w":"設身處地","z":["ㄕㄜˋ","ㄕㄣ","ㄔㄨˇ","ㄉㄧˋ"],"p":[["處","ㄔㄨˇ","ㄔㄨˋ（到處）"]],"t":"設身楚弟"},{"id":"cy0426","w":"背水一戰","z":["ㄅㄟˋ","ㄕㄨㄟˇ","ㄧ","ㄓㄢˋ"],"p":[["背","ㄅㄟˋ","ㄅㄟ（背書包）"]],"t":"貝水一戰"},{"id":"cy0432","w":"買櫝還珠","z":["ㄇㄞˇ","ㄉㄨˊ","ㄏㄨㄢˊ","ㄓㄨ"],"p":[["還","ㄏㄨㄢˊ","ㄏㄞˊ（還有）"]],"t":null},{"id":"cy0434","w":"望洋興嘆","z":["ㄨㄤˋ","ㄧㄤˊ","ㄒㄧㄥ","ㄊㄢˋ"],"p":[["興","ㄒㄧㄥ","ㄒㄧㄥˋ（高興）"]],"t":null},{"id":"cy0435","w":"夸父追日","z":["ㄎㄨㄚ","ㄈㄨˇ","ㄓㄨㄟ","ㄖˋ"],"p":[["父","ㄈㄨˇ","ㄈㄨˋ（父親）"]],"t":null},{"id":"cy0438","w":"入木三分","z":["ㄖㄨˋ","ㄇㄨˋ","ㄙㄢ","ㄈㄣ"],"p":[["分","ㄈㄣ","ㄈㄣˋ（成分）"]],"t":null},{"id":"cy0441","w":"名落孫山","z":["ㄇㄧㄥˊ","ㄌㄨㄛˋ","ㄙㄨㄣ","ㄕㄢ"],"p":[["落","ㄌㄨㄛˋ","ㄌㄠˋ（落枕）"]],"t":null},{"id":"cy0443","w":"病入膏肓","z":["ㄅㄧㄥˋ","ㄖㄨˋ","ㄍㄠ","ㄏㄨㄤ"],"p":[["膏","ㄍㄠ","ㄍㄠˋ（膏油，把油加在機器上）"]],"t":null},{"id":"cy0444","w":"豁然開朗","z":["ㄏㄨㄛˋ","ㄖㄢˊ","ㄎㄞ","ㄌㄤˇ"],"p":[["豁","ㄏㄨㄛˋ","ㄏㄨㄛ（豁出去）"]],"t":null},{"id":"cy0447","w":"如釋重負","z":["ㄖㄨˊ","ㄕˋ","ㄓㄨㄥˋ","ㄈㄨˋ"],"p":[["重","ㄓㄨㄥˋ","ㄔㄨㄥˊ（重新）"]],"t":null},{"id":"cy0449","w":"茅塞頓開","z":["ㄇㄠˊ","ㄙㄜˋ","ㄉㄨㄣˋ","ㄎㄞ"],"p":[["塞","ㄙㄜˋ","ㄙㄞ（塞車）"]],"t":null},{"id":"cy0451","w":"樂此不疲","z":["ㄌㄜˋ","ㄘˇ","ㄅㄨˋ","ㄆㄧˊ"],"p":[["樂","ㄌㄜˋ","ㄩㄝˋ（音樂）"]],"t":"勒此不疲"},{"id":"cy0454","w":"語重心長","z":["ㄩˇ","ㄓㄨㄥˋ","ㄒㄧㄣ","ㄔㄤˊ"],"p":[["重","ㄓㄨㄥˋ","ㄔㄨㄥˊ（重複）"],["長","ㄔㄤˊ","ㄓㄤˇ（長大）"]],"t":null},{"id":"cy0455","w":"直截了當","z":["ㄓˊ","ㄐㄧㄝˊ","ㄌㄧㄠˇ","ㄉㄤˋ"],"p":[["了","ㄌㄧㄠˇ","˙ㄌㄜ（吃了）"],["當","ㄉㄤˋ","ㄉㄤ（當然）"]],"t":null},{"id":"cy0459","w":"道聽塗說","z":["ㄉㄠˋ","ㄊㄧㄥ","ㄊㄨˊ","ㄕㄨㄛ"],"p":[["說","ㄕㄨㄛ","ㄕㄨㄟˋ（遊說）"]],"t":null},{"id":"cy0460","w":"眾說紛紜","z":["ㄓㄨㄥˋ","ㄕㄨㄛ","ㄈㄣ","ㄩㄣˊ"],"p":[["說","ㄕㄨㄛ","ㄕㄨㄟˋ（遊說）"]],"t":null},{"id":"cy0463","w":"未雨綢繆","z":["ㄨㄟˋ","ㄩˇ","ㄔㄡˊ","ㄇㄡˊ"],"p":[["繆","ㄇㄡˊ","ㄇㄧㄠˋ（姓繆）"]],"t":null},{"id":"cy0465","w":"本末倒置","z":["ㄅㄣˇ","ㄇㄛˋ","ㄉㄠˋ","ㄓˋ"],"p":[["倒","ㄉㄠˋ","ㄉㄠˇ（跌倒）"]],"t":null},{"id":"cy0466","w":"當務之急","z":["ㄉㄤ","ㄨˋ","ㄓ","ㄐㄧˊ"],"p":[["當","ㄉㄤ","ㄉㄤˋ（上當）"]],"t":null},{"id":"cy0469","w":"當機立斷","z":["ㄉㄤ","ㄐㄧ","ㄌㄧˋ","ㄉㄨㄢˋ"],"p":[["當","ㄉㄤ","ㄉㄤˋ（上當）"]],"t":"噹機立斷"},{"id":"cy0472","w":"迎刃而解","z":["ㄧㄥˊ","ㄖㄣˋ","ㄦˊ","ㄐㄧㄝˇ"],"p":[["解","ㄐㄧㄝˇ","ㄒㄧㄝˋ（姓氏，解先生）"]],"t":null},{"id":"cy0473","w":"事與願違","z":["ㄕˋ","ㄩˇ","ㄩㄢˋ","ㄨㄟˊ"],"p":[["與","ㄩˇ","ㄩˋ（參與）"]],"t":null},{"id":"cy0474","w":"適得其反","z":["ㄕˋ","ㄉㄜˊ","ㄑㄧˊ","ㄈㄢˇ"],"p":[["得","ㄉㄜˊ","ㄉㄟˇ（得要早點睡）"]],"t":null},{"id":"cy0479","w":"德高望重","z":["ㄉㄜˊ","ㄍㄠ","ㄨㄤˋ","ㄓㄨㄥˋ"],"p":[["重","ㄓㄨㄥˋ","ㄔㄨㄥˊ（重新）"]],"t":null},{"id":"cy0482","w":"稍縱即逝","z":["ㄕㄠ","ㄗㄨㄥˋ","ㄐㄧˊ","ㄕˋ"],"p":[["稍","ㄕㄠ","ㄕㄠˋ（稍息）"]],"t":null},{"id":"cy0484","w":"空前絕後","z":["ㄎㄨㄥ","ㄑㄧㄢˊ","ㄐㄩㄝˊ","ㄏㄡˋ"],"p":[["空","ㄎㄨㄥ","ㄎㄨㄥˋ（空閒）"]],"t":null},{"id":"cy0485","w":"與時俱進","z":["ㄩˇ","ㄕˊ","ㄐㄩˋ","ㄐㄧㄣˋ"],"p":[["與","ㄩˇ","ㄩˋ（參與）"]],"t":null},{"id":"cy0486","w":"絡繹不絕","z":["ㄌㄨㄛˋ","ㄧˋ","ㄅㄨˋ","ㄐㄩㄝˊ"],"p":[["絡","ㄌㄨㄛˋ","ㄌㄠˋ（絡子）"]],"t":null},{"id":"cy0487","w":"無與倫比","z":["ㄨˊ","ㄩˇ","ㄌㄨㄣˊ","ㄅㄧˇ"],"p":[["與","ㄩˇ","ㄩˋ（參與）"]],"t":null},{"id":"cy0488","w":"旗鼓相當","z":["ㄑㄧˊ","ㄍㄨˇ","ㄒㄧㄤ","ㄉㄤ"],"p":[["相","ㄒㄧㄤ","ㄒㄧㄤˋ（相貌）"],["當","ㄉㄤ","ㄉㄤˋ（上當）"]],"t":null},{"id":"cy0494","w":"舉足輕重","z":["ㄐㄩˇ","ㄗㄨˊ","ㄑㄧㄥ","ㄓㄨㄥˋ"],"p":[["重","ㄓㄨㄥˋ","ㄔㄨㄥˊ（重新）"]],"t":null},{"id":"cy0495","w":"大材小用","z":["ㄉㄚˋ","ㄘㄞˊ","ㄒㄧㄠˇ","ㄩㄥˋ"],"p":[["大","ㄉㄚˋ","ㄉㄞˋ（大夫）"]],"t":null},{"id":"cy0497","w":"為所欲為","z":["ㄨㄟˊ","ㄙㄨㄛˇ","ㄩˋ","ㄨㄟˊ"],"p":[["為","ㄨㄟˊ","ㄨㄟˋ（因為）"]],"t":null},{"id":"cy0500","w":"對症下藥","z":["ㄉㄨㄟˋ","ㄓㄥˋ","ㄒㄧㄚˋ","ㄧㄠˋ"],"p":[["症","ㄓㄥˋ","ㄓㄥ（症結）"]],"t":null}];
+const KEY = "chengyu-tts-check-v2";
+const $ = s => document.querySelector(s);
+const list = $("#list");
+let wrong = new Set(), heard = new Set(), filter = "fixed";
+
+// 讀寫勾選紀錄（瀏覽器儲存可能不可用，失敗就只存在畫面上）
+function load() { try { const o = JSON.parse(localStorage.getItem(KEY) || "{}"); wrong = new Set(o.wrong || []); heard = new Set(o.heard || []); } catch (e) {} }
+function save() { try { localStorage.setItem(KEY, JSON.stringify({ wrong: [...wrong], heard: [...heard] })); } catch (e) {} }
+
+/* ---------- 語音 ---------- */
+const canSpeak = "speechSynthesis" in window;
+let voices = [];
+function fillVoices() {
+  if (!canSpeak) return;
+  voices = speechSynthesis.getVoices().filter(v => /^zh|cmn|yue/i.test(v.lang));
+  const sel = $("#voice"), prev = sel.value;
+  sel.replaceChildren(...voices.map((v, i) => { const o = document.createElement("option"); o.value = i; o.textContent = `${v.name}（${v.lang}）`; return o; }));
+  const tw = voices.findIndex(v => /zh[-_]TW/i.test(v.lang));
+  sel.value = prev && voices[prev] ? prev : (tw >= 0 ? tw : 0);
+  const w = $("#voiceWarn");
+  if (!voices.length) { w.hidden = false; w.innerHTML = '<span class="warn">這台裝置找不到中文語音。</span>遊戲的朗讀功能在這台裝置上會沒有聲音或念不出中文。'; }
+  else if (tw < 0) { w.hidden = false; w.textContent = "找不到台灣中文（zh-TW）語音，目前用的是其他中文語音，讀音可能和台灣標準不同。"; }
+  else w.hidden = true;
+}
+if (canSpeak) { fillVoices(); speechSynthesis.onvoiceschanged = fillVoices; }
+else { $("#voiceWarn").hidden = false; $("#voiceWarn").innerHTML = '<span class="warn">這個瀏覽器不支援朗讀。</span>'; }
+
+function speak(text, onend) {
+  if (!canSpeak) return onend && onend();
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  const v = voices[$("#voice").value];
+  u.lang = v ? v.lang : "zh-TW"; if (v) u.voice = v;
+  u.rate = parseFloat($("#rate").value);
+  if (onend) { u.onend = onend; u.onerror = onend; }
+  speechSynthesis.speak(u);
+}
+
+/* ---------- 清單 ---------- */
+function rowFor(d) {
+  const li = document.createElement("li");
+  li.className = "item" + (wrong.has(d.id) ? " wrong" : ""); li.dataset.id = d.id;
+  const word = document.createElement("div"); word.className = "word";
+  [...d.w].forEach((ch, i) => { const r = document.createElement("ruby"); r.append(ch); const rt = document.createElement("rt"); rt.textContent = d.z[i] || ""; r.append(rt); word.append(r); });
+  const hint = document.createElement("div"); hint.className = "hint";
+  hint.innerHTML = (d.t ? `<span class="fix">已換字朗讀：${d.t}</span>　` : "") + d.p.map(([c, here, other]) => `「<b>${c}</b>」應念 <b>${here}</b>，不是 ${other}`).join("；");
+  const ctrls = document.createElement("div"); ctrls.className = "ctrls";
+  const btn = document.createElement("button"); btn.textContent = "▶ 念";
+  btn.addEventListener("click", () => { markHeard(d.id); speak(d.t || d.w); });
+  const lab = document.createElement("label");
+  const cb = document.createElement("input"); cb.type = "checkbox"; cb.id = "cb-" + d.id; cb.checked = wrong.has(d.id);
+  cb.addEventListener("change", () => { cb.checked ? wrong.add(d.id) : wrong.delete(d.id); markHeard(d.id); li.classList.toggle("wrong", cb.checked); save(); stat(); });
+  lab.append(cb, "念錯了");
+  ctrls.append(btn, lab);
+  li.append(word, ctrls, hint);
+  return li;
+}
+function markHeard(id) { if (!heard.has(id)) { heard.add(id); save(); stat(); } }
+function visible() { return DATA.filter(d => filter === "all" || (filter === "fixed" ? !!d.t : filter === "wrong" ? wrong.has(d.id) : !heard.has(d.id))); }
+function render() { list.replaceChildren(...visible().map(rowFor)); stat(); }
+function stat() { $("#stat").innerHTML = `已聽 ${heard.size}／${DATA.length}・念錯 <b>${wrong.size}</b>`; }
+
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.f; document.querySelectorAll(".chip").forEach(x => x.classList.toggle("on", x === b)); render();
+}));
+
+/* ---------- 連續播放 ---------- */
+let playing = false;
+$("#playAll").addEventListener("click", () => {
+  if (playing) { playing = false; speechSynthesis.cancel(); $("#playAll").textContent = "連續播放"; document.querySelectorAll(".playing").forEach(e => e.classList.remove("playing")); return; }
+  const items = [...list.querySelectorAll("li.item")];
+  if (!items.length) return;
+  playing = true; $("#playAll").textContent = "停止";
+  let i = 0;
+  const next = () => {
+    document.querySelectorAll(".playing").forEach(e => e.classList.remove("playing"));
+    if (!playing || i >= items.length) { playing = false; $("#playAll").textContent = "連續播放"; return; }
+    const li = items[i++], d = DATA.find(x => x.id === li.dataset.id);
+    li.classList.add("playing"); li.scrollIntoView({ block: "center", behavior: "smooth" });
+    markHeard(d.id);
+    speak(d.t || d.w, () => setTimeout(next, 1200));   // 每個成語之間停 1.2 秒，來得及勾選
+  };
+  next();
+});
+
+/* ---------- 結果 ---------- */
+$("#make").addEventListener("click", () => {
+  const v = voices[$("#voice").value];
+  const lines = [
+    "【成語朗讀檢查結果・第二輪（同音字）】",
+    `裝置：${navigator.userAgent}`,
+    `語音：${v ? v.name + "（" + v.lang + "）" : "無"}・語速 ${$("#rate").value}`,
+    `已聽 ${heard.size}／${DATA.length}，念錯 ${wrong.size} 個：`,
+    ...DATA.filter(d => wrong.has(d.id)).map(d => `${d.id} ${d.w}（${d.z.join(" ")}）`)
+  ];
+  $("#result").value = lines.join("\n");
+  $("#copyMsg").textContent = "";
+});
+$("#copy").addEventListener("click", async () => {
+  if (!$("#result").value) $("#make").click();
+  const ta = $("#result");
+  try { await navigator.clipboard.writeText(ta.value); $("#copyMsg").textContent = "已複製"; }
+  catch (e) { ta.focus(); ta.select(); $("#copyMsg").textContent = "請長按文字框，選「全選」後複製"; }
+});
+let resetArmed = false;
+$("#reset").addEventListener("click", () => {
+  if (!resetArmed) { resetArmed = true; $("#reset").textContent = "再按一次確認清除"; setTimeout(() => { resetArmed = false; $("#reset").textContent = "清除所有勾選"; }, 3000); return; }
+  resetArmed = false; $("#reset").textContent = "清除所有勾選";
+  wrong.clear(); heard.clear(); save(); render(); $("#result").value = "";
+});
+
+load(); render();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,3708 @@
+{
+ "version": "0.2.0",
+ "items": [
+  {
+   "id": "cy0155",
+   "idiom": "東張西望",
+   "zhuyin": [
+    "ㄉㄨㄥ",
+    "ㄓㄤ",
+    "ㄒㄧ",
+    "ㄨㄤˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "動作"
+   ],
+   "meaning": "一下子往東看、一下子往西看。形容到處張望，在找東西或心裡不安定。",
+   "key_chars": [
+    {
+     "char": "張",
+     "meaning": "看、張望"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "媽媽在人很多的車站東張西望，想找到來接我們的舅舅。",
+    "考試的時候不要東張西望，老師會以為你在偷看。"
+   ],
+   "synonyms": [],
+   "antonyms": [
+    "目不轉睛",
+    "全神貫注"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「東張西望」是什麼意思？",
+     "choices": [
+      "把東西張貼在東邊和西邊",
+      "到處看來看去",
+      "專心盯著一個地方",
+      "往東西兩邊走路"
+     ],
+     "answer_index": 1,
+     "explanation": "張、望都是「看」的意思，東張西望就是四處看來看去。"
+    },
+    "fill_blank": {
+     "sentence": "上課鐘響了，他還在走廊上＿＿，不知道在找誰。",
+     "choices": [
+      "東張西望",
+      "風調雨順",
+      "五穀豐登",
+      "名列前茅"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "小美在百貨公司走失了，站在原地東張西望，急著找媽媽。",
+     "correct": true,
+     "explanation": "她四處張望在找人，用「東張西望」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0156",
+   "idiom": "應有盡有",
+   "zhuyin": [
+    "ㄧㄥ",
+    "ㄧㄡˇ",
+    "ㄐㄧㄣˋ",
+    "ㄧㄡˇ"
+   ],
+   "polyphones": [
+    {
+     "char": "應",
+     "here": "ㄧㄥ",
+     "other": "ㄧㄥˋ（反應）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "多"
+   ],
+   "meaning": "應該有的東西全都有了。形容東西非常齊全。",
+   "key_chars": [
+    {
+     "char": "應",
+     "meaning": "應該，讀 ㄧㄥ"
+    },
+    {
+     "char": "盡",
+     "meaning": "全部、都"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "這家文具店從鉛筆到畫架應有盡有。",
+    "夜市裡吃的、玩的應有盡有，我們逛了一整晚。"
+   ],
+   "synonyms": [
+    "包羅萬象"
+   ],
+   "antonyms": [
+    "一無所有"
+   ],
+   "common_mistakes": [
+    {
+     "type": "讀音",
+     "wrong": "ㄧㄥˋ",
+     "note": "「應有」的應是「應該」的意思，讀 ㄧㄥ。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「應有盡有」是什麼意思？",
+     "choices": [
+      "應該有的都有，非常齊全",
+      "東西快要用完了",
+      "大家都要回應",
+      "應該把東西分完"
+     ],
+     "answer_index": 0,
+     "explanation": "盡是「全部」，應該有的全部都有，就是很齊全。"
+    },
+    "fill_blank": {
+     "sentence": "新開的大賣場從生鮮蔬果到家電用品＿＿。",
+     "choices": [
+      "垂頭喪氣",
+      "應有盡有",
+      "啞口無言",
+      "自暴自棄"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "外婆家的雜貨店從醬油、文具到電池應有盡有，什麼都買得到。",
+     "correct": true,
+     "explanation": "形容雜貨店東西很齊全，用「應有盡有」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0157",
+   "idiom": "各式各樣",
+   "zhuyin": [
+    "ㄍㄜˋ",
+    "ㄕˋ",
+    "ㄍㄜˋ",
+    "ㄧㄤˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "多"
+   ],
+   "meaning": "有很多不同的樣式和種類。",
+   "key_chars": [
+    {
+     "char": "式",
+     "meaning": "樣式、形式"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "花市裡有各式各樣的花，紅的、黃的、紫的都有。",
+    "園遊會的攤位賣各式各樣的點心。"
+   ],
+   "synonyms": [
+    "五花八門",
+    "形形色色"
+   ],
+   "antonyms": [
+    "一模一樣",
+    "千篇一律"
+   ],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "各試各樣",
+     "note": "是「樣式」的式，不是考試的試。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「各式各樣」是什麼意思？",
+     "choices": [
+      "每個人都去考試",
+      "種類、樣子很多",
+      "大家穿一樣的衣服",
+      "每樣東西都很貴"
+     ],
+     "answer_index": 1,
+     "explanation": "式和樣都是「樣子、種類」，各式各樣就是種類很多。"
+    },
+    "fill_blank": {
+     "sentence": "美術課上，同學們用黏土捏出＿＿的小動物。",
+     "choices": [
+      "各式各樣",
+      "眾所周知",
+      "迫在眉睫",
+      "刻不容緩"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "全班都穿著各式各樣的制服，看起來非常整齊一致。",
+     "correct": false,
+     "explanation": "制服整齊一致是「一樣」，跟「各式各樣（很多種）」意思相反。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0158",
+   "idiom": "千奇百怪",
+   "zhuyin": [
+    "ㄑㄧㄢ",
+    "ㄑㄧˊ",
+    "ㄅㄞˇ",
+    "ㄍㄨㄞˋ"
+   ],
+   "polyphones": [
+    {
+     "char": "奇",
+     "here": "ㄑㄧˊ",
+     "other": "ㄐㄧ（奇數）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "多",
+    "奇特"
+   ],
+   "meaning": "各種奇特、怪異的事物或現象，數量又多。",
+   "key_chars": [
+    {
+     "char": "奇",
+     "meaning": "奇特、少見，讀 ㄑㄧˊ"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "海洋館裡有許多千奇百怪的深海魚。",
+    "弟弟問了一堆千奇百怪的問題，把爸爸考倒了。"
+   ],
+   "synonyms": [
+    "奇形怪狀",
+    "五花八門"
+   ],
+   "antonyms": [
+    "千篇一律"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「千奇百怪」是什麼意思？",
+     "choices": [
+      "一千個奇數和一百個怪物",
+      "各式各樣奇特古怪的東西",
+      "非常害怕奇怪的事",
+      "數學題目很難"
+     ],
+     "answer_index": 1,
+     "explanation": "千、百表示很多，奇、怪是奇特，合起來是「很多奇特古怪的事物」。"
+    },
+    "fill_blank": {
+     "sentence": "科學博物館裡展示了＿＿的昆蟲標本，有的像樹葉，有的像樹枝。",
+     "choices": [
+      "千奇百怪",
+      "言歸正傳",
+      "相敬如賓",
+      "苦盡甘來"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "森林裡長著千奇百怪的植物，有的會吃蟲，有的葉子大得像雨傘。",
+     "correct": true,
+     "explanation": "描寫很多奇特的植物，用「千奇百怪」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0159",
+   "idiom": "奇形怪狀",
+   "zhuyin": [
+    "ㄑㄧˊ",
+    "ㄒㄧㄥˊ",
+    "ㄍㄨㄞˋ",
+    "ㄓㄨㄤˋ"
+   ],
+   "polyphones": [
+    {
+     "char": "奇",
+     "here": "ㄑㄧˊ",
+     "other": "ㄐㄧ（奇數）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "外形"
+   ],
+   "meaning": "形狀很奇特、很古怪，跟平常看到的不一樣。",
+   "key_chars": [
+    {
+     "char": "狀",
+     "meaning": "樣子、形狀"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "海邊有很多奇形怪狀的石頭，有一塊很像烏龜。",
+    "雲朵變成奇形怪狀的樣子，我們猜它像什麼。"
+   ],
+   "synonyms": [
+    "千奇百怪"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "形容人的個性奇怪",
+     "note": "奇形怪狀說的是「外形」，不是個性或行為。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「奇形怪狀」最常用來形容什麼？",
+     "choices": [
+      "東西的形狀很奇特",
+      "人的脾氣很怪",
+      "成績進步很多",
+      "天氣變化很快"
+     ],
+     "answer_index": 0,
+     "explanation": "奇形怪狀說的是形狀、外表很特別古怪。"
+    },
+    "fill_blank": {
+     "sentence": "野柳海邊有許多被海浪侵蝕成＿＿的岩石。",
+     "choices": [
+      "半信半疑",
+      "奇形怪狀",
+      "知錯能改",
+      "後會有期"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "這塊樹根長得奇形怪狀，看起來像一條盤起來的龍。",
+     "correct": true,
+     "explanation": "形容樹根形狀特別，用「奇形怪狀」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0160",
+   "idiom": "調皮搗蛋",
+   "zhuyin": [
+    "ㄊㄧㄠˊ",
+    "ㄆㄧˊ",
+    "ㄉㄠˇ",
+    "ㄉㄢˋ"
+   ],
+   "polyphones": [
+    {
+     "char": "調",
+     "here": "ㄊㄧㄠˊ",
+     "other": "ㄉㄧㄠˋ（調查）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "個性",
+    "行為"
+   ],
+   "meaning": "愛玩、愛惡作劇，常常故意找麻煩。",
+   "key_chars": [
+    {
+     "char": "搗",
+     "meaning": "攪亂、找麻煩"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "小狗調皮搗蛋，把衛生紙咬得滿地都是。",
+    "弟弟上課調皮搗蛋，被老師叫去罰站。"
+   ],
+   "synonyms": [],
+   "antonyms": [
+    "循規蹈矩"
+   ],
+   "common_mistakes": [
+    {
+     "type": "讀音",
+     "wrong": "ㄉㄧㄠˋ ㄆㄧˊ",
+     "note": "調皮的調讀 ㄊㄧㄠˊ，不是調查的 ㄉㄧㄠˋ。"
+    },
+    {
+     "type": "錯字",
+     "wrong": "調皮倒蛋",
+     "note": "是提手旁的「搗」，表示攪亂。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「調皮搗蛋」是什麼意思？",
+     "choices": [
+      "很會煮蛋料理",
+      "愛玩又愛惡作劇",
+      "做事非常認真",
+      "調查蛋是誰打破的"
+     ],
+     "answer_index": 1,
+     "explanation": "調皮搗蛋形容人愛玩鬧、常惹麻煩，跟蛋沒有關係。"
+    },
+    "fill_blank": {
+     "sentence": "表弟一來我家就＿＿，把我的積木城堡全推倒了。",
+     "choices": [
+      "調皮搗蛋",
+      "德高望重",
+      "金榜題名",
+      "風和日麗"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "哥哥調皮搗蛋，每天都把作業寫得整整齊齊才去玩。",
+     "correct": false,
+     "explanation": "寫作業認真又整齊是乖巧，不是「調皮搗蛋」。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0161",
+   "idiom": "平安無事",
+   "zhuyin": [
+    "ㄆㄧㄥˊ",
+    "ㄢ",
+    "ㄨˊ",
+    "ㄕˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "平安"
+   ],
+   "meaning": "很安全，沒有發生意外或壞事。",
+   "key_chars": [
+    {
+     "char": "事",
+     "meaning": "這裡指意外、麻煩事"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "颱風過後，全家人都平安無事，爸爸終於放心了。",
+    "露營的這幾天大家平安無事，玩得很開心。"
+   ],
+   "synonyms": [
+    "安然無恙"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「平安無事」是什麼意思？",
+     "choices": [
+      "很平安，沒有發生意外",
+      "很無聊，沒有事情可以做",
+      "工作做完了",
+      "路面很平坦"
+     ],
+     "answer_index": 0,
+     "explanation": "這裡的「事」指意外或壞事，平安無事就是沒出事。"
+    },
+    "fill_blank": {
+     "sentence": "地震雖然很大，幸好學校的同學都＿＿。",
+     "choices": [
+      "平安無事",
+      "胡說八道",
+      "一毛不拔",
+      "目中無人"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "爸爸出差一個星期，打電話回來說一切平安無事，要我們別擔心。",
+     "correct": true,
+     "explanation": "表示沒有發生意外，用「平安無事」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0162",
+   "idiom": "無影無蹤",
+   "zhuyin": [
+    "ㄨˊ",
+    "ㄧㄥˇ",
+    "ㄨˊ",
+    "ㄗㄨㄥ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "消失"
+   ],
+   "meaning": "連影子和腳印都沒有。形容完全消失，找不到了。",
+   "key_chars": [
+    {
+     "char": "蹤",
+     "meaning": "腳印、留下的痕跡"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "一打開門，小貓就跑得無影無蹤。",
+    "吃了藥睡一覺，頭痛消失得無影無蹤。"
+   ],
+   "synonyms": [
+    "不翼而飛"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "無影無踪",
+     "note": "台灣標準字是「蹤」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「無影無蹤」是什麼意思？",
+     "choices": [
+      "完全消失，找不到",
+      "天黑了看不到影子",
+      "走路沒有聲音",
+      "照片沒有拍好"
+     ],
+     "answer_index": 0,
+     "explanation": "影子和腳印（蹤）都沒有，表示完全不見了。"
+    },
+    "fill_blank": {
+     "sentence": "剛才桌上的蛋糕，一轉眼就消失得＿＿。",
+     "choices": [
+      "精神抖擻",
+      "無影無蹤",
+      "名副其實",
+      "依依不捨"
+     ],
+     "answer_index": 1
+    },
+    "usage_check": {
+     "sentence": "聽到老師說要考試，他的笑容一下子消失得無影無蹤。",
+     "correct": true,
+     "explanation": "笑容完全不見了，用「無影無蹤」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0163",
+   "idiom": "小心翼翼",
+   "zhuyin": [
+    "ㄒㄧㄠˇ",
+    "ㄒㄧㄣ",
+    "ㄧˋ",
+    "ㄧˋ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "態度",
+    "謹慎"
+   ],
+   "meaning": "非常小心、謹慎，一點也不敢馬虎。",
+   "key_chars": [
+    {
+     "char": "翼翼",
+     "meaning": "恭敬謹慎的樣子，不是翅膀"
+    }
+   ],
+   "origin": {
+    "source": "《詩經・大雅・大明》",
+    "quote": "維此文王，小心翼翼。",
+    "story": null,
+    "note": "原指恭敬嚴肅的樣子，後來才多用來表示謹慎小心。"
+   },
+   "examples": [
+    "我小心翼翼地捧著剛做好的蛋糕走到餐桌。",
+    "妹妹小心翼翼地走過結冰的小路。"
+   ],
+   "synonyms": [
+    "提心吊膽",
+    "一絲不苟"
+   ],
+   "antonyms": [
+    "粗心大意",
+    "粗枝大葉"
+   ],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "形容鳥張開翅膀",
+     "note": "翼翼是「謹慎」的意思，跟翅膀無關。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「小心翼翼」是什麼意思？",
+     "choices": [
+      "小鳥張開翅膀",
+      "非常小心謹慎",
+      "心胸很狹小",
+      "飛得很小心"
+     ],
+     "answer_index": 1,
+     "explanation": "翼翼在這裡是謹慎的樣子，所以是非常小心。"
+    },
+    "fill_blank": {
+     "sentence": "哥哥＿＿地把玻璃杯放進櫃子，深怕打破了。",
+     "choices": [
+      "小心翼翼",
+      "大搖大擺",
+      "人云亦云",
+      "人山人海"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "他小心翼翼地把書包往地上一丟，就衝去打球。",
+     "correct": false,
+     "explanation": "隨手一丟是很隨便，不是小心，跟「小心翼翼」矛盾。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0164",
+   "idiom": "大搖大擺",
+   "zhuyin": [
+    "ㄉㄚˋ",
+    "ㄧㄠˊ",
+    "ㄉㄚˋ",
+    "ㄅㄞˇ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "動作",
+    "態度"
+   ],
+   "meaning": "走路時身體搖來擺去。形容很神氣、很大膽、一點都不在乎的樣子。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "一隻大白鵝大搖大擺地走過操場。",
+    "他沒排隊就大搖大擺地走到最前面，大家都很生氣。"
+   ],
+   "synonyms": [
+    "耀武揚威"
+   ],
+   "antonyms": [
+    "偷偷摸摸",
+    "鬼鬼祟祟"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「大搖大擺」是什麼意思？",
+     "choices": [
+      "走路很搖晃，快要跌倒",
+      "很神氣、毫不在乎地走",
+      "把東西擺得很大",
+      "跳舞動作很大"
+     ],
+     "answer_index": 1,
+     "explanation": "大搖大擺形容走路很神氣、大膽，不怕別人看。"
+    },
+    "fill_blank": {
+     "sentence": "那隻流浪貓＿＿地走進教室，好像這裡是牠家一樣。",
+     "choices": [
+      "大搖大擺",
+      "一知半解",
+      "見多識廣",
+      "持之以恆"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "小偷大搖大擺地從大門走出去，警衛還以為他是住戶。",
+     "correct": true,
+     "explanation": "小偷大膽、毫不在乎地走出去，用「大搖大擺」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0165",
+   "idiom": "偷偷摸摸",
+   "zhuyin": [
+    "ㄊㄡ",
+    "ㄊㄡ",
+    "ㄇㄛ",
+    "ㄇㄛ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "行為"
+   ],
+   "meaning": "怕被別人發現，暗地裡做事。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "弟弟偷偷摸摸地從冰箱拿出冰淇淋。",
+    "我們偷偷摸摸地準備媽媽的生日驚喜。"
+   ],
+   "synonyms": [
+    "鬼鬼祟祟"
+   ],
+   "antonyms": [
+    "光明正大",
+    "大搖大擺"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「偷偷摸摸」是什麼意思？",
+     "choices": [
+      "一直摸東西",
+      "暗地裡做事，怕被發現",
+      "在黑暗中找路",
+      "很會偷東西的小偷"
+     ],
+     "answer_index": 1,
+     "explanation": "偷偷摸摸是瞞著別人、悄悄地做事，不一定是偷竊。"
+    },
+    "fill_blank": {
+     "sentence": "他＿＿地把考卷藏進抽屜，不想讓爸爸看到。",
+     "choices": [
+      "偷偷摸摸",
+      "光明正大",
+      "異口同聲",
+      "天寒地凍"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "班長偷偷摸摸地站上講台，大聲向全班宣布明天的活動。",
+     "correct": false,
+     "explanation": "站上講台大聲宣布是公開的，不是暗地裡做，用「偷偷摸摸」不對。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0166",
+   "idiom": "好吃懶做",
+   "zhuyin": [
+    "ㄏㄠˋ",
+    "ㄔ",
+    "ㄌㄢˇ",
+    "ㄗㄨㄛˋ"
+   ],
+   "polyphones": [
+    {
+     "char": "好",
+     "here": "ㄏㄠˋ",
+     "other": "ㄏㄠˇ（好人）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "個性",
+    "生活"
+   ],
+   "meaning": "只喜歡吃，卻懶得工作。形容人很懶惰。",
+   "key_chars": [
+    {
+     "char": "好",
+     "meaning": "喜歡，讀 ㄏㄠˋ"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "故事裡那隻好吃懶做的蚱蜢，冬天就沒有東西吃了。",
+    "爸爸說，好吃懶做的人很難成功。"
+   ],
+   "synonyms": [
+    "遊手好閒",
+    "坐享其成"
+   ],
+   "antonyms": [
+    "自食其力",
+    "任勞任怨"
+   ],
+   "common_mistakes": [
+    {
+     "type": "讀音",
+     "wrong": "ㄏㄠˇ ㄔ",
+     "note": "好是「喜歡」的意思，讀 ㄏㄠˋ，不是「好吃（美味）」的 ㄏㄠˇ。"
+    },
+    {
+     "type": "誤用",
+     "wrong": "形容食物好吃",
+     "note": "這是在說人懶惰，不是說東西美味。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「好吃懶做」是什麼意思？",
+     "choices": [
+      "食物很好吃，做法很簡單",
+      "只愛吃，不愛工作",
+      "吃得很少，做得很多",
+      "很會做菜"
+     ],
+     "answer_index": 1,
+     "explanation": "好（ㄏㄠˋ）是喜歡，喜歡吃又懶得做事，形容人懶惰。"
+    },
+    "fill_blank": {
+     "sentence": "他整天＿＿，連自己的碗都不洗，媽媽很頭痛。",
+     "choices": [
+      "好吃懶做",
+      "勤能補拙",
+      "聞雞起舞",
+      "一諾千金"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "阿嬤做的滷肉好吃懶做，我一口氣吃了三碗飯。",
+     "correct": false,
+     "explanation": "這句是想說滷肉美味，但「好吃懶做」是說人懶惰，完全用錯。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0167",
+   "idiom": "省吃儉用",
+   "zhuyin": [
+    "ㄕㄥˇ",
+    "ㄔ",
+    "ㄐㄧㄢˇ",
+    "ㄩㄥˋ"
+   ],
+   "polyphones": [
+    {
+     "char": "省",
+     "here": "ㄕㄥˇ",
+     "other": "ㄒㄧㄥˇ（反省）"
+    }
+   ],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "生活",
+    "節儉"
+   ],
+   "meaning": "吃和用都很節省，不浪費錢。",
+   "key_chars": [
+    {
+     "char": "儉",
+     "meaning": "節省、不浪費"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "爺爺奶奶年輕時省吃儉用，才買了一間小房子。",
+    "我省吃儉用存了半年的零用錢，終於買到想要的書。"
+   ],
+   "synonyms": [
+    "精打細算"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "省吃檢用",
+     "note": "是「節儉」的儉，人字旁。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「省吃儉用」是什麼意思？",
+     "choices": [
+      "吃東西要省略步驟",
+      "吃和用都很節省",
+      "不吃飯只用東西",
+      "吃得很多用得很少"
+     ],
+     "answer_index": 1,
+     "explanation": "省和儉都是節省，表示生活很節儉。"
+    },
+    "fill_blank": {
+     "sentence": "為了買新腳踏車，哥哥決定＿＿，不再買零食。",
+     "choices": [
+      "省吃儉用",
+      "鶴立雞群",
+      "車水馬龍",
+      "雞毛蒜皮"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "媽媽省吃儉用，把省下的錢存起來給我們繳學費。",
+     "correct": true,
+     "explanation": "媽媽節省生活費存錢，用「省吃儉用」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0168",
+   "idiom": "物美價廉",
+   "zhuyin": [
+    "ㄨˋ",
+    "ㄇㄟˇ",
+    "ㄐㄧㄚˋ",
+    "ㄌㄧㄢˊ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "買賣",
+    "生活"
+   ],
+   "meaning": "東西品質很好，價錢又便宜。",
+   "key_chars": [
+    {
+     "char": "廉",
+     "meaning": "便宜"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "學校附近的小吃店物美價廉，放學時總是大排長龍。",
+    "這家文具店的筆物美價廉，同學都來這裡買。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "物美價連",
+     "note": "是表示便宜的「廉」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「物美價廉」是什麼意思？",
+     "choices": [
+      "東西漂亮但很貴",
+      "東西好又便宜",
+      "東西很美但不能買",
+      "價錢跟美不美有關"
+     ],
+     "answer_index": 1,
+     "explanation": "廉是便宜的意思，物美價廉就是又好又便宜。"
+    },
+    "fill_blank": {
+     "sentence": "夜市這攤蔥油餅＿＿，一個只要二十元又很好吃。",
+     "choices": [
+      "物美價廉",
+      "七上八下",
+      "目瞪口呆",
+      "落井下石"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "這雙球鞋要一萬多元，又很快就壞了，真是物美價廉。",
+     "correct": false,
+     "explanation": "又貴又容易壞，跟「品質好又便宜」完全相反。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0169",
+   "idiom": "貨真價實",
+   "zhuyin": [
+    "ㄏㄨㄛˋ",
+    "ㄓㄣ",
+    "ㄐㄧㄚˋ",
+    "ㄕˊ"
+   ],
+   "polyphones": [],
+   "level": 1,
+   "tags": [
+    "生活百態",
+    "買賣",
+    "真實"
+   ],
+   "meaning": "貨品是真的，價錢也實在。也用來形容一點都不假、真真實實。",
+   "key_chars": [
+    {
+     "char": "實",
+     "meaning": "實在、不虛假"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "老闆說他賣的蜂蜜貨真價實，絕對沒有加糖水。",
+    "這可是貨真價實的恐龍化石，不是模型喔！"
+   ],
+   "synonyms": [
+    "名副其實",
+    "千真萬確"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「貨真價實」是什麼意思？",
+     "choices": [
+      "貨品很多，價錢很高",
+      "貨品是真的，一點也不假",
+      "東西都賣完了",
+      "價錢可以討價還價"
+     ],
+     "answer_index": 1,
+     "explanation": "貨真價實原指貨品真、價錢實在，也引申為「真真實實、不假」。"
+    },
+    "fill_blank": {
+     "sentence": "這面獎牌是用純金做的，＿＿，不是塑膠的。",
+     "choices": [
+      "貨真價實",
+      "畫蛇添足",
+      "三心二意",
+      "對牛彈琴"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "這家店賣的牛肉麵貨真價實，碗裡的牛肉又大塊又新鮮。",
+     "correct": true,
+     "explanation": "牛肉料多實在、不偷工減料，用「貨真價實」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0170",
+   "idiom": "鶴立雞群",
+   "zhuyin": [
+    "ㄏㄜˋ",
+    "ㄌㄧˋ",
+    "ㄐㄧ",
+    "ㄑㄩㄣˊ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "出眾",
+    "外貌"
+   ],
+   "meaning": "像白鶴站在雞群裡一樣顯眼。比喻一個人的外表或才能特別突出。",
+   "key_chars": [],
+   "origin": {
+    "source": "《世說新語・容止》",
+    "quote": null,
+    "story": {
+     "title": "像鶴站在雞群裡",
+     "text": "晉朝有一個人叫嵇紹，他長得高高的，氣質又好。有一次他走在擁擠的人群中，有人看見了，就對朋友王戎說：「嵇紹站在人群裡，好像一隻野鶴站在雞群中間一樣，一眼就能看見！」後來大家就用「鶴立雞群」來形容一個人特別出色，在一群人中非常顯眼。"
+    },
+    "note": "出處原文為「卓卓如野鶴之在雞群」；故事依原文大意改寫。"
+   },
+   "examples": [
+    "表哥身高一百九十公分，站在同學中間真是鶴立雞群。",
+    "她的畫在全校比賽中鶴立雞群，得到第一名。"
+   ],
+   "synonyms": [
+    "出類拔萃",
+    "與眾不同",
+    "脫穎而出"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "形容一個人跟大家處不來",
+     "note": "這是稱讚人出眾，不是說人孤僻或不合群。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「鶴立雞群」是什麼意思？",
+     "choices": [
+      "鶴和雞住在一起",
+      "比喻一個人特別出眾",
+      "雞群在追趕白鶴",
+      "養雞場裡出現一隻鳥"
+     ],
+     "answer_index": 1,
+     "explanation": "白鶴站在雞群裡很顯眼，比喻人的外表或才能特別突出。"
+    },
+    "fill_blank": {
+     "sentence": "他的演講內容又有趣又有深度，在所有參賽者中＿＿。",
+     "choices": [
+      "鶴立雞群",
+      "鴉雀無聲",
+      "雞飛狗跳",
+      "膽小如鼠"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "小明的成績在班上鶴立雞群，每次都考第一名。",
+     "correct": true,
+     "explanation": "成績特別突出，用「鶴立雞群」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0171",
+   "idiom": "老馬識途",
+   "zhuyin": [
+    "ㄌㄠˇ",
+    "ㄇㄚˇ",
+    "ㄕˋ",
+    "ㄊㄨˊ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "經驗"
+   ],
+   "meaning": "老馬認得走過的路。比喻有經驗的人對事情很熟悉，可以帶領大家。",
+   "key_chars": [
+    {
+     "char": "識",
+     "meaning": "認得"
+    },
+    {
+     "char": "途",
+     "meaning": "道路"
+    }
+   ],
+   "origin": {
+    "source": "《韓非子・說林上》",
+    "quote": "管仲曰：「老馬之智可用也。」乃放老馬而隨之，遂得道。",
+    "story": {
+     "title": "老馬帶路",
+     "text": "春秋時候，齊桓公帶著軍隊去打仗，出發時是春天，回來時已經是冬天了。大軍在山谷裡迷了路，大家急得團團轉。聰明的管仲說：「老馬很有智慧，讓牠們帶路吧！」於是他們放開幾匹老馬，跟在後面走，果然找到了回家的路。"
+    }
+   },
+   "examples": [
+    "爺爺在這座山上走了幾十年，老馬識途，帶我們走最安全的步道。",
+    "學長老馬識途，帶我們很快就找到社團教室。"
+   ],
+   "synonyms": [
+    "駕輕就熟"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "罵人年紀大",
+     "note": "這是稱讚有經驗，不是取笑人老。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「老馬識途」是什麼意思？",
+     "choices": [
+      "老馬跑得很慢",
+      "有經驗的人熟悉情況，能帶路",
+      "馬年紀大了要退休",
+      "老人喜歡騎馬"
+     ],
+     "answer_index": 1,
+     "explanation": "老馬認得路，比喻有經驗的人能引導大家。"
+    },
+    "fill_blank": {
+     "sentence": "這次校外教學，就請＿＿的王老師帶隊吧！",
+     "choices": [
+      "老馬識途",
+      "膽小如鼠",
+      "朝三暮四",
+      "胡說八道"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "遇到電腦當機，大家都請老馬識途的資訊老師來幫忙。",
+     "correct": true,
+     "explanation": "資訊老師經驗豐富、熟悉狀況，用「老馬識途」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0172",
+   "idiom": "塞翁失馬",
+   "zhuyin": [
+    "ㄙㄞˋ",
+    "ㄨㄥ",
+    "ㄕ",
+    "ㄇㄚˇ"
+   ],
+   "polyphones": [
+    {
+     "char": "塞",
+     "here": "ㄙㄞˋ",
+     "other": "ㄙㄜˋ（阻塞）、ㄙㄞ（塞車）"
+    }
+   ],
+   "level": 2,
+   "tags": [
+    "動物",
+    "禍福",
+    "寓言"
+   ],
+   "meaning": "住在邊塞的老人走失了馬，後來反而帶來好處。比喻壞事有時也會變成好事。常說「塞翁失馬，焉知非福」。",
+   "key_chars": [
+    {
+     "char": "塞",
+     "meaning": "邊塞、邊境，讀 ㄙㄞˋ"
+    },
+    {
+     "char": "翁",
+     "meaning": "老人"
+    }
+   ],
+   "origin": {
+    "source": "《淮南子・人間訓》",
+    "quote": "此何遽不為福乎？",
+    "story": {
+     "title": "老爺爺丟了馬",
+     "text": "從前邊塞住著一位老爺爺，他的馬跑到胡人那裡去了。鄰居來安慰他，他卻說：「這說不定是好事呢！」幾個月後，那匹馬竟然帶著一群好馬回來。後來兒子騎馬摔斷了腿，大家又來安慰。不久戰爭爆發，年輕人都被抓去打仗，他的兒子因為腿受傷，反而保住了性命。"
+    }
+   },
+   "examples": [
+    "沒趕上公車雖然很倒楣，卻因此遇到好久不見的老同學，真是塞翁失馬。",
+    "這次比賽落選，讓我有時間練得更好，也算是塞翁失馬，焉知非福。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "讀音",
+     "wrong": "ㄙㄞ ㄨㄥ",
+     "note": "塞翁的塞是「邊塞」，讀 ㄙㄞˋ，不是塞車的 ㄙㄞ。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「塞翁失馬」想告訴我們什麼？",
+     "choices": [
+      "要好好看管自己的馬",
+      "壞事有時也會變成好事",
+      "老人家常常迷路",
+      "失去的東西一定找不回來"
+     ],
+     "answer_index": 1,
+     "explanation": "故事中丟了馬反而帶回更多好馬，說明壞事也可能帶來好結果。"
+    },
+    "fill_blank": {
+     "sentence": "雨天不能出去玩，我們在家拼完一千片拼圖，真是＿＿，焉知非福。",
+     "choices": [
+      "塞翁失馬",
+      "老馬識途",
+      "鶴立雞群",
+      "走馬看花"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "他的鉛筆盒弄丟了，第二天就在操場找到，真是塞翁失馬。",
+     "correct": false,
+     "explanation": "只是把東西找回來，沒有「壞事變成好事」的意思，用「失而復得」比較恰當。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0173",
+   "idiom": "指鹿為馬",
+   "zhuyin": [
+    "ㄓˇ",
+    "ㄌㄨˋ",
+    "ㄨㄟˊ",
+    "ㄇㄚˇ"
+   ],
+   "polyphones": [
+    {
+     "char": "為",
+     "here": "ㄨㄟˊ",
+     "other": "ㄨㄟˋ（因為）"
+    }
+   ],
+   "level": 2,
+   "tags": [
+    "動物",
+    "是非",
+    "歷史故事"
+   ],
+   "meaning": "指著鹿說是馬。比喻故意顛倒是非、把對的說成錯的。",
+   "key_chars": [
+    {
+     "char": "為",
+     "meaning": "是、當作，讀 ㄨㄟˊ"
+    }
+   ],
+   "origin": {
+    "source": "《史記・秦始皇本紀》",
+    "quote": null,
+    "story": {
+     "title": "鹿還是馬？",
+     "text": "秦朝時，有個大官叫趙高，他想知道朝廷裡哪些人敢反對他。有一天，他牽了一頭鹿獻給皇帝，卻說：「這是一匹馬。」皇帝笑著說：「這明明是鹿呀！」趙高問大臣們，有的人怕他，就跟著說是馬；說實話的人，後來都被趙高害了。"
+    },
+    "note": "原文為趙高「持鹿獻於二世」，說是馬；故事依原文大意改寫。"
+   },
+   "examples": [
+    "明明是他先動手，卻說是別人推他，簡直是指鹿為馬。",
+    "做人要誠實，不可以指鹿為馬。"
+   ],
+   "synonyms": [
+    "顛倒是非"
+   ],
+   "antonyms": [
+    "實事求是"
+   ],
+   "common_mistakes": [
+    {
+     "type": "讀音",
+     "wrong": "ㄓˇ ㄌㄨˋ ㄨㄟˋ ㄇㄚˇ",
+     "note": "這裡的為是「是、當作」，讀 ㄨㄟˊ。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「指鹿為馬」是什麼意思？",
+     "choices": [
+      "分不清鹿和馬",
+      "故意顛倒是非黑白",
+      "用手指去摸動物",
+      "把鹿訓練成馬"
+     ],
+     "answer_index": 1,
+     "explanation": "趙高明知是鹿卻說是馬，是故意顛倒是非，不是真的分不清楚。"
+    },
+    "fill_blank": {
+     "sentence": "明明是他打破花瓶，卻硬說是貓弄的，真是＿＿。",
+     "choices": [
+      "指鹿為馬",
+      "物美價廉",
+      "一臂之力",
+      "平安無事"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "弟弟年紀太小，把斑馬叫成老虎，真是指鹿為馬。",
+     "correct": false,
+     "explanation": "弟弟只是認錯，不是故意顛倒是非，不能用「指鹿為馬」。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0174",
+   "idiom": "葉公好龍",
+   "zhuyin": [
+    "ㄕㄜˋ",
+    "ㄍㄨㄥ",
+    "ㄏㄠˋ",
+    "ㄌㄨㄥˊ"
+   ],
+   "polyphones": [
+    {
+     "char": "好",
+     "here": "ㄏㄠˋ",
+     "other": "ㄏㄠˇ（好人）"
+    },
+    {
+     "char": "葉",
+     "here": "ㄕㄜˋ",
+     "other": "ㄧㄝˋ（樹葉）"
+    }
+   ],
+   "level": 2,
+   "tags": [
+    "動物",
+    "寓言",
+    "真假"
+   ],
+   "meaning": "葉公說自己喜歡龍，真龍來了卻嚇跑了。比喻嘴上說喜歡，其實並不是真的喜歡。",
+   "key_chars": [
+    {
+     "char": "葉",
+     "meaning": "古地名，讀 ㄕㄜˋ"
+    },
+    {
+     "char": "好",
+     "meaning": "喜歡，讀 ㄏㄠˋ"
+    }
+   ],
+   "origin": {
+    "source": "劉向《新序・雜事》",
+    "quote": "是葉公非好龍也，好夫似龍而非龍者也。",
+    "story": {
+     "title": "喜歡龍的葉公",
+     "text": "古時候有位葉公，非常喜歡龍。他的衣服帶鉤上刻著龍，酒器上刻著龍，連牆壁和屋樑也畫滿了龍。天上的真龍聽說了，很感動，就飛下來拜訪他，把頭伸進窗戶裡。沒想到葉公一看見真龍，嚇得臉色發白、轉身就逃。原來他喜歡的只是像龍的圖畫，不是真的龍。"
+    },
+    "note": "讀音依使用者校正：葉讀 ㄕㄜˋ。"
+   },
+   "examples": [
+    "他說最愛小狗，真的小狗靠近卻嚇得大叫，真是葉公好龍。",
+    "說喜歡運動卻從來不肯動，這不就是葉公好龍嗎？"
+   ],
+   "synonyms": [
+    "口是心非"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "讀音",
+     "wrong": "ㄧㄝˋ ㄍㄨㄥ",
+     "note": "葉公的「葉」是古地名，讀 ㄕㄜˋ，不讀樹葉的 ㄧㄝˋ。"
+    },
+    {
+     "type": "讀音",
+     "wrong": "ㄕㄜˋ ㄍㄨㄥ ㄏㄠˇ ㄌㄨㄥˊ",
+     "note": "「好龍」的好是喜歡，讀 ㄏㄠˋ。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「葉公好龍」是什麼意思？",
+     "choices": [
+      "葉公養了一條龍",
+      "嘴上說喜歡，其實不是真的喜歡",
+      "樹葉長得像龍",
+      "龍很喜歡葉公"
+     ],
+     "answer_index": 1,
+     "explanation": "葉公看到真龍就嚇跑，說明他不是真的喜歡龍。"
+    },
+    "fill_blank": {
+     "sentence": "他天天說想學游泳，可是一到泳池就找藉口不下水，真是＿＿。",
+     "choices": [
+      "葉公好龍",
+      "如魚得水",
+      "望子成龍",
+      "車水馬龍"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "小華說他最喜歡看書，結果圖書館一開門，他就第一個衝進去，真是葉公好龍。",
+     "correct": false,
+     "explanation": "他是真的喜歡看書，言行一致，不能用「葉公好龍」。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [
+     "zhuyin"
+    ],
+    "note": "AI 產生；注音已由使用者校正"
+   }
+  },
+  {
+   "id": "cy0175",
+   "idiom": "望子成龍",
+   "zhuyin": [
+    "ㄨㄤˋ",
+    "ㄗˇ",
+    "ㄔㄥˊ",
+    "ㄌㄨㄥˊ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "家庭",
+    "期望"
+   ],
+   "meaning": "希望孩子將來能有成就、成為傑出的人。",
+   "key_chars": [
+    {
+     "char": "望",
+     "meaning": "希望、盼望"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "爸媽望子成龍，週末幫哥哥安排了好多才藝課。",
+    "每個父母都望子成龍，但更希望孩子健康快樂。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "用在自己身上",
+     "note": "是父母對子女的期望，不能說「我望子成龍，想當科學家」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「望子成龍」是什麼意思？",
+     "choices": [
+      "希望孩子長大成為傑出的人",
+      "看著兒子變成一條龍",
+      "孩子想當龍舟選手",
+      "盼望龍年生小孩"
+     ],
+     "answer_index": 0,
+     "explanation": "龍代表傑出的人，望子成龍是父母希望孩子有成就。"
+    },
+    "fill_blank": {
+     "sentence": "阿姨＿＿，每天都陪表弟練鋼琴到很晚。",
+     "choices": [
+      "望子成龍",
+      "葉公好龍",
+      "畫龍點睛",
+      "車水馬龍"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "我望子成龍，所以每天努力讀書，希望將來當醫生。",
+     "correct": false,
+     "explanation": "「望子成龍」是父母盼望孩子有成就，不能用在自己對自己的期望。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0176",
+   "idiom": "如虎添翼",
+   "zhuyin": [
+    "ㄖㄨˊ",
+    "ㄏㄨˇ",
+    "ㄊㄧㄢ",
+    "ㄧˋ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "能力",
+    "幫助"
+   ],
+   "meaning": "好像老虎長出翅膀。比喻本來就很強，又得到幫助，變得更強。",
+   "key_chars": [
+    {
+     "char": "翼",
+     "meaning": "翅膀"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null,
+    "note": "出處說法不一，待查。"
+   },
+   "examples": [
+    "球隊來了一位高大的新中鋒，真是如虎添翼。",
+    "姊姊本來就會畫畫，有了繪圖板更是如虎添翼。"
+   ],
+   "synonyms": [
+    "錦上添花"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "用在本來很弱的人身上",
+     "note": "要先「本來就強」，再得到幫助，才是如虎添翼。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「如虎添翼」是什麼意思？",
+     "choices": [
+      "老虎會飛很可怕",
+      "強的人得到幫助，變得更強",
+      "動物園多了一隻老虎",
+      "給老虎畫上翅膀"
+     ],
+     "answer_index": 1,
+     "explanation": "老虎本來就很強，再長出翅膀就更厲害了。"
+    },
+    "fill_blank": {
+     "sentence": "我們班的接力賽本來就很強，加上全校跑最快的轉學生，更是＿＿。",
+     "choices": [
+      "如虎添翼",
+      "虎頭蛇尾",
+      "狐假虎威",
+      "膽小如鼠"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "合唱團原本就很優秀，請到專業老師指導後如虎添翼，拿下全國冠軍。",
+     "correct": true,
+     "explanation": "本來就強又得到幫助，用「如虎添翼」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0177",
+   "idiom": "虎背熊腰",
+   "zhuyin": [
+    "ㄏㄨˇ",
+    "ㄅㄟˋ",
+    "ㄒㄩㄥˊ",
+    "ㄧㄠ"
+   ],
+   "polyphones": [
+    {
+     "char": "背",
+     "here": "ㄅㄟˋ",
+     "other": "ㄅㄟ（背書包）"
+    }
+   ],
+   "level": 2,
+   "tags": [
+    "動物",
+    "外貌",
+    "身材"
+   ],
+   "meaning": "背像老虎一樣寬厚，腰像熊一樣粗壯。形容人身材高大強壯。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "舉重選手個個虎背熊腰，看起來力氣很大。",
+    "叔叔虎背熊腰，一次就能把整箱水搬上樓。"
+   ],
+   "synonyms": [],
+   "antonyms": [
+    "骨瘦如柴"
+   ],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "形容人很胖",
+     "note": "是說身材強壯有力，不是說人胖。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「虎背熊腰」是形容什麼？",
+     "choices": [
+      "人的身材高大強壯",
+      "動物園裡的老虎和熊",
+      "人很胖、走不動",
+      "背著熊娃娃"
+     ],
+     "answer_index": 0,
+     "explanation": "老虎的背、熊的腰都很壯，用來形容人身材強壯。"
+    },
+    "fill_blank": {
+     "sentence": "那位＿＿的警察，一下子就把壞人抓住了。",
+     "choices": [
+      "虎背熊腰",
+      "金碧輝煌",
+      "萬紫千紅",
+      "春光明媚"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "他的身材虎背熊腰，風一吹好像就要倒下去。",
+     "correct": false,
+     "explanation": "風一吹就倒是很瘦弱，跟「強壯」相反，應該用「骨瘦如柴」。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0178",
+   "idiom": "驚弓之鳥",
+   "zhuyin": [
+    "ㄐㄧㄥ",
+    "ㄍㄨㄥ",
+    "ㄓ",
+    "ㄋㄧㄠˇ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "害怕",
+    "寓言"
+   ],
+   "meaning": "被弓箭嚇怕的鳥。比喻受過驚嚇的人，一點小動靜就非常害怕。",
+   "key_chars": [
+    {
+     "char": "弓",
+     "meaning": "射箭用的弓"
+    }
+   ],
+   "origin": {
+    "source": "《戰國策・楚策四》",
+    "quote": null,
+    "story": {
+     "title": "不用箭就射下的大雁",
+     "text": "戰國時有位神射手叫更羸，他對魏王說：「我不用箭，只拉弓弦，就能讓鳥掉下來。」不久一隻大雁飛過，他拉了一下弓弦，大雁果然掉了下來。他解釋說：「這隻雁飛得慢、叫聲悲傷，是受過箭傷的鳥。牠一聽到弓弦聲就嚇得拚命往上飛，結果傷口裂開，就掉下來了。」"
+    }
+   },
+   "examples": [
+    "上次被狗追過以後，他就像驚弓之鳥，聽到狗叫就發抖。",
+    "被雷聲嚇過的小貓成了驚弓之鳥，一點聲音就躲進床底。"
+   ],
+   "synonyms": [
+    "草木皆兵",
+    "杯弓蛇影"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "驚功之鳥",
+     "note": "是射箭的「弓」，不是功勞的功。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「驚弓之鳥」是什麼意思？",
+     "choices": [
+      "很會射箭的鳥",
+      "受過驚嚇的人，一有動靜就害怕",
+      "鳥被弓箭射中了",
+      "很驚訝的小鳥"
+     ],
+     "answer_index": 1,
+     "explanation": "受過箭傷的鳥聽到弓弦聲就嚇壞了，比喻受過驚嚇的人特別容易害怕。"
+    },
+    "fill_blank": {
+     "sentence": "上次爬山迷路後，妹妹變成了＿＿，聽到要去山上就緊張。",
+     "choices": [
+      "驚弓之鳥",
+      "鳥語花香",
+      "笨鳥先飛",
+      "一石二鳥"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "被蜜蜂叮過一次後，他就成了驚弓之鳥，一聽到嗡嗡聲就趕快躲開。",
+     "correct": true,
+     "explanation": "受過驚嚇，一有動靜就害怕，用「驚弓之鳥」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0179",
+   "idiom": "一石二鳥",
+   "zhuyin": [
+    "ㄧ",
+    "ㄕˊ",
+    "ㄦˋ",
+    "ㄋㄧㄠˇ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "數字",
+    "效果"
+   ],
+   "meaning": "丟一顆石頭打到兩隻鳥。比喻做一件事得到兩種好處。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null,
+    "note": "一般認為來自外語諺語的翻譯，非中國古籍出處。"
+   },
+   "examples": [
+    "騎腳踏車上學既能運動又能環保，真是一石二鳥。",
+    "幫阿嬤顧店還能順便寫作業，一石二鳥。"
+   ],
+   "synonyms": [
+    "一舉兩得",
+    "一箭雙鵰"
+   ],
+   "antonyms": [
+    "得不償失"
+   ],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "用在傷害動物的事",
+     "note": "這是比喻一次得到兩種好處，不是真的拿石頭打鳥。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「一石二鳥」是什麼意思？",
+     "choices": [
+      "一次得到兩種好處",
+      "用石頭打鳥",
+      "一顆石頭上停兩隻鳥",
+      "兩隻鳥搶一顆石頭"
+     ],
+     "answer_index": 0,
+     "explanation": "一顆石頭打中兩隻鳥，比喻做一件事得到兩種好處。"
+    },
+    "fill_blank": {
+     "sentence": "走路去圖書館，既能還書又能運動，真是＿＿。",
+     "choices": [
+      "一石二鳥",
+      "驚弓之鳥",
+      "半途而廢",
+      "多此一舉"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "看英文卡通既能放鬆，又能練習聽力，可說是一石二鳥。",
+     "correct": true,
+     "explanation": "一件事得到兩種好處，用「一石二鳥」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0180",
+   "idiom": "聞雞起舞",
+   "zhuyin": [
+    "ㄨㄣˊ",
+    "ㄐㄧ",
+    "ㄑㄧˇ",
+    "ㄨˇ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "勤奮",
+    "歷史故事"
+   ],
+   "meaning": "聽到雞叫就起床練劍。形容人非常勤奮、有志氣，及早努力。",
+   "key_chars": [
+    {
+     "char": "聞",
+     "meaning": "聽到"
+    },
+    {
+     "char": "舞",
+     "meaning": "這裡指舞劍、練劍"
+    }
+   ],
+   "origin": {
+    "source": "《晉書・祖逖傳》",
+    "quote": null,
+    "story": {
+     "title": "半夜聽雞叫就起床",
+     "text": "晉朝的祖逖和劉琨是好朋友，兩個人都希望將來能為國家出力。他們睡在一起，有一天半夜，祖逖聽到雞叫，就把劉琨踢醒說：「這不是壞聲音，是叫我們起來努力呀！」於是兩人起床到院子裡練劍。從此他們天天聽到雞叫就起來練習，後來都成為有名的將領。"
+    },
+    "note": "原文大意：祖逖半夜聽到雞鳴，踢醒劉琨說「此非惡聲也」，於是起來舞劍。"
+   },
+   "examples": [
+    "哥哥為了參加馬拉松，每天聞雞起舞，五點就出門晨跑。",
+    "考前一個月，她聞雞起舞，每天早起背英文單字。"
+   ],
+   "synonyms": [
+    "廢寢忘食"
+   ],
+   "antonyms": [
+    "好吃懶做",
+    "遊手好閒"
+   ],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "形容人喜歡跳舞",
+     "note": "這裡的舞是舞劍練武，重點是勤奮努力。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「聞雞起舞」是什麼意思？",
+     "choices": [
+      "聽到雞叫就開心跳舞",
+      "勤奮努力，及早用功",
+      "雞會跳舞",
+      "早上起床做早操很好玩"
+     ],
+     "answer_index": 1,
+     "explanation": "祖逖聽到雞叫就起來練劍，形容勤奮有志氣。"
+    },
+    "fill_blank": {
+     "sentence": "為了準備比賽，隊員們＿＿，天一亮就到球場練習。",
+     "choices": [
+      "聞雞起舞",
+      "呆若木雞",
+      "雞毛蒜皮",
+      "坐享其成"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "舞蹈班的同學聽到音樂響起就聞雞起舞，跳得非常開心。",
+     "correct": false,
+     "explanation": "「聞雞起舞」是比喻勤奮用功，不是聽到音樂跳舞。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0181",
+   "idiom": "雞毛蒜皮",
+   "zhuyin": [
+    "ㄐㄧ",
+    "ㄇㄠˊ",
+    "ㄙㄨㄢˋ",
+    "ㄆㄧˊ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "小事"
+   ],
+   "meaning": "雞的毛和蒜的皮。比喻不重要的小事情。",
+   "key_chars": [],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "他們為了一點雞毛蒜皮的小事吵了一整天。",
+    "不要為了雞毛蒜皮的事情生氣，不值得。"
+   ],
+   "synonyms": [
+    "微不足道"
+   ],
+   "antonyms": [
+    "舉足輕重",
+    "當務之急"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「雞毛蒜皮」是什麼意思？",
+     "choices": [
+      "做菜的材料",
+      "不重要的小事",
+      "很髒亂的廚房",
+      "很便宜的東西"
+     ],
+     "answer_index": 1,
+     "explanation": "雞毛和蒜皮都是沒用的小東西，比喻小事情。"
+    },
+    "fill_blank": {
+     "sentence": "兄弟倆常常為了誰先洗澡這種＿＿的事吵架。",
+     "choices": [
+      "雞毛蒜皮",
+      "金碧輝煌",
+      "春暖花開",
+      "高聳入雲"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "班長說誰坐窗邊這種雞毛蒜皮的事，大家可以自己商量決定。",
+     "correct": true,
+     "explanation": "坐哪裡是小事，用「雞毛蒜皮」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0182",
+   "idiom": "殺雞儆猴",
+   "zhuyin": [
+    "ㄕㄚ",
+    "ㄐㄧ",
+    "ㄐㄧㄥˇ",
+    "ㄏㄡˊ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "處罰",
+    "警告"
+   ],
+   "meaning": "殺雞給猴子看，嚇唬猴子。比喻處罰一個人，來警告其他人。",
+   "key_chars": [
+    {
+     "char": "儆",
+     "meaning": "警告、使人警惕"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null,
+    "note": "出處待查。"
+   },
+   "examples": [
+    "老師把遲到的同學罰站，有點殺雞儆猴的意思。",
+    "遊戲裡管理員封鎖了作弊的玩家，就是要殺雞儆猴。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "殺雞敬猴",
+     "note": "是「警告」意思的儆，不是尊敬的敬。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「殺雞儆猴」是什麼意思？",
+     "choices": [
+      "把雞送給猴子吃",
+      "處罰一個人來警告其他人",
+      "雞和猴子打架",
+      "很會照顧動物"
+     ],
+     "answer_index": 1,
+     "explanation": "儆是警告，處罰一個讓其他人知道不能這樣做。"
+    },
+    "fill_blank": {
+     "sentence": "店長把偷懶的店員記過，想＿＿，讓大家不敢再偷懶。",
+     "choices": [
+      "殺雞儆猴",
+      "一石二鳥",
+      "見義勇為",
+      "雪中送炭"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "過年時阿公殺雞儆猴，煮了一鍋香噴噴的雞湯請大家吃。",
+     "correct": false,
+     "explanation": "這句是真的殺雞煮湯，沒有「處罰一人、警告別人」的意思。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0183",
+   "idiom": "呆若木雞",
+   "zhuyin": [
+    "ㄉㄞ",
+    "ㄖㄨㄛˋ",
+    "ㄇㄨˋ",
+    "ㄐㄧ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "表情",
+    "寓言"
+   ],
+   "meaning": "呆呆的像木頭做的雞。現在多用來形容人因為害怕或驚訝而發呆的樣子。",
+   "key_chars": [
+    {
+     "char": "若",
+     "meaning": "好像"
+    }
+   ],
+   "origin": {
+    "source": "《莊子・達生》",
+    "quote": "望之似木雞矣，其德全矣。",
+    "story": {
+     "title": "像木頭雞的鬥雞",
+     "text": "古時候有個人叫紀渻子，專門替國王訓練鬥雞。國王一直問：「訓練好了沒？」他總說：「還沒，牠還很驕傲、很衝動。」過了四十天，他才說：「好了！別的雞叫，牠一點也不慌，看起來就像一隻木頭雞。」結果別的雞一看到牠，都不敢應戰，轉身就跑。"
+    },
+    "note": "原意是稱讚鬥雞訓練得沉穩，現在意思已轉變為形容發呆。"
+   },
+   "examples": [
+    "聽到自己得了第一名，她高興得呆若木雞，說不出話來。",
+    "看到地上的大蟑螂，弟弟嚇得呆若木雞。"
+   ],
+   "synonyms": [
+    "目瞪口呆"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "說成「呆如木雞」",
+     "note": "正確是「若」，意思是好像。"
+    },
+    {
+     "type": "誤用",
+     "wrong": "照原意稱讚人沉著",
+     "note": "原本是說鬥雞修練得很沉穩，現在多用來形容嚇呆、驚呆。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「呆若木雞」現在常用來形容什麼？",
+     "choices": [
+      "人嚇得或驚訝得發呆",
+      "雞是用木頭雕成的",
+      "人很笨",
+      "雞跑得很慢"
+     ],
+     "answer_index": 0,
+     "explanation": "若是「好像」，像木頭雞一樣一動也不動，形容驚呆的樣子。"
+    },
+    "fill_blank": {
+     "sentence": "看到魔術師把鴿子變不見，全場觀眾都＿＿。",
+     "choices": [
+      "呆若木雞",
+      "自由自在",
+      "堅持不懈",
+      "安居樂業"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "聽到老師宣布要停課去遊樂園，大家都呆若木雞，一時說不出話。",
+     "correct": true,
+     "explanation": "因為太驚訝而發呆，用「呆若木雞」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0184",
+   "idiom": "杯弓蛇影",
+   "zhuyin": [
+    "ㄅㄟ",
+    "ㄍㄨㄥ",
+    "ㄕㄜˊ",
+    "ㄧㄥˇ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "害怕",
+    "疑心"
+   ],
+   "meaning": "把杯中弓的倒影當成蛇。比喻疑神疑鬼，自己嚇自己。",
+   "key_chars": [
+    {
+     "char": "影",
+     "meaning": "倒影"
+    }
+   ],
+   "origin": {
+    "source": "《晉書・樂廣傳》",
+    "quote": null,
+    "story": {
+     "title": "杯子裡的蛇",
+     "text": "晉朝的樂廣請朋友來家裡喝酒。朋友舉杯時，看見酒裡好像有一條小蛇，心裡害怕，可是不好意思不喝。回家後他就生病了。樂廣想了想，發現牆上掛著一把弓，弓的影子剛好映在酒杯裡，看起來就像蛇。他把朋友請回來，指給他看，朋友一明白，病馬上就好了。"
+    },
+    "note": "相似故事更早見於應劭《風俗通義・怪神》（主角為杜宣）；此處採《晉書》樂廣版本改寫。"
+   },
+   "examples": [
+    "只是窗簾被風吹動，你就以為有小偷，真是杯弓蛇影。",
+    "別杯弓蛇影了，那只是樹影，不是鬼啦！"
+   ],
+   "synonyms": [
+    "疑神疑鬼",
+    "草木皆兵",
+    "驚弓之鳥"
+   ],
+   "antonyms": [
+    "若無其事"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「杯弓蛇影」是什麼意思？",
+     "choices": [
+      "杯子上畫了弓和蛇",
+      "疑神疑鬼，自己嚇自己",
+      "蛇躲在杯子裡",
+      "射箭射中了蛇"
+     ],
+     "answer_index": 1,
+     "explanation": "弓的倒影被當成蛇，比喻把不存在的事當真，自己嚇自己。"
+    },
+    "fill_blank": {
+     "sentence": "一聽到樓上有聲音，她就以為是小偷，未免太＿＿了。",
+     "choices": [
+      "杯弓蛇影",
+      "一清二楚",
+      "心滿意足",
+      "大功告成"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "晚上看到牆上的衣服影子就以為有人，他杯弓蛇影，嚇得不敢睡覺。",
+     "correct": true,
+     "explanation": "把衣服影子當成人，是疑神疑鬼，用「杯弓蛇影」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0185",
+   "idiom": "打草驚蛇",
+   "zhuyin": [
+    "ㄉㄚˇ",
+    "ㄘㄠˇ",
+    "ㄐㄧㄥ",
+    "ㄕㄜˊ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "做事方法"
+   ],
+   "meaning": "打草時驚動了草裡的蛇。比喻行動不小心，讓對方先察覺而有了防備。",
+   "key_chars": [],
+   "origin": {
+    "source": "宋・鄭文寶《南唐近事》",
+    "quote": "汝雖打草，吾已驚蛇。",
+    "story": {
+     "title": "打草嚇到蛇",
+     "text": "南唐時有個縣官叫王魯，很貪心，常常收別人的錢。有一天，百姓寫狀子告他手下的官員收賄。王魯看了很心虛，因為自己也做過一樣的壞事，就在狀子上寫了八個字：「汝雖打草，吾已驚蛇。」意思是：你們雖然只是打草，我這條蛇已經被嚇到了。"
+    }
+   },
+   "examples": [
+    "我們要給哥哥驚喜，先別打草驚蛇，讓他發現。",
+    "警察悄悄埋伏，就是怕打草驚蛇，讓小偷跑了。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "形容人很怕蛇",
+     "note": "重點是行動不小心，讓對方有了警覺。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「打草驚蛇」是什麼意思？",
+     "choices": [
+      "到草叢裡抓蛇",
+      "行動不小心，讓對方察覺",
+      "蛇被嚇得跑出來咬人",
+      "割草的時候要小心"
+     ],
+     "answer_index": 1,
+     "explanation": "比喻做事不夠隱密，讓對方先有了防備。"
+    },
+    "fill_blank": {
+     "sentence": "我們準備的生日派對是秘密，大家說話要小聲，不要＿＿。",
+     "choices": [
+      "打草驚蛇",
+      "畫蛇添足",
+      "虎頭蛇尾",
+      "杯弓蛇影"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "爺爺在院子裡打草驚蛇，把除草機開得很大聲。",
+     "correct": false,
+     "explanation": "這只是真的在除草，沒有「行動讓對方察覺」的比喻意思。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0186",
+   "idiom": "害群之馬",
+   "zhuyin": [
+    "ㄏㄞˋ",
+    "ㄑㄩㄣˊ",
+    "ㄓ",
+    "ㄇㄚˇ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "團體",
+    "寓言"
+   ],
+   "meaning": "危害整群馬的那匹馬。比喻在團體中帶來壞影響的人。",
+   "key_chars": [],
+   "origin": {
+    "source": "《莊子・徐無鬼》",
+    "quote": null,
+    "story": {
+     "title": "牧童的回答",
+     "text": "傳說黃帝有一次在野外迷了路，遇到一個放馬的小孩。黃帝問他怎麼治理天下，小孩說：「治理天下和放馬差不多，只要把會傷害馬群的那匹壞馬趕走就好了。」黃帝聽了，覺得很有道理，向小孩深深行禮，稱他為「天師」。後來人們就用「害群之馬」比喻破壞團體的人。"
+    },
+    "note": "原文大意為牧馬童子說治天下就像牧馬，「去其害馬者而已」。"
+   },
+   "examples": [
+    "他總是在班上搗亂，被同學說是害群之馬。",
+    "球隊不能因為一匹害群之馬，影響大家的團結。"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "害群之碼",
+     "note": "是動物的「馬」。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「害群之馬」是什麼意思？",
+     "choices": [
+      "生病的馬",
+      "在團體中帶來壞影響的人",
+      "跑得最慢的馬",
+      "被大家欺負的人"
+     ],
+     "answer_index": 1,
+     "explanation": "這匹馬會危害整個馬群，比喻團體中的壞分子。"
+    },
+    "fill_blank": {
+     "sentence": "大家都很守規矩，只有他一直作弊，成了班上的＿＿。",
+     "choices": [
+      "害群之馬",
+      "老馬識途",
+      "馬到成功",
+      "青梅竹馬"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "小新是我們合唱團的害群之馬，每次練習都最早到、最認真。",
+     "correct": false,
+     "explanation": "最早到又認真是好榜樣，不是帶來壞影響的人。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0187",
+   "idiom": "走馬看花",
+   "zhuyin": [
+    "ㄗㄡˇ",
+    "ㄇㄚˇ",
+    "ㄎㄢˋ",
+    "ㄏㄨㄚ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "學習態度",
+    "觀察"
+   ],
+   "meaning": "騎著快跑的馬看花。比喻看得很快、很粗略，沒有仔細了解。",
+   "key_chars": [
+    {
+     "char": "走",
+     "meaning": "古時候指跑，走馬就是騎馬快跑"
+    }
+   ],
+   "origin": {
+    "source": "唐・孟郊〈登科後〉",
+    "quote": "春風得意馬蹄疾，一日看盡長安花。",
+    "story": null,
+    "note": "成語由詩句意思演變而來，原句並沒有「走馬看花」四字。"
+   },
+   "examples": [
+    "博物館這麼大，只玩一個小時只能走馬看花。",
+    "讀書不能走馬看花，要仔細想想內容。"
+   ],
+   "synonyms": [
+    "蜻蜓點水",
+    "囫圇吞棗"
+   ],
+   "antonyms": [],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「走馬看花」是什麼意思？",
+     "choices": [
+      "騎馬去花園賞花",
+      "看得很快、很粗略",
+      "馬喜歡吃花",
+      "邊散步邊看花"
+     ],
+     "answer_index": 1,
+     "explanation": "騎著快跑的馬看花，只能大略看看，比喻不夠仔細。"
+    },
+    "fill_blank": {
+     "sentence": "這次旅行行程太趕，每個景點都只能＿＿。",
+     "choices": [
+      "走馬看花",
+      "全神貫注",
+      "精益求精",
+      "聚精會神"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "小明讀故事書走馬看花，連主角的名字都記不住。",
+     "correct": true,
+     "explanation": "讀得很快又不仔細，用「走馬看花」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0188",
+   "idiom": "朝三暮四",
+   "zhuyin": [
+    "ㄓㄠ",
+    "ㄙㄢ",
+    "ㄇㄨˋ",
+    "ㄙˋ"
+   ],
+   "polyphones": [
+    {
+     "char": "朝",
+     "here": "ㄓㄠ",
+     "other": "ㄔㄠˊ（朝代）"
+    }
+   ],
+   "level": 2,
+   "tags": [
+    "動物",
+    "寓言",
+    "個性"
+   ],
+   "meaning": "原本是用花招騙人；現在多用來比喻心意不定、反覆無常。",
+   "key_chars": [
+    {
+     "char": "朝",
+     "meaning": "早上，讀 ㄓㄠ"
+    },
+    {
+     "char": "暮",
+     "meaning": "傍晚"
+    }
+   ],
+   "origin": {
+    "source": "《莊子・齊物論》",
+    "quote": "狙公賦芧，曰：「朝三而暮四。」眾狙皆怒。",
+    "story": {
+     "title": "養猴子的老人",
+     "text": "從前有個老人養了一群猴子。後來糧食不夠了，他對猴子說：「以後橡實早上給三顆，晚上給四顆。」猴子聽了都很生氣。老人改口說：「那早上給四顆，晚上給三顆好了。」猴子們就高興起來。其實一天加起來還是七顆，一顆也沒多，猴子卻被這個說法騙了。"
+    },
+    "note": "意思古今有變化：原指用詐術騙人，現多指反覆無常。"
+   },
+   "examples": [
+    "他一下想學鋼琴、一下想學畫畫，朝三暮四，什麼都沒學好。",
+    "做事情要有恆心，不能朝三暮四。"
+   ],
+   "synonyms": [
+    "三心二意",
+    "出爾反爾"
+   ],
+   "antonyms": [
+    "一心一意",
+    "持之以恆"
+   ],
+   "common_mistakes": [
+    {
+     "type": "讀音",
+     "wrong": "ㄔㄠˊ ㄙㄢ ㄇㄨˋ ㄙˋ",
+     "note": "朝是早上，讀 ㄓㄠ，不是朝代的 ㄔㄠˊ。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「朝三暮四」現在常用來形容什麼？",
+     "choices": [
+      "心意不定、反覆無常",
+      "早上三點、晚上四點起床",
+      "猴子很會算數",
+      "每天吃七顆糖"
+     ],
+     "answer_index": 0,
+     "explanation": "現在多用來比喻人心意不定、一直改變主意。"
+    },
+    "fill_blank": {
+     "sentence": "選社團時他＿＿，換了好幾次還是決定不了。",
+     "choices": [
+      "朝三暮四",
+      "持之以恆",
+      "專心致志",
+      "堅持不懈"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "她學小提琴已經五年了，每天都朝三暮四地認真練習。",
+     "correct": false,
+     "explanation": "五年都認真練習是很有恆心，跟「反覆無常」相反。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0189",
+   "idiom": "鷸蚌相爭",
+   "zhuyin": [
+    "ㄩˋ",
+    "ㄅㄤˋ",
+    "ㄒㄧㄤ",
+    "ㄓㄥ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "寓言",
+    "爭吵"
+   ],
+   "meaning": "鷸鳥和河蚌互相爭鬥，誰也不放。比喻雙方爭吵不停，結果讓別人得到好處。常和「漁翁得利」連用。",
+   "key_chars": [
+    {
+     "char": "鷸",
+     "meaning": "一種嘴巴長長的水鳥"
+    },
+    {
+     "char": "蚌",
+     "meaning": "有兩片殼的貝類"
+    }
+   ],
+   "origin": {
+    "source": "《戰國策・燕策二》",
+    "quote": "蚌方出曝，而鷸啄其肉，蚌合而拑其喙。",
+    "story": {
+     "title": "鳥和蚌的拔河",
+     "text": "戰國時，趙國想攻打燕國，蘇代就去對趙王說了一個故事：一隻河蚌張開殼曬太陽，鷸鳥飛來啄牠的肉，河蚌立刻合上殼，夾住鷸鳥的嘴。兩個誰也不肯放，一直僵著。這時漁夫走過來，輕輕鬆鬆就把牠們一起抓走了。趙王聽懂了，就打消了攻打燕國的念頭。"
+    },
+    "note": "原文出自蘇代勸趙王的寓言；摘句建議人工核對版本用字。"
+   },
+   "examples": [
+    "兩兄弟搶遙控器，結果妹妹趁機把電視轉到卡通台，真是鷸蚌相爭，漁翁得利。",
+    "兩隊互相扯後腿，鷸蚌相爭，第三名的隊伍反而拿了冠軍。"
+   ],
+   "synonyms": [
+    "兩敗俱傷"
+   ],
+   "antonyms": [
+    "同舟共濟",
+    "齊心協力"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「鷸蚌相爭」是什麼意思？",
+     "choices": [
+      "鳥和貝殼一起玩",
+      "雙方爭吵不停，讓別人得到好處",
+      "海邊的動物很兇",
+      "漁夫很會抓魚"
+     ],
+     "answer_index": 1,
+     "explanation": "鷸和蚌互不相讓，最後兩個都被漁夫抓走。"
+    },
+    "fill_blank": {
+     "sentence": "兩家飲料店一直打價格戰，＿＿，結果顧客都跑到新開的第三家去了。",
+     "choices": [
+      "鷸蚌相爭",
+      "相親相愛",
+      "志同道合",
+      "相敬如賓"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "哥哥和我一起合作打掃房間，真是鷸蚌相爭，很快就打掃好了。",
+     "correct": false,
+     "explanation": "合作是互相幫忙，不是互相爭鬥，用「鷸蚌相爭」不對。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0190",
+   "idiom": "如魚得水",
+   "zhuyin": [
+    "ㄖㄨˊ",
+    "ㄩˊ",
+    "ㄉㄜˊ",
+    "ㄕㄨㄟˇ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "環境",
+    "歷史故事"
+   ],
+   "meaning": "像魚得到水一樣。比喻遇到很適合自己的環境或很投合的人。",
+   "key_chars": [],
+   "origin": {
+    "source": "《三國志・蜀書・諸葛亮傳》",
+    "quote": "孤之有孔明，猶魚之有水也。",
+    "story": {
+     "title": "劉備和諸葛亮",
+     "text": "三國時，劉備三次去請諸葛亮出來幫忙，終於請到了他。從此劉備和諸葛亮天天在一起討論大事，感情越來越好。關羽和張飛看了不太高興。劉備就對他們說：「我有了孔明，就像魚有了水一樣。希望你們別再說了。」關羽、張飛聽了，才不再抱怨。"
+    }
+   },
+   "examples": [
+    "他從小就愛畫畫，進了美術班以後如魚得水。",
+    "喜歡踢球的弟弟一到足球場就如魚得水，開心得不得了。"
+   ],
+   "synonyms": [],
+   "antonyms": [
+    "格格不入"
+   ],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "用在魚或游泳的事",
+     "note": "是比喻遇到適合的環境，不是在講魚游泳。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「如魚得水」是什麼意思？",
+     "choices": [
+      "魚游得很快",
+      "遇到很適合自己的環境或人",
+      "把魚放回河裡",
+      "下雨天很潮濕"
+     ],
+     "answer_index": 1,
+     "explanation": "魚有水才能自在生活，比喻得到適合自己的環境。"
+    },
+    "fill_blank": {
+     "sentence": "她愛說故事，加入廣播社後＿＿，每天都很開心。",
+     "choices": [
+      "如魚得水",
+      "垂頭喪氣",
+      "心灰意冷",
+      "坐立不安"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "小明很怕水，到了游泳課他就如魚得水，緊張得一直發抖。",
+     "correct": false,
+     "explanation": "緊張發抖表示很不適應，跟「如魚得水」相反。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0191",
+   "idiom": "一箭雙鵰",
+   "zhuyin": [
+    "ㄧ",
+    "ㄐㄧㄢˋ",
+    "ㄕㄨㄤ",
+    "ㄉㄧㄠ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "數字",
+    "效果"
+   ],
+   "meaning": "一枝箭射中兩隻鵰。比喻做一件事得到兩種好處。",
+   "key_chars": [
+    {
+     "char": "鵰",
+     "meaning": "一種很大、很兇猛的鳥"
+    }
+   ],
+   "origin": {
+    "source": "《北史・長孫晟傳》",
+    "quote": null,
+    "story": {
+     "title": "一枝箭射下兩隻大鵰",
+     "text": "北周時有位很會射箭的人叫長孫晟。有一次他到突厥去，突厥的首領很欣賞他，常常約他一起打獵。有一天，天上有兩隻大鵰在搶一塊肉，首領給長孫晟兩枝箭，請他射下來。長孫晟拉滿弓，只射出一枝箭，就同時射中了兩隻鵰，大家都佩服得不得了。"
+    },
+    "note": "教育部辭典以「一箭雙鵰」為正，也見「一箭雙雕」寫法。"
+   },
+   "examples": [
+    "幫媽媽洗車既能賺零用錢又能玩水，真是一箭雙鵰。",
+    "看英文繪本既能學英文又能學知識，一箭雙鵰。"
+   ],
+   "synonyms": [
+    "一舉兩得",
+    "一石二鳥"
+   ],
+   "antonyms": [
+    "得不償失"
+   ],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "一箭雙雕",
+     "note": "台灣標準寫法是「鵰」，指鳥；「雕」是雕刻。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「一箭雙鵰」是什麼意思？",
+     "choices": [
+      "射箭很危險",
+      "做一件事得到兩種好處",
+      "兩隻鳥被同一個人養",
+      "很會雕刻"
+     ],
+     "answer_index": 1,
+     "explanation": "一箭射中兩隻鵰，比喻一次得到兩種好處。"
+    },
+    "fill_blank": {
+     "sentence": "騎腳踏車去買早餐，又能運動又能省錢，真是＿＿。",
+     "choices": [
+      "一箭雙鵰",
+      "前功盡棄",
+      "功虧一簣",
+      "徒勞無功"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "姊姊去圖書館還書，順便借了想看的小說，一箭雙鵰。",
+     "correct": true,
+     "explanation": "一趟路完成兩件事，用「一箭雙鵰」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0192",
+   "idiom": "鵬程萬里",
+   "zhuyin": [
+    "ㄆㄥˊ",
+    "ㄔㄥˊ",
+    "ㄨㄢˋ",
+    "ㄌㄧˇ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "前途",
+    "祝福"
+   ],
+   "meaning": "大鵬鳥一飛就是萬里遠。比喻前途遠大，常用來祝福別人。",
+   "key_chars": [
+    {
+     "char": "鵬",
+     "meaning": "傳說中最大的鳥"
+    },
+    {
+     "char": "程",
+     "meaning": "路程"
+    }
+   ],
+   "origin": {
+    "source": "《莊子・逍遙遊》",
+    "quote": "鵬之徙於南冥也，水擊三千里，摶扶搖而上者九萬里。",
+    "story": {
+     "title": "飛九萬里的大鵬",
+     "text": "莊子說，北方大海裡有一條大魚叫做「鯤」，大得不知道有幾千里。後來牠變成一隻大鳥，叫做「鵬」，背也大得不知道有幾千里。大鵬鳥展開翅膀，像天邊的雲一樣。牠要飛到南方的大海時，拍打水面三千里，再乘著大風一直飛上九萬里的高空。"
+    }
+   },
+   "examples": [
+    "畢業典禮上，校長祝福大家鵬程萬里。",
+    "老師在我的畢業紀念冊上寫著「鵬程萬里」。"
+   ],
+   "synonyms": [
+    "前程似錦"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "朋程萬里",
+     "note": "鵬是大鳥，鳥字旁。"
+    },
+    {
+     "type": "誤用",
+     "wrong": "用在旅行路程很遠",
+     "note": "這是祝福前途遠大，不是說旅行很遠。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「鵬程萬里」是什麼意思？",
+     "choices": [
+      "坐飛機飛得很遠",
+      "比喻前途遠大",
+      "鳥類遷徙的路線",
+      "一萬里的路要走很久"
+     ],
+     "answer_index": 1,
+     "explanation": "大鵬鳥一飛萬里，用來比喻人前途遠大。"
+    },
+    "fill_blank": {
+     "sentence": "哥哥要出國讀書了，我們祝他＿＿。",
+     "choices": [
+      "鵬程萬里",
+      "雞毛蒜皮",
+      "一毛不拔",
+      "不勞而獲"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "姊姊考上理想的大學，親戚們都祝福她鵬程萬里。",
+     "correct": true,
+     "explanation": "祝福姊姊前途遠大，用「鵬程萬里」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0193",
+   "idiom": "車水馬龍",
+   "zhuyin": [
+    "ㄔㄜ",
+    "ㄕㄨㄟˇ",
+    "ㄇㄚˇ",
+    "ㄌㄨㄥˊ"
+   ],
+   "polyphones": [
+    {
+     "char": "車",
+     "here": "ㄔㄜ",
+     "other": "ㄐㄩ（象棋的車）"
+    }
+   ],
+   "level": 2,
+   "tags": [
+    "動物",
+    "熱鬧",
+    "交通"
+   ],
+   "meaning": "車子像流水，馬像游動的龍。形容車輛來來往往，非常熱鬧。",
+   "key_chars": [],
+   "origin": {
+    "source": "《後漢書・明德馬皇后紀》",
+    "quote": "車如流水，馬如游龍",
+    "story": null
+   },
+   "examples": [
+    "過年前的市場車水馬龍，到處都是買年貨的人。",
+    "下班時間，台北街頭車水馬龍。"
+   ],
+   "synonyms": [
+    "川流不息",
+    "絡繹不絕",
+    "人山人海"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "形容河裡有馬和龍",
+     "note": "這是形容車多熱鬧，跟水、龍無關。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「車水馬龍」是什麼意思？",
+     "choices": [
+      "車輛來來往往，很熱鬧",
+      "車子掉進水裡",
+      "馬和龍一起比賽",
+      "洗車場很忙"
+     ],
+     "answer_index": 0,
+     "explanation": "車像流水、馬像游龍，形容交通熱鬧。"
+    },
+    "fill_blank": {
+     "sentence": "新年倒數那天，市中心＿＿，熱鬧極了。",
+     "choices": [
+      "車水馬龍",
+      "夜深人靜",
+      "萬里無雲",
+      "冰天雪地"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "深夜的鄉下小路車水馬龍，一輛車也沒有。",
+     "correct": false,
+     "explanation": "一輛車都沒有是很冷清，跟「車水馬龍」相反。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0194",
+   "idiom": "青梅竹馬",
+   "zhuyin": [
+    "ㄑㄧㄥ",
+    "ㄇㄟˊ",
+    "ㄓㄨˊ",
+    "ㄇㄚˇ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "友誼"
+   ],
+   "meaning": "小時候一起玩青梅、騎竹馬。形容從小一起長大、感情很好的玩伴。",
+   "key_chars": [
+    {
+     "char": "竹馬",
+     "meaning": "小孩當作馬騎的竹竿"
+    }
+   ],
+   "origin": {
+    "source": "唐・李白〈長干行〉",
+    "quote": "郎騎竹馬來，繞床弄青梅。",
+    "story": null,
+    "note": "原指男女孩童天真無邪地一起玩耍，現在也常用來說從小一起長大的伴侶。"
+   },
+   "examples": [
+    "爸爸和媽媽是青梅竹馬，從幼稚園就認識了。",
+    "她們兩個是青梅竹馬的好朋友，住在同一條巷子。"
+   ],
+   "synonyms": [
+    "兩小無猜"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "用在剛認識的朋友",
+     "note": "一定要是從小一起長大的才算。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「青梅竹馬」是什麼意思？",
+     "choices": [
+      "從小一起長大的玩伴",
+      "愛吃梅子的人",
+      "騎馬去竹林",
+      "青色的馬"
+     ],
+     "answer_index": 0,
+     "explanation": "青梅、竹馬都是小時候的玩具，形容從小一起玩的伴。"
+    },
+    "fill_blank": {
+     "sentence": "阿明和小華從小就住隔壁、一起上學，是＿＿的好朋友。",
+     "choices": [
+      "青梅竹馬",
+      "害群之馬",
+      "走馬看花",
+      "指鹿為馬"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "小美和隔壁的阿杰從小一起長大，是青梅竹馬的好朋友。",
+     "correct": true,
+     "explanation": "從小一起長大的玩伴，用「青梅竹馬」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0195",
+   "idiom": "漁翁得利",
+   "zhuyin": [
+    "ㄩˊ",
+    "ㄨㄥ",
+    "ㄉㄜˊ",
+    "ㄌㄧˋ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "動物",
+    "寓言",
+    "爭吵"
+   ],
+   "meaning": "漁夫輕鬆得到好處。比喻雙方爭吵不休，讓第三個人得到好處。常說「鷸蚌相爭，漁翁得利」。",
+   "key_chars": [
+    {
+     "char": "翁",
+     "meaning": "老人"
+    },
+    {
+     "char": "利",
+     "meaning": "好處"
+    }
+   ],
+   "origin": {
+    "source": "《戰國策・燕策二》",
+    "quote": null,
+    "story": {
+     "title": "漁夫撿到便宜",
+     "text": "有一天，河邊的河蚌打開殼曬太陽，一隻鷸鳥飛來啄牠的肉。河蚌馬上把殼合起來，夾住鷸鳥的嘴。鷸鳥說：「再不下雨，你就會乾死！」河蚌說：「我不放你，你就會餓死！」兩個吵個不停。一位漁夫走過來，一點力氣也沒花，就把牠們一起抓回家了。"
+    },
+    "note": "與「鷸蚌相爭」同一則寓言。"
+   },
+   "examples": [
+    "兩個姊姊搶最後一塊蛋糕，結果被我吃掉了，真是漁翁得利。",
+    "兩隊互相犯規被判出局，第三隊漁翁得利，拿下冠軍。"
+   ],
+   "synonyms": [
+    "坐享其成"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "魚翁得利",
+     "note": "是捕魚的人「漁」，三點水。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「漁翁得利」是什麼意思？",
+     "choices": [
+      "漁夫很會做生意",
+      "雙方相爭，讓第三者得到好處",
+      "釣魚可以賺很多錢",
+      "老人家運氣好"
+     ],
+     "answer_index": 1,
+     "explanation": "鷸和蚌爭吵不停，結果漁夫輕鬆把兩個都抓走了。"
+    },
+    "fill_blank": {
+     "sentence": "哥哥和弟弟爭著玩新玩具，結果妹妹＿＿，先拿去玩了。",
+     "choices": [
+      "漁翁得利",
+      "愛不釋手",
+      "一諾千金",
+      "如虎添翼"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "爸爸是漁夫，今天出海抓到很多魚，真是漁翁得利。",
+     "correct": false,
+     "explanation": "這只是真的捕到魚，沒有「雙方相爭、第三者得利」的意思。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0196",
+   "idiom": "一知半解",
+   "zhuyin": [
+    "ㄧ",
+    "ㄓ",
+    "ㄅㄢˋ",
+    "ㄐㄧㄝˇ"
+   ],
+   "polyphones": [
+    {
+     "char": "解",
+     "here": "ㄐㄧㄝˇ",
+     "other": "ㄒㄧㄝˋ（姓氏）"
+    }
+   ],
+   "level": 2,
+   "tags": [
+    "數字",
+    "數字",
+    "學習態度"
+   ],
+   "meaning": "只知道一點點，了解得不完整、不透徹。",
+   "key_chars": [
+    {
+     "char": "解",
+     "meaning": "理解、明白"
+    }
+   ],
+   "origin": {
+    "source": "宋・嚴羽《滄浪詩話・詩辨》",
+    "quote": null,
+    "story": null
+   },
+   "examples": [
+    "他對電腦只是一知半解，就說自己是專家。",
+    "這題我一知半解，下課要再問老師。"
+   ],
+   "synonyms": [
+    "囫圇吞棗"
+   ],
+   "antonyms": [
+    "融會貫通",
+    "見多識廣"
+   ],
+   "common_mistakes": [],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「一知半解」是什麼意思？",
+     "choices": [
+      "知道一半的答案就夠了",
+      "了解得不完整、不透徹",
+      "一個人解開半道題",
+      "什麼都知道"
+     ],
+     "answer_index": 1,
+     "explanation": "只知道一點、懂一半，表示了解不深。"
+    },
+    "fill_blank": {
+     "sentence": "對規則還＿＿，最好先看清楚說明書再玩。",
+     "choices": [
+      "一知半解",
+      "萬紫千紅",
+      "古往今來",
+      "家喻戶曉"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "哥哥看了一點點恐龍書，就一知半解地教我好多錯的知識。",
+     "correct": true,
+     "explanation": "只懂一點就亂教，用「一知半解」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0197",
+   "idiom": "一諾千金",
+   "zhuyin": [
+    "ㄧ",
+    "ㄋㄨㄛˋ",
+    "ㄑㄧㄢ",
+    "ㄐㄧㄣ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "數字",
+    "數字",
+    "誠信"
+   ],
+   "meaning": "答應別人的一句話，價值像千兩黃金。形容說話算話、很守信用。",
+   "key_chars": [
+    {
+     "char": "諾",
+     "meaning": "答應的話"
+    }
+   ],
+   "origin": {
+    "source": "《史記・季布欒布列傳》",
+    "quote": "得黃金百斤，不如得季布一諾。",
+    "story": {
+     "title": "季布的承諾",
+     "text": "楚漢相爭的時候，楚國有一個人叫季布，他非常講信用，只要答應別人的事，就一定做到。所以楚國人流傳一句話：「得到一百斤黃金，還不如得到季布的一句承諾。」大家都很信任他，也很尊敬他。後來人們就用「一諾千金」來稱讚說話算話的人。"
+    },
+    "note": "成語由「季布一諾」的典故而來，原文未直接出現「一諾千金」四字。"
+   },
+   "examples": [
+    "小明一諾千金，答應幫我顧小狗，就每天準時來餵。",
+    "做人要一諾千金，答應的事就要做到。"
+   ],
+   "synonyms": [
+    "言而有信",
+    "一言為定"
+   ],
+   "antonyms": [
+    "出爾反爾",
+    "口是心非"
+   ],
+   "common_mistakes": [
+    {
+     "type": "錯字",
+     "wrong": "一諾千斤",
+     "note": "是「金」錢的金，不是重量的斤。"
+    },
+    {
+     "type": "誤用",
+     "wrong": "形容東西很貴",
+     "note": "是說承諾很有價值，不是指價錢。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「一諾千金」是什麼意思？",
+     "choices": [
+      "說話算話，很守信用",
+      "答應給別人一千元",
+      "東西非常昂貴",
+      "說一句話要付錢"
+     ],
+     "answer_index": 0,
+     "explanation": "答應的話像千金一樣貴重，形容很守信用。"
+    },
+    "fill_blank": {
+     "sentence": "他答應要幫我修腳踏車，第二天一早就來了，真是＿＿。",
+     "choices": [
+      "一諾千金",
+      "出爾反爾",
+      "口是心非",
+      "言外之意"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "他上次答應要還我書卻一直沒還，真是一諾千金。",
+     "correct": false,
+     "explanation": "答應了卻沒做到是不守信用，跟「一諾千金」相反。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0198",
+   "idiom": "一鳴驚人",
+   "zhuyin": [
+    "ㄧ",
+    "ㄇㄧㄥˊ",
+    "ㄐㄧㄥ",
+    "ㄖㄣˊ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "數字",
+    "數字",
+    "成就"
+   ],
+   "meaning": "鳥平時不叫，一叫就讓人吃驚。比喻平時沒什麼表現，突然做出驚人的成績。",
+   "key_chars": [
+    {
+     "char": "鳴",
+     "meaning": "鳥叫"
+    }
+   ],
+   "origin": {
+    "source": "《史記・滑稽列傳》",
+    "quote": "此鳥不飛則已，一飛沖天；不鳴則已，一鳴驚人。",
+    "story": {
+     "title": "不飛不叫的大鳥",
+     "text": "齊威王剛當國王時，整天喝酒玩樂，不管國家大事。大臣淳于髡就問他：「國內有一隻大鳥，停在宮裡三年，不飛也不叫，大王知道這是什麼鳥嗎？」齊威王聽懂了，回答說：「這隻鳥不飛就算了，一飛就衝上天；不叫就算了，一叫就讓人吃驚！」後來他果然認真治國，讓齊國強盛起來。"
+    }
+   },
+   "examples": [
+    "平常很安靜的小芳，在演講比賽一鳴驚人，拿了第一名。",
+    "這位新人歌手第一張專輯就一鳴驚人。"
+   ],
+   "synonyms": [
+    "一飛沖天"
+   ],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "形容人說話很大聲",
+     "note": "是比喻突然做出驚人的成績，不是聲音很大。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「一鳴驚人」是什麼意思？",
+     "choices": [
+      "叫聲很大嚇到別人",
+      "平時不起眼，突然做出驚人成績",
+      "鳥一叫大家就害怕",
+      "說話很有禮貌"
+     ],
+     "answer_index": 1,
+     "explanation": "比喻平時沒有表現，一出手就有很好的成績。"
+    },
+    "fill_blank": {
+     "sentence": "轉學生第一次參加校運就＿＿，打破了學校的跑步紀錄。",
+     "choices": [
+      "一鳴驚人",
+      "半途而廢",
+      "垂頭喪氣",
+      "知難而退"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "鬧鐘一鳴驚人，把全家人都吵醒了。",
+     "correct": false,
+     "explanation": "這只是鬧鐘聲音很大，不是「突然做出驚人成績」的意思。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0199",
+   "idiom": "一毛不拔",
+   "zhuyin": [
+    "ㄧ",
+    "ㄇㄠˊ",
+    "ㄅㄨˋ",
+    "ㄅㄚˊ"
+   ],
+   "polyphones": [],
+   "level": 2,
+   "tags": [
+    "數字",
+    "數字",
+    "個性"
+   ],
+   "meaning": "連一根毛都不肯拔。形容人非常小氣、自私。",
+   "key_chars": [],
+   "origin": {
+    "source": "《孟子・盡心上》",
+    "quote": "楊子取為我，拔一毛而利天下，不為也。",
+    "story": {
+     "title": "不肯拔一根毛的楊朱",
+     "text": "戰國時有個思想家叫楊朱，他主張人要先為自己著想。孟子批評他說：「楊子只顧自己，就算拔他身上一根毛就能對天下有好處，他也不願意做。」一根毛是很小的東西，連這樣都不肯付出，可見非常自私。後來大家就用「一毛不拔」來形容很小氣的人。"
+    },
+    "note": "孟子原意是批評楊朱只顧自己。"
+   },
+   "examples": [
+    "他一毛不拔，連一顆糖都不肯分給弟弟。",
+    "大家都捐錢幫忙，只有他一毛不拔。"
+   ],
+   "synonyms": [
+    "斤斤計較"
+   ],
+   "antonyms": [
+    "慷慨解囊"
+   ],
+   "common_mistakes": [
+    {
+     "type": "誤用",
+     "wrong": "形容節省的好習慣",
+     "note": "一毛不拔是貶義，說人小氣，不是稱讚節儉。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「一毛不拔」是什麼意思？",
+     "choices": [
+      "身上沒有毛",
+      "非常小氣，不肯付出",
+      "一塊錢也沒有",
+      "很會拔草"
+     ],
+     "answer_index": 1,
+     "explanation": "連一根毛都不肯拔，形容人非常小氣。"
+    },
+    "fill_blank": {
+     "sentence": "班上募款買禮物給老師，大家都出了錢，只有他＿＿。",
+     "choices": [
+      "一毛不拔",
+      "全力以赴",
+      "見義勇為",
+      "捨己為人"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "姊姊省吃儉用，把存下的錢全捐給育幼院，真是一毛不拔。",
+     "correct": false,
+     "explanation": "把錢捐出去是大方，跟「一毛不拔（小氣）」相反。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  },
+  {
+   "id": "cy0200",
+   "idiom": "一臂之力",
+   "zhuyin": [
+    "ㄧ",
+    "ㄅㄧˋ",
+    "ㄓ",
+    "ㄌㄧˋ"
+   ],
+   "polyphones": [
+    {
+     "char": "臂",
+     "here": "ㄅㄧˋ",
+     "other": "˙ㄅㄟ（胳臂）"
+    }
+   ],
+   "level": 2,
+   "tags": [
+    "數字",
+    "數字",
+    "幫助"
+   ],
+   "meaning": "一隻手臂的力量。比喻一份力量的幫忙。常說「助我一臂之力」。",
+   "key_chars": [
+    {
+     "char": "臂",
+     "meaning": "手臂，讀 ㄅㄧˋ"
+    }
+   ],
+   "origin": {
+    "source": null,
+    "quote": null,
+    "story": null,
+    "note": "出處待查。"
+   },
+   "examples": [
+    "搬家那天，鄰居叔叔助我們一臂之力，很快就搬完了。",
+    "這個海報好難做，你可以助我一臂之力嗎？"
+   ],
+   "synonyms": [],
+   "antonyms": [],
+   "common_mistakes": [
+    {
+     "type": "讀音",
+     "wrong": "ㄅㄟˋ",
+     "note": "臂讀 ㄅㄧˋ；只有「胳臂」口語讀 ˙ㄅㄟ。"
+    },
+    {
+     "type": "誤用",
+     "wrong": "形容人力氣很大",
+     "note": "是指幫忙，不是說手臂很有力。"
+    }
+   ],
+   "quiz": {
+    "meaning_mcq": {
+     "question": "「一臂之力」是什麼意思？",
+     "choices": [
+      "一份力量的幫忙",
+      "一隻手很有力氣",
+      "比腕力",
+      "手臂受傷了"
+     ],
+     "answer_index": 0,
+     "explanation": "多用在「助人一臂之力」，表示幫一點忙。"
+    },
+    "fill_blank": {
+     "sentence": "這箱書好重，你能助我＿＿，幫我抬上樓嗎？",
+     "choices": [
+      "一臂之力",
+      "一乾二淨",
+      "一無所有",
+      "一路平安"
+     ],
+     "answer_index": 0
+    },
+    "usage_check": {
+     "sentence": "同學們都願意助我一臂之力，一起把教室布置好。",
+     "correct": true,
+     "explanation": "大家出力幫忙，用「一臂之力」正確。"
+    }
+   },
+   "review": {
+    "status": "draft",
+    "checked": [],
+    "note": "AI 產生，未人工校對"
+   }
+  }
+ ]
+}

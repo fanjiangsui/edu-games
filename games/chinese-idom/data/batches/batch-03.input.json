@@ -1,0 +1,381 @@
+{
+ "batch": "03",
+ "items": [
+  {
+   "id": "cy0108",
+   "idiom": "甜言蜜語",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0109",
+   "idiom": "異口同聲",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0110",
+   "idiom": "輕聲細語",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0111",
+   "idiom": "無話可說",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0112",
+   "idiom": "不可思議",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0113",
+   "idiom": "莫名其妙",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0114",
+   "idiom": "議論紛紛",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0115",
+   "idiom": "讚不絕口",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0116",
+   "idiom": "交頭接耳",
+   "level": 1,
+   "topic": "說話溝通",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0117",
+   "idiom": "輕而易舉",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0118",
+   "idiom": "大功告成",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0119",
+   "idiom": "不約而同",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0120",
+   "idiom": "多此一舉",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0121",
+   "idiom": "全力以赴",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0122",
+   "idiom": "盡心盡力",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0123",
+   "idiom": "爭分奪秒",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0124",
+   "idiom": "分秒必爭",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0125",
+   "idiom": "爭先恐後",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0126",
+   "idiom": "不慌不忙",
+   "level": 1,
+   "topic": "做事方法",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0127",
+   "idiom": "風和日麗",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0128",
+   "idiom": "春暖花開",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0129",
+   "idiom": "秋高氣爽",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0130",
+   "idiom": "冰天雪地",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0131",
+   "idiom": "天寒地凍",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0132",
+   "idiom": "傾盆大雨",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0133",
+   "idiom": "狂風暴雨",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0134",
+   "idiom": "風雨交加",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0135",
+   "idiom": "晴空萬里",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0136",
+   "idiom": "風平浪靜",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0137",
+   "idiom": "山清水秀",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0138",
+   "idiom": "青山綠水",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0139",
+   "idiom": "一望無際",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0140",
+   "idiom": "無邊無際",
+   "level": 1,
+   "topic": "自然景物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0141",
+   "idiom": "濃眉大眼",
+   "level": 1,
+   "topic": "形容人物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0142",
+   "idiom": "聰明伶俐",
+   "level": 1,
+   "topic": "形容人物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0143",
+   "idiom": "心靈手巧",
+   "level": 1,
+   "topic": "形容人物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0144",
+   "idiom": "多才多藝",
+   "level": 1,
+   "topic": "形容人物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0145",
+   "idiom": "與眾不同",
+   "level": 1,
+   "topic": "形容人物",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0146",
+   "idiom": "光陰似箭",
+   "level": 1,
+   "topic": "時間",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0147",
+   "idiom": "日月如梭",
+   "level": 1,
+   "topic": "時間",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0148",
+   "idiom": "日積月累",
+   "level": 1,
+   "topic": "時間",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0149",
+   "idiom": "年復一年",
+   "level": 1,
+   "topic": "時間",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0150",
+   "idiom": "日復一日",
+   "level": 1,
+   "topic": "時間",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0151",
+   "idiom": "夜深人靜",
+   "level": 1,
+   "topic": "時間",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0152",
+   "idiom": "早出晚歸",
+   "level": 1,
+   "topic": "時間",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0153",
+   "idiom": "人山人海",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  },
+  {
+   "id": "cy0154",
+   "idiom": "形影不離",
+   "level": 1,
+   "topic": "生活百態",
+   "status": "待產生",
+   "story_guess": false
+  }
+ ]
+}

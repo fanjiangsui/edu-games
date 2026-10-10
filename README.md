@@ -1,0 +1,28 @@
+# edu-games 學習小遊戲
+
+給孩子玩的離線學習遊戲集合，網址：https://fanjiangsui.github.io/edu-games/
+
+| 遊戲 | 路徑 | 說明 |
+|---|---|---|
+| 成語小達人 | `games/chinese-idom/` | 500 個常用成語，注音、故事、計時計分 |
+
+## 結構
+
+```
+games/<遊戲>/      每個遊戲的資料與工具（game.json 是遊戲資訊）
+docs/              打包結果，GitHub Pages 發佈這個資料夾
+build_all.py       檢查並打包所有遊戲、產生首頁
+```
+
+## 更新流程
+
+1. 修改 `games/<遊戲>/data/` 裡的資料（例如修正讀音、`tts-overrides.json` 朗讀同音字）
+2. `python3 build_all.py`（會自動合併、檢查、打包；檢查有錯就不會打包）
+3. commit 並 push，GitHub Pages 約 1～2 分鐘後更新
+
+需要 Python 3；資料格式檢查若要完整，需 `pip install jsonschema`。
+
+## 說明
+
+- 內容由 AI（Claude）協助產生與整理，未逐條人工校對；出處與典故標示「推測」或「待查」的部分不是事實陳述。
+- 難度「入門／進階／高階」是遊戲自訂分級，不是教育部的年級規定。
