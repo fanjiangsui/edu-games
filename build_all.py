@@ -7,7 +7,7 @@
      （適合需要合併、檢查資料的遊戲，例如成語小達人）
   B. 沒有 build_game.py、只有 index.html：直接複製 index.html；有 assets/ 也一起複製
      （適合單一 HTML 檔就能玩的遊戲）
-game.json 可加 "icon"（一個 emoji，顯示在首頁卡片）、"group"（首頁分區標題，如「玩一局」「腦袋補給站」）。
+game.json 可加 "icon"（一個 emoji，顯示在首頁卡片），並可在遊戲資料夾放 favicon.svg（分頁小圖示）、"group"（首頁分區標題，如「玩一局」「腦袋補給站」）。
 game.json 的 "status" 設成 "草稿" 時不打包、不放上首頁。
 任何一個遊戲打包失敗，整個流程就停下來，不會產生不完整的網站。"""
 import hashlib, json, re, shutil, subprocess, sys
@@ -34,6 +34,8 @@ for g in sorted((root / "games").iterdir()):
             shutil.copytree(g / "assets", out / "assets", dirs_exist_ok=True)
     else:
         sys.exit(f"[{g.name}] 找不到 build_game.py 或 index.html，不知道怎麼打包")
+    if (g / "favicon.svg").exists():
+        shutil.copy2(g / "favicon.svg", out / "favicon.svg")
     if not (out / "index.html").exists():
         sys.exit(f"[{g.name}] 打包後沒有產生 index.html，停止")
     print(f"[{g.name}] 完成")
@@ -53,8 +55,9 @@ def inject(f):
     t = f.read_text(encoding="utf-8")
     if MARK in t:
         return
+    add = HEAD_ADD + ('<link rel="icon" href="favicon.svg" type="image/svg+xml">' if (f.parent / "favicon.svg").exists() else "")
     h = t.rfind("</head>")
-    t = t[:h] + HEAD_ADD + t[h:] if h >= 0 else HEAD_ADD + t
+    t = t[:h] + add + t[h:] if h >= 0 else add + t
     mb = re.search(r"<body[^>]*>", t)
     t = t[:mb.end()] + BACK_ADD + t[mb.end():] if mb else BACK_ADD + t
     b = t.rfind("</body>")
@@ -67,6 +70,7 @@ for m in games:
 # 首頁、圖示、games.json、manifest
 shutil.copy2(root / "hub" / "index.html", docs / "index.html")
 shutil.copytree(root / "hub" / "icons", docs / "icons", dirs_exist_ok=True)
+shutil.copy2(root / "hub" / "favicon.svg", docs / "favicon.svg")
 listing = [{"name": m["title"], "description": m.get("description", ""), "path": m["slug"] + "/",
             "icon": m.get("icon", ""), "group": m.get("group", "玩一局"), "audience": m.get("audience", ""), "note": m.get("note", "")} for m in games]
 (docs / "games.json").write_text(json.dumps(listing, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

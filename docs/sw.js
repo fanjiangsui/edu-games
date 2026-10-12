@@ -1,13 +1,15 @@
 /* 由 build_all.py 產生，請勿手改 */
-const VERSION = "edu-games-453d7a5b9a";
+const VERSION = "edu-games-b73ae7dedc";
 const PRECACHE = [
   "./",
   "chinese-idiom/",
+  "chinese-idiom/favicon.svg",
   "chinese-idiom/index.html",
   "chinese-idiom/tts-check.html",
   "chinese-idom/",
   "chinese-idom/index.html",
   "chinese-idom/tts-check.html",
+  "favicon.svg",
   "games.json",
   "icons/apple-touch-icon.png",
   "icons/icon-192.png",
@@ -15,6 +17,7 @@ const PRECACHE = [
   "index.html",
   "manifest.json",
   "mental-models/",
+  "mental-models/favicon.svg",
   "mental-models/index.html"
 ];
 self.addEventListener("install", e => {
