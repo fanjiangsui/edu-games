@@ -18,6 +18,15 @@
     "note": "內容由 AI 協助整理"
   },
   {
+    "name": "話匣子",
+    "description": "中英雙語聊天卡，670 題加 30 張挑戰卡，親子、朋友聚會、練英文都能用。",
+    "path": "talkbox/",
+    "icon": "🍿",
+    "group": "玩一局",
+    "audience": "",
+    "note": "題目由 AI 協助產生；可安裝到手機離線用"
+  },
+  {
     "name": "西瓜飛鏢",
     "description": "瞄準旋轉的西瓜，避開舊物品，三關挑戰。",
     "path": "watermelon-darts/",

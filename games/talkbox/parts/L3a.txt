@@ -1,0 +1,68 @@
+fp|feel|最近有什麼事讓你有點擔心？你想說的話可以慢慢說。|Is something on your mind lately? Take your time if you want to share.
+fp|value|你覺得自己最近在哪方面成長了？|In what way do you feel you have grown recently?
+fp|memory|有沒有一件事，你希望當時做了不一樣的選擇？|Is there something you wish you had chosen differently?
+f|value|你覺得我們家最珍貴的是什麼？|What do you think is the most precious thing about our family?
+f|feel|有沒有什麼話，你一直想對我們說，卻還沒說出口？|Is there something you have been wanting to tell us but have not yet?
+fp|dream|如果知道自己不會失敗，你最想嘗試什麼？|If you knew you could not fail, what would you try?
+p|value|在一段友誼裡，你最看重什麼？|What do you value most in a friendship?
+p|feel|你上一次對我們的友情感到感謝，是什麼時候？|When did you last feel grateful for our friendship?
+fp|memory|誰對你的人生影響最大？|Who has influenced your life the most?
+fp|dream|你希望別人怎麼記得你？|How would you like to be remembered?
+fp|value|對你來說，「幸福」是什麼樣子？|What does happiness look like to you?
+f|feel|我們可以怎麼做，讓彼此更自在地聊天？|What could we do to talk with each other more comfortably?
+p|value|有沒有什麼事，你以前很堅持，現在想法不一樣了？|Is there something you used to be sure about but now see differently?
+f|dream|你希望五年後我們家有什麼改變？|What would you like to see change in our family in five years?
+p|feel|你現在最需要的是什麼？時間、休息，還是陪伴？|What do you need most right now: time, rest, or company?
+f|memory|我們一起做過的事裡，你最想永遠記得哪一件？|Of everything we have done together, which moment do you most want to remember forever?
+fp|daily|你覺得現在的生活節奏，哪裡可以調整一點？|What part of your current routine could use a little adjustment?
+fp|daily|一天當中最有意義的十分鐘，你通常在做什麼？|What do you usually do during the most meaningful ten minutes of your day?
+p|daily|你怎麼決定一件事值不值得花時間？|How do you decide whether something is worth your time?
+p|daily|你最近有沒有因為太忙而錯過什麼？|Have you missed anything lately because you were too busy?
+fp|daily|有沒有一件小事，你覺得再不做就會後悔？|Is there a small thing you will regret not doing soon?
+fp|daily|你覺得自己在哪方面最需要放過自己？|In what area do you most need to go easier on yourself?
+fp|daily|你最近對哪一件事特別有熱情？|What are you particularly passionate about lately?
+fp|daily|你有哪些習慣是從家人那裡學來的？|Which habits did you pick up from your family?
+p|daily|現在的你，有哪些事是十年前想不到的？|What about your life now would you not have imagined ten years ago?
+fp|daily|你覺得「休息」和「偷懶」差在哪裡？|What is the difference between resting and being lazy?
+fp|daily|如果一天多出兩個小時，你會用來做什麼？|If your day had two more hours, what would you put in them?
+fp|daily|有哪些儀式感對你來說很重要？|What ritual matters to you?
+fp|daily|你最近一次真正放空是什麼時候？|When did you last truly switch off?
+fp|daily|你覺得手機改變了我們相處的方式嗎？|Has your phone changed the way we spend time together?
+fp|fun|如果可以讓一項科技消失，你選哪一個？|If you could erase one technology, which would it be?
+fp|fun|如果能知道任何一個問題的答案，你會問什麼？|If you could know the answer to any one question, what would you ask?
+fp|fun|如果你可以一夜之間精通一項技能，你選哪一個？|If you could master a skill overnight, which one would you choose?
+fp|fun|你願意知道自己的未來會發生什麼事嗎？|Would you want to know what your future holds?
+fp|fun|如果可以重新活一次，你會選擇活在哪個年代？|If you could live again in any era, which would you choose?
+fp|fun|如果可以寫一封信給十年前的自己，第一句你會寫什麼？|If you could write to yourself ten years ago, what would the first line be?
+fp|fun|如果全世界突然安靜一整天，你會做什麼？|If the whole world went quiet for a day, what would you do?
+fp|fun|如果可以永遠待在同一個季節，你選哪一個？|If you could live in one season forever, which would you pick?
+fp|fun|如果每一種心情都有顏色，你今天是什麼顏色？|If every mood had a color, what color are you today?
+p|fun|你願意用一年的壽命換一個超能力嗎？|Would you trade a year of your life for a superpower?
+fp|fun|如果你受邀做一場演講，主題會是什麼？|If you were invited to give a talk, what would it be about?
+p|fun|如果有一個預算無限的週末，你會怎麼過？|With an unlimited budget for one weekend, how would you spend it?
+fp|fun|如果可以消除一種大家常有的壞習慣，你選哪一個？|If you could erase one common bad habit, which would it be?
+fp|fun|如果可以把一座城市搬到另一個國家，你想搬哪一座？|If you could move one city to another country, which one would you pick?
+fp|feel|你上一次覺得累，是身體累還是心累？|The last time you felt tired, was it your body or your mind?
+fp|feel|你最近有沒有哪種情緒，很難用話說出來？|Is there a feeling lately that is hard to put into words?
+fp|feel|你什麼時候最需要被聽見，而不是被建議？|When do you most need to be heard rather than advised?
+fp|feel|你心裡有沒有一個還沒整理好的想法？|Is there a thought you carry that you have not sorted out yet?
+fp|feel|你覺得自己需要什麼，才能更自在？|What would you need to feel more at ease?
+fp|feel|對你來說，被在乎是什麼感覺？|What does feeling cared for mean to you?
+fp|feel|你最近有沒有哪一刻覺得「這樣就很好了」？|Did you have a moment lately when you thought, "This is enough"?
+fp|feel|你有沒有因為怕讓別人失望而做過決定？|Have you made a decision out of fear of letting someone down?
+fp|feel|你最近有沒有哪一刻特別想念一個人？|Was there a moment lately when you missed someone?
+fp|feel|你覺得自己的哪一部分，最不容易被別人看見？|Which part of you is the hardest for others to see?
+fp|feel|你怎麼知道自己真的累了？|How do you know you are truly tired?
+fp|feel|你覺得誰最了解你？|Who knows you best?
+fp|feel|你什麼時候會覺得自己被接納？|When do you feel accepted?
+fp|feel|你覺得最難開口說出來的話是什麼？|What is the hardest thing to say out loud?
+fp|feel|你對自己有什麼樣的期待？|What expectations do you have of yourself?
+fp|feel|你最近有沒有哪方面變得比以前溫柔？|Have you become gentler in some way lately?
+fp|feel|很開心的時候，你會擔心它結束嗎？|When you are very happy, do you worry it will end?
+fp|feel|你上一次笑到肚子痛是什麼時候？|When did you last laugh until it hurt?
+fp|feel|現在最讓你開心的小確幸是什麼？|What is your biggest little joy right now?
+fp|feel|你最近有沒有被誰安慰到？|Has someone comforted you lately?
+fp|feel|你難過的時候，希望別人怎麼做？|What do you hope others do when you are sad?
+fp|feel|你覺得安全感是從哪裡來的？|Where does your sense of security come from?
+fp|feel|有沒有一件事，你說不清為什麼，就是很在意？|Is there something you care about without being sure why?
+fp|feel|被理解和被同意，哪一個對你比較重要？|Which matters more to you, being understood or being agreed with?

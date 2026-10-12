@@ -1,0 +1,84 @@
+fp|feel|最近一次讓你鬆一口氣的事是什麼？|What was the last thing that made you feel relieved?
+fp|memory|哪一次旅行或活動，你到現在還常常想起？|Which trip or event do you still think about often?
+fp|value|你覺得什麼樣的人是好朋友？|What makes someone a good friend?
+fp|dream|十年後的你，平常的一天會怎麼過？|What will an ordinary day look like for you in ten years?
+fp|fun|如果能和一位歷史人物吃晚餐，你選誰？你想問他什麼？|If you could have dinner with someone from history, who would it be and what would you ask?
+p|daily|你最近學到的一件新東西是什麼？|What is something new you learned recently?
+f|feel|你上一次覺得被家人了解，是什麼時候？|When did you last feel understood by your family?
+f|memory|小時候你最喜歡的玩具或遊戲是什麼？它有什麼故事？|What was your favorite toy or game as a kid, and what is the story behind it?
+p|value|你覺得「努力」和「天分」哪一個比較重要？|Which matters more, effort or talent? Why?
+p|fun|如果你要開一間店，你會賣什麼？|If you opened a shop, what would you sell?
+f|daily|如果全家一起做一道菜，你想做什麼？|If our family cooked one dish together, what would you want to make?
+fp|feel|什麼事會讓你很有成就感？|What makes you feel proud of yourself?
+f|dream|長大以後，你想做什麼事來幫助別人？|What would you like to do to help others when you grow up?
+fp|value|如果可以改變世界上的一件小事，你想改變什麼？|If you could change one small thing in the world, what would it be?
+p|memory|我們是怎麼變成朋友的？你對那時候有什麼印象？|How did we become friends, and what do you remember about it?
+p|daily|最近有什麼興趣或習慣讓你上癮？|What hobby or habit are you into lately?
+fp|fun|如果能讓一樣日常用品開口說話，你選哪一樣？它會說什麼？|If you could make one everyday object talk, which would it be and what would it say?
+fp|feel|你通常怎麼讓自己心情變好？|How do you usually cheer yourself up?
+p|daily|如果可以重新安排你的一週，你會改變什麼？|If you could rearrange your week, what would you change?
+fp|daily|你最近最常花時間在什麼事情上？|What have you been spending most of your time on lately?
+fp|daily|你覺得一天當中，哪個時段最有效率？|When are you the most productive during the day?
+p|daily|你最近做過最衝動的決定是什麼？|What is the most impulsive decision you made lately?
+fp|daily|有沒有哪個小習慣讓你的生活變得更好？|Is there a small habit that has made your life better?
+fp|daily|你最喜歡用什麼方式放鬆？|What is your favorite way to unwind?
+fp|daily|你一天最想關掉手機多久？|How long each day would you like to turn your phone off?
+p|daily|今年有什麼小事值得一提？|What small thing from this year is worth mentioning?
+fp|daily|你覺得日常生活中，哪一樣東西最被低估？|What is the most underrated thing in daily life?
+fp|daily|通勤或走路的時候，你最喜歡做什麼？|What do you like to do while commuting or walking?
+f|daily|你覺得放學後最理想的下午是什麼樣子？|What would a perfect afternoon after school look like?
+f|daily|你覺得家裡哪些家事其實滿有趣的？|Which chores at home are actually kind of fun?
+f|daily|如果由你來決定這個週末的行程，你會安排什麼？|If you could plan this weekend, what would we do?
+f|value|你覺得每天玩多久的遊戲剛剛好？|How much time a day on games feels just right to you?
+p|daily|如果每週可以多放一天假，你會拿來做什麼？|If you got one extra day off each week, what would you do with it?
+p|daily|你最近很用心準備的一件事是什麼？|What did you recently put real effort into preparing?
+p|daily|你心目中理想的星期日是什麼樣子？|What does your ideal Sunday look like?
+p|value|你覺得最浪費時間的事是什麼？|What do you think is the biggest waste of time?
+p|daily|你有沒有什麼想戒掉的小習慣？|Is there a small habit you want to quit?
+p|daily|你最近一次早起，是為了什麼？|What was the last reason you got up early for?
+p|daily|說一個你最近發現的好用小技巧。|Share a handy trick you discovered recently.
+p|daily|你最喜歡的一家店是哪一家？它哪裡特別？|What is your favorite shop, and what makes it special?
+fp|fun|如果可以選一個地方住一年，你選哪裡？|If you could live anywhere for a year, where would you choose?
+fp|fun|如果可以回到過去的任何時間，你想去什麼時候？|If you could go back to any time in history, when would you visit?
+fp|fun|如果時光機只能用一次，你會去過去還是未來？|If you had a time machine you could only use once, would you go to the past or the future?
+fp|fun|如果你可以和一個人交換身分一天，你選誰？|If you could swap lives with someone for a day, who would it be?
+fp|fun|如果你的人生是一本書，現在這一章的標題會是什麼？|If your life were a book, what would this chapter be called?
+fp|fun|如果你中了大獎，第一件事會做什麼？|If you won the lottery, what is the first thing you would do?
+fp|fun|你會選擇讀心術，還是隱形？|Would you choose mind reading or invisibility?
+fp|fun|如果能發明一種新的運動，規則會是什麼？|If you could invent a new sport, what would the rules be?
+fp|fun|如果可以在家裡裝一個不可能存在的設備，你會裝什麼？|If you could install one impossible gadget at home, what would it be?
+fp|fun|你比較想要會做飯的機器人，還是會打掃的機器人？|Would you rather have a robot that cooks or one that cleans?
+fp|fun|如果可以在任何一部電影裡住一個星期，你選哪一部？|If you could live in any movie for a week, which one would you pick?
+fp|fun|如果全世界只剩下一種顏色，你選哪一種？|If the whole world had only one color, which would you pick?
+fp|fun|你會選擇永遠不用睡覺，還是永遠不用吃飯？|Would you rather never need to sleep or never need to eat?
+f|fun|如果有一天你可以變成大人（或小孩），你想做什麼？|If you could be a grown-up (or a kid) for one day, what would you do?
+fp|fun|如果每個人胸前都掛一個牌子介紹自己，你的牌子會寫什麼？|If everyone wore a sign about themselves, what would yours say?
+fp|fun|如果所有動物都能說話，你覺得哪一種最吵？|If all animals could talk, which would be the noisiest?
+fp|fun|你比較想去月球旅行，還是去海底旅行？|Would you rather travel to the moon or to the bottom of the sea?
+fp|fun|如果可以重新設計一個節日，你會怎麼設計？|If you could redesign a holiday, how would you do it?
+fp|fun|如果可以擁有任何一種交通工具，你選什麼？|If you could have any vehicle, what would it be?
+p|fun|如果你要拍一部紀錄片，主題會是什麼？|If you made a documentary, what would it be about?
+fp|fun|如果可以在世界上任何地方擁有一間小木屋，你想放在哪裡？|If you could have a cabin anywhere in the world, where would it be?
+fp|fun|你覺得明年最流行的東西會是什麼？|What do you think will be popular next year?
+fp|feel|最近有什麼事讓你覺得被支持？|What recently made you feel supported?
+fp|feel|有什麼事你以前很怕，現在已經不怕了？|What is something you used to fear but do not anymore?
+p|feel|壓力大的時候，你的身體會有什麼反應？|How does your body react when you feel stressed?
+fp|feel|哪一種稱讚最讓你開心？|What kind of compliment makes you happiest?
+fp|feel|你上一次被某件事感動是什麼時候？|When were you last moved by something?
+fp|feel|你覺得自己什麼時候最像自己？|When do you feel most like yourself?
+fp|feel|有什麼事你很想做，但一直鼓不起勇氣？|What do you want to do but have not found the courage for?
+fp|feel|你生氣的時候，怎麼讓自己冷靜下來最有用？|What helps you calm down when you are angry?
+fp|feel|你最近有什麼小小的快樂？|What small joys have you had lately?
+fp|feel|覺得孤單的時候，你會做什麼？|What do you do when you feel lonely?
+fp|feel|有什麼聲音、味道或畫面會讓你想起家？|What sound, smell, or sight reminds you of home?
+fp|feel|你覺得自己是容易緊張的人嗎？|Do you consider yourself a nervous person?
+fp|feel|什麼事會讓你覺得「今天我做得不錯」？|What makes you think, "I did well today"?
+fp|feel|被誤會的時候，你通常會怎麼做？|What do you usually do when you feel misunderstood?
+fp|feel|哪些事比較容易跟朋友說，哪些事比較容易跟家人說？|What is easier to tell friends, and what is easier to tell family?
+fp|feel|失敗的時候，你最需要什麼？|What do you need most when you fail?
+fp|feel|有沒有哪一刻，你覺得自己很勇敢？|Was there a moment you felt brave?
+fp|feel|最近有沒有特別想感謝的人？|Is there someone you felt especially thankful for lately?
+fp|feel|開心的時候，你最想跟誰分享？|Who do you most want to share good news with?
+fp|feel|你覺得今天的心情像哪一種風格的歌？|What style of song would match your mood today?
+fp|feel|什麼事能讓無聊的時刻變得有趣？|What makes a boring moment fun for you?
+fp|feel|對你來說，「放鬆」是什麼感覺？|What does feeling relaxed mean to you?

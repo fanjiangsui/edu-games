@@ -1,0 +1,52 @@
+fp|daily|你覺得現在的生活裡，哪一件事最值得好好珍惜？|What in your life right now is most worth cherishing?
+fp|daily|你最近做的哪一個決定，讓你覺得自己很了不起？|What decision lately are you proud of?
+p|daily|你每天花最多時間的事，是你真正想花時間的事嗎？|Is the thing you spend most time on each day what you truly want to spend time on?
+fp|daily|你最近有沒有哪一天過得特別有意義？|Was there a day lately that felt especially meaningful?
+fp|daily|你怎麼在忙碌中讓自己保持平衡？|How do you stay balanced when life is busy?
+fp|daily|你的哪一個小習慣，最能代表你這個人？|Which small habit says the most about who you are?
+fp|daily|你最近一次對自己說「辛苦了」是什麼時候？|When did you last tell yourself, "Well done"?
+fp|daily|現在的生活裡，有哪些事是你以前曾經很想要的？|What in your life now did you once wish for?
+fp|daily|有沒有一件每天都會做的小事，讓你覺得很安穩？|Is there a daily routine that makes you feel steady?
+p|daily|在工作或學習上，你最想改進的是什麼？|What would you most like to improve at work or school?
+f|daily|你覺得我們家一天當中最溫暖的時刻是什麼？|What is the warmest moment of our family's day?
+fp|daily|有沒有哪個習慣，慢慢影響了你的心情？|Has a habit slowly affected your mood lately?
+fp|daily|你有沒有想過一個更適合你的作息？|Have you thought about a daily schedule that suits you better?
+p|daily|你最近決定不再勉強自己做哪一件事？|What have you decided to stop forcing yourself to do?
+fp|daily|你最羨慕誰的生活方式？|Whose lifestyle do you admire most?
+fp|daily|每天你最想把哪一段時間留給自己？|When do you most want to keep time for yourself each day?
+fp|fun|如果有一句話能被一個人永遠記得，你想說什麼？|If one sentence of yours could be remembered forever, what would it be?
+fp|fun|如果可以回到十年前，你想先改變什麼？|If you could go back ten years, what would you change first?
+fp|fun|如果你可以和未來的自己聊十分鐘，你會問什麼？|If you could talk with your future self for ten minutes, what would you ask?
+fp|fun|如果能擁有一種新的感官，你想要什麼？|If you could have one new sense, what would it be?
+fp|fun|如果時間慢一倍，你想把多出來的時間用在哪裡？|If time ran twice as slowly, where would you use it?
+fp|fun|如果你只能保留一個回憶，其他都忘掉，你選哪一個？|If you could keep only one memory and forget the rest, which would you keep?
+fp|fun|如果可以選一個人共度一年，你選誰？|If you could spend a year with anyone, who would you choose?
+p|fun|如果可以到任何一間公司工作一天，你選哪一間？|If you could work at any company for a day, which would you pick?
+fp|fun|如果可以親自參加一場世界知名的活動，你想去哪一個？|If you could attend any famous event in the world, which would it be?
+fp|fun|如果你的人生被拍成電影，你希望由誰來演你？|If your life became a movie, who would you want to play you?
+fp|fun|如果可以改變一個歷史事件，你會改變哪一個？|If you could change one historical event, which would it be?
+fp|fun|如果你能讀懂任何一種古代文字，你選哪一種？|If you could read any ancient script, which would you choose?
+fp|fun|如果你擁有全世界所有的書，你會先讀哪一本？|If you had every book in the world, what would you read first?
+fp|fun|如果可以讓一個夢境成真，你選哪一個夢？|If you could make one dream come true, which would it be?
+fp|fun|如果可以讓所有人都學會一件事，你選什麼？|If you could teach everyone one thing, what would it be?
+fp|fun|如果可以永遠擁有一個完美的房間，它會是什麼樣子？|If you could have one perfect room forever, what would it look like?
+fp|memory|你人生中做過最勇敢的決定是什麼？|What is the bravest decision you have made?
+fp|memory|有沒有哪一個時刻，你突然覺得自己被好好愛著？|Was there a moment you suddenly felt deeply loved?
+fp|memory|你曾經從誰身上學到一件很重要的事？|Who taught you something important?
+fp|memory|有沒有一句話，你一直記在心裡？|Is there a saying you have always kept in mind?
+fp|memory|你記得上一次真正感到驕傲是什麼時候嗎？|Do you remember the last time you felt truly proud?
+fp|memory|有沒有一次經歷，改變了你看世界的方式？|Was there an experience that changed how you see the world?
+f|memory|我們家裡，你對哪一個地方最有感情？|Which place in our home do you feel most attached to?
+fp|dream|你想用什麼方式讓世界變得更好一點？|How would you like to make the world a little better?
+fp|dream|你希望在人生的最後，自己回想起什麼？|What do you hope to remember at the end of your life?
+fp|dream|你想成為什麼樣的長輩或前輩？|What kind of elder or mentor would you like to be?
+fp|dream|做到哪一件事，會讓你覺得「這一生值得了」？|What would make you feel your life was worth it?
+fp|dream|你想為自己創造一個什麼樣的生活環境？|What kind of environment would you like to create for yourself?
+fp|dream|你希望自己在哪一方面變得更自由？|In what way would you like to become freer?
+fp|dream|你想為你愛的人做一件什麼事？|What would you like to do for someone you love?
+fp|curious|你覺得人為什麼會有同理心？|Why do you think people feel empathy?
+fp|curious|你覺得科技進步會讓人更幸福嗎？|Will technological progress make people happier?
+fp|curious|你覺得人為什麼會想探索未知的地方？|Why do people want to explore the unknown?
+fp|curious|你覺得世界上有沒有「完全的自由」？|Is there such a thing as complete freedom?
+fp|curious|你覺得創意是天生的，還是可以練習出來的？|Is creativity something you are born with or something you can practice?
+fp|curious|你覺得人為什麼需要朋友？|Why do people need friends?

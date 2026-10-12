@@ -1,0 +1,86 @@
+fp|memory|你記得最好笑的一次糗事嗎？|Do you remember a really funny embarrassing moment?
+fp|memory|你吃過最難忘的一頓飯是哪一次？|What is the most memorable meal you have had?
+fp|memory|你最近想起了什麼舊回憶？|What old memory have you recalled lately?
+fp|memory|小時候你最喜歡的地方是哪裡？|What was your favorite place as a child?
+fp|memory|小時候有沒有一個你很崇拜的人？|Was there someone you looked up to as a kid?
+fp|memory|你還記得第一份零用錢或薪水是怎麼花掉的嗎？|Do you remember how you spent your first allowance or paycheck?
+fp|memory|你記得第一次獨自去一個地方是什麼情景嗎？|Do you remember the first time you went somewhere alone?
+fp|memory|你學生時代最喜歡哪一個科目？|What was your favorite subject in school?
+fp|memory|哪一首歌會讓你想起某一段時光？|Which song takes you back to a certain time?
+fp|memory|你搬過家或轉過學嗎？那時是什麼感覺？|Have you ever moved or changed schools? How did it feel?
+fp|memory|小時候你的暑假通常怎麼過？|How did you usually spend summer vacations as a child?
+fp|memory|你記得第一次進電影院的情景嗎？|Do you remember your first time at the movies?
+fp|memory|有沒有哪一位老師影響過你？|Has a teacher ever influenced you?
+fp|memory|你收集過什麼東西？|What have you collected?
+fp|memory|你以前最愛的一件衣服或一雙鞋是什麼？|What was your favorite piece of clothing or pair of shoes?
+f|memory|小時候你最期待哪一天？|What day did you look forward to most as a kid?
+fp|memory|你有沒有迷路或走丟的經驗？|Have you ever gotten lost?
+f|memory|你有沒有一個從來沒說過的童年小祕密？|Do you have a childhood secret you never told?
+fp|memory|你記得在新環境裡認識的第一個朋友嗎？|Do you remember the first friend you made in a new place?
+fp|memory|你最想重新體驗一次的時光是哪一段？|Which period of your life would you like to relive?
+fp|memory|你和家人或朋友之間，最常重複的一個玩笑是什麼？|What is a joke you and your family or friends keep repeating?
+fp|memory|小時候你看過最厲害的魔術或表演是什麼？|What is the best magic trick or show you saw as a kid?
+fp|dream|如果你可以完成一件大事，會是什麼？|If you could accomplish one big thing, what would it be?
+fp|dream|未來十年內，你想學會什麼？|What do you want to learn within the next ten years?
+fp|dream|你想創造什麼東西？|What would you like to create?
+p|dream|如果可以重新選擇職業，你想做什麼？|If you could choose a different career, what would you pick?
+fp|dream|你最想住在哪一座城市？|Which city would you most like to live in?
+fp|dream|你希望未來的家是什麼樣子？|What would you like your future home to be like?
+fp|dream|有哪一個地方是你一生一定要去一次的？|Which place do you want to visit at least once in your life?
+fp|dream|你想成為什麼樣的朋友？|What kind of friend do you want to be?
+fp|dream|如果你要寫一本書，主題會是什麼？|If you wrote a book, what would it be about?
+fp|dream|如果有一整年的自由時間，你會怎麼安排？|If you had one free year, how would you spend it?
+fp|dream|有哪一種運動你從沒試過，但很想挑戰？|What sport have you never tried but want to?
+fp|dream|你想為你住的社區做什麼？|What would you like to do for your community?
+fp|dream|你最想實現的一個小願望是什麼？|What small wish would you most like to come true?
+fp|dream|你現在可以做什麼事，讓未來的自己感謝你？|What could you do now that your future self would thank you for?
+fp|dream|你希望五年後的自己在哪裡？|Where do you hope to be in five years?
+fp|dream|你想擁有什麼樣的生活節奏？|What pace of life would you like to have?
+p|dream|如果有一筆錢只能花在體驗上，你想體驗什麼？|If money could only be spent on experiences, what would you pick?
+fp|dream|你想教別人什麼？|What would you like to teach others?
+fp|dream|你想收集哪些地方的紀念品？|Which places would you like to collect souvenirs from?
+fp|dream|你想在一年內完成什麼小目標？|What small goal would you like to reach within a year?
+f|dream|你希望孩子們擁有什麼樣的童年？|What kind of childhood would you like children to have?
+fp|dream|你最想親眼看到哪一種自然景象？|Which natural wonder do you most want to see in person?
+fp|value|你覺得誠實比善意重要嗎？|Is honesty more important than kindness?
+fp|value|你覺得金錢能買到快樂嗎？|Can money buy happiness?
+fp|value|你覺得原諒一個人難不難？|Is it hard to forgive someone?
+fp|value|你覺得一個人需要多少朋友才夠？|How many friends does a person need?
+fp|value|你覺得哪些規矩是必要的？|Which rules do you think are necessary?
+fp|value|對你來說，什麼是「成功」？|What does success mean to you?
+fp|value|你覺得守時重要嗎？|Is being on time important?
+fp|value|獨處和陪伴，哪一個對你比較重要？|Which matters more to you, alone time or company?
+fp|value|做錯事的時候，說對不起很難嗎？|Is it hard to apologize when you are wrong?
+fp|value|如果撿到一個錢包，你會怎麼做？|What would you do if you found a wallet?
+fp|value|如果朋友做錯事，你覺得要告訴他嗎？|If a friend does something wrong, should you tell them?
+fp|value|你覺得壓力有好處嗎？|Can stress ever be good?
+fp|value|做自己和融入大家，哪一個比較重要？|Which is more important: being yourself or fitting in?
+fp|value|你覺得說「不」難嗎？|Is it hard to say no?
+fp|value|你覺得一個人最好的品格是什麼？|What is the best quality a person can have?
+fp|value|傳統和創新，你覺得哪一個比較重要？|Which is more important, tradition or innovation?
+fp|value|你覺得人應該每天都開心嗎？|Should a person be happy every day?
+fp|value|你覺得小謊言有時候可以接受嗎？|Are small lies ever okay?
+fp|value|你覺得「公平」和「平等」有什麼不同？|What is the difference between fair and equal?
+fp|value|慢慢做和快速完成，你覺得哪一個比較好？|Is it better to take your time or finish quickly?
+fp|value|你覺得長輩的建議，聽了比較好嗎？|Is it better to follow advice from elders?
+fp|value|你覺得運氣在人生裡占多大的比例？|How much of life do you think is luck?
+fp|curious|你覺得未來十年，哪一種科技會改變我們最多？|Which technology will change our lives most in the next ten years?
+fp|curious|你覺得 AI 能幫我們做哪些事？|What do you think AI can help us do?
+fp|curious|你想知道宇宙有多大嗎？|Do you wonder how big the universe is?
+fp|curious|你覺得人類有可能住到別的星球嗎？|Could humans live on another planet?
+fp|curious|你覺得為什麼有些人特別愛冒險？|Why do you think some people love adventure?
+fp|curious|你覺得為什麼不同國家有不同的飲食文化？|Why do you think countries have different food cultures?
+fp|curious|你想知道哪一種職業的一天是怎麼過的？|Whose workday would you like to see?
+fp|curious|你覺得語言是怎麼誕生的？|How do you think language began?
+fp|curious|你覺得人為什麼會打哈欠？|Why do you think people yawn?
+fp|curious|你最好奇的一個歷史謎團是什麼？|What historical mystery are you most curious about?
+fp|curious|你覺得為什麼有些音樂特別讓人感動？|Why do some pieces of music move us so much?
+fp|curious|你覺得動物會有感情嗎？|Do you think animals have feelings?
+fp|curious|城市和鄉村，你覺得哪一種比較適合生活？|Which is better to live in: a city or the countryside?
+fp|curious|你覺得人為什麼需要睡覺？|Why do you think people need sleep?
+fp|curious|你覺得為什麼會有四季？|Why do you think we have seasons?
+fp|curious|如果可以讓一種絕種的動物回來，你選哪一種？|Which extinct animal would you bring back?
+fp|curious|你覺得為什麼有些人喜歡收藏東西？|Why do some people love to collect things?
+fp|curious|你覺得手寫和打字，有什麼不一樣？|What is the difference between handwriting and typing?
+fp|curious|你覺得食物的味道為什麼會和記憶連在一起？|Why do you think tastes are connected to memories?
+fp|curious|你覺得動物是怎麼長途遷徙的？|How do you think animals migrate over long distances?

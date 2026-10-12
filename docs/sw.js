@@ -1,5 +1,5 @@
 /* 由 build_all.py 產生，請勿手改 */
-const VERSION = "edu-games-00a05dc399";
+const VERSION = "edu-games-243be27e1b";
 const PRECACHE = [
   "./",
   "chinese-idiom/",
@@ -19,6 +19,14 @@ const PRECACHE = [
   "mental-models/",
   "mental-models/favicon.svg",
   "mental-models/index.html",
+  "talkbox/",
+  "talkbox/icons/apple-touch-icon.png",
+  "talkbox/icons/icon-192.png",
+  "talkbox/icons/icon-512.png",
+  "talkbox/icons/icon-maskable-512.png",
+  "talkbox/index.html",
+  "talkbox/manifest.webmanifest",
+  "talkbox/questions.js",
   "watermelon-darts/",
   "watermelon-darts/index.html"
 ];

@@ -1,0 +1,92 @@
+fp|memory|哪一次的離別讓你最難忘？|Which goodbye do you remember most?
+fp|memory|你人生中的轉捩點是什麼？|What has been a turning point in your life?
+fp|memory|有沒有哪一個瞬間，你是後來才明白它很重要？|Was there a moment you only later realized was important?
+fp|memory|你曾經幫助過誰，讓你一直記到現在？|Whom did you help in a way you still remember?
+fp|memory|誰曾經在你需要的時候出現？|Who showed up for you when you needed it?
+fp|memory|你最想回去看看的地方是哪裡？|Which place would you most like to go back to?
+p|memory|有沒有一個很久沒聯絡的人，想起來還是會微笑？|Is there someone you have not talked to in a long time who still makes you smile?
+fp|memory|你還記得自己第一次覺得長大是什麼時候嗎？|When did you first feel grown up?
+fp|memory|有哪一次失敗，後來成為你成長的養分？|Which failure ended up helping you grow?
+fp|memory|有沒有一場對話改變了你的想法？|Was there a conversation that changed your mind?
+f|memory|我們家有沒有一個一代傳一代的故事？|Is there a story passed down in our family?
+fp|memory|有哪一個傳統，從你小時候一直延續到現在？|Which tradition has continued from your childhood to now?
+fp|memory|你覺得人生中哪一段時間的自己最自由？|When in your life did you feel most free?
+fp|memory|你記得第一次獨立完成一件大事的感覺嗎？|Do you remember the feeling of finishing something big on your own?
+fp|memory|有沒有一首歌或一本書，陪你走過某一段時期？|Was there a song or book that stayed with you through some period?
+fp|memory|你有哪一個習慣，是人生某個階段留下來的？|Which habit stayed with you from a certain period of life?
+fp|memory|你有沒有一樣東西很珍貴，但不是因為價錢？|Do you own something precious for reasons other than its price?
+fp|memory|你有沒有一次跳出舒適圈的經驗？|Have you ever stepped far out of your comfort zone?
+fp|memory|有沒有一個地方，一回去就覺得安心？|Is there a place where you feel at ease the moment you return?
+p|memory|你還記得我們第一次一起做的事是什麼嗎？|Do you remember the first thing we did together?
+fp|dream|你想過什麼樣的晚年生活？|What kind of later life would you like?
+fp|dream|你想為這個世界留下什麼？|What would you like to leave behind?
+fp|dream|你想成為哪一個領域的專家？|In which field would you like to become an expert?
+fp|dream|如果不用考慮金錢，你每天會做什麼？|If money were no concern, what would you do each day?
+fp|dream|你想在什麼時候慢下腳步？|When would you like to slow down?
+fp|dream|你希望十年後的自己擁有什麼能力？|What ability would you like to have in ten years?
+fp|dream|你想和家人或朋友一起完成什麼計畫？|What project would you like to do with family or friends?
+fp|dream|你想怎麼度過人生中某個重要的日子？|How would you like to spend an important day in your life?
+fp|dream|你希望有一天能對誰說謝謝？|Whom do you hope to thank one day?
+fp|dream|你最想支持哪一件事？|What cause would you most like to support?
+fp|dream|你心目中「理想的一天」是什麼樣子？|How do you define an ideal day?
+fp|dream|有什麼現在看起來很難的事，你想挑戰？|What seemingly difficult thing do you want to challenge?
+fp|dream|你想在哪個地方度過一整個季節？|Where would you like to spend an entire season?
+fp|dream|你想把什麼本領傳給下一代？|What skill would you like to pass on to the next generation?
+fp|dream|你希望下一個人生階段有什麼不同？|What would you like to be different in the next stage of life?
+fp|dream|你想學會和什麼事情和解？|What would you like to make peace with?
+fp|dream|如果可以用不同的方式生活一個月，你想怎麼過？|If you could live differently for a month, how would you do it?
+fp|dream|有什麼事是你一直想做的？|What have you always meant to do?
+fp|dream|你想對未來的自己說一句什麼話？|What sentence would you like to give your future self?
+fp|dream|你希望身邊的人怎麼形容你的人生態度？|How would you like people around you to describe your outlook on life?
+fp|value|對你來說，勇氣是什麼？|What is courage to you?
+fp|value|自由和安全，你覺得哪一個比較重要？|Which matters more, freedom or security?
+fp|value|你覺得什麼時候該堅持，什麼時候該放手？|When should we hold on, and when should we let go?
+fp|value|你覺得一個人的價值是由什麼決定的？|What determines a person's worth?
+fp|value|你怎麼在為別人做事和為自己做事之間取得平衡？|How do you balance doing things for others and for yourself?
+fp|value|原諒自己比較難，還是原諒別人比較難？|Is it harder to forgive yourself or others?
+fp|value|你覺得什麼時候誠實反而會傷人？|When can honesty be hurtful?
+fp|value|你覺得陪伴比解決問題更重要嗎？|Is being there more important than solving problems?
+p|value|你覺得朋友之間可以有祕密嗎？|Can friends have secrets from each other?
+fp|value|金錢和時間，你比較珍惜哪一個？|Which do you value more, money or time?
+fp|value|你覺得有哪些事，只有年輕的時候才能做？|What can only be done when young?
+fp|value|對你來說，什麼叫「足夠」？|What does "enough" mean to you?
+fp|value|好奇心和責任心，你覺得哪一個更重要？|Which matters more, curiosity or responsibility?
+fp|value|你怎麼看待「失敗」這件事？|How do you view failure?
+fp|value|你覺得什麼樣的領導者，會讓人想跟隨？|What kind of leader makes people want to follow?
+fp|value|你覺得為什麼有些人很難說出「謝謝」？|Why is it hard for some people to say thank you?
+fp|value|你覺得人需要偶爾逃離現實嗎？|Do people need to escape reality sometimes?
+f|value|你覺得家人之間需要有界線嗎？|Do family members need boundaries?
+fp|value|你覺得人可以改變多少？|How much can people change?
+fp|value|你覺得誠信為什麼重要？|Why does integrity matter?
+fp|value|你覺得生活中的哪些小事，最能看出一個人的品格？|Which small things show a person's character best?
+fp|value|面對自己不擅長的事，你覺得該怎麼做？|How should we face things we are not good at?
+fp|value|簡單的生活和豐富的生活，你覺得哪一個比較好？|Which is better, a simple life or a rich one?
+fp|value|你覺得人與人之間的信任是怎麼建立起來的？|How is trust built between people?
+fp|value|有哪一種價值觀，是你絕對不會妥協的？|Which value would you never compromise?
+fp|value|你覺得學習最重要的是什麼？|What is the most important thing about learning?
+fp|value|你覺得好的溝通是什麼樣子？|What does good communication look like?
+fp|value|對你來說，「家」是什麼？|What is home to you?
+fp|curious|你覺得人工智慧會怎麼改變我們的工作和生活？|How might artificial intelligence change work and life?
+fp|curious|你覺得為什麼有些想法特別容易流行起來？|Why do some ideas spread so easily?
+fp|curious|你覺得社群媒體讓人更靠近，還是更疏遠？|Does social media bring people closer or push them apart?
+fp|curious|你覺得人為什麼需要故事？|Why do people need stories?
+fp|curious|你覺得語言會影響我們思考的方式嗎？|Does language shape the way we think?
+fp|curious|你覺得未來的學校會是什麼樣子？|What will schools of the future look like?
+fp|curious|你覺得為什麼有些人特別有創造力？|Why are some people especially creative?
+fp|curious|你覺得文化的差異是怎麼形成的？|How do cultural differences form?
+fp|curious|你覺得我們為什麼會做夢？|Why do you think we dream?
+fp|curious|你覺得「意識」是什麼？|What do you think consciousness is?
+fp|curious|如果沒有網路，你覺得生活會變成什麼樣子？|What would life be like without the internet?
+fp|curious|你覺得為什麼笑聲會傳染？|Why is laughter contagious?
+fp|curious|你覺得音樂為什麼可以改變心情？|Why can music change our mood?
+fp|curious|你覺得什麼樣的城市適合人居住？|What makes a city good to live in?
+fp|curious|你覺得為什麼有些習慣很難改？|Why are some habits so hard to change?
+fp|curious|你覺得時間為什麼有時感覺很快，有時感覺很慢？|Why does time feel fast sometimes and slow at other times?
+fp|curious|你覺得人為什麼會害怕改變？|Why are people afraid of change?
+fp|curious|你覺得人類為什麼會對藝術有興趣？|Why do humans care about art?
+fp|curious|你覺得下一個重大的發明會是什麼？|What will the next big invention be?
+fp|curious|你覺得未來的食物會是什麼樣子？|What will food be like in the future?
+fp|curious|在數位時代，你覺得記憶力還重要嗎？|Does memory still matter in the digital age?
+fp|curious|你覺得我們為什麼會對懸疑故事著迷？|Why are we fascinated by mystery stories?
+fp|curious|你覺得機器有可能學會創意嗎？|Can machines learn to be creative?
+fp|curious|你覺得為什麼有些地方讓人一去就愛上？|Why do some places make us fall in love at first sight?

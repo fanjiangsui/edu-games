@@ -5,6 +5,7 @@
 | 遊戲 | 路徑 | 說明 |
 |---|---|---|
 | 成語小達人 | `games/chinese-idiom/` | 500 個常用成語，注音、故事、計時計分 |
+| 話匣子 | `games/talkbox/` | 中英雙語聊天卡 670 題＋30 張挑戰卡，可安裝成 PWA 離線用（題庫改 `parts/*.txt`，見該資料夾 README） |
 | 西瓜飛鏢 | `games/watermelon-darts/` | 瞄準旋轉的西瓜，避開舊物品，三關挑戰（單檔 Canvas 遊戲） |
 
 ## 結構

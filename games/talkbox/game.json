@@ -1,0 +1,10 @@
+{
+  "title": "話匣子",
+  "description": "中英雙語聊天卡，670 題加 30 張挑戰卡，親子、朋友聚會、練英文都能用。",
+  "audience": "",
+  "icon": "🍿",
+  "group": "玩一局",
+  "status": "上線",
+  "note": "題目由 AI 協助產生；可安裝到手機離線用",
+  "inject_css": "#hub-home{margin:12px 0 0 max(16px,calc(50% - 304px))}"
+}

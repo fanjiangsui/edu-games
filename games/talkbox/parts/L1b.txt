@@ -1,0 +1,62 @@
+p|daily|你的手機桌布是什麼？為什麼選它？|What is your phone wallpaper, and why did you choose it?
+p|daily|你最近追完的一部劇是哪一部？|What is the last series you finished?
+p|daily|你最愛的宵夜或深夜零食是什麼？|What is your favorite late-night snack?
+p|fun|你有沒有什麼沒人知道的小專長？|Do you have a small talent nobody knows about?
+p|daily|你出去吃飯或叫外送，最常點什麼？|What do you order most often when you eat out or get delivery?
+p|daily|你最近最喜歡的一家店或咖啡廳是哪裡？|What is your favorite shop or café lately?
+p|fun|如果可以瞬間學會一種語言，你選哪一種？|If you could learn a language instantly, which one would you pick?
+p|daily|你最近一次迷路是在哪裡？|When did you last get lost?
+p|daily|你覺得自己是早起型，還是夜貓型？|Are you a morning person or a night owl?
+p|daily|你出門一定會帶的三樣東西是什麼？|What three things do you always carry when you go out?
+p|fun|如果我們一起去旅行，你覺得誰最愛拍照？|On a trip together, who would take the most photos?
+p|daily|你最近很想買、但還沒買的東西是什麼？|What do you want to buy but have not yet?
+p|daily|你覺得哪一種食物最被高估？|What food do you think is the most overrated?
+p|daily|你最喜歡哪一部電影的哪一幕？|What is your favorite scene from a movie?
+p|fun|哪一部電影你最想忘記劇情重看一次？|Which movie would you like to forget so you can watch it again for the first time?
+p|fun|你有沒有什麼奇怪的小迷信？|Do you have a strange little superstition?
+p|fun|你覺得自己最像哪一種食物？|Which food are you most like?
+p|fun|如果聚會只能選一個遊戲，你推薦哪一個？|If we had to pick one game for a get-together, what would you recommend?
+p|feel|你最近一次笑到不行是因為什麼？|What made you laugh out loud recently?
+p|daily|朋友聚會中，你最喜歡哪個部分？吃、聊天，還是玩遊戲？|What do you like most about get-togethers: eating, chatting, or playing games?
+p|fun|哪一種超能力最能讓你的日常生活變輕鬆？|Which superpower would make your daily life easier?
+p|daily|你平常的週末是怎麼過的？|How would you describe your usual weekend?
+p|daily|你最常忘記帶的東西是什麼？|What do you forget most often?
+p|feel|你最近有沒有看過讓你很感動的影片或故事？|Did you see a video or story lately that moved you?
+p|daily|我們這群人裡，誰最會煮飯？|Who in our group cooks best?
+p|feel|你最喜歡一個人做的事是什麼？|What do you enjoy doing alone?
+p|daily|你手機裡有沒有一個其實不太需要的 app？|Is there an app on your phone you do not really need?
+p|memory|你小時候想當什麼？|What did you want to be when you were a kid?
+p|memory|你覺得最難忘的一次聚會是哪一次？|Which get-together do you remember best?
+p|value|你覺得朋友之間，最適合一起做哪一件事？|What is the best thing for friends to do together?
+f|daily|你今天最喜歡哪一堂課？|Which class did you like most today?
+f|daily|今天午餐你和誰一起吃？|Who did you eat lunch with today?
+f|daily|學校裡最好玩的地方是哪裡？|What is the most fun place at school?
+f|value|今天你有幫助過同學嗎？|Did you help a classmate today?
+f|feel|你最喜歡哪一位老師？為什麼？|Which teacher do you like best, and why?
+f|daily|下課時間你最常做什麼？|What do you do most at recess?
+f|feel|今天有什麼事讓你覺得有點難？|What was a little hard for you today?
+f|curious|你今天學到最有趣的一件事是什麼？|What was the most interesting thing you learned today?
+f|feel|有沒有一位同學，你很想跟他當朋友？|Is there a classmate you would like to be friends with?
+f|daily|你最喜歡的運動是什麼？|What is your favorite sport?
+f|daily|爸爸媽媽煮的菜裡，你最愛哪一道？|Which dish that Mom or Dad cooks do you love most?
+f|curious|你覺得爸爸媽媽最擅長什麼？|What do you think Mom and Dad are best at?
+f|fun|我們家誰最愛睡懶覺？|Who in our family sleeps in the most?
+f|daily|你最喜歡全家一起做什麼事？|What do you like doing together as a family?
+f|fun|如果我們家是一種動物，會是什麼動物？|If our family were an animal, which one would we be?
+f|daily|家裡哪個位置最舒服？|Which spot in our house is the coziest?
+f|feel|你最喜歡我們對你說哪一句話？|What is your favorite thing we say to you?
+f|fun|我們家誰的聲音最大？|Who is the loudest person in our family?
+f|dream|這個週末我們來規劃一個小冒險，你想去哪裡？|Let us plan a little adventure this weekend. Where would you go?
+f|memory|你最喜歡哪一個節日？為什麼？|Which holiday do you like best, and why?
+f|dream|睡前你最想聽什麼樣的故事？|What kind of bedtime story would you like to hear?
+f|daily|下雨天你想待在家，還是出去踩水？|On a rainy day, would you rather stay in or splash in puddles?
+fp|dream|你想在生日辦一場什麼樣的派對？|What kind of party would you like for your birthday?
+fp|daily|你最喜歡的顏色是什麼？它讓你想到什麼？|What is your favorite color, and what does it remind you of?
+fp|fun|你最喜歡看天上哪一種形狀的雲？|What shape of cloud do you like to see?
+fp|curious|你最近有學會什麼新的英文單字嗎？|Did you learn a new English word lately?
+fp|daily|今天你最想說的一個英文單字是什麼？|What English word would you like to say today?
+fp|daily|你能用英文說出幾種水果？|How many fruits can you name in English?
+fp|daily|你會怎麼用英文介紹你的家人？|How would you introduce your family in English?
+fp|daily|請用英文說說看你最喜歡的食物。|Tell us about your favorite food in English.
+fp|value|你最喜歡哪一個英文單字？為什麼？|What is your favorite English word, and why?
+fp|fun|你想用哪一種語言說晚安？|Which language would you like to say good night in?

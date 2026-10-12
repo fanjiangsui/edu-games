@@ -1,0 +1,40 @@
+fp|daily|你最近有沒有改變過什麼生活習慣？|Have you changed any habits in your life recently?
+p|daily|你最近在手機上最常用的功能是什麼？|What do you use most on your phone these days?
+fp|daily|你覺得一天當中最美好的十分鐘是什麼時候？|When is the best ten minutes of your day?
+f|daily|你覺得我們家有哪些地方可以變得更好？|What could be improved at home?
+p|daily|你有什麼讓一天更順利的小訣竅？|What is your trick for a smoother day?
+fp|daily|你最近最常說的一句話是什麼？|What phrase do you say most often lately?
+fp|daily|你一天當中最期待的時刻是什麼？|What do you look forward to most during your day?
+fp|curious|你覺得為什麼有些人對音樂特別有天分？|Why do you think some people have a talent for music?
+fp|curious|你覺得為什麼世界上有那麼多不同的語言？|Why do you think there are so many different languages?
+fp|curious|你覺得動物園裡的動物開心嗎？|Do you think animals at the zoo are happy?
+fp|curious|你覺得海浪為什麼一直拍打著岸邊？|Why do waves keep hitting the shore?
+fp|curious|為什麼有些食物聞起來很香，吃起來卻沒那麼好吃？|Why do some foods smell great but not taste as good?
+fp|curious|你覺得月亮為什麼會有圓缺？|Why does the moon change shape?
+fp|curious|你覺得電腦是怎麼「思考」的？|How do you think a computer "thinks"?
+fp|curious|你覺得為什麼有些人喜歡看恐怖片？|Why do some people enjoy scary movies?
+fp|curious|你覺得為什麼世界各地的人都喜歡音樂和舞蹈？|Why do people everywhere love music and dance?
+fp|curious|紙本書和電子書，你覺得哪一種比較適合你？|Which suits you better, books or e-books?
+fp|dream|你想在哪一個國家生活一段時間？|In which country would you like to live for a while?
+fp|dream|你最想完成哪一個旅行計畫？|Which travel plan would you like to complete?
+fp|dream|你最想學會哪一道拿手菜？|Which signature dish would you like to master?
+fp|dream|你想成為什麼樣的家人？|What kind of family member do you want to be?
+p|dream|你想和朋友一起做什麼瘋狂的事？|What crazy thing would you like to do with friends?
+fp|dream|你想培養哪一種休閒興趣？|What kind of hobby would you like to take up?
+fp|memory|你還記得學會騎腳踏車之後，第一次騎去哪裡嗎？|Do you remember where you first rode after learning to ride a bike?
+fp|memory|你記得第一次自己煮東西的經驗嗎？|Do you remember the first time you cooked something yourself?
+fp|memory|有沒有哪一次旅行出了意外，後來卻變成美好的回憶？|Was there a trip where something went wrong but became a good memory?
+p|memory|你和朋友之間有沒有一個只有你們懂的梗？|Do you and your friends have an inside joke only you understand?
+fp|memory|你記得第一次出國或離家很遠是什麼感覺嗎？|Do you remember how it felt going abroad or far from home for the first time?
+fp|fun|如果有一種動物可以當你的助手，你選哪一種？|If an animal could be your assistant, which would you choose?
+fp|fun|如果你要設計一款新玩具，它會是什麼樣子？|If you designed a new toy, what would it be like?
+fp|fun|你比較想要瞬間移動的能力，還是飛行的能力？|Would you rather teleport or fly?
+p|fun|如果你和朋友一起開餐廳，你們會賣什麼？|If you and friends opened a restaurant, what would you serve?
+fp|fun|如果可以讓一條規矩消失一天，你選哪一條？|If you could cancel any rule for a day, which would it be?
+fp|feel|你最近有沒有哪一天特別有活力？|Have you had an especially energetic day lately?
+fp|feel|什麼事會讓你突然心情變好？|What suddenly lifts your mood?
+f|feel|家人說哪一句話最能給你力量？|What do family members say that gives you strength?
+fp|feel|你最近有沒有哪一件事讓你覺得很不好意思？|Did something embarrass you lately?
+fp|value|你覺得一個人需要多少獨處的時間？|How much time alone does a person need?
+fp|value|當誠實和禮貌有衝突的時候，你覺得該怎麼辦？|What should you do when honesty and politeness conflict?
+fp|value|你覺得朋友之間的承諾有多重要？|How important are promises between friends?

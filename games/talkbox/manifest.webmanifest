@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "話匣子 Talk Box",
+  "short_name": "話匣子",
+  "description": "親子、朋友聚會、練英文都能用的中英雙語聊天卡。",
+  "lang": "zh-Hant",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EEF0F7",
+  "theme_color": "#D8372F",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

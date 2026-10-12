@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>話匣子 · 中英聊天卡</title>
+<meta name="description" content="親子、朋友聚會、練英文都能用的中英雙語聊天卡。">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#D8372F" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141830" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="話匣子">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    --bg: #EEF0F7;
+    --surface: #FFFFFF;
+    --ink: #1B2340;
+    --muted: #566082;
+    --line: #D3D8E8;
+    --red: #D8372F;
+    --on-red: #FFFFFF;
+    --butter: #FFD45C;
+    --on-butter: #1B2340;
+    --chip-on: #1B2340;
+    --on-chip: #FFFFFF;
+    /* system fonts only, so the app works fully offline */
+    --font-zh: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+    --font-en: ui-rounded, "SF Pro Rounded", "Nunito", "Avenir Next Rounded", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141830; --surface: #1F2547; --ink: #F1F2FA; --muted: #A5ACCD; --line: #343C68;
+      --red: #FF6B5E; --on-red: #1B2340; --chip-on: #FFD45C; --on-chip: #1B2340;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141830; --surface: #1F2547; --ink: #F1F2FA; --muted: #A5ACCD; --line: #343C68;
+    --red: #FF6B5E; --on-red: #1B2340; --chip-on: #FFD45C; --on-chip: #1B2340;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--font-zh); line-height: 1.6; -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 20px 16px 40px; }
+  .top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  h1 { margin: 0; font-size: 28px; font-weight: 700; letter-spacing: .02em; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  h1 .en { font-family: var(--font-en); font-weight: 600; font-size: 20px; color: var(--muted); }
+  .sub { margin: 4px 0 18px; color: var(--muted); font-size: 14px; }
+  .install {
+    font: inherit; font-size: 14px; font-weight: 700; color: var(--ink); background: var(--butter);
+    border: 2px solid var(--ink); border-radius: 12px; padding: 6px 12px; min-height: 40px; cursor: pointer; white-space: nowrap;
+  }
+
+  .stage { margin: 0 0 14px; }
+  .card {
+    background: var(--surface); border-radius: 18px 18px 26px 26px; overflow: hidden;
+    border: 2px solid var(--ink); box-shadow: 0 6px 0 var(--ink); transform-origin: 50% 100%;
+  }
+  .card.pop { animation: pop .38s cubic-bezier(.2,.9,.3,1.2); }
+  @keyframes pop { from { transform: translateY(14px) rotate(-1.5deg) scale(.97); opacity: .4; } to { transform: none; opacity: 1; } }
+  .stripe {
+    height: 62px; position: relative;
+    background: repeating-linear-gradient(90deg, var(--red) 0 24px, #fff 24px 48px);
+    border-bottom: 2px solid var(--ink);
+  }
+  .badge { position: absolute; left: 12px; bottom: -14px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .pill {
+    background: var(--surface); color: var(--ink); border: 2px solid var(--ink); border-radius: 999px;
+    padding: 2px 12px; font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;
+  }
+  .pill.butter { background: var(--butter); color: var(--on-butter); }
+  .dots { display: inline-flex; gap: 3px; }
+  .dots i { width: 8px; height: 8px; border-radius: 50%; border: 2px solid currentColor; display: block; }
+  .dots i.on { background: currentColor; }
+  .body { padding: 32px 20px 20px; min-height: 230px; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+  .zh, .en { margin: 0; overflow-wrap: anywhere; }
+  .zh.big { font-size: clamp(23px, 6vw, 29px); font-weight: 700; line-height: 1.45; }
+  .zh.small { font-size: 16px; color: var(--muted); }
+  .en.big { font-family: var(--font-en); font-weight: 500; font-size: clamp(23px, 6vw, 29px); line-height: 1.35; }
+  .en.small { font-family: var(--font-en); font-size: 17px; color: var(--muted); line-height: 1.4; }
+  .hidden { display: none !important; }
+  .tools { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 20px 18px; }
+  .tool {
+    font: inherit; font-size: 14px; font-weight: 500; color: var(--ink); background: transparent;
+    border: 2px solid var(--line); border-radius: 12px; padding: 8px 14px; min-height: 44px; cursor: pointer;
+  }
+  .tool[aria-pressed="true"] { border-color: var(--red); color: var(--red); font-weight: 700; }
+  .tool:hover { border-color: var(--ink); }
+
+  .draw-row { display: flex; align-items: center; gap: 12px; margin: 22px 0 6px; }
+  .draw {
+    flex: 1; font: inherit; font-size: 19px; font-weight: 700; min-height: 56px; cursor: pointer;
+    background: var(--red); color: var(--on-red); border: 2px solid var(--ink); border-radius: 16px; box-shadow: 0 4px 0 var(--ink);
+  }
+  .draw:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+  .left { color: var(--muted); font-size: 13px; min-width: 76px; text-align: right; }
+  .note { margin: 6px 2px 20px; color: var(--muted); font-size: 13px; }
+
+  .panel { background: var(--surface); border: 2px solid var(--line); border-radius: 16px; padding: 14px; display: grid; gap: 12px; }
+  .row { display: grid; grid-template-columns: 52px 1fr; gap: 8px; align-items: start; }
+  .row > span { font-size: 13px; color: var(--muted); padding-top: 9px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font: inherit; font-size: 14px; color: var(--ink); background: transparent; cursor: pointer;
+    border: 2px solid var(--line); border-radius: 999px; padding: 4px 13px; min-height: 38px;
+  }
+  .chip[aria-pressed="true"] { background: var(--chip-on); color: var(--on-chip); border-color: var(--chip-on); font-weight: 700; }
+  .check { display: flex; align-items: center; gap: 8px; font-size: 14px; min-height: 38px; cursor: pointer; }
+  .check input { width: 20px; height: 20px; accent-color: var(--red); }
+
+  h2 { font-size: 17px; margin: 28px 0 10px; }
+  .favs { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .fav { background: var(--surface); border: 2px solid var(--line); border-radius: 14px; padding: 10px 12px; display: flex; gap: 10px; align-items: center; }
+  .fav button.open { flex: 1; text-align: left; font: inherit; color: var(--ink); background: none; border: 0; cursor: pointer; padding: 4px 0; min-height: 44px; }
+  .fav .f-en { display: block; font-family: var(--font-en); font-size: 14px; color: var(--muted); }
+  .fav .rm { font: inherit; font-size: 13px; color: var(--muted); background: none; border: 2px solid var(--line); border-radius: 10px; padding: 6px 10px; min-height: 40px; cursor: pointer; }
+  .empty { color: var(--muted); font-size: 14px; margin: 0; }
+  .foot { margin-top: 28px; color: var(--muted); font-size: 12px; text-align: center; }
+
+  :focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { .card.pop { animation: none; } .draw:active { transform: none; } }
+  @media (max-width: 420px) { .row { grid-template-columns: 1fr; gap: 2px; } .row > span { padding-top: 0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>話匣子 <span class="en">Talk Box</span></h1>
+      <p class="sub" id="sub">抽一張卡，聊一個話題。</p>
+    </div>
+    <button class="install hidden" id="install">安裝到手機</button>
+  </div>
+
+  <div class="stage">
+    <div class="card" id="card" aria-live="polite">
+      <div class="stripe"><div class="badge" id="badge"></div></div>
+      <div class="body">
+        <p class="zh big" id="zh"></p>
+        <p class="en small" id="en"></p>
+      </div>
+      <div class="tools">
+        <button class="tool" id="fav" aria-pressed="false">♡ 收藏</button>
+        <button class="tool" id="say">🔊 聽英文</button>
+        <button class="tool" id="reveal">看中文</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="draw-row">
+    <button class="draw" id="draw">抽一題</button>
+    <span class="left" id="left"></span>
+  </div>
+  <p class="note">任何題目都可以跳過，不想回答也沒關係。</p>
+
+  <div class="panel" role="group" aria-label="設定">
+    <div class="row"><span>玩法</span><div class="chips" id="g-mode"></div></div>
+    <div class="row"><span>對象</span><div class="chips" id="g-scene"></div></div>
+    <div class="row"><span>等級</span><div class="chips" id="g-level"></div></div>
+    <div class="row"><span>類型</span><div class="chips" id="g-type"></div></div>
+    <div class="row" id="row-lang"><span>顯示</span><div class="chips" id="g-lang"></div></div>
+    <label class="check"><input type="checkbox" id="chal"> 穿插挑戰卡</label>
+    <label class="check hidden" id="wl-wrap"><input type="checkbox" id="wl"> 聊天時保持螢幕不關閉</label>
+    <p class="note" style="margin:0" id="mode-tip"></p>
+  </div>
+
+  <h2>收藏的題目</h2>
+  <ul class="favs" id="favs"></ul>
+
+  <p class="foot" id="foot"></p>
+</div>
+
+<script src="questions.js"></script>
+<script>
+const DATA = window.TB_DATA;
+const LEVELS = {1:'暖身', 2:'聊聊', 3:'走心'};
+const TYPES = {daily:'日常', fun:'想像趣味', feel:'心情', memory:'回憶', dream:'夢想', value:'價值觀', curious:'好奇探索'};
+
+const CARDS = DATA.cards;
+const CHALS = DATA.challenges.map(c => ({ ...c, level:0, scenes:'fp', type:'challenge', challenge:true }));
+const BYID = Object.fromEntries([...CARDS, ...CHALS].map(c => [c.id, c]));
+
+const DEFAULTS = { mode:'chat', scene:'all', level:0, type:'all', lang:'both', challenge:true, wake:false };
+const s = { ...DEFAULTS, deck:[], chalDeck:[], current:null, revealed:false, favs:[] };
+
+const $ = q => document.querySelector(q);
+const shuffle = a => { a = a.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+
+/* storage is optional; the app works without it */
+const FAV_KEY = 'talkbox:favs', SET_KEY = 'talkbox:settings';
+try { const v = JSON.parse(localStorage.getItem(FAV_KEY) || '[]'); if (Array.isArray(v)) s.favs = v.filter(id => BYID[id]); } catch(e) {}
+try {
+  const v = JSON.parse(localStorage.getItem(SET_KEY) || '{}');
+  for (const k of Object.keys(DEFAULTS)) if (k in v && typeof v[k] === typeof DEFAULTS[k]) s[k] = v[k];
+  if (!['chat','practice'].includes(s.mode)) s.mode = 'chat';
+} catch(e) {}
+const saveFavs = () => { try { localStorage.setItem(FAV_KEY, JSON.stringify(s.favs)); } catch(e) {} };
+const saveSettings = () => { try { localStorage.setItem(SET_KEY, JSON.stringify(Object.fromEntries(Object.keys(DEFAULTS).map(k => [k, s[k]])))); } catch(e) {} };
+
+const pool = () => CARDS.filter(c =>
+  (s.scene==='all' || c.scenes.includes(s.scene)) &&
+  (s.level===0 || c.level===s.level) &&
+  (s.type==='all' || c.type===s.type));
+
+function rebuildDeck(){ s.deck = shuffle(pool().map(c => c.id)); updateLeft(); }
+function updateLeft(){ const n = pool().length; $('#left').textContent = n ? `剩 ${s.deck.length} / ${n} 題` : ''; }
+
+function draw(){
+  if (!pool().length){ s.current = null; render('empty-pool'); return; }
+  let notice = '', card;
+  if (s.challenge && Math.random() < 0.18){
+    if (!s.chalDeck.length) s.chalDeck = shuffle(CHALS.map(c => c.id));
+    card = BYID[s.chalDeck.pop()];
+  } else {
+    if (!s.deck.length){ rebuildDeck(); notice = 'reshuffle'; }
+    card = BYID[s.deck.pop()];
+    updateLeft();
+  }
+  s.current = card; s.revealed = false;
+  render(notice, true);
+}
+
+function render(state, animate){
+  const c = s.current;
+  const zh = $('#zh'), en = $('#en'), badge = $('#badge');
+  badge.textContent = '';
+  const practice = s.mode === 'practice';
+
+  if (!c){
+    zh.className = 'zh big'; en.className = 'en small';
+    if (state === 'empty-pool'){ zh.textContent = '這個組合沒有題目'; en.textContent = '換個對象、等級或類型試試。'; }
+    else { zh.textContent = '準備好了嗎？'; en.textContent = 'Ready when you are.'; }
+    ['#fav','#say','#reveal'].forEach(q => $(q).classList.add('hidden'));
+    return;
+  }
+
+  const mk = (cls, html) => { const p = document.createElement('span'); p.className = 'pill ' + cls; if (html) p.innerHTML = html; badge.appendChild(p); return p; };
+  if (c.challenge){ mk('butter').textContent = '挑戰卡'; }
+  else {
+    const lv = mk('', '<span class="dots">' + [1,2,3].map(n => `<i class="${n<=c.level?'on':''}"></i>`).join('') + '</span>');
+    lv.appendChild(document.createTextNode(LEVELS[c.level]));
+    mk('butter').textContent = TYPES[c.type];
+  }
+  if (state === 'reshuffle') mk('').textContent = '重新洗牌';
+
+  let showZh, showEn, enBig;
+  if (practice){ showEn = true; showZh = s.revealed; enBig = true; }
+  else { showZh = s.lang !== 'en'; showEn = s.lang !== 'zh'; enBig = s.lang === 'en'; }
+
+  zh.textContent = c.zh; en.textContent = c.en;
+  zh.className = 'zh ' + (enBig ? 'small' : 'big') + (showZh ? '' : ' hidden');
+  en.className = 'en ' + (enBig ? 'big' : 'small') + (showEn ? '' : ' hidden');
+
+  $('#say').classList.toggle('hidden', !showEn || !('speechSynthesis' in window));
+  $('#reveal').classList.toggle('hidden', !(practice && !s.revealed));
+  const fav = $('#fav'); fav.classList.remove('hidden');
+  const on = s.favs.includes(c.id);
+  fav.setAttribute('aria-pressed', on); fav.textContent = on ? '♥ 已收藏' : '♡ 收藏';
+
+  if (animate){ const card = $('#card'); card.classList.remove('pop'); void card.offsetWidth; card.classList.add('pop'); }
+}
+
+function renderFavs(){
+  const ul = $('#favs'); ul.textContent = '';
+  if (!s.favs.length){ const li = document.createElement('li'); li.className = 'empty'; li.textContent = '按卡片上的愛心，把喜歡的題目收藏在這裡。'; ul.appendChild(li); return; }
+  s.favs.forEach(id => {
+    const c = BYID[id]; const li = document.createElement('li'); li.className = 'fav';
+    const open = document.createElement('button'); open.className = 'open';
+    open.innerHTML = '<span></span><span class="f-en"></span>';
+    open.children[0].textContent = c.zh; open.children[1].textContent = c.en;
+    open.addEventListener('click', () => { s.current = c; s.revealed = false; render('', true); window.scrollTo({ top:0, behavior:'smooth' }); });
+    const rm = document.createElement('button'); rm.className = 'rm'; rm.textContent = '移除';
+    rm.addEventListener('click', () => { s.favs = s.favs.filter(x => x !== id); saveFavs(); renderFavs(); if (s.current && s.current.id === id) render(''); });
+    li.append(open, rm); ul.appendChild(li);
+  });
+}
+
+/* chips */
+function buildChips(el, options, key, onChange){
+  el.textContent = '';
+  options.forEach(([val, label]) => {
+    const b = document.createElement('button'); b.className = 'chip'; b.textContent = label; b.dataset.val = val;
+    b.addEventListener('click', () => { s[key] = (key === 'level') ? +val : val; sync(el, key); saveSettings(); onChange && onChange(); });
+    el.appendChild(b);
+  });
+  sync(el, key);
+}
+function sync(el, key){ el.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.val) === String(s[key]))); }
+
+function modeTip(){
+  $('#mode-tip').textContent = s.mode === 'practice'
+    ? '練英文：先看英文題目，想一想怎麼回答，再點「看中文」核對。等級越高，英文越難。'
+    : '聊天：中英對照，可以只看中文或只看英文。';
+  $('#row-lang').classList.toggle('hidden', s.mode === 'practice');
+}
+
+/* keep the screen awake during a game (optional, where supported) */
+let lock = null;
+async function setWake(on){
+  try {
+    if (on && 'wakeLock' in navigator && document.visibilityState === 'visible') lock = await navigator.wakeLock.request('screen');
+    else if (lock){ await lock.release(); lock = null; }
+  } catch(e) { lock = null; }
+}
+document.addEventListener('visibilitychange', () => { if (s.wake) setWake(true); });
+
+buildChips($('#g-mode'), [['chat','聊天'],['practice','練英文']], 'mode', () => { s.revealed = false; modeTip(); render(''); });
+buildChips($('#g-scene'), [['all','全部'],['f','親子'],['p','朋友']], 'scene', rebuildDeck);
+buildChips($('#g-level'), [[0,'全部'],[1,'暖身'],[2,'聊聊'],[3,'走心']], 'level', rebuildDeck);
+buildChips($('#g-type'), [['all','全部'], ...Object.entries(TYPES)], 'type', rebuildDeck);
+buildChips($('#g-lang'), [['both','中英'],['zh','中文'],['en','English']], 'lang', () => render(''));
+
+$('#chal').checked = s.challenge;
+$('#chal').addEventListener('change', e => { s.challenge = e.target.checked; saveSettings(); });
+if ('wakeLock' in navigator){
+  $('#wl-wrap').classList.remove('hidden'); $('#wl').checked = s.wake;
+  $('#wl').addEventListener('change', e => { s.wake = e.target.checked; saveSettings(); setWake(s.wake); });
+  if (s.wake) setWake(true);
+}
+
+$('#draw').addEventListener('click', draw);
+$('#reveal').addEventListener('click', () => { s.revealed = true; render(''); });
+$('#say').addEventListener('click', () => {
+  if (!s.current || !('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(s.current.en); u.lang = 'en-US'; u.rate = 0.9; speechSynthesis.speak(u);
+});
+$('#fav').addEventListener('click', () => {
+  const c = s.current; if (!c) return;
+  s.favs = s.favs.includes(c.id) ? s.favs.filter(x => x !== c.id) : [...s.favs, c.id];
+  saveFavs(); renderFavs(); render('');
+});
+document.addEventListener('keydown', e => { if (e.key === 'ArrowRight' && !e.target.closest('input')) draw(); });
+
+/* install prompt (Android / desktop Chrome). iOS: Share > Add to Home Screen. */
+let deferred = null;
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; $('#install').classList.remove('hidden'); });
+$('#install').addEventListener('click', async () => {
+  if (!deferred) return; deferred.prompt(); await deferred.userChoice; deferred = null; $('#install').classList.add('hidden');
+});
+window.addEventListener('appinstalled', () => $('#install').classList.add('hidden'));
+
+/* offline support */
+if ('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').then(() => navigator.serviceWorker.ready)
+      .then(() => { $('#foot').textContent = '已可離線使用'; }).catch(() => {});
+  });
+}
+
+$('#sub').textContent = `${CARDS.length} 題中英聊天卡，親子、朋友聚會、練英文都能用。`;
+modeTip(); rebuildDeck(); render(''); renderFavs();
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+fp|daily|今天最好吃的一口是什麼？|What was the best bite you had today?
+f|daily|如果今天不用寫功課，也不用上班，你會做什麼？|If you had no homework or work today, what would you do?
+fp|fun|如果你可以變成任何一種動物一天，你想變成什麼？|If you could be any animal for one day, which would you be?
+f|fun|如果你的超能力只能用來做家事，會是什麼能力？|If your superpower could only be used for chores, what would it be?
+fp|daily|一天當中，你最喜歡哪個時段？為什麼？|What is your favorite time of day? Why?
+fp|feel|今天有什麼事讓你笑了嗎？|Did anything make you laugh today?
+fp|fun|發明一種新的冰淇淋口味，它叫什麼名字？|Invent a new ice cream flavor. What is it called?
+f|memory|你記得第一次學會騎腳踏車的感覺嗎？|Do you remember how it felt to learn to ride a bike?
+p|daily|最近有哪首歌一直在你腦中重複播放？|Which song has been stuck in your head lately?
+p|fun|如果你的人生有一首主題曲，現在會播哪一首？|If your life had a theme song, what would be playing right now?
+p|daily|你手機裡最新的一張照片是什麼？|What is the latest photo on your phone?
+fp|fun|你會在家裡哪個角落蓋一座秘密基地？|Where in the house would you build a secret hideout?
+f|value|你覺得我們家最好玩的一個規矩是什麼？|What is the most fun rule in our family?
+fp|dream|如果現在可以馬上去任何地方旅行，你想去哪裡？|If you could travel anywhere right now, where would you go?
+fp|daily|週末有什麼小事是你特別期待的？|What small thing do you look forward to on weekends?
+p|fun|如果一個月只能吃一種食物，你會選什麼？|If you could only eat one food for a month, what would you pick?
+f|daily|今天在學校或公司，你遇到最有趣的人是誰？|Who was the most interesting person you met at school or work today?
+f|feel|哪一種聲音會讓你覺得很安心？|What sound makes you feel calm?
+fp|daily|你早上起床的第一件事通常是什麼？|What is the first thing you do after you wake up?
+fp|daily|你今天穿的衣服裡，哪一件你最喜歡？|Which thing you are wearing today do you like most?
+fp|daily|你的包包裡最奇怪的東西是什麼？|What is the strangest thing in your bag?
+fp|daily|你最常喝的飲料是什麼？|What drink do you have most often?
+fp|daily|今天走路或搭車的時候，你看到什麼有趣的東西？|What interesting thing did you see on your way today?
+fp|daily|你最喜歡的早餐是什麼？|What is your favorite breakfast?
+fp|daily|你的房間裡，哪一樣東西最重要？|What is the most important thing in your room?
+fp|daily|你最喜歡哪一個季節？|Which season do you like best?
+fp|daily|今天哪個時候你最想睡覺？|When did you feel sleepiest today?
+fp|daily|你最近吃過最辣的東西是什麼？|What is the spiciest thing you have eaten lately?
+fp|daily|你最喜歡哪一種天氣？|What kind of weather do you like most?
+fp|daily|你最常看哪一種影片？|What kind of videos do you watch most?
+fp|daily|你有沒有一個每天都會做的小習慣？|Do you have a small habit you do every day?
+fp|daily|洗澡的時候你會做什麼？會唱歌嗎？|What do you do in the shower? Do you sing?
+fp|daily|你最喜歡的手機遊戲或 app 是什麼？|What is your favorite game or app?
+fp|daily|今天有什麼小事讓你覺得很感謝？|What small thing are you thankful for today?
+fp|daily|你的鞋子今天帶你去了哪些地方？|Where did your shoes take you today?
+fp|daily|睡覺前你通常會做什麼？|What do you usually do before bed?
+fp|daily|你午餐最想吃什麼？|What would you most like for lunch?
+fp|fun|如果你會飛，你第一個想去哪裡？|If you could fly, where would you go first?
+fp|fun|如果你有一隻寵物龍，你會幫牠取什麼名字？|If you had a pet dragon, what would you name it?
+fp|fun|你想發明一台什麼機器？|What machine would you like to invent?
+fp|fun|如果你當一天的國王或女王，你會下什麼命令？|If you were king or queen for a day, what would you order?
+fp|fun|如果冰箱會說話，它最常說什麼？|If the fridge could talk, what would it say most often?
+fp|fun|如果天上下的不是雨而是食物，你想下什麼？|If food fell from the sky like rain, what would you want?
+fp|fun|如果你可以隱形十分鐘，你會做什麼？|If you could be invisible for ten minutes, what would you do?
+fp|fun|如果你可以和一種動物說話，你選哪一種？|If you could talk with one animal, which would it be?
+fp|fun|你想住在樹屋、船屋，還是城堡？|Would you rather live in a treehouse, a boat, or a castle?
+fp|fun|如果你的名字是一種食物，你想叫什麼？|If your name were a food, what would it be?
+fp|fun|如果你有一個魔法口袋，裡面會放什麼？|If you had a magic pocket, what would you keep in it?
+fp|fun|如果你可以創造一個節日，你想慶祝什麼？|If you could make up a holiday, what would you celebrate?
+fp|fun|你比較想要翅膀，還是想要魚尾巴？|Would you rather have wings or a fish tail?
+fp|fun|如果你是一部電影的主角，電影的名字叫什麼？|If you were the hero of a movie, what would it be called?
+fp|fun|如果你可以和一個卡通角色當一天的朋友，你選誰？|If you could be friends with a cartoon character for a day, who would it be?
+fp|fun|如果你有一間糖果工廠，你會做什麼新糖果？|If you had a candy factory, what new candy would you make?
+fp|fun|你覺得貓和狗，誰比較聰明？|Who is smarter, cats or dogs?
+fp|fun|如果你可以暫停時間，你想暫停在什麼時候？|If you could pause time, when would you pause it?
+fp|fun|你覺得外星人長什麼樣子？|What do you think aliens look like?
+fp|fun|你想當超級英雄，還是魔法師？|Would you rather be a superhero or a wizard?
+fp|fun|如果你被困在一座小島上，你會帶哪三樣東西？|If you were stuck on an island, what three things would you bring?
+fp|fun|如果你的鞋子會唱歌，它們會唱什麼？|If your shoes could sing, what would they sing?
+fp|fun|如果雪人活過來了，它會想去哪裡？|If a snowman came alive, where would it go?
+fp|feel|今天你的電力有多少？滿格、一半，還是快沒電？|How much energy do you have today: full, half, or almost empty?
+fp|feel|什麼事會讓你開心得想跳起來？|What makes you so happy that you want to jump?
+fp|feel|你最喜歡誰的擁抱？|Whose hugs do you like best?
+fp|feel|什麼時候你會覺得有點害羞？|When do you feel a little shy?
+fp|feel|什麼東西摸起來會讓你覺得很舒服？|What feels nice to touch?
+fp|feel|今天有什麼事讓你覺得很驕傲？|What made you feel proud today?
+fp|feel|如果今天是一種天氣，它會是晴天、陰天，還是雨天？|If today were weather, would it be sunny, cloudy, or rainy?
+fp|feel|什麼味道會讓你覺得很溫暖？|What smell makes you feel warm?
+fp|feel|有什麼小事會讓你生氣一下下？|What small thing makes you a little angry?
+fp|feel|什麼事會讓你覺得很興奮？|What makes you feel excited?
+fp|feel|你最喜歡誰陪你玩？|Who do you like to play with most?
+fp|feel|你做什麼事會覺得很放鬆？|What do you do that helps you relax?
+fp|memory|你記得最早的一個記憶是什麼嗎？|What is your earliest memory?
+fp|memory|你最難忘的一次生日是哪一次？|Which birthday do you remember best?
+fp|memory|你小時候最怕什麼？現在還怕嗎？|What were you afraid of as a kid? Are you still afraid?
+fp|memory|你上一次去海邊或山上是什麼時候？|When did you last go to the beach or the mountains?
+fp|memory|你小時候最喜歡哪一部卡通？|What was your favorite cartoon when you were little?
+f|memory|你最喜歡的一次家庭出遊是哪一次？|What was your favorite family trip?
+fp|memory|你還記得小學第一天上學的樣子嗎？|Do you remember your first day of school?
+fp|memory|你最喜歡的一本繪本或故事是什麼？|What is your favorite picture book or story?
+fp|memory|你有沒有從小一直留到現在的東西？|Do you have something you have kept since you were little?
+fp|dream|你長大以後想住在哪裡？|Where do you want to live when you grow up?
+fp|dream|你想學會什麼新本領？|What new skill would you like to learn?
+fp|dream|你最想去哪一個國家看看？|Which country would you most like to visit?
+fp|dream|你想做什麼工作？為什麼？|What job would you like to do? Why?
+fp|dream|如果可以養一隻動物，你想養什麼？|If you could have any pet, what would it be?
+fp|dream|你最想學會哪一種樂器？|Which instrument would you most like to learn?
+fp|dream|今年有什麼事是你最想完成的？|What is one thing you want to finish this year?
+fp|dream|你最想和誰一起去旅行？|Who would you most like to travel with?
+fp|value|你覺得什麼是「有禮貌」？|What does being polite mean to you?
+fp|value|你做什麼事會讓別人覺得開心？|What do you do that makes other people happy?
+fp|value|你覺得說實話難不難？|Is it hard to tell the truth?
+fp|value|你最想謝謝誰？為什麼？|Who would you most like to thank, and why?
+fp|value|你覺得和別人分享東西是什麼感覺？|How does it feel to share something with others?
+fp|value|你覺得什麼事才算「公平」？|What do you think is fair?
+fp|value|你最想幫助誰？|Who would you most like to help?
+fp|curious|你想知道天空為什麼是藍色的嗎？|Do you wonder why the sky is blue?
+fp|curious|你覺得月亮上有什麼？|What do you think is on the moon?
+fp|curious|你最想知道哪一種動物的祕密？|Which animal's secret would you most like to know?
+fp|curious|如果你可以問太陽一個問題，你會問什麼？|If you could ask the sun one question, what would you ask?
+fp|curious|你覺得恐龍為什麼會消失？|Why do you think the dinosaurs disappeared?
+fp|curious|你覺得以後機器人會做哪些工作？|What jobs do you think robots will do in the future?
+fp|curious|你最想知道海底有什麼？|What do you most want to know about the deep sea?
+fp|curious|你覺得貓為什麼那麼愛窩在小盒子裡？|Why do you think cats love small boxes so much?
+fp|curious|你覺得夢是從哪裡來的？|Where do you think dreams come from?
+fp|curious|你覺得星星是怎麼出現的？|How do you think stars appeared?
+fp|curious|如果可以問一位科學家一個問題，你會問什麼？|If you could ask a scientist one question, what would you ask?
+fp|curious|你覺得鳥為什麼會唱歌？|Why do you think birds sing?

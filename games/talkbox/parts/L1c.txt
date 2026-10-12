@@ -1,0 +1,78 @@
+fp|feel|今天你的心情像哪一種動物？|If your mood today were an animal, which would it be?
+fp|feel|什麼事會讓你覺得很驕傲，想跟大家分享？|What makes you so proud that you want to tell everyone?
+f|feel|你今天最想要一個什麼樣的抱抱？|What kind of hug would you like today?
+fp|feel|你緊張的時候，身體哪裡會有感覺？|Where do you feel it in your body when you are nervous?
+fp|feel|你什麼時候會覺得很安全？|When do you feel safe?
+fp|feel|有什麼小小的驚喜會讓你很開心？|What small surprise would make you happy?
+f|feel|你難過的時候，最想聽到什麼話？|What would you like to hear when you are sad?
+fp|feel|你最喜歡用什麼方式讓別人笑？|How do you like to make other people laugh?
+fp|feel|如果滿分是十分，你今天給自己幾分？|If ten is the best, how would you rate yourself today?
+fp|memory|你小時候最喜歡的零食是什麼？|What was your favorite snack as a kid?
+f|memory|小時候，你最喜歡爸爸媽媽陪你做哪一件事？|What did you most like doing with your parents when you were little?
+fp|memory|你記得第一次吃到某樣東西，覺得超好吃的經驗嗎？|Do you remember the first time you tasted something amazing?
+fp|memory|你印象最深刻的一個下雨天是什麼樣子？|What is a rainy day you remember well?
+fp|memory|你去過最遠的地方是哪裡？|What is the farthest place you have been to?
+fp|memory|你最喜歡的一次戶外活動是哪一次？|What was your favorite outdoor activity?
+fp|memory|你小時候有沒有一個很愛的娃娃或玩具？|Did you have a favorite stuffed animal or toy when you were little?
+f|memory|你記得我們全家上一次一起大笑是什麼時候嗎？|When did our whole family last laugh together?
+fp|memory|你第一次游泳或下水是什麼感覺？|How did it feel the first time you swam?
+fp|memory|你記得第一次坐飛機或搭高鐵嗎？|Do you remember your first time on a plane or a high-speed train?
+fp|memory|有哪一首歌是你從小就很愛聽的？|What song have you loved since you were little?
+fp|memory|你記得第一次自己刷牙或穿衣服的樣子嗎？|Do you remember the first time you brushed your teeth or got dressed by yourself?
+fp|memory|你最近一次和朋友玩得很開心是什麼時候？|When did you last have a great time with a friend?
+fp|memory|你小時候有沒有養過寵物？|Did you have a pet when you were little?
+fp|memory|你記得第一次露營或在外面過夜嗎？|Do you remember your first camping trip or night away from home?
+fp|memory|你小時候最喜歡玩哪一種戶外遊戲？|What outdoor game did you love as a kid?
+p|memory|你學生時代最愛的零食或飲料是什麼？|What snack or drink did you love during your school days?
+fp|value|你覺得什麼是「勇敢」？|What does being brave mean to you?
+fp|value|當有人需要幫忙的時候，你會怎麼做？|What do you do when someone needs help?
+fp|value|你覺得為什麼我們要說「請」和「謝謝」？|Why do you think we say please and thank you?
+f|value|生氣的時候，你可以做什麼不會傷到別人的事？|What can you do when you are angry that does not hurt anyone?
+fp|value|你覺得什麼樣的朋友會讓你很自在？|What kind of friend makes you feel comfortable?
+fp|value|如果撿到別人掉的東西，你會怎麼辦？|What would you do if you found something someone dropped?
+fp|value|你覺得怎麼做才算是愛護小動物？|What does it mean to be kind to animals?
+fp|value|你覺得為什麼要排隊？|Why do you think we wait in line?
+fp|value|你覺得怎麼分享才是好的分享？|What makes good sharing?
+f|value|你覺得家人之間最重要的是什麼？|What is the most important thing between family members?
+fp|value|有人做錯事的時候，你覺得該怎麼辦？|What should we do when someone makes a mistake?
+fp|value|你覺得「認真努力」是什麼意思？|What does trying hard mean to you?
+fp|value|有哪一個規矩是你一定會遵守的？|What is a rule you always follow?
+fp|value|你覺得「安靜」有什麼好處？|What is good about being quiet?
+fp|value|你覺得我們可以怎麼保護地球？|How can we take care of the Earth?
+fp|value|如果有人說了讓你不舒服的話，你可以怎麼回應？|How can you respond if someone says something that hurts your feelings?
+fp|value|你覺得「友善」是什麼樣子？|What does being kind look like?
+fp|value|你覺得為什麼要聽別人把話說完？|Why should we let others finish speaking?
+fp|value|你覺得把房間整理乾淨有什麼好處？|What is good about keeping your room tidy?
+fp|dream|你最想去哪一間動物園或水族館玩？|Which zoo or aquarium would you like to visit?
+fp|dream|你長大以後想開什麼樣的店？|What kind of shop would you like to open when you grow up?
+fp|dream|如果你可以蓋一座遊樂園，你會放什麼遊樂設施？|If you built an amusement park, what rides would you put in?
+fp|dream|你最想當哪一種運動選手？|What kind of athlete would you like to be?
+fp|dream|你最想和哪一位你崇拜的人見一面？|Which famous person or hero would you like to meet?
+f|dream|你想和爸爸媽媽一起學什麼新東西？|What new thing would you like to learn with Mom and Dad?
+fp|dream|如果你有自己的寵物，你想幫牠取什麼名字？|What would you name a pet of your own?
+fp|dream|你最想去哪裡露營？|Where would you like to go camping?
+fp|dream|你最想嘗試哪一種新食物？|What new food would you like to try?
+fp|dream|你想不想當太空人？你會去哪一顆星球？|Would you like to be an astronaut? Which planet would you visit?
+fp|dream|你最想畫一幅什麼樣的畫？|What kind of picture would you like to draw?
+fp|dream|你最想寫一個什麼樣的故事？|What kind of story would you like to write?
+fp|dream|你最想學哪一種語言？|Which language would you like to learn?
+fp|dream|你夢想中的房間是什麼樣子？|What would your dream room look like?
+fp|dream|放假的時候，你最想做的一件事是什麼？|What is the one thing you most want to do on vacation?
+fp|dream|如果可以去任何一座島，你想去哪一座？|If you could visit any island, which would you choose?
+fp|dream|你最想收到什麼樣的生日禮物？|What kind of birthday present would you love most?
+fp|dream|你最想幫助哪一種動物？|Which animals would you like to help?
+fp|curious|你覺得雲是怎麼飄在天上的？|How do you think clouds float in the sky?
+fp|curious|你知道彩虹是怎麼出現的嗎？|Do you know how rainbows appear?
+fp|curious|你覺得為什麼會打雷？|Why do you think it thunders?
+fp|curious|你覺得魚會不會口渴？|Do you think fish get thirsty?
+fp|curious|你覺得為什麼樹葉會變黃？|Why do you think leaves turn yellow?
+fp|curious|你覺得蜜蜂是怎麼做出蜂蜜的？|How do you think bees make honey?
+fp|curious|你想知道飛機為什麼能飛嗎？|Do you wonder why airplanes can fly?
+fp|curious|你覺得貓咪為什麼會發出呼嚕聲？|Why do you think cats purr?
+fp|curious|你覺得為什麼晚上天會變黑？|Why do you think it gets dark at night?
+fp|curious|你覺得世界上最大的動物是什麼？|What do you think is the biggest animal in the world?
+fp|curious|你覺得我們為什麼會有影子？|Why do we have shadows?
+fp|curious|你覺得海水為什麼是鹹的？|Why do you think seawater is salty?
+fp|curious|你覺得冰箱是怎麼讓東西變冷的？|How do you think a fridge keeps food cold?
+fp|curious|你覺得我們為什麼會長高？|Why do you think we grow taller?
+fp|curious|你覺得植物是怎麼長大的？|How do you think plants grow?
