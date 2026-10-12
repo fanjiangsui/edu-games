@@ -30,5 +30,17 @@ self.addEventListener("activate", e => {
 });
 self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
+  const url = new URL(e.request.url);
+  const scope = new URL(self.registration.scope);
+  const top = url.origin === scope.origin && (url.pathname === scope.pathname || url.pathname === scope.pathname + "index.html" || url.pathname === scope.pathname + "games.json");
+  if (top) {
+    // 首頁與遊戲清單：先抓最新（新增遊戲馬上看得到），沒網路才用快取
+    e.respondWith(fetch(e.request, { cache: "no-cache" }).then(r => {
+      const copy = r.clone();
+      caches.open(VERSION).then(c => c.put(e.request, copy));
+      return r;
+    }).catch(() => caches.match(e.request, { ignoreSearch: true })));
+    return;
+  }
   e.respondWith(caches.match(e.request, { ignoreSearch: true }).then(hit => hit || fetch(e.request)));
 });
