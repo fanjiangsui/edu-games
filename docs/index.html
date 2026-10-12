@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>學習小遊戲</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#c0392b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="學習小遊戲">
 <style>
 :root { --bg:#fbf7f0; --card:#fff; --ink:#2b2420; --muted:#7a6e64; --line:#e8dfd3; --accent:#c0392b; --accent-soft:#fbe9e6; }
 @media (prefers-color-scheme: dark) { :root { --bg:#1d1916; --card:#2a2420; --ink:#f2ebe3; --muted:#b3a597; --line:#3d342d; --accent:#e8735f; --accent-soft:#3d2622; color-scheme: dark; } }
@@ -13,8 +18,9 @@ main { max-width:640px; margin:0 auto; padding-inline:16px; padding-block:32px 4
 h1 { color:var(--accent); letter-spacing:2px; margin:0 0 4px; }
 p { color:var(--muted); margin:0 0 20px; }
 .list { display:grid; gap:12px; }
-.game { display:grid; gap:4px; padding:16px; border:1.5px solid var(--line); border-radius:14px; background:var(--card); color:inherit; text-decoration:none;
+.game { display:grid; grid-template-columns:auto 1fr; column-gap:14px; align-items:center; padding:16px; border:1.5px solid var(--line); border-radius:14px; background:var(--card); color:inherit; text-decoration:none;
   transition: transform .12s, border-color .12s, background-color .12s, box-shadow .12s; }
+.game .ic { grid-row:1 / span 3; font-size:34px; line-height:1; }
 .game b { font-size:20px; }
 .game small { color:var(--muted); }
 .game:hover { transform:translateY(-3px); border-color:var(--accent); background:var(--accent-soft); box-shadow:0 6px 16px rgba(0,0,0,.12); }
@@ -25,15 +31,22 @@ footer { margin-top:24px; font-size:14px; color:var(--muted); }
 <body>
 <main>
   <h1>學習小遊戲</h1>
-  <p>給孩子玩的離線學習遊戲，用手機或電腦的瀏覽器打開就能玩。</p>
-  <div class="list">
-    <a class="game" href="chinese-idiom/">
-      <b>成語小達人</b>
-      <span>500 個常用成語的闖關遊戲，有注音、故事、計時與計分。</span>
-      <small>國小學生・內容由 AI 協助整理，未逐條人工校對</small>
-    </a>
-  </div>
+  <p>用手機或電腦的瀏覽器打開就能玩，安裝到主畫面後可離線使用。</p>
+  <div class="list" id="list"><noscript>請開啟 JavaScript 才能顯示遊戲清單。</noscript></div>
   <footer>內容由 AI 協助整理，可能有誤；發現錯誤歡迎回報。</footer>
 </main>
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+fetch("games.json").then(r => r.json()).then(games => {
+  document.getElementById("list").innerHTML = games.map(g => `
+    <a class="game" href="${esc(g.path)}">
+      <span class="ic" aria-hidden="true">${esc(g.icon || "🎮")}</span>
+      <b>${esc(g.name)}</b>
+      <span>${esc(g.description)}</span>
+      <small>${esc([g.audience, g.note].filter(Boolean).join("・"))}</small>
+    </a>`).join("");
+}).catch(() => { document.getElementById("list").textContent = "讀不到遊戲清單，請連上網路後重新整理。"; });
+if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).catch(() => {}));
+</script>
 </body>
 </html>

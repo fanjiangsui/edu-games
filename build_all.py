@@ -7,9 +7,10 @@
      （適合需要合併、檢查資料的遊戲，例如成語小達人）
   B. 沒有 build_game.py、只有 index.html：直接複製 index.html；有 assets/ 也一起複製
      （適合單一 HTML 檔就能玩的遊戲）
+game.json 可加 "icon"（一個 emoji，顯示在首頁卡片）。
 game.json 的 "status" 設成 "草稿" 時不打包、不放上首頁。
 任何一個遊戲打包失敗，整個流程就停下來，不會產生不完整的網站。"""
-import json, shutil, subprocess, sys, html
+import hashlib, json, shutil, subprocess, sys
 from pathlib import Path
 
 root = Path(__file__).parent
@@ -38,47 +39,56 @@ for g in sorted((root / "games").iterdir()):
     print(f"[{g.name}] 完成")
     games.append(meta)
 
-cards = "\n".join(
-    f'''    <a class="game" href="{html.escape(m['slug'])}/">
-      <b>{html.escape(m['title'])}</b>
-      <span>{html.escape(m.get('description', ''))}</span>
-      <small>{html.escape(m.get('audience', ''))}・{html.escape(m.get('note', ''))}</small>
-    </a>''' for m in games)
-(docs / "index.html").write_text(f'''<!doctype html>
-<html lang="zh-Hant-TW">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>學習小遊戲</title>
-<style>
-:root {{ --bg:#fbf7f0; --card:#fff; --ink:#2b2420; --muted:#7a6e64; --line:#e8dfd3; --accent:#c0392b; --accent-soft:#fbe9e6; }}
-@media (prefers-color-scheme: dark) {{ :root {{ --bg:#1d1916; --card:#2a2420; --ink:#f2ebe3; --muted:#b3a597; --line:#3d342d; --accent:#e8735f; --accent-soft:#3d2622; color-scheme: dark; }} }}
-* {{ box-sizing: border-box; }}
-body {{ margin:0; background:var(--bg); color:var(--ink); font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif; line-height:1.6; }}
-main {{ max-width:640px; margin:0 auto; padding-inline:16px; padding-block:32px 48px; }}
-h1 {{ color:var(--accent); letter-spacing:2px; margin:0 0 4px; }}
-p {{ color:var(--muted); margin:0 0 20px; }}
-.list {{ display:grid; gap:12px; }}
-.game {{ display:grid; gap:4px; padding:16px; border:1.5px solid var(--line); border-radius:14px; background:var(--card); color:inherit; text-decoration:none;
-  transition: transform .12s, border-color .12s, background-color .12s, box-shadow .12s; }}
-.game b {{ font-size:20px; }}
-.game small {{ color:var(--muted); }}
-.game:hover {{ transform:translateY(-3px); border-color:var(--accent); background:var(--accent-soft); box-shadow:0 6px 16px rgba(0,0,0,.12); }}
-.game:focus-visible {{ outline:3px solid var(--accent); outline-offset:2px; }}
-footer {{ margin-top:24px; font-size:14px; color:var(--muted); }}
-</style>
-</head>
-<body>
-<main>
-  <h1>學習小遊戲</h1>
-  <p>給孩子玩的離線學習遊戲，用手機或電腦的瀏覽器打開就能玩。</p>
-  <div class="list">
-{cards}
-  </div>
-  <footer>內容由 AI 協助整理，可能有誤；發現錯誤歡迎回報。</footer>
-</main>
-</body>
-</html>
-''', encoding="utf-8")
+# 在每個遊戲頁加上 manifest 連結與離線註冊（只改打包結果，不動遊戲原始檔；重複執行不會重複加）
+MARK = "<!--hub-pwa-->"
+HEAD_ADD = MARK + '<link rel="manifest" href="../manifest.json"><link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">'
+BODY_ADD = ('<script>if("serviceWorker"in navigator)addEventListener("load",function(){'
+            'navigator.serviceWorker.register("../sw.js",{scope:"../",updateViaCache:"none"}).catch(function(){})})</script>')
+def inject(f):
+    t = f.read_text(encoding="utf-8")
+    if MARK in t:
+        return
+    h, b = t.rfind("</head>"), t.rfind("</body>")
+    t = t[:h] + HEAD_ADD + t[h:] if h >= 0 else HEAD_ADD + t
+    b = t.rfind("</body>")
+    t = t[:b] + BODY_ADD + t[b:] if b >= 0 else t + BODY_ADD
+    f.write_text(t, encoding="utf-8")
+for m in games:
+    for f in (docs / m["slug"]).glob("*.html"):
+        inject(f)
+
+# 首頁、圖示、games.json、manifest
+shutil.copy2(root / "hub" / "index.html", docs / "index.html")
+shutil.copytree(root / "hub" / "icons", docs / "icons", dirs_exist_ok=True)
+listing = [{"name": m["title"], "description": m.get("description", ""), "path": m["slug"] + "/",
+            "icon": m.get("icon", ""), "audience": m.get("audience", ""), "note": m.get("note", "")} for m in games]
+(docs / "games.json").write_text(json.dumps(listing, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+(docs / "manifest.json").write_text(json.dumps({
+    "name": "學習小遊戲", "short_name": "學習小遊戲", "description": "給孩子與大人的離線學習小遊戲",
+    "start_url": "./", "scope": "./", "display": "standalone", "lang": "zh-Hant-TW",
+    "background_color": "#fbf7f0", "theme_color": "#c0392b",
+    "icons": [{"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+              {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}]},
+    ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (docs / ".nojekyll").write_text("")
-print(f"完成：{len(games)} 個遊戲 → docs/")
+
+# sw.js：預先快取 docs/ 裡所有檔案；版本號 = 檔案內容雜湊，內容一變就換新快取、清掉舊的
+files = sorted(f for f in docs.rglob("*") if f.is_file() and f.name not in ("sw.js", ".nojekyll"))
+ver = hashlib.sha1(b"".join(f.relative_to(docs).as_posix().encode() + f.read_bytes() for f in files)).hexdigest()[:10]
+urls = ["./"] + [f.relative_to(docs).as_posix() for f in files]
+urls += [u[:-len("index.html")] for u in urls if u.endswith("/index.html")]
+(docs / "sw.js").write_text(f"""/* 由 build_all.py 產生，請勿手改 */
+const VERSION = "edu-games-{ver}";
+const PRECACHE = {json.dumps(sorted(set(urls)), ensure_ascii=False, indent=2)};
+self.addEventListener("install", e => {{
+  e.waitUntil(caches.open(VERSION).then(c => c.addAll(PRECACHE.map(u => new URL(u, self.registration.scope).href))).then(() => self.skipWaiting()));
+}});
+self.addEventListener("activate", e => {{
+  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith("edu-games-") && k !== VERSION).map(k => caches.delete(k)))).then(() => self.clients.claim()));
+}});
+self.addEventListener("fetch", e => {{
+  if (e.request.method !== "GET") return;
+  e.respondWith(caches.match(e.request, {{ ignoreSearch: true }}).then(hit => hit || fetch(e.request)));
+}});
+""", encoding="utf-8")
+print(f"完成：{len(games)} 個遊戲 → docs/（快取版本 edu-games-{ver}）")

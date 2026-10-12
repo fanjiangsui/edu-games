@@ -144,7 +144,7 @@ button:disabled { cursor: not-allowed; }
 .pop { animation: pop .25s ease-out; }
 @keyframes pop { from { transform: scale(.96); opacity: .4; } to { transform: none; opacity: 1; } }
 </style>
-</head>
+<!--hub-pwa--><link rel="manifest" href="../manifest.json"><link rel="apple-touch-icon" href="../icons/apple-touch-icon.png"></head>
 <body>
 <div class="wrap">
   <header>
@@ -697,5 +697,5 @@ document.getElementById("home-link").addEventListener("click", () => {
 renderLevels();
 showHome();
 </script>
-</body>
+<script>if("serviceWorker"in navigator)addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../",updateViaCache:"none"}).catch(function(){})})</script></body>
 </html>

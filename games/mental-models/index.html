@@ -1,0 +1,1573 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>*{box-sizing:border-box}body{margin:0}</style></head><body>
+<title>心智模型庫</title>
+<style>
+/* 版面概念：像一面格柵。左上標題，下方篩選列，模型卡片排成格子，點開後在面板中看到它與其他模型的連結。 */
+:root{
+  --bg:#f2f4f7; --surface:#ffffff; --fg:#18222e; --muted:#5a6675; --line:#d8dee6; --accent:#1b6a78; --accent-fg:#ffffff; --soft:#e6eef1;
+  --c-decision:#3556c9; --c-systems:#1c7d63; --c-bias:#b4491a; --c-reason:#6a45ab; --c-econ:#9a6b12; --c-org:#b03160; --c-comm:#0b7da6; --c-learn:#5a8a14; --c-eng:#8a5a3c;
+  --font-display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --font-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12181f; --surface:#1a222c; --fg:#e8edf2; --muted:#9aa6b4; --line:#2c3743; --accent:#58b4c2; --accent-fg:#0c1418; --soft:#1f2c33;
+  --c-decision:#8ea6ff; --c-systems:#5cc4a3; --c-bias:#f0996b; --c-reason:#b99cf0; --c-econ:#e0b45a; --c-org:#ee8db3; --c-comm:#6cc4e8; --c-learn:#a8d56b; --c-eng:#d6a47e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12181f; --surface:#1a222c; --fg:#e8edf2; --muted:#9aa6b4; --line:#2c3743; --accent:#58b4c2; --accent-fg:#0c1418; --soft:#1f2c33;
+  --c-decision:#8ea6ff; --c-systems:#5cc4a3; --c-bias:#f0996b; --c-reason:#b99cf0; --c-econ:#e0b45a; --c-org:#ee8db3; --c-comm:#6cc4e8; --c-learn:#a8d56b; --c-eng:#d6a47e; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);line-height:1.7;padding-inline:16px;padding-block:28px 48px}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+.wrap{max-width:1080px;margin-inline:auto}
+[data-cat="decision"]{--cc:var(--c-decision)} [data-cat="systems"]{--cc:var(--c-systems)} [data-cat="bias"]{--cc:var(--c-bias)}
+[data-cat="reason"]{--cc:var(--c-reason)} [data-cat="econ"]{--cc:var(--c-econ)} [data-cat="org"]{--cc:var(--c-org)}
+[data-cat="comm"]{--cc:var(--c-comm)} [data-cat="learn"]{--cc:var(--c-learn)} [data-cat="eng"]{--cc:var(--c-eng)}
+header h1{font-family:var(--font-display);font-size:clamp(28px,5vw,40px);line-height:1.25;margin:0 0 8px;text-wrap:balance}
+header p{margin:0;max-width:60ch;color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;gap:10px;margin-block:12px 8px;padding-block:10px;align-items:center;background:var(--bg)}
+@media (min-width:640px){.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:4}}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.seg button{border:0;background:var(--surface);padding:8px 12px;font-size:14px}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+#sort{font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg)}
+.tagbar{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:flex-start;margin:0 0 16px}
+.tagbar .tl{font-size:13px;color:var(--muted);padding-top:3px}
+.tgs{display:flex;flex-wrap:wrap;gap:6px;flex:1 1 240px;min-width:0}
+.tgs.scroll{max-height:150px;overflow-y:auto}
+.tg{border:1px solid var(--line);background:transparent;border-radius:4px;padding:1px 9px;font-size:13px;color:var(--muted)}
+.tg small{font-family:var(--font-mono);margin-left:5px;opacity:.7}
+.tg[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.linkbtn{border:0;background:transparent;color:var(--accent);padding:4px 0;text-decoration:underline;text-underline-offset:3px;font-size:14px}
+.gh{display:flex;align-items:baseline;gap:8px;font-family:var(--font-display);font-size:20px;margin:26px 0 8px;padding-bottom:6px;border-bottom:2px solid var(--cc)}
+.gh i{width:10px;height:10px;background:var(--cc);display:inline-block}
+.gh small{font-family:var(--font-mono);font-size:13px;color:var(--muted)}
+.rows{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:2px 16px}
+.gfoot{display:flex;gap:16px;margin-top:8px}
+.rw{display:grid;grid-template-columns:auto 1fr;gap:0 8px;text-align:left;width:100%;min-width:0;border:1px solid transparent;border-bottom-color:var(--line);background:transparent;padding:8px 42px 8px 6px;border-radius:4px}
+.rw:hover{background:var(--surface);border-color:var(--line)}
+.rw i{grid-row:1/3;align-self:center;width:8px;height:8px;background:var(--cc);display:inline-block}
+.rl{min-width:0;overflow-wrap:anywhere}
+.rn{font-family:var(--font-display);font-size:16px;line-height:1.4}
+.re{font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-left:8px}
+.rs{grid-column:2;font-size:13px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rows .pick{top:50%;transform:translateY(-50%);right:8px;width:26px;height:26px}
+.totop{position:fixed;right:16px;bottom:calc(16px + var(--tray,0px));z-index:6;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--fg);font-size:18px}
+.search{flex:1 1 240px;min-width:0}
+.search input{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--accent-fg);padding:9px 16px;border-radius:6px;font-weight:500}
+.btn.ghost{background:transparent;color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{border:1px solid var(--line);background:var(--surface);padding:5px 12px;border-radius:999px;font-size:14px;display:inline-flex;gap:7px;align-items:center}
+.chip i{width:9px;height:9px;background:var(--cc,var(--muted));display:inline-block}
+.chip[aria-pressed="true"]{border-color:var(--fg);background:var(--fg);color:var(--bg)}
+.chip small{font-family:var(--font-mono);opacity:.7;font-size:12px}
+.orig{margin:-6px 0 14px;align-items:center}
+.orig .ol{color:var(--muted);font-size:13px;margin-right:2px}
+.collide{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:18px;margin-bottom:22px}
+.collide h2{margin:0 0 4px;font-family:var(--font-display);font-size:20px}
+.collide .hint{margin:0 0 14px;color:var(--muted);font-size:14px}
+.solve summary{cursor:pointer;font-family:var(--font-display);font-size:18px;font-weight:700}
+.solve[open] summary{margin-bottom:0}
+.solve textarea{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);resize:vertical;min-height:84px}
+.solve .rt{margin:18px 0 8px;font-size:15px;font-family:var(--font-display)}
+.solve .hint.small{margin:12px 0 0;font-size:13px}
+.cw{position:relative;min-width:0}
+.pick{position:absolute;top:10px;right:10px;width:28px;height:28px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--muted);line-height:1;padding:0}
+.pick[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.tray{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));z-index:5}
+.trayIn{max-width:1080px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.trayChips{display:flex;gap:6px;flex-wrap:wrap;flex:1 1 200px;min-width:0;align-items:center}
+.tchip{border:1px solid var(--cc);color:var(--cc);border-radius:999px;padding:2px 4px 2px 12px;font-size:14px;display:inline-flex;gap:4px;align-items:center}
+.tchip button{border:0;background:transparent;color:inherit;padding:0 8px;font-size:16px;line-height:1}
+.trayNote{font-size:13px;color:var(--muted)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.topicRow{display:flex;gap:10px;flex-wrap:wrap}
+.topicRow input{flex:1 1 240px;min-width:0;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+.qs{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.qi{background:var(--soft);border-radius:6px;padding:12px 14px}
+.qi small{display:block;font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-bottom:2px;overflow-wrap:anywhere}
+.pair{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch}
+.pair .x{align-self:center;font-family:var(--font-mono);color:var(--muted)}
+.q{margin:14px 0 0;padding:12px 14px;background:var(--soft);border-radius:6px}
+.collide .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.card{text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0;width:100%}
+.card:hover{border-color:var(--cc,var(--accent))}
+.card .cat{font-size:12px;color:var(--cc);letter-spacing:.06em;font-weight:500;display:flex;gap:6px;align-items:center}
+.card .cat i{width:8px;height:8px;background:var(--cc);display:inline-block}
+.card h3{margin:0;font-family:var(--font-display);font-size:19px;line-height:1.35}
+.card .en{font-family:var(--font-mono);font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.card p{margin:2px 0 0;font-size:14px;color:var(--muted)}
+.empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:8px}
+.count{color:var(--muted);font-size:14px;margin:0 0 10px}
+footer{margin-top:36px;color:var(--muted);font-size:13px;max-width:70ch}
+.overlay{position:fixed;inset:0;background:rgba(10,16,22,.55);display:flex;justify-content:flex-end;z-index:10}
+.panel{background:var(--surface);width:min(620px,100%);height:100%;overflow-y:auto;padding:22px 20px calc(32px + env(safe-area-inset-bottom,0px));border-left:1px solid var(--line)}
+.panel .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.panel h2{font-family:var(--font-display);font-size:28px;line-height:1.3;margin:6px 0 2px}
+.panel .en{font-family:var(--font-mono);font-size:13px;color:var(--muted)}
+.panel .cat{font-size:13px;color:var(--cc);font-weight:500}
+.close{border:1px solid var(--line);background:transparent;border-radius:6px;padding:4px 12px;flex:none}
+.panel h4{margin:22px 0 6px;font-size:13px;letter-spacing:.08em;color:var(--muted);font-weight:500}
+.panel p{margin:0}
+.lead{font-size:18px;font-family:var(--font-display);margin-top:14px!important}
+.note{margin-top:10px!important;font-size:14px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{border:1px solid var(--line);background:transparent;border-radius:4px;padding:1px 9px;font-size:13px;color:var(--muted)}
+.rel{display:flex;flex-direction:column;gap:10px}
+.rel button{text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:10px 12px;width:100%}
+.rel b{color:var(--cc);font-family:var(--font-display)}
+.rel span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+@media (max-width:560px){.pair{grid-template-columns:1fr}.pair .x{justify-self:center}}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}}
+
+.addf label{display:block;margin:12px 0 4px;font-size:14px;color:var(--muted)}
+.addf input[type=text],.addf textarea{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+.addf textarea{resize:vertical;min-height:72px}
+.addf .vd{margin:16px 0 0;padding:12px 14px;border:1px solid var(--line);border-radius:8px}
+.addf .vd h4{margin:0 0 6px;font-size:15px}
+.addf .vd p{margin:6px 0;font-size:14px}
+.bdg{display:inline-block;margin-left:6px;padding:1px 6px;border:1px solid var(--line);border-radius:4px;font-size:11px;font-weight:400;color:var(--muted);vertical-align:middle}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>心智模型庫</h1>
+    <p>單一模型只能看見事情的一個面向。把不同領域的模型放在一起交叉使用，才比較不會只用同一把錘子看所有問題。</p>
+  </header>
+
+  <details class="collide solve" id="solveBox" style="margin-top:22px">
+    <summary>遇到困境？描述情況，找可能用得上的模型</summary>
+    <p class="hint" style="margin-top:12px">用幾句話描述你卡住的情況，會列出可能用得上的模型，以及可以交叉思考的問題。</p>
+    <textarea id="problem" rows="3" aria-label="描述你的困境" placeholder="例如：這個專案已經投入半年，效果一直不好，我很捨不得放棄，又怕繼續下去更糟。"></textarea>
+    <div class="row"><button class="btn" id="solveBtn" type="button">找模型</button><button class="btn ghost" id="exBtn" type="button">放入範例</button></div>
+    <div id="results" aria-live="polite"></div>
+  </details>
+
+
+  <details class="collide solve addf" id="addBox" style="margin-top:14px">
+    <summary>想加入新的心智模型？</summary>
+    <p class="hint" style="margin-top:12px">寫下你想加入的模型名稱和你知道的內容。Claude 會判斷它是新的、重複的、還是可以併入現有模型，並草擬完整條目讓你確認後才加入。</p>
+    <label for="addName">名稱（中英文皆可）</label>
+    <input id="addName" type="text" maxlength="60" placeholder="例如：林迪效應 Lindy Effect">
+    <label for="addDesc">你知道的內容、出處或想解決的問題</label>
+    <textarea id="addDesc" rows="3" maxlength="600" placeholder="例如：存在越久的事物，預期還會存在得越久。我想拿來判斷哪些知識值得學。"></textarea>
+    <div class="row"><button class="btn" id="addJudge" type="button">請 Claude 判斷</button><button class="btn ghost" id="addSave" type="button">存成待審</button></div>
+    <p class="hint small" id="addNote"></p>
+    <div id="addOut" aria-live="polite"></div>
+  </details>
+
+  <div class="bar">
+    <div class="search"><input id="q" type="search" placeholder="搜尋名稱、標籤或關鍵字" aria-label="搜尋心智模型"></div>
+    <select id="sort" aria-label="排序"><option value="cat">依分類</option><option value="zh">注音排序</option><option value="en">英文 A–Z</option></select>
+    <div class="seg" role="group" aria-label="檢視方式"><button type="button" data-view="group" aria-pressed="true">分組</button><button type="button" data-view="list" aria-pressed="false">列表</button><button type="button" data-view="card" aria-pressed="false">卡片</button></div>
+    <button class="btn" id="collideBtn" type="button">隨機碰撞</button>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="分類篩選"></div>
+  <div class="chips orig" id="origins" role="group" aria-label="出處篩選"></div>
+  <div class="tagbar" id="tagbar"></div>
+
+  <section class="collide" id="collide" hidden aria-live="polite"></section>
+
+  <section class="collide" id="free" hidden>
+    <h2>自由碰撞</h2>
+    <p class="hint" id="freeSel"></p>
+    <div class="topicRow"><input id="topic" type="text" aria-label="想拿來看的事（選填）" placeholder="想拿來看什麼事？（選填，例如：要不要把舊系統重寫）"><button class="btn" id="regen" type="button">換一批提問</button></div>
+    <div id="freeOut" aria-live="polite"></div>
+    <p class="hint" style="margin:14px 0 0;font-size:13px">提問由模板和每個模型的「鏡頭問題」組合而成，不是 AI 即時生成。</p>
+  </section>
+
+  <p class="count" id="count"></p>
+  <div id="grid"></div>
+  <div class="empty" id="empty" hidden>找不到符合的模型。換個關鍵字，或清除篩選看看。</div>
+
+  <footer>
+    構想：燧。內容初稿由 Claude 以自己的話撰寫，靈感來自查理·蒙格的「思維格柵」概念與《Super Thinking》一書的主題，並非書中文字。部分實例與說法屬通俗引用，正式使用前建議逐條查證。
+  </footer>
+</div>
+
+<button class="totop" id="totop" type="button" hidden aria-label="回到頂端">↑</button>
+
+<div class="tray" id="tray" hidden>
+  <div class="trayIn">
+    <div class="trayChips" id="trayChips"></div>
+    <span class="trayNote" id="trayNote"></span>
+    <button class="btn" id="genBtn" type="button" disabled>產生提問</button>
+    <button class="btn ghost" id="clearBtn" type="button">清空</button>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="pTitle" tabindex="-1"></div>
+</div>
+
+<script>
+const CATS=[
+ {k:"decision",n:"決策"},{k:"systems",n:"系統"},{k:"bias",n:"認知偏誤"},
+ {k:"reason",n:"推理與證據"},{k:"econ",n:"經濟與策略"},{k:"org",n:"組織與人"},
+ {k:"comm",n:"溝通"},{k:"learn",n:"學習"},{k:"eng",n:"工程與產品"}
+];
+const M=[
+{id:"opportunity-cost",n:"機會成本",en:"Opportunity Cost",c:"decision",s:"選了這個，就放棄了你原本能選的最好的另一個。",
+ d:"成本不只是花掉的錢，還包括被放棄的最佳替代方案。時間、注意力與精力都適用，而且它們比金錢更難補回。",
+ e:"花一整個週末修一個只影響少數人的小問題，代價是沒有做那個能讓所有人受益的功能。",
+ t:["取捨","資源","時間"],r:[["sunk-cost","我是不是只因為已經投入了，才不願意把資源轉到更好的地方？"],["pareto","哪少數幾件事，值得拿走這些資源？"],["comparative-advantage","這件事一定要我親自做嗎？還是交給成本更低的人？"]]},
+{id:"sunk-cost",n:"沉沒成本",en:"Sunk Cost",c:"decision",s:"已經花掉且拿不回來的成本，不該左右接下來的決定。",
+ d:"做決定時只該比較未來的成本與收益。過去投入的時間與金錢無論如何都回不來，拿它當理由繼續，只會讓損失擴大。",
+ e:"一部看到一半覺得很爛的電影，票錢已經付了，繼續看只是再多花兩小時。",
+ t:["決策","放手","情緒"],r:[["loss-aversion","我捨不得放手，是不是因為不想承認這筆損失？"],["path-dependence","我維持現狀，是因為它好，還是因為換掉的成本看起來太高？"]]},
+{id:"second-order",n:"第二層思考",en:"Second-Order Thinking",c:"decision",s:"不只問會發生什麼，還要問接著又會發生什麼。",
+ d:"第一層思考只看決定的直接結果。第二層會追問：這個結果會引發誰的什麼反應，長期下來整體會變成什麼樣子。",
+ e:"降價能提高短期銷量，但競爭者跟進後，整個市場的利潤被壓低，客戶也習慣了低價。",
+ t:["長期","連鎖反應","預測"],r:[["unintended","這個做法會誘發人們做出什麼我們沒料到的行為？"],["feedback-loop","這個結果會不會回頭加強或削弱原本的原因？"],["prisoners-dilemma","如果對手也這樣想，最後大家會落在哪裡？"]]},
+{id:"inversion",n:"逆向思考",en:"Inversion",c:"decision",s:"不問怎樣成功，先問怎樣一定會失敗，然後避開。",
+ d:"正面列出成功條件常常很空泛，但列出失敗原因通常很具體。把會失敗的做法排除，剩下的路徑往往更清楚。",
+ e:"要讓專案成功很難列清單，但列出「怎樣一定會延誤」很容易：需求頻繁變動、沒人負責驗收、整合拖到最後。",
+ t:["風險","規劃","檢討"],r:[["safety-margin","如果最壞的情況發生，我的緩衝撐得住嗎？"],["confirmation","我列出的失敗原因，是不是又只找了符合既有想法的？"]]},
+{id:"two-way-door",n:"單向門與雙向門",en:"One-Way and Two-Way Doors",c:"decision",s:"可以回頭的決定快點做，無法回頭的決定慢慢想。",
+ d:"亞馬遜創辦人貝佐斯在致股東信中把決定分成不可逆與可逆兩種。可逆的決定多花時間討論，通常比做錯再改更貴。",
+ e:"換一個工具試用兩週是雙向門；把資料格式綁定給所有客戶，是單向門。",
+ t:["可逆性","速度","風險"],r:[["safety-margin","這是單向門，我預留的退路夠嗎？"],["opportunity-cost","這其實是雙向門，我是不是在猶豫上花了太多時間？"]]},
+{id:"safety-margin",n:"安全邊際",en:"Margin of Safety",c:"decision",s:"預留緩衝，讓估計的誤差不至於造成崩潰。",
+ d:"源自價值投資的用語，在工程裡叫安全係數。你的估計一定有誤差，緩衝的功用就是讓誤差發生時系統還能撐住。",
+ e:"橋梁的設計承載量遠高於預期的最大負荷；排程在估計的工時上再留一段緩衝。",
+ t:["緩衝","風險","工程"],r:[["base-rate","類似的事過去通常超出預期多少？緩衝夠嗎？"],["parkinson","緩衝能保護進度，但會不會也讓工作膨脹到用完它？"]]},
+
+{id:"feedback-loop",n:"回饋迴路",en:"Feedback Loop",c:"systems",s:"結果會回頭影響原因，形成放大或穩定的循環。",
+ d:"正回饋會讓變化愈來愈大，負回饋會把系統拉回平衡。許多看似突然的現象，背後其實是一個沒被注意到的迴路。",
+ e:"恆溫器是負回饋，室溫偏離就調整回來；一則貼文愈熱門就愈常被推薦，又變得更熱門，是正回饋。",
+ t:["循環","放大","平衡"],r:[["compounding","這個正回饋，是不是就是複利在運作？"],["tipping-point","這個迴路會在哪個點之後失控或翻轉？"]]},
+{id:"bottleneck",n:"瓶頸",en:"Bottleneck",c:"systems",s:"整體的產出，由最窄的那一個環節決定。",
+ d:"在非瓶頸處用力，整體幾乎不會變快。想提升效率，先找到限制，再集中處理它；處理完，瓶頸會移到下一處。",
+ e:"團隊寫程式的速度提升一倍，但程式碼審查只有一個人，整體交付速度幾乎沒變。",
+ t:["效率","流程","限制"],r:[["pareto","那少數關鍵的環節，是不是正好就是瓶頸？"],["diminishing","在非瓶頸處繼續投入，報酬是不是已經遞減？"],["conway","瓶頸是在流程裡，還是在人與人的溝通結構裡？"]]},
+{id:"compounding",n:"複利",en:"Compounding",c:"systems",s:"成果再產生成果，時間拉長後差距會非常大。",
+ d:"每一期的收益併入基數，下一期從更高的基礎開始。除了金錢，知識、信譽、技能與人脈也會這樣累積。",
+ e:"每週花一小時整理筆記，幾年後累積成可搜尋的知識庫，讓每個新問題的解題成本逐步下降。",
+ t:["累積","長期","習慣"],r:[["network-effect","這個累積會不會因為使用者增加而加速？"],["opportunity-cost","為了複利而放棄的短期利益，值得嗎？"]]},
+{id:"tipping-point",n:"臨界點",en:"Tipping Point",c:"systems",s:"小幅累積到某處，系統突然發生質變。",
+ d:"在臨界點之前，看不太出效果；越過之後，變化快速且難以逆轉。因此只看線性趨勢，常常低估風險或機會。",
+ e:"水加熱到沸點才變成蒸氣；社群人數過了某個門檻，新來的人才覺得加入有價值。",
+ t:["質變","門檻","非線性"],r:[["network-effect","需要多少使用者，才會越過讓大家願意加入的門檻？"],["feedback-loop","是哪個迴路在把系統推向這個點？"]]},
+{id:"unintended",n:"非預期後果",en:"Unintended Consequences",c:"systems",s:"介入複雜系統時，常會出現沒有人想要的副作用。",
+ d:"系統裡的各部分互相牽動，單點的改動會透過其他路徑傳導。事前把可能受影響的人與行為列出來，能減少意外。",
+ e:"拓寬壅塞的道路，常使更多人改開車，幾年後又塞回來。",
+ t:["副作用","制度","設計"],r:[["incentives","這個規則會讓人為了拿到好處，而做出什麼我們不想要的行為？"],["second-order","受影響的人會怎麼調整，而調整之後又會怎樣？"]]},
+{id:"path-dependence",n:"路徑依賴",en:"Path Dependence",c:"systems",s:"過去的選擇，限制了現在能走的路。",
+ d:"早期的決定會累積成慣例、相容性與習慣，讓之後的選擇愈來愈窄。這不一定是壞事，但要知道它存在。",
+ e:"早期為了趕上市而選定的資料格式，之後每個新功能都得相容它。",
+ t:["慣性","技術債","轉換成本"],r:[["first-principles","如果今天從零開始，我還會這樣設計嗎？"],["moat","別人的轉換成本，能不能成為我的優勢？"]]},
+
+{id:"confirmation",n:"確認偏誤",en:"Confirmation Bias",c:"bias",s:"傾向尋找、記住支持自己既有看法的證據。",
+ d:"人一旦有了立場，會自動放大支持它的資訊，輕忽相反的資訊。對抗方式是主動去找「如果我錯了，會看到什麼」。",
+ e:"已經認定某個供應商不可靠，於是只注意到每次的延遲，忽略準時的紀錄。",
+ t:["偏誤","證據","立場"],r:[["bayes","我是否真的依新證據調整了看法，還是只是在找理由？"],["survivorship","我看到的證據，是不是只來自存活下來的案例？"]]},
+{id:"anchoring",n:"錨定效應",en:"Anchoring",c:"bias",s:"最先接觸的數字，會影響之後的判斷。",
+ d:"即使那個數字與問題無關，人也會以它為起點做調整，而且調整通常不夠。談判、報價與估算都容易受影響。",
+ e:"談價時先出價的一方，往往把最終結果拉向自己的方向。",
+ t:["數字","談判","估算"],r:[["base-rate","有沒有不依賴那個數字的參考基準？"],["first-principles","拆開成本結構重算，結果和那個錨差多少？"]]},
+{id:"availability",n:"可得性偏誤",en:"Availability Bias",c:"bias",s:"容易想起來的事，會被當成常常發生的事。",
+ d:"近期、鮮明、情緒強烈的事件在記憶裡特別突出，讓我們高估它的發生機率。新聞與社群會放大這種效果。",
+ e:"看了幾則空難新聞後覺得飛行很危險，但平均而言，每趟旅程開車的風險通常更高。",
+ t:["機率","記憶","媒體"],r:[["base-rate","事實上這種事一般多常發生？"],["social-proof","我覺得很多人都這樣，是不是只因為我常看到？"]]},
+{id:"loss-aversion",n:"損失趨避",en:"Loss Aversion",c:"bias",s:"失去的痛，比得到同樣東西的快樂更強烈。",
+ d:"卡尼曼與特沃斯基的展望理論指出，人對損失特別敏感。研究常估計損失的影響約為等量獲利的兩倍上下，實際倍數依情境而異。",
+ e:"明明很少用，卻不肯取消訂閱，因為取消感覺像是失去，而不是省錢。",
+ t:["情緒","風險","行為經濟學"],r:[["sunk-cost","我是怕損失，還是真的覺得值得？"],["opportunity-cost","保留這個東西的代價，是不是被我低估了？"]]},
+{id:"survivorship",n:"倖存者偏差",en:"Survivorship Bias",c:"bias",s:"只看到活下來的，就會誤判成功的原因。",
+ d:"二戰時統計學家沃德建議加強飛機上沒有彈孔的部位，因為彈孔多的飛機是飛得回來的，真正致命的位置反而沒被看見。",
+ e:"研究成功創業者的共同點，卻沒有看那些做了同樣事情卻失敗的人。",
+ t:["抽樣","成功學","證據"],r:[["base-rate","包含失敗的案例在內，整體的比例是多少？"],["correlation","這個共同點，真的是成功的原因嗎？"],["social-proof","大家都在做，是因為有效，還是因為只看到做成功的人？"]]},
+{id:"hindsight",n:"後見之明",en:"Hindsight Bias",c:"bias",s:"事後覺得結果早就看得出來。",
+ d:"知道結果後，人會重寫自己當時的記憶，讓過程顯得理所當然。這讓我們對決策品質下錯結論，也學不到真正的教訓。",
+ e:"專案失敗後的檢討會上，人人都說徵兆很明顯，但當時手上的資訊並沒有那麼清楚。",
+ t:["檢討","學習","記憶"],r:[["map-territory","當時的我看到的資訊，和現在看到的是同一份嗎？"],["inversion","事前先寫下「如果失敗，最可能的原因」，事後比對。"]]},
+{id:"dunning-kruger",n:"鄧寧-克魯格效應",en:"Dunning–Kruger Effect",c:"bias",s:"剛入門的人，容易高估自己的掌握程度。",
+ d:"坊間常見的「愚昧山峰」曲線是通俗化的版本，原始研究與後續重現並不完全如此。比較穩妥的用法是當作提醒：不熟時，連自己哪裡不懂都不容易看見。",
+ e:"讀了一週教學就覺得懂了整個領域，直到碰上第一個邊界案例。",
+ t:["自我檢視","學習","謙遜"],r:[["circle-of-competence","我現在談的事，在能力圈之內嗎？"],["bayes","我對自己能力的判斷，有沒有外部的證據可以更新？"]]},
+{id:"social-proof",n:"社會認同",en:"Social Proof",c:"bias",s:"人傾向跟隨多數人的行為，當作正確的線索。",
+ d:"在不確定時，別人的選擇是便宜的資訊來源。這常常有用，但也會造成跟風與泡沫。",
+ e:"餐廳門口排隊的人潮，讓路過的人以為那裡一定好吃。",
+ t:["團體","跟風","行銷"],r:[["network-effect","這個跟隨，是在創造真實的價值，還是只是在製造聲勢？"],["incentives","大家這樣做，是因為判斷，還是因為誘因一樣？"]]},
+{id:"fundamental-attribution",n:"基本歸因錯誤",en:"Fundamental Attribution Error",c:"bias",s:"把別人的行為歸因於個性，把自己的行為歸因於情境。",
+ d:"我們看不到他人當時所處的壓力與限制，所以容易直接下結論「他就是這種人」。對自己卻能清楚說出各種外在原因。",
+ e:"同事遲交報告，我想他不負責任；自己遲交，是因為臨時被插了急件。",
+ t:["人際","判斷","溝通"],r:[["hanlon","有沒有不必假設惡意或無能的解釋？"],["incentives","他處在什麼樣的誘因與限制之下？"]]},
+
+{id:"first-principles",n:"第一原理",en:"First Principles",c:"reason",s:"拆到不能再拆的事實，再從那裡重新組合。",
+ d:"不沿用類比與慣例，而是問：哪些是物理或邏輯上確定的？哪些只是「大家都這樣做」？常被引用的例子是從原物料價格重新估算產品成本。",
+ e:"與其問別人的產品怎麼設計，先問這個產品必須滿足的硬性限制是什麼，例如功耗、延遲與成本。",
+ t:["拆解","創新","假設"],r:[["path-dependence","哪些限制是真的，哪些只是歷史遺留？"],["occam","重組之後，最簡單的方案是什麼？"]]},
+{id:"occam",n:"奧卡姆剃刀",en:"Occam's Razor",c:"reason",s:"同樣能解釋時，優先選假設較少的那一個。",
+ d:"這是一種啟發法，用來決定先檢查什麼，不保證簡單的解釋就是對的。複雜的現實有時就是需要複雜的解釋。",
+ e:"網路時好時壞，先檢查線有沒有鬆脫，再去懷疑複雜的軟體問題。",
+ t:["除錯","簡化","假設"],r:[["bayes","簡單的解釋，事前機率也真的比較高嗎？"],["hanlon","最簡單的解釋是疏忽，還是我預設的惡意？"]]},
+{id:"hanlon",n:"漢隆剃刀",en:"Hanlon's Razor",c:"reason",s:"能用疏忽或無知解釋的，就別假設是惡意。",
+ d:"多數令人不悅的事，背後是資訊不足、忙亂或誤會。先假設善意，可以少走很多冤枉路，也比較容易修復關係。",
+ e:"對方沒回信，先想他是不是被淹沒在信件裡，再禮貌地追問一次。",
+ t:["溝通","善意","誤會"],r:[["fundamental-attribution","我是不是把他的行為，直接歸因為個性？"],["incentives","如果真有問題，是誘因造成的，還是個人的意圖？"]]},
+{id:"bayes",n:"貝氏思考",en:"Bayesian Thinking",c:"reason",s:"用新證據一點一點更新信念，而不是推翻重來。",
+ d:"先有一個事前判斷，再依證據的強弱調整。同一個證據，在事前機率不同的情況下，意義會完全不同。",
+ e:"一項檢測呈陽性，要看這種病本來有多罕見，才能判斷這個結果有多可信。",
+ t:["機率","更新","證據"],r:[["base-rate","我的事前判斷，有參考過一般的基準率嗎？"],["confirmation","我給證據的權重，是否因為它符合我的期待而偏高？"]]},
+{id:"base-rate",n:"基準率",en:"Base Rate",c:"reason",s:"先問這類事情一般多常發生，再談這次的特殊之處。",
+ d:"人傾向沉浸在眼前案例的細節，忘了整體的比例。先用基準率當起點，再依這次的差異調整，通常更準。",
+ e:"估算專案時間，先查過去類似專案實際花了多久，再調整，而不是只看這次的計畫表。",
+ t:["統計","估算","外部視角"],r:[["anchoring","我選的起點，是外部的基準，還是隨手聽到的數字？"],["survivorship","我用來計算基準率的樣本，有沒有漏掉失敗的？"]]},
+{id:"correlation",n:"相關不等於因果",en:"Correlation ≠ Causation",c:"reason",s:"兩件事同時變化，不代表其中一個造成了另一個。",
+ d:"可能是巧合、有共同的原因，或是因果方向相反。要宣稱因果，需要對照組、時間順序或可說明的機制。",
+ e:"冰淇淋銷量與溺水事故同時增加，背後的共同原因是夏天。",
+ t:["因果","資料","實驗"],r:[["feedback-loop","會不會是結果反過來影響了原因？"],["goodhart","我為了讓相關的指標變好而做的事，真的會改變結果嗎？"]]},
+{id:"circle-of-competence",n:"能力圈",en:"Circle of Competence",c:"reason",s:"清楚知道自己懂什麼，以及不懂什麼。",
+ d:"巴菲特與蒙格常用的概念。重點不在圈子有多大，而在於邊界清楚：在圈內可以果斷，在圈外要請教或保守。",
+ e:"很懂電路的人去評估法律條款時，先承認這不在自己的範圍內，找專業的人確認。",
+ t:["自我檢視","專業","邊界"],r:[["dunning-kruger","我是不是因為不熟，所以沒看見自己的盲點？"],["comparative-advantage","我該把時間花在圈內最有價值的地方嗎？"]]},
+{id:"map-territory",n:"地圖不等於疆域",en:"The Map Is Not the Territory",c:"reason",s:"模型、報表和指標都只是對現實的簡化。",
+ d:"這句話出自科日布斯基。地圖為了好用，一定省略了很多細節。拿地圖做決定沒問題，但要知道它省略了什麼。",
+ e:"儀表板上全部是綠燈，不代表使用者的實際體驗良好。",
+ t:["模型","限制","簡化"],r:[["goodhart","我是不是把指標當成了目標本身？"],["hindsight","我記得的過去，是真實發生的，還是事後的簡化版本？"]]},
+
+{id:"comparative-advantage",n:"比較優勢",en:"Comparative Advantage",c:"econ",s:"即使每件事都做得比別人好，仍該專注在機會成本最低的事。",
+ d:"重點是比較而不是絕對。把時間用在自己相對最有價值的事，其他的交給別人，雙方整體的產出都會更高。",
+ e:"資深工程師實作比新人快，但若他審查與規劃的價值更高，就應該把部分實作交出去。",
+ t:["分工","取捨","團隊"],r:[["opportunity-cost","我做這件事的時候，放棄了什麼？"],["peter","這樣分工之後，每個人的職責是否仍符合他的能力？"]]},
+{id:"prisoners-dilemma",n:"囚徒困境",en:"Prisoner's Dilemma",c:"econ",s:"每個人都做對自己最有利的選擇，結果對大家都更差。",
+ d:"這是賽局理論的經典情境。要走出困境，通常需要重複互動、信任、溝通，或改變誘因的規則。",
+ e:"兩家店各自降價搶客人，最後兩家都賺得更少。",
+ t:["賽局","合作","競爭"],r:[["incentives","要怎麼調整誘因，讓合作對每個人都更划算？"],["second-order","對方會怎麼回應我這一步？"]]},
+{id:"moat",n:"護城河",en:"Moat",c:"econ",s:"讓競爭者難以追上的長期優勢。",
+ d:"巴菲特常用的比喻。常見的來源包括品牌、規模、轉換成本與網路效應。真正的護城河要能持續，不是暫時領先。",
+ e:"使用者的資料與習慣都在某個工具裡，換掉的成本很高。",
+ t:["競爭","策略","優勢"],r:[["network-effect","我的優勢會隨著使用者增加而變強嗎？"],["compounding","這個優勢，隨時間會累積還是消耗？"]]},
+{id:"network-effect",n:"網路效應",en:"Network Effect",c:"econ",s:"使用的人愈多，每個人得到的價值愈高。",
+ d:"通訊軟體、交易平台與標準格式都有這種特性。早期很難起步，一旦越過門檻，後來者很難追上。",
+ e:"通訊軟體只有朋友都在用，才有價值。",
+ t:["平台","成長","規模"],r:[["tipping-point","要累積多少使用者，才能越過起飛的門檻？"],["moat","網路效應如何變成長期的護城河？"]]},
+{id:"diminishing",n:"邊際效益遞減",en:"Diminishing Returns",c:"econ",s:"每多投入一單位，新增的收穫愈來愈少。",
+ d:"最初的努力回報最大，接近上限時，同樣的力氣只換來很小的進步。知道自己在曲線的哪一段，才知道要不要繼續。",
+ e:"第一杯咖啡最提神，第五杯幾乎沒差別。",
+ t:["投入","效率","停損"],r:[["pareto","我是否已經過了 80% 的位置，正在追最後的 20%?"],["bottleneck","把資源轉去最窄的環節，效益會不會更高？"]]},
+{id:"incentives",n:"誘因",en:"Incentives",c:"econ",s:"人會對獎勵與懲罰做出反應，而且常常比你預期的更徹底。",
+ d:"蒙格強調，想預測行為，先看誘因。當結果不如預期，通常不是人不好，而是規則在獎勵別的東西。",
+ e:"以修復的問題數量當績效，可能讓人傾向把問題拆得很碎。",
+ t:["獎勵","行為","制度"],r:[["goodhart","我設定的指標，會不會被人用來「做數字」？"],["unintended","這個誘因最糟的用法是什麼？"]]},
+{id:"pareto",n:"80/20 法則",en:"Pareto Principle",c:"econ",s:"少數原因造成大部分的結果。",
+ d:"80/20 只是常見的經驗比例，不是精確的定律，但它提醒我們：資源分配不均，找到關鍵的少數，事半功倍。",
+ e:"大部分客戶回報的問題，往往集中在少數幾個模組。",
+ t:["優先順序","聚焦","資源"],r:[["bottleneck","那關鍵的少數，是不是就是整體的限制？"],["diminishing","剩下的 20% 還值得投入嗎？"]]},
+{id:"goodhart",n:"古德哈特定律",en:"Goodhart's Law",c:"econ",s:"當指標變成目標，它就不再是個好指標。",
+ d:"指標原本是現實的間接測量。一旦人們為了指標本身去優化，指標與真正想要的東西就會分開。",
+ e:"用程式碼行數衡量生產力，人就會寫出冗長的程式。",
+ t:["指標","績效","測量"],r:[["incentives","是哪個誘因讓人去「優化數字」？"],["map-territory","這個指標省略了現實中的什麼？"]]},
+
+{id:"conway",n:"康威定律",en:"Conway's Law",c:"org",s:"系統的設計，會複製組織的溝通結構。",
+ d:"團隊之間怎麼分、怎麼溝通，最後就會長成系統的模組與介面。想改架構，有時要先調整組織。",
+ e:"前端與後端分屬兩個少有溝通的團隊，兩者之間的介面往往最脆弱。",
+ t:["架構","團隊","溝通"],r:[["bottleneck","瓶頸是在技術上，還是在人與人的交接上？"],["incentives","各團隊被考核的目標，是否讓介面變成了誰都不管的角落？"]]},
+{id:"peter",n:"彼得原理",en:"Peter Principle",c:"org",s:"在層級組織裡，人會被升遷到他不能勝任的位置為止。",
+ d:"這是半戲謔的觀察：因為做得好而被升遷，但新職位需要的能力不同。解法之一是設計專業路線，讓人不必只靠管理才能晉升。",
+ e:"表現優秀的工程師被升為主管，卻不擅長帶人與協調。",
+ t:["升遷","管理","職涯"],r:[["comparative-advantage","升遷的是職位，還是讓他發揮最大價值的位置？"],["circle-of-competence","新職位在他的能力圈裡嗎？"]]},
+{id:"parkinson",n:"帕金森定律",en:"Parkinson's Law",c:"org",s:"工作會膨脹到用完所有可用的時間。",
+ d:"給一週的任務就會花一週，給三天可能也做得完。適度的期限能讓人聚焦，但期限壓得太緊也會犧牲品質。",
+ e:"給一週寫的報告，多半在最後一天才寫完。",
+ t:["時間","效率"],r:[["safety-margin","怎樣的緩衝，既能保護品質，又不讓工作膨脹？"],["pareto","若時間縮短，哪些是最重要的那一部分？"]]},
+{id:"regret-min",n:"後悔最小化",en:"Regret Minimization",c:"decision",s:"想像未來回頭看，哪個選擇讓你比較不後悔。",
+ d:"面對沒有標準答案的重大選擇，把視角拉到很多年以後，問自己哪個決定會更讓你遺憾。貝佐斯多次談到，他是用這個方式決定離開原本的工作去創辦亞馬遜。這個方法特別適合在風險與安穩之間猶豫的時刻。",
+ e:"在穩定的工作與一個沒把握的新機會之間，問自己：八十歲時，會比較後悔沒試過，還是比較後悔試了失敗？",
+ t:["人生選擇","長期","後悔"],r:[["two-way-door","這個選擇真的不可逆嗎？可以回頭的話，後悔的重量會不同。"],["loss-aversion","我怕的是損失本身，還是未來的後悔？"]]},
+{id:"pre-mortem",n:"事前驗屍",en:"Pre-mortem",c:"decision",s:"先假設計畫已經失敗，再回頭找原因。",
+ d:"由心理學家克萊恩提出的方法。團隊在開始前想像一年後專案徹底失敗，每個人各自寫下最可能的原因。這比直接問「有什麼風險」更容易讓人說出疑慮，因為失敗被當成既定事實，而不是對計畫的批評。",
+ e:"新系統上線前開一場會，每人寫三個「為什麼它會在上線後出事」，再集中討論最常出現的原因。",
+ t:["風險","規劃","團隊"],r:[["inversion","逆向思考是我一個人想，事前驗屍能不能讓整個團隊一起想？"],["overconfidence","寫完失敗原因後，我對成功的把握降低了多少？"]]},
+{id:"satisficing",n:"滿意即可",en:"Satisficing",c:"decision",s:"找到夠好的就停，而不是追求最好。",
+ d:"經濟學家西蒙提出。資訊與時間有限時，完整比較所有選項本身就有成本。先定義「夠好」的門檻，第一個達標的選項就接受，通常比耗盡力氣找最佳解更划算。",
+ e:"挑一家午餐店時，只要符合預算、距離與口味三個條件就去，而不是比完整個商圈。",
+ t:["效率","門檻","選擇過多"],r:[["diminishing","再多比較一個選項，新增的好處還值得花時間嗎？"],["two-way-door","這個決定可以回頭嗎？可逆的決定更適合滿意即可。"]]},
+{id:"expected-value",n:"期望值",en:"Expected Value",c:"decision",s:"把每種結果的機率與報酬相乘，再加總比較。",
+ d:"用機率加權後的平均報酬比較選項，能避免只被最好或最壞的結果吸引。但期望值只看平均：如果某種結果會讓你出局，它就不能和普通的損失放在同一個天平上比較。",
+ e:"一個三成機率、成功可得十倍的專案，與一個九成把握、只得一倍的專案，期望值不難算，但要先問：失敗的代價你付得起嗎？",
+ t:["機率","風險","計算"],r:[["base-rate","我估的機率，有參考過類似情況的實際比例嗎？"],["safety-margin","最壞的結果發生時，我還能繼續玩下去嗎？"]]},
+{id:"option-value",n:"選擇權價值",en:"Option Value",c:"decision",s:"保留選擇的彈性本身就有價值，但也有成本。",
+ d:"在不確定的情況下，能晚一點再決定、或同時保留多條路，常比早早鎖死更有價值。代價是為了維持彈性所付出的金錢、複雜度或機會。重點是比較這兩者。",
+ e:"先用租約或試用，而不是買斷；系統先設計成可替換的介面，而不是寫死某個廠商。",
+ t:["彈性","不確定性","可逆性"],r:[["path-dependence","保留彈性，能不能避免日後被過去的選擇綁住？"],["two-way-door","我是在為可逆的決定保留彈性，還是在拖延不可逆的決定？"]]},
+{id:"decision-journal",n:"決策日誌",en:"Decision Journal",c:"decision",s:"在知道結果之前，先寫下你當時的判斷與理由。",
+ d:"記錄當時的資訊、假設、預期與信心，事後才能分辨「決策品質」與「運氣」。它也是對抗後見之明最直接的方法，因為紙上的紀錄不會被事後的記憶改寫。",
+ e:"每次做重要決定，寫下三行：我為什麼這樣選、我預期會發生什麼、我有幾成把握。半年後回頭對照。",
+ t:["學習","紀錄","反思"],r:[["hindsight","日誌上寫的當時判斷，和我事後的記憶一致嗎？"],["resulting","結果不好時，是決策有問題，還是運氣不好？"]]},
+{id:"small-bets",n:"小額押注",en:"Small Bets",c:"decision",s:"不確定時，用便宜且可重複的小實驗取代一次大押注。",
+ d:"當無法事先判斷哪條路會成功，與其一次投入大量資源，不如把問題切成低成本的小實驗，從結果中學習，再決定要不要加碼。前提是每次失敗都要小到承受得起。",
+ e:"新功能先給一小群使用者試用兩週，看實際使用數據，再決定是否完整開發。",
+ t:["實驗","學習","風險"],r:[["two-way-door","這個實驗能快速撤回嗎？"],["bayes","每次實驗的結果，我有確實更新原本的判斷嗎？"]]},
+{id:"eisenhower",n:"艾森豪矩陣",en:"Eisenhower Matrix",c:"decision",s:"用「緊急」與「重要」兩個維度，決定事情的處理方式。",
+ d:"這個方法常被歸功於艾森豪，後來由柯維等人推廣。重要又緊急的立刻做，重要但不緊急的排進行程，緊急但不重要的盡量委派，兩者都不是的捨棄。多數人的問題是把「緊急」誤認成「重要」。",
+ e:"有人臨時要一份不影響決策的報表，是緊急但不重要；每週留一段時間整理長期架構，是重要但不緊急。",
+ t:["優先順序","時間","委派"],r:[["pareto","真正重要的那一小部分，是不是就是那關鍵的 20%?"],["parkinson","重要但不緊急的事，有訂期限嗎？還是會一直被推遲？"]]},
+{id:"ooda",n:"OODA 循環",en:"OODA Loop",c:"decision",s:"觀察、判斷、決定、行動，誰循環得更快，誰就掌握主動。",
+ d:"由空軍戰略家博伊德提出。他強調的不只是速度，而是比對手更快更新對情勢的理解(Orient)，讓對手的反應總是慢一步。在快速變化的環境中，縮短回饋週期往往比單次決策更準確更重要。",
+ e:"線上服務出事時，先快速觀察狀況、判斷影響範圍、做出最小的止血動作，再重複這個循環，而不是等到完全查清楚才行動。",
+ t:["速度","競爭","回饋"],r:[["feedback-loop","我的循環週期，短到足以在環境變化前修正嗎？"],["map-territory","我「判斷」的依據，是現況還是過時的地圖？"]]},
+{id:"precommitment",n:"預先承諾",en:"Precommitment",c:"decision",s:"預先綁住自己，避免未來的自己在壓力下做出違背長期目標的選擇。",
+ d:"奧德修斯要水手把自己綁在桅杆上，再經過海妖的歌聲，就是經典的比喻。意志力在當下常常不可靠，與其依賴決心，不如事先把壞選項的成本提高，或把好選項變成預設。",
+ e:"把定期定額的投資設成自動扣款；開會前先說好結束時間並設鬧鐘。",
+ t:["自制","習慣","規則"],r:[["loss-aversion","我能不能利用「怕失去」，讓承諾更有約束力？"],["status-quo","能不能把好的行為設成預設選項？"]]},
+
+{id:"stocks-flows",n:"存量與流量",en:"Stocks and Flows",c:"systems",s:"存量是累積的水位，流量是進出的水龍頭。",
+ d:"系統裡的許多變化，其實是存量被流入與流出慢慢改變。存量只能靠流量調整，所以改變需要時間；只看流量，常會忽略累積已經到了什麼水位。",
+ e:"浴缸的水位是存量，水龍頭與排水孔是流量；人力、技術債與存款也都是存量。",
+ t:["累積","水位","動態"],r:[["delay","存量變化的速度，和我期待看到結果的時間一致嗎？"],["compounding","這個存量的流入，會不會因為存量本身而增加？"]]},
+{id:"delay",n:"時間延遲",en:"Delay",c:"systems",s:"行動與結果之間有時間差，容易造成過度調整與震盪。",
+ d:"當回饋來得慢，人往往以為調整無效而再次加大力道，結果超過頭。理解延遲有多長，才知道該多久觀察一次、每次調整多少。",
+ e:"淋浴時水溫調整後要幾秒才有變化，不耐煩地轉太多，就會忽冷忽熱；招募人才要幾個月才見效，急著補人常補過頭。",
+ t:["時間差","震盪","耐心"],r:[["feedback-loop","這個回饋迴路的延遲有多長？我的調整是否過度？"],["stocks-flows","延遲是不是因為存量需要時間累積？"]]},
+{id:"emergence",n:"湧現",en:"Emergence",c:"systems",s:"整體出現了單看個體看不出來的性質。",
+ d:"許多現象不是個別部分的加總，而是互動後才出現，例如交通壅塞、市場價格、團隊文化。想理解它們，只拆解成零件是不夠的，還要看互動規則。",
+ e:"每個駕駛都只想順利開車，卻共同製造了交通波動；每個人都照規則做事，團隊氣氛卻可能越來越僵。",
+ t:["複雜系統","互動","整體"],r:[["unintended","個別合理的行為，加總後會不會產生沒人想要的整體結果？"],["conway","這個整體特性，是不是來自組織的互動結構？"]]},
+{id:"redundancy",n:"冗餘",en:"Redundancy",c:"systems",s:"多留一份備援，用效率換取出錯時仍能運作。",
+ d:"效率追求的是沒有多餘，可靠度追求的是出錯時還有退路，兩者天生衝突。關鍵的部分值得有備援，不重要的地方則不必。",
+ e:"重要服務部署在多個機房；資料保留異地備份；關鍵技能不要只有一個人會。",
+ t:["可靠度","備援","取捨"],r:[["spof","哪些地方現在只有一份、沒有備援？"],["safety-margin","備援與緩衝，我分別預留了多少？"]]},
+{id:"leverage-points",n:"槓桿點",en:"Leverage Points",c:"systems",s:"在系統中找到小改動就能帶來大變化的位置。",
+ d:"系統思考家梅多斯指出，介入系統的位置不同，效果差異很大。調整數字參數常常效果有限，改變資訊的流動、規則或目標，往往影響更深。",
+ e:"與其不斷要求大家「更努力」，不如改變回報的方式或考核的目標，讓整個系統的行為跟著改變。",
+ t:["介入","規則","效率"],r:[["bottleneck","最有槓桿的位置，是不是整體的瓶頸？"],["incentives","改變誘因，是不是比改變個人更有槓桿？"]]},
+{id:"antifragile",n:"反脆弱",en:"Antifragile",c:"systems",s:"有些系統不只承受壓力，還會從壓力與波動中變強。",
+ d:"塔雷伯用這個詞描述比「堅韌」更進一步的特質：脆弱的東西遇到衝擊會壞，堅韌的東西維持原樣，反脆弱的東西會因為衝擊而進步。肌肉訓練與免疫系統是常見的比喻。",
+ e:"定期做故障演練的團隊，面對真正的事故時反應更好；而從未出過事的系統，第一次出事時往往最慘。",
+ t:["韌性","壓力","成長"],r:[["redundancy","備援只是撐住，還是能讓系統從失敗中學到東西？"],["inversion","最壞的衝擊，會毀掉這個系統，還是讓它更強？"]]},
+{id:"spof",n:"單點故障",en:"Single Point of Failure",c:"systems",s:"只要這一個環節壞了，整個系統就停擺。",
+ d:"檢查系統時，問每個環節：如果它消失，會怎樣？若答案是「全部停擺」，它就是單點故障。人、設備、帳號與流程都可能是。",
+ e:"只有一個人知道部署步驟；所有服務共用同一個憑證，到期時全部出問題。",
+ t:["風險","可靠度","依賴"],r:[["redundancy","這個單點，可以用什麼方式備援？"],["bottleneck","它同時也是瓶頸嗎？"]]},
+{id:"entropy",n:"熵增與維護",en:"Entropy",c:"systems",s:"沒有持續投入維護，事物會自然趨向混亂與衰敗。",
+ d:"借用熱力學的比喻：有序的狀態需要持續投入能量才能維持。文件過時、程式碼腐化、組織流程鬆散，都是這種現象。停止維護不是維持現狀，而是慢慢變差。",
+ e:"沒人更新的文件逐漸與系統脫節；沒人整理的程式碼，每次修改都更困難。",
+ t:["維護","衰敗","技術債"],r:[["path-dependence","累積的舊決定，是不是讓維護成本愈來愈高？"],["compounding","小小的維護，長期累積起來有多大差別？"]]},
+{id:"policy-resistance",n:"政策抗拒",en:"Policy Resistance",c:"systems",s:"系統裡各方有自己的目標，硬推單方的政策常被抵消。",
+ d:"當一個系統中的各方有不同目標，你推一方，其他各方就會用各自的方式調整回來，最後整體幾乎沒有改變，甚至更糟。要突破，通常需要讓各方的目標一致，而不是更用力推。",
+ e:"部門各自被考核不同指標，強推單一流程，大家用各種方式繞過，實際行為幾乎不變。",
+ t:["改革","對抗","目標一致"],r:[["incentives","各方的誘因一致嗎？"],["leverage-points","該改變的是目標，而不是更用力推嗎？"]]},
+{id:"littles-law",n:"利特爾法則",en:"Little's Law",c:"systems",s:"同時進行的工作量，等於處理速度乘以每項工作花的時間。",
+ d:"在穩定狀態下，系統中平均的工作數量，等於平均到達率乘以平均停留時間。這代表：同時進行的事愈多，每件事就愈慢。想縮短交付時間，最直接的方法之一就是減少同時進行的工作量。",
+ e:"團隊同時有二十件工作在進行，平均每週完成五件，平均每件就要等約四週。把進行中的工作砍半，等待時間也會大致減半。",
+ t:["排隊","流程","在製品"],r:[["bottleneck","堆積的工作，是不是都卡在同一個環節？"],["parkinson","同時進行的事太多，是不是也讓每件工作被拉長？"]]},
+
+{id:"overconfidence",n:"過度自信",en:"Overconfidence",c:"bias",s:"我們對自己的判斷與預測，通常比實際準確度更有把握。",
+ d:"在許多研究中，人們自稱有九成把握的範圍，實際命中率往往遠低於九成，專業人士也不例外。對抗的方法是給出範圍而不是單一數字，並事後追蹤自己的準確度。",
+ e:"估計專案三週完成，被問到把握多大時說九成，但回頭看，類似專案經常超過這個時間。",
+ t:["估算","信心","校準"],r:[["planning-fallacy","我的信心，和過去類似情況的實際結果相符嗎？"],["decision-journal","如果有記錄下信心程度，事後的準確度如何？"]]},
+{id:"planning-fallacy",n:"計畫謬誤",en:"Planning Fallacy",c:"bias",s:"我們總是低估完成一件事所需的時間、成本與風險。",
+ d:"卡尼曼與特沃斯基提出。即使知道過去類似的計畫都超時，人們仍傾向相信這次會順利。有效的修正是採用「外部視角」：找出同類型計畫實際花了多少，再以此為基準調整。",
+ e:"估算工時時，只想著理想的流程，沒有算入審查、修改、等待與突發的問題。",
+ t:["估算","時間","外部視角"],r:[["base-rate","同類型的計畫，過去實際花了多久？"],["safety-margin","我預留的緩衝，足夠覆蓋典型的超時幅度嗎？"]]},
+{id:"framing",n:"框架效應",en:"Framing Effect",c:"bias",s:"同樣的資訊，換個說法，人的選擇就會改變。",
+ d:"說「手術存活率九成」和「手術死亡率一成」，內容相同，但接受度常常不同。決策時要試著把資訊換成另一種說法，看看結論是否改變。",
+ e:"「這個方案省下三成成本」與「這個方案仍然花七成成本」，讓人感受不同。",
+ t:["表達","溝通","選擇"],r:[["anchoring","我是被最初的說法與數字影響了嗎？"],["loss-aversion","把得到說成避免損失，感受會有什麼差別？"]]},
+{id:"endowment",n:"稟賦效應",en:"Endowment Effect",c:"bias",s:"東西一旦屬於自己，就覺得比別人眼中的價值更高。",
+ d:"經濟學家塞勒等人觀察到，擁有某物的人要求的賣價，往往高於沒有擁有的人願意付的價格。這讓人難以清理舊東西，也容易高估自己的作品或想法。",
+ e:"自己寫的程式碼，即使有更好的替代方案，也很難下決心換掉。",
+ t:["擁有","估價","不捨"],r:[["loss-aversion","放手感覺像損失，是損失趨避在作用嗎？"],["sunk-cost","我捨不得，是因為它的價值，還是因為我投入過？"]]},
+{id:"status-quo",n:"現狀偏差",en:"Status Quo Bias",c:"bias",s:"人傾向維持現狀，即使改變可能更好。",
+ d:"改變需要付出成本也有風險，而維持現狀感覺比較安全。許多預設選項的威力正是來自這點。要判斷現狀是否真的好，可以問：如果今天從零開始，我還會選它嗎？",
+ e:"一直用同一個訂閱方案，從來沒有比較過是否有更適合的。",
+ t:["慣性","預設","改變"],r:[["path-dependence","現狀是因為好，還是因為過去選擇的限制？"],["first-principles","如果從零開始，我還會選現在這個嗎？"]]},
+{id:"halo",n:"月暈效應",en:"Halo Effect",c:"bias",s:"一個突出的優點，讓人對其他方面也給出較好的評價。",
+ d:"我們很難把一個人或事物的各個面向分開評價。外表好看的人被認為更有能力，一次成功的產品被認為團隊各方面都優秀。評價時，把各項標準拆開逐項打分，可以降低影響。",
+ e:"面試時因為候選人口條好，就預設他技術也強。",
+ t:["評估","第一印象","面試"],r:[["confirmation","我是不是因為第一印象好，而只找支持的證據？"],["fundamental-attribution","我對他的整體印象，影響了我對他行為的解讀嗎？"]]},
+{id:"resulting",n:"結果論",en:"Resulting",c:"bias",s:"用結果好壞去判斷決策好壞，忽略運氣的成分。",
+ d:"撲克玩家出身的作家杜克稱之為 resulting。好的決策也可能因為運氣得到壞結果，壞的決策也可能碰巧成功。只看結果，會讓人學錯東西。",
+ e:"一次冒險的投資賺錢了，就認為決策正確；一個合理的決定因為意外失敗了，就認為當初判斷錯誤。",
+ t:["運氣","決策","學習"],r:[["decision-journal","當時的資訊與理由是否合理，和結果無關？"],["hindsight","結果出來後，我是不是在改寫當時的判斷？"]]},
+{id:"recency",n:"近因效應",en:"Recency Bias",c:"bias",s:"最近發生的事，在判斷中占的份量過重。",
+ d:"最近的資訊在記憶中最鮮明，容易被當成趨勢。評估績效、投資與風險時，若只看最近一段時間，會忽略更長期的規律。",
+ e:"年度考核時，只記得最近兩個月的表現，忽略前十個月。",
+ t:["記憶","評估","趨勢"],r:[["availability","我覺得是趨勢，是因為最近剛好發生，還是長期都這樣？"],["base-rate","拉長時間範圍來看，基準是什麼？"]]},
+{id:"self-serving",n:"自利偏誤",en:"Self-Serving Bias",c:"bias",s:"成功歸功於自己，失敗歸因於外在環境。",
+ d:"這與基本歸因錯誤相呼應：我們替自己的失敗找情境因素，卻替別人的失敗找個性原因。長期下來，會讓人難以從錯誤中學習。",
+ e:"專案成功時說是我們的規劃好，失敗時說是需求一直在變。",
+ t:["歸因","自我","學習"],r:[["fundamental-attribution","我對自己和對別人，用的是同一把尺嗎？"],["hindsight","失敗後，我有誠實檢討自己能控制的部分嗎？"]]},
+{id:"curse-of-knowledge",n:"知識的詛咒",en:"Curse of Knowledge",c:"bias",s:"一旦懂了某件事，就很難想像不懂的人是怎麼看的。",
+ d:"懂的人常常省略他覺得「顯而易見」的步驟與背景，這讓說明、文件與教學變得難以理解。對策是請真正的初學者試讀，而不是自己重讀。",
+ e:"寫給新人的操作文件，跳過了每個老手都知道的環境設定。",
+ t:["溝通","教學","文件"],r:[["dunning-kruger","懂的人低估難度，不懂的人高估自己，兩端的落差在哪？"],["map-territory","我腦中的地圖，對方也有嗎？"]]},
+{id:"illusion-of-control",n:"控制錯覺",en:"Illusion of Control",c:"bias",s:"高估自己對隨機或外在事件的影響力。",
+ d:"心理學家蘭格的研究顯示，當人覺得自己有參與或選擇，即使結果完全隨機，也會覺得自己能影響。這會讓人在不可控的情況下過度介入或冒險。",
+ e:"以為自己選的樂透號碼比隨機號碼更容易中；事情不順時不斷干預，反而讓系統更不穩定。",
+ t:["控制","隨機","介入"],r:[["circle-of-competence","這件事我真的能影響，還是只是覺得可以？"],["delay","我的頻繁介入，是不是沒有給系統反應的時間？"]]},
+{id:"bias-blind-spot",n:"偏誤盲點",en:"Bias Blind Spot",c:"bias",s:"很容易看出別人的偏誤，卻看不見自己的。",
+ d:"研究顯示，人們普遍認為自己比一般人更少受偏誤影響。光是知道有哪些偏誤並不夠，需要有外部的檢查機制，例如清單、第二意見與事前記錄。",
+ e:"讀完一本講認知偏誤的書後，更常指出別人的錯誤，卻很少檢視自己。",
+ t:["自我檢視","偏誤","方法"],r:[["confirmation","我有請持不同意見的人檢查過嗎？"],["decision-journal","我有沒有在事前留下可以被檢驗的紀錄？"]]},
+{id:"steelman",n:"鋼人論證",en:"Steelmanning",c:"reason",s:"先把對方的論點講到比他自己講得更好，再來回應。",
+ d:"稻草人論證是把對方的說法簡化成容易攻擊的樣子，鋼人論證則相反：找出對方立場最強、最合理的版本，確認自己真的理解，再評論。這樣得到的結論更可靠，也更容易被對方接受。",
+ e:"在技術選型討論中，先替自己不支持的方案列出它最好的三個理由，再比較。",
+ t:["討論","理解","說服"],r:[["confirmation","我有認真想過對方最強的論點嗎，還是只在找支持自己的證據？"],["hanlon","我有沒有先假設對方是出於合理的理由？"]]},
+{id:"falsifiability",n:"可證偽性",en:"Falsifiability",c:"reason",s:"一個說法如果找不到任何可能推翻它的證據，它就沒有告訴你什麼。",
+ d:"哲學家波普提出，有科學意義的主張必須能被事實反駁。無論發生什麼都能說得通的說法，看起來很堅固，實際上沒有資訊量。評估想法時，先問：什麼結果會證明我是錯的？",
+ e:"「不管漲跌，這個策略都符合我的理論」並沒有解釋力；「若連續三個月沒有改善，就代表這個做法無效」才可檢驗。",
+ t:["科學方法","驗證","證據"],r:[["confirmation","我有事先寫下什麼證據會讓我改變想法嗎？"],["bayes","如果這個說法是錯的，我應該預期看到什麼不同的證據？"]]},
+{id:"confounding",n:"混淆變項",en:"Confounding",c:"reason",s:"兩件事看似有關，其實是第三個因素同時影響了它們。",
+ d:"相關不等於因果，而混淆變項是其中最常見的原因：有個沒被注意到的共同原因，同時推動了兩邊。要主張因果，需要控制或排除這些變項，或用隨機對照的方式實驗。",
+ e:"經常運動的人比較健康，但可能是本來就健康、生活規律的人更容易運動。",
+ t:["因果","研究設計","資料"],r:[["correlation","這個相關，是不是被某個共同原因同時推高？"],["survivorship","我看的資料裡，有被篩選過嗎？"]]},
+{id:"regression-mean",n:"均值回歸",en:"Regression to the Mean",c:"reason",s:"極端的結果之後，通常會回到比較平均的水準。",
+ d:"任何含有運氣成分的表現，極好或極差的一次之後，下一次更可能接近平均。這會讓人誤以為是自己的介入有效：表現最差時罵人或換方法，之後自然改善，卻不一定是方法的功勞。",
+ e:"業績墊底的月份之後換了新作法，下個月自然進步，但這可能只是回到平常水準。",
+ t:["統計","因果","運氣"],r:[["resulting","這次的結果，有多少是運氣造成的？"],["base-rate","平常的水準是多少？這次偏離了多少？"]]},
+{id:"simpsons-paradox",n:"辛普森悖論",en:"Simpson's Paradox",c:"reason",s:"整體看是一個趨勢，拆成幾組來看，趨勢卻相反。",
+ d:"當各組的人數比例差異很大時，合併後的平均可能掩蓋甚至逆轉各組內部的關係。遇到整體數字與直覺不符時，可以先依重要的條件分組再看一次。",
+ e:"一種治療在各個分組中成功率都比較高，但合併後整體的成功率卻較低，原因是兩種治療所接受的病例輕重比例差很多。",
+ t:["統計","分組","資料"],r:[["confounding","是不是有一個分組變項，改變了整體的結論？"],["map-territory","這個整體的平均，隱藏了哪些內部的差異？"]]},
+{id:"small-numbers",n:"小樣本陷阱",en:"Law of Small Numbers",c:"reason",s:"樣本很小時，極端的結果很常見，不要太當真。",
+ d:"卡尼曼與特沃斯基指出，人們常以為小樣本也會反映整體的比例。實際上樣本愈小，隨機波動愈大。看到令人驚訝的結果時，先問樣本有多大。",
+ e:"一個只有十位受訪者的調查，有八位偏好某方案，並不足以代表所有使用者。",
+ t:["統計","樣本","不確定性"],r:[["signal-noise","這個差異，是真的訊號，還是隨機的雜訊？"],["base-rate","這個小樣本，和一般的比例差多少？"]]},
+{id:"chestertons-fence",n:"柴斯特頓的籬笆",en:"Chesterton's Fence",c:"reason",s:"在弄清楚一道籬笆為什麼存在之前，不要急著拆掉它。",
+ d:"作家柴斯特頓用籬笆比喻舊規則與舊制度：如果你看不出它的用途，不代表它沒有用途。先找出它設立的原因，再決定要不要移除。這不是反對改變，而是要求改變前先理解。",
+ e:"接手舊系統時，看到一段奇怪的檢查邏輯，先查出它是為了處理什麼事故，再決定能不能刪。",
+ t:["改革","制度","謹慎"],r:[["path-dependence","這個規則的由來，是不是已經沒人記得？"],["first-principles","理解原因之後，它現在還必要嗎？"]]},
+{id:"five-whys",n:"五個為什麼",en:"Five Whys",c:"reason",o:"jp",s:"連續追問為什麼，從表面問題一路追到根本原因。",
+ d:"源自豐田的做法：每次回答之後再問一次為什麼，通常問到第五次左右會接近流程或制度層面的原因。重點是追問系統，而不是追究個人。次數不必剛好是五次。",
+ e:"服務當機，是因為記憶體不足，是因為某個工作沒釋放資源，是因為審查沒有檢查這類問題，是因為沒有相關的規範。",
+ t:["根本原因","檢討","除錯"],r:[["occam","追到的原因，是不是最簡單且能解釋全部現象的？"],["fundamental-attribution","我追問到的，是流程問題，還是在責怪某個人？"]]},
+{id:"mece",n:"MECE 原則",en:"MECE",c:"reason",s:"分類時要彼此不重疊，合起來又沒有遺漏。",
+ d:"這是顧問業常用的結構化原則：Mutually Exclusive, Collectively Exhaustive。把問題拆成互不重疊又涵蓋全部的幾塊，才能確保分析不重複也不漏掉重點。",
+ e:"分析營收下滑時，拆成「客戶數」乘以「每客戶營收」，再各自往下拆，而不是隨意列舉原因。",
+ t:["結構化","分析","分類"],r:[["first-principles","我拆出的每一塊，都是真正獨立的因素嗎？"],["pareto","拆完之後，哪一塊貢獻了最大的影響？"]]},
+{id:"burden-of-proof",n:"舉證責任",en:"Burden of Proof",c:"reason",s:"提出主張的人，有責任提供證據。",
+ d:"不能要求別人去證明某件事不存在。主張愈是出人意料，所需的證據就愈強；這個想法常被歸功於薩根，以「非凡的主張需要非凡的證據」表達。評估資訊時，先問提出者拿出了什麼證據。",
+ e:"有人宣稱某個工具能讓效率提升十倍，先請他提供實際的對照數據，而不是由你證明它沒用。",
+ t:["證據","主張","懷疑"],r:[["bayes","這個主張原本的可信度多高？證據夠改變它嗎？"],["falsifiability","這個主張有沒有可能被證明是錯的？"]]},
+{id:"signal-noise",n:"訊號與雜訊",en:"Signal vs. Noise",c:"reason",s:"不是每次起伏都有意義，先分辨哪些是真的變化。",
+ d:"任何數據都會隨機波動。對每個小波動都做反應，會讓人團團轉。拉長時間、看趨勢，或先估計正常的波動範圍，才知道什麼樣的變化值得處理。",
+ e:"每日訪客數今天少了 5%，不一定代表出了問題；若連續兩週低於平常的範圍，才值得調查。",
+ t:["資料","波動","判斷"],r:[["small-numbers","資料量夠大嗎？"],["recency","我是在對最近的一個點反應，還是在看整體趨勢？"]]},
+{id:"fermi",n:"費米估算",en:"Fermi Estimation",c:"reason",s:"把不知道的數字拆成幾個能猜的部分，快速得到數量級。",
+ d:"以物理學家費米命名。不必追求精確，而是先抓出數量級，檢查想法是否合理。把問題拆成幾個你有概略概念的因子，相乘後通常比直接猜更準，因為高估與低估會彼此抵消一部分。",
+ e:"估算一個城市有多少家咖啡店：人口乘以每人每年平均喝的杯數，除以一家店每年的銷量。",
+ t:["估算","數量級","快速判斷"],r:[["base-rate","我估的每個因子，有參考實際的資料嗎？"],["first-principles","拆出的因子，是不是這個問題真正的組成？"]]},
+{id:"type-errors",n:"型一與型二錯誤",en:"Type I and Type II Errors",c:"reason",s:"誤報與漏報，是兩種不同的錯，代價往往不一樣。",
+ d:"型一錯誤是把沒有的當成有（誤報），型二錯誤是把有的當成沒有（漏報）。降低其中一種，通常會增加另一種。要設多嚴格的門檻，取決於哪一種錯誤比較難承受。",
+ e:"垃圾郵件過濾器太嚴會誤判重要信件，太鬆則讓垃圾信進來；火災警報器則寧可誤報也不要漏報。",
+ t:["誤判","門檻","取捨"],r:[["expected-value","兩種錯誤各自的代價，乘上機率後，哪個更大？"],["safety-margin","我把門檻設在哪裡，是依錯誤的代價來決定嗎？"]]},
+
+{id:"supply-demand",n:"供給與需求",en:"Supply and Demand",c:"econ",s:"價格是買賣雙方意願的訊號，也是資源分配的機制。",
+ d:"需求增加或供給減少，價格傾向上升；反之下降。價格同時傳遞資訊：哪裡稀少、哪裡過剩。強行壓低或抬高價格，通常會造成短缺或過剩，而不是真正解決問題。",
+ e:"熱門演唱會票價被硬性限制，結果是票瞬間售完，轉手市場上的價格卻高出許多。",
+ t:["價格","市場","稀缺"],r:[["incentives","價格改變了誰的誘因？"],["unintended","強制定價會讓市場產生什麼副作用？"]]},
+{id:"economies-of-scale",n:"規模經濟",en:"Economies of Scale",c:"econ",s:"產量愈大，每單位的平均成本愈低。",
+ d:"固定成本被更多單位分攤，加上採購與生產的效率提升，讓大規模的一方成本更低。但規模過大時，協調成本也會上升，出現規模不經濟。",
+ e:"同一套軟體開發好之後，多一位使用者的邊際成本幾乎是零。",
+ t:["成本","規模","競爭"],r:[["moat","規模帶來的成本優勢，能不能成為護城河？"],["diminishing","規模繼續擴大，還有效益嗎？"]]},
+{id:"switching-costs",n:"轉換成本",en:"Switching Costs",c:"econ",s:"換掉現有選擇要付出的代價，會讓人留在原地。",
+ d:"轉換成本包括金錢、時間、學習，以及資料遷移與習慣的改變。它會讓使用者不容易離開，但被綁住的使用者不一定滿意。決定要不要換之前，先把這筆成本估算清楚。",
+ e:"團隊的資料都在某個工具裡，即使有更好的替代品，遷移的成本也讓人猶豫。",
+ t:["鎖定","競爭","遷移"],r:[["path-dependence","現在的選擇，是因為它好，還是因為換掉的成本高？"],["status-quo","我是怕轉換成本，還是只是習慣？"]]},
+{id:"winner-takes-most",n:"贏家通吃",en:"Winner-Takes-Most",c:"econ",s:"最強的一方拿走絕大部分的價值。",
+ d:"在網路效應、規模經濟或標準競爭明顯的市場中，領先者的優勢會自我強化，第二名之後的份額急遽縮小。判斷自己所在的市場是否有這種特性，會影響策略的選擇。",
+ e:"通訊平台上，使用者都聚集在少數幾個平台；新進者很難靠略好一點的功能突圍。",
+ t:["市場","競爭","平台"],r:[["network-effect","贏家通吃是否源自網路效應？"],["feedback-loop","領先者的優勢，是不是在自我強化？"]]},
+{id:"marginal-thinking",n:"邊際思考",en:"Thinking at the Margin",c:"econ",s:"決定要不要多做一單位，看的是新增的成本與新增的收益。",
+ d:"平均成本與邊際成本是兩回事。許多決策應該比較的是「再多一個」的代價與好處，而不是整體的平均。已付出的固定成本不影響邊際的比較。",
+ e:"一班飛機還有空位，多賣一張票的邊際成本很低，所以降價賣出剩餘座位仍然有利可圖。",
+ t:["決策","成本","增量"],r:[["diminishing","邊際效益開始遞減了嗎？"],["sunk-cost","我在比較的是未來新增的成本，還是已經花掉的？"]]},
+{id:"tragedy-commons",n:"公地悲劇",en:"Tragedy of the Commons",c:"econ",s:"共用的資源，每個人各自多取一點，最終大家都受害。",
+ d:"哈丁提出這個模型：當個人獲得全部好處，卻只承擔一部分成本，就會過度使用共有資源。但經濟學家奧斯壯的研究指出，許多社群能透過規則與監督避免悲劇，所以它不是必然的結果。",
+ e:"共用的伺服器資源或雲端預算，若沒人負擔成本，每個團隊都會多佔一些。",
+ t:["共有資源","外部性","制度"],r:[["prisoners-dilemma","這是不是一個個人理性、整體失敗的結構？"],["incentives","要怎麼讓使用者承擔自己造成的成本？"]]},
+{id:"principal-agent",n:"委託代理問題",en:"Principal–Agent Problem",c:"econ",s:"代替你做事的人，不一定和你有相同的利益。",
+ d:"當委託人無法完全監督代理人，而兩者目標不一致時，就會出現偏離。解法包括對齊誘因、增加透明度與監督，以及選擇本來就利益一致的人。",
+ e:"業務人員按簽約金額領獎金，可能為了簽下客戶而承諾公司難以做到的事。",
+ t:["委託","誘因","監督"],r:[["incentives","代理人實際被獎勵去做什麼？"],["goodhart","我用來評估代理人的指標，會不會被拿來做數字？"]]},
+{id:"adverse-selection",n:"逆選擇",en:"Adverse Selection",c:"econ",s:"資訊不對等時，最需要的人最容易進來，市場品質跟著下降。",
+ d:"經濟學家阿克洛夫以「檸檬市場」說明：二手車賣方比買方更清楚車況，買方只願付平均價，於是好車退出市場，剩下的更多是爛車。保險、貸款與招募也有類似的現象。",
+ e:"提供沒有任何篩選的優惠方案，最容易吸引的是最可能造成損失的客戶。",
+ t:["資訊不對稱","市場","篩選"],r:[["moral-hazard","風險出現在簽約前（逆選擇），還是簽約後（道德風險）?"],["survivorship","留在市場裡的，是不是已經被篩選過？"]]},
+{id:"moral-hazard",n:"道德風險",en:"Moral Hazard",c:"econ",s:"一旦有人替你承擔風險，你就更可能冒險。",
+ d:"當一方不必完全承擔後果，行為就會改變。保險、擔保與兜底的承諾，都可能讓人放鬆警覺。設計制度時，要讓決策者仍保有一部分的風險。",
+ e:"有保險的人比較不會小心保管財物；開發人員知道一定有人會在上線前把關，就更不仔細檢查自己的程式。",
+ t:["風險","誘因","保險"],r:[["incentives","決策的人，有沒有承擔自己決定的後果？"],["safety-margin","我提供的保護，會不會讓人放棄原本該有的謹慎？"]]},
+{id:"positive-sum",n:"正和賽局",en:"Positive-Sum Games",c:"econ",s:"合作能把餅做大，不是你多拿一點就代表我少拿一點。",
+ d:"許多互動並非零和：交易讓雙方都更好，合作讓整體產出增加。把情境誤判為零和，會讓人錯過合作的機會；反之，把零和誤認為雙贏，也會被利用。",
+ e:"兩個團隊共享一套工具，各自省下重複開發的時間，雙方的產出都增加。",
+ t:["合作","賽局","談判"],r:[["prisoners-dilemma","要怎麼讓這個情境從互相防備，變成互相合作？"],["comparative-advantage","各方專注在自己的強項，能不能創造更大的整體價值？"]]},
+{id:"schelling-point",n:"謝林點",en:"Schelling Point",c:"econ",s:"在無法溝通時，人們會自然選擇最顯眼、最「理所當然」的那一個。",
+ d:"謝林觀察到，當雙方需要協調卻無法交談，會傾向挑選彼此都覺得最突出的選項，也稱為焦點。預設值、慣例與約定俗成的標準，往往就是這樣形成的。",
+ e:"約在大城市見面卻沒有講地點，很多人會想到最著名的車站或地標。",
+ t:["協調","預設"],r:[["social-proof","大家都選這個，是因為它真的最好，還是因為大家都這樣預期？"],["network-effect","一旦成為標準，後來者是否更難改變？"]]},
+{id:"disruption",n:"破壞式創新",en:"Disruptive Innovation",c:"econ",s:"從被忽視的低端市場切入，逐步威脅既有的領導者。",
+ d:"克里斯汀生提出：既有的大公司專注在最賺錢的客戶，忽略便宜但夠用的產品；新進者從這裡起步，慢慢提升品質，最後取代原本的領導者。這個理論常被過度使用，不是每個新進者都叫破壞式創新。",
+ e:"早期的數位相機畫質遠不如底片，但便利又便宜，逐漸在日常使用上取代了底片。",
+ t:["創新","競爭","市場"],r:[["moat","現有的護城河，擋得住從低端來的挑戰嗎？"],["diminishing","現有產品的改進，是否已超過客戶實際需要的程度？"]]},
+
+{id:"brooks-law",n:"布魯克斯法則",en:"Brooks's Law",c:"org",s:"在已經延誤的軟體專案中加人，只會讓它更晚。",
+ d:"布魯克斯在《人月神話》中提出。新人需要時間上手，既有成員要花時間帶領，溝通的路徑也增加。這是一個經驗法則而非絕對定律，關鍵在於工作能不能被拆分，以及新人上手要多久。",
+ e:"專案落後時臨時調來三位工程師，原本的成員反而花更多時間講解與整合，進度更慢。",
+ t:["管理","人力","延誤"],r:[["communication-paths","加人之後，溝通路徑增加了多少？"],["littles-law","問題是人手不夠，還是同時進行的事太多？"]]},
+{id:"communication-paths",n:"溝通路徑數",en:"Communication Paths",c:"org",s:"人數增加一點，彼此之間的溝通路徑會快速增加。",
+ d:"n 個人彼此直接溝通的路徑數是 n(n−1)/2：五個人有 10 條，十個人有 45 條，二十個人有 190 條。團隊變大時，協調成本比人數成長得更快，因此需要分組、分層與明確的介面。",
+ e:"十個人的團隊每個人都要知道所有事，開會就會變得冗長；拆成兩個五人的小組並約定介面，溝通就輕鬆許多。",
+ t:["團隊規模","協調","數學"],r:[["conway","團隊怎麼分，系統就會怎麼分，我分得合理嗎？"],["two-pizza","多大的團隊，溝通成本還在可控範圍？"]]},
+{id:"two-pizza",n:"兩個披薩團隊",en:"Two-Pizza Team",c:"org",s:"團隊小到兩個披薩就能餵飽，通常溝通比較有效率。",
+ d:"這個說法常被歸功於亞馬遜的貝佐斯。重點不是真的算披薩，而是讓團隊小到可以快速溝通、責任清楚。但小團隊也需要有完整的能力與明確的目標，否則只是變成依賴別人。",
+ e:"一個負責單一服務的六人小隊，擁有從設計、開發到維運的完整責任。",
+ t:["團隊規模","自主","溝通"],r:[["communication-paths","小團隊省下了多少溝通路徑？"],["dri","小團隊裡，每件事有明確的負責人嗎？"]]},
+{id:"dunbar",n:"鄧巴數",en:"Dunbar's Number",c:"org",s:"人能維持穩定關係的數量有限，常被提到的數字是一百五十人左右。",
+ d:"人類學家鄧巴根據靈長類的新皮質大小與群體規模的關係，推估人能維持穩定社交關係的人數大約是 150 人（原始估計的信賴區間相當寬，常被引用的範圍是 100 到 250）。這個數字是估計，不是嚴格的上限，不同研究結果差異很大，後來也有重新分析質疑這種推算方式。它提醒我們：組織變大後，靠人與人熟悉度運作的方式會失效，需要制度。",
+ e:"公司從三十人成長到三百人後，過去靠口頭溝通與默契完成的事，開始需要流程與文件。",
+ t:["規模","關係","組織成長"],r:[["communication-paths","超過一定規模後，是否需要用制度取代熟悉度？"],["conway","組織成長之後，溝通結構如何改變系統？"]]},
+{id:"psychological-safety",n:"心理安全感",en:"Psychological Safety",c:"org",s:"團隊成員相信說出疑問或犯錯，不會受到懲罰或羞辱。",
+ d:"哈佛的艾德蒙森研究發現，心理安全感高的團隊更願意提出問題與回報錯誤，因此學得更快。它不是不要標準，而是讓人能坦承困難。Google 的團隊效能研究也將它列為關鍵因素。",
+ e:"事故檢討會上，大家討論的是流程怎麼改進，而不是誰該負責。",
+ t:["團隊","學習","回報錯誤"],r:[["fundamental-attribution","出錯時，我們先檢討個人，還是先檢討情境與流程？"],["pre-mortem","團隊敢不敢在事前說出疑慮？"]]},
+{id:"bikeshedding",n:"自行車棚效應",en:"Bikeshedding",c:"org",s:"愈簡單、人人都懂的小事，愈容易吸引過多的討論時間。",
+ d:"帕金森的瑣碎定律：會議對一座核電廠的預算幾分鐘就通過，卻花很長時間爭論自行車棚的顏色，因為人人都能插話。對策是先確認議題的重要性，並限定討論時間。",
+ e:"設計評審花了半小時爭論按鈕的顏色，卻只用五分鐘帶過資料庫的架構。",
+ t:["會議","優先順序","討論"],r:[["pareto","我們的討論時間，有花在最重要的那 20% 嗎？"],["eisenhower","這個議題重要，還是只是容易插話？"]]},
+{id:"diffusion-responsibility",n:"責任分散",en:"Diffusion of Responsibility",c:"org",s:"在場的人愈多，每個人愈覺得這件事應該由別人處理。",
+ d:"當責任屬於一群人，而沒有明確的人負責時，每個人都以為別人會處理。在組織裡，這表現為群組裡的訊息沒人回、共同負責的任務沒人推進。解法是指名單一負責人。",
+ e:"群組裡有人提出一個問題，二十個人都看到了，但沒有人回覆，各自假設別人會處理。",
+ t:["責任","團體","溝通"],r:[["dri","這件事有指定單一負責人嗎？"],["social-proof","我沒行動，是不是因為其他人也沒行動？"]]},
+{id:"groupthink",n:"團體迷思",en:"Groupthink",c:"org",s:"團體為了維持和諧一致，壓抑了不同意見與批判思考。",
+ d:"心理學家詹尼斯提出。凝聚力強、領導者立場鮮明、缺乏外部意見時最容易發生。對策包括指定一個人專門唱反調、讓成員先獨立寫下意見，以及邀請外部審視。",
+ e:"整個團隊都認定新架構沒問題，即使有人心中有疑慮，也因為氣氛而沒說出口。",
+ t:["決策","團體","異見"],r:[["pre-mortem","事前驗屍能不能讓不同意見被說出來？"],["confirmation","團隊是不是只在互相確認既有的想法？"]]},
+{id:"abilene-paradox",n:"阿比林悖論",en:"Abilene Paradox",c:"org",s:"每個人都誤以為別人想要，結果團體做了誰都不想要的事。",
+ d:"管理學者哈維（1974 年）用一個故事描述：德州炎熱的午後，一家人本來在家玩牌，有人提議開車約八十公里去阿比林吃晚餐，每個人都以為別人想去而跟著去，事後才發現其實沒有人想去。它與團體迷思不同：每個人其實都知道自己不同意，只是沒有說出來。",
+ e:"會議上人人都對一個計畫有保留，但每個人都以為只有自己有疑慮，於是計畫通過，最後沒有人真心支持。",
+ t:["團體","溝通","共識"],r:[["groupthink","是大家真的同意，還是沒人敢說出自己的真實想法？"],["social-proof","我在跟隨的，是別人真實的意見，還是我想像中的意見？"]]},
+{id:"pygmalion",n:"期望效應",en:"Pygmalion Effect",c:"org",s:"別人對你的期待，會影響你的表現。",
+ d:"心理學家羅森塔爾與雅各布森的研究認為，教師對學生的期望會影響學生的表現。後續研究結果並不一致，效果大小仍有爭議，但在管理上仍是個有用的提醒：對人的預設會改變你對待他們的方式。",
+ e:"主管預設某位新人潛力很高，於是給他更多挑戰與回饋，他的表現也跟著提升。",
+ t:["管理","期望","培養"],r:[["confirmation","我對這個人的看法，有沒有因為只注意符合預期的表現而被強化？"],["halo","我的期望，是來自實際的證據，還是第一印象？"]]},
+{id:"dri",n:"單一負責人",en:"Directly Responsible Individual",c:"org",s:"每件事都指定一個明確負責的人，而不是一群人共同負責。",
+ d:"這個做法常和蘋果的管理聯繫在一起：每項任務有一個名字對應的負責人(DRI)。負責不代表一個人做完所有事，而是由他確保事情推進、能被追問。沒有明確的負責人，就容易出現責任分散。",
+ e:"每個專案計畫上都寫著「負責人：某某」，而不是「某某團隊」。",
+ t:["責任","管理","效率"],r:[["diffusion-responsibility","是不是有任何事情目前沒有明確的負責人？"],["peter","把責任交給這個人，他有能力、也有權力承擔嗎？"]]},
+{id:"scope-creep",n:"範圍蔓延",en:"Scope Creep",c:"org",s:"需求一點一點增加，專案不知不覺變得比原來大得多。",
+ d:"每個小增加看起來都合理，累積起來卻讓時程與成本失控。對策是明確定義範圍，並讓每個新增項目都經過取捨：要加進來，就要拿掉某些東西或延後時程。",
+ e:"一個原本只做登入功能的專案，陸續加上了第三方登入、多國語言與報表，最終超時數個月。",
+ t:["管理","需求","時間"],r:[["planning-fallacy","加入新需求時，我有重新估算時程嗎？"],["opportunity-cost","每多加一項，我放棄了什麼？"]]},
+{id:"active-listening",n:"積極傾聽",en:"Active Listening",c:"comm",s:"先確認自己真的聽懂了，再開始回應。",
+ d:"多數人聽別人說話時，其實一邊在準備自己要說什麼。積極傾聽是把注意力放在對方身上，用自己的話複述重點，再確認「你的意思是這樣嗎？」。這樣做能及早發現誤解，也讓對方感覺被認真對待。",
+ e:"同事抱怨「進度被卡住」，你不急著提解法，而是先問：「你是說在等設計稿，還是在等其他團隊的回覆？」確認之後才討論怎麼處理。",
+ t:["溝通","理解","回饋"],r:[["steelman","我能把對方的立場講到讓他點頭嗎？"],["curse-of-knowledge","我是不是以為對方已經知道我知道的事？"]]},
+{id:"pyramid-principle",n:"金字塔原理",en:"Pyramid Principle",c:"comm",s:"先講結論，再講支撐結論的理由，由上往下組織。",
+ d:"這是管理顧問芭芭拉·明托推廣的寫作與表達結構：開頭先給結論，下一層列出支撐它的幾個理由，每個理由再往下展開證據。聽的人不必猜你要講什麼，也能在任何一層停下來提問。",
+ e:"向主管報告時，第一句就說「建議延後上線兩週」，接著說明三個原因，而不是從事情經過慢慢講起。",
+ t:["溝通","結構化","表達"],r:[["mece","同一層的理由之間，有沒有重疊或遺漏？"],["audience-first","對方最想先知道的是結論，還是背景？"]]},
+{id:"ladder-of-inference",n:"推論階梯",en:"Ladder of Inference",c:"comm",s:"我們從事實一路往上推到結論，卻常忘了中間跳了好幾步。",
+ d:"這個概念由組織學者阿吉里斯提出，後來經彼得·聖吉的著作廣為人知：人先注意到部分事實，再加上自己的解讀與假設，得出結論並據此行動，而且下一次只會注意到支持結論的事實。溝通卡住時，沿著階梯往回問：我實際看到了什麼？",
+ e:"「他沒回我訊息，就是不重視這件事」。往回拆：事實只有「三小時沒回」，其餘是我的解讀；他可能在開會。",
+ t:["溝通","假設","誤會"],r:[["hanlon","對方有沒有可能只是疏忽，而不是惡意？"],["confirmation","我之後注意到的事實，是不是只挑了符合結論的？"]]},
+{id:"nonviolent-communication",n:"非暴力溝通",en:"Nonviolent Communication",c:"comm",s:"把「觀察、感受、需要、請求」分開講，少評斷、多描述。",
+ d:"由心理學家馬歇爾·盧森堡發展的溝通方式：先描述看到的事實（不加評價），再說自己的感受與背後的需要，最後提出具體、可以拒絕的請求。重點不是句型，而是把「你很自私」這類評斷，換成對方比較能聽進去的描述。",
+ e:"把「你每次都遲到，根本不尊重人」換成「這週三次會議你晚到十分鐘，我很焦慮，因為我需要準時開始；下次可以提前通知我嗎？」",
+ t:["溝通","情緒","人際"],r:[["fundamental-attribution","我是在描述他的行為，還是在評斷他的為人？"],["active-listening","我有先聽懂他的需要嗎？"]]},
+{id:"radical-candor",n:"徹底坦率",en:"Radical Candor",c:"comm",s:"真心關心對方，同時直接說出需要改進的地方。",
+ d:"金·史考特提出的管理框架：以「是否真心關心」和「是否直接挑戰」兩個維度，區分四種回饋方式。只直接、不關心容易變成刻薄；只關心、不直接則變成虛假的客氣，兩者都讓人學不到東西。",
+ e:"發現同事的簡報有重大遺漏，你私下說：「我很希望這次報告成功，所以直說：第三頁的數字來源我看不懂，建議補上。」",
+ t:["溝通","回饋","管理"],r:[["psychological-safety","對方在這個環境裡，敢不敢接收並回應直接的意見？"],["pygmalion","我的期望，有沒有讓對方更願意成長？"]]},
+{id:"write-it-down",n:"把決定寫下來",en:"Written Decisions",c:"comm",s:"口頭同意不等於真的同意；寫下來才會暴露歧義。",
+ d:"會議結束時，每個人對「決定了什麼、誰負責、何時完成」的記憶常常不同。把結論用一兩段文字寫下並請大家確認，能找出隱藏的歧義，也讓缺席的人與未來的自己有依據。",
+ e:"會後立刻寄出三行摘要：決議、負責人、期限。結果有人回信指出「我以為是下週五，不是這週五」。",
+ t:["溝通","紀錄","共識"],r:[["dri","每件事有明確的負責人嗎？"],["abilene-paradox","大家是真的同意，還是只是沒有人提出疑慮？"]]},
+{id:"audience-first",n:"對象優先",en:"Know Your Audience",c:"comm",s:"同一件事，對不同的人要講不同的版本。",
+ d:"溝通的目的是讓對方理解並採取行動，所以內容的選擇要從對方出發：他已經知道什麼？他在乎什麼？他需要做什麼決定？技術細節對工程師是證據，對決策者可能只是雜訊。",
+ e:"同一個系統故障，對客戶說明影響範圍與預計恢復時間，對工程團隊說明根因與修補計畫。",
+ t:["溝通","表達","說服"],r:[["curse-of-knowledge","我是不是用自己的背景知識在解釋？"],["pyramid-principle","對方需要先看到什麼，才願意繼續聽？"]]},
+{id:"open-questions",n:"開放式提問",en:"Open Questions",c:"comm",s:"問「是不是」只會得到是或否；問「怎麼樣」才會得到資訊。",
+ d:"封閉式問題可以快速確認事實，但容易把自己的假設塞進問題裡；開放式問題（例如「這件事對你來說最困難的是什麼？」）讓對方用自己的框架回答，常能挖到你沒想到的資訊。兩種問法要依目的切換。",
+ e:"訪談使用者時，不問「你覺得這個功能好用嗎？」，而問「上次你做這件事時，是怎麼做的？卡在哪裡？」。",
+ t:["溝通","假設","理解"],r:[["framing","我的問法，有沒有已經引導了答案？"],["five-whys","要追問到第幾層，才接近真正的原因？"]]},
+{id:"spaced-repetition",n:"間隔重複",en:"Spaced Repetition",c:"learn",s:"把複習分散在逐漸拉長的間隔，比一次塞滿有效。",
+ d:"心理學上稱為間隔效應：同樣的學習時間，分散安排通常比集中學習記得更久。做法是在快要忘記時複習，每複習成功一次就把下次間隔拉長。艾賓浩斯的遺忘曲線是這個領域的經典起點。",
+ e:"背單字時，今天學的明天、三天後、一週後各看一次，不再看的單字就不必每天重複。",
+ t:["學習","記憶","效率"],r:[["retrieval-practice","複習時，我是重讀，還是試著自己想起來？"],["compounding","每次小量複習，長期累積的效果有多大？"]]},
+{id:"retrieval-practice",n:"提取練習",en:"Retrieval Practice",c:"learn",s:"不看答案、自己想起來，比重複閱讀記得更牢。",
+ d:"也稱測驗效應：把知識從記憶中主動提取出來，本身就在強化記憶。許多研究發現，花同樣時間，自我測驗通常比重讀教材的長期效果好，雖然感覺上比較吃力。",
+ e:"讀完一章後蓋住書，把重點寫在白紙上，再對照書本找出漏掉的部分。",
+ t:["學習","記憶","方法"],r:[["fluency-illusion","我覺得讀起來很熟，是真的會，還是只是眼熟？"],["desirable-difficulty","這份吃力，是有價值的困難嗎？"]]},
+{id:"deliberate-practice",n:"刻意練習",en:"Deliberate Practice",c:"learn",s:"進步來自針對弱點、有回饋的練習，不是單純的重複次數。",
+ d:"心理學家安德斯·艾瑞克森研究專家如何成為專家，提出刻意練習：設定明確的小目標、專注在自己做不好的部分、立即取得回饋並修正。坊間常說的「一萬小時」是對他研究的簡化說法，重點不在時數，而在練習的品質。",
+ e:"練習簡報時，不是從頭到尾講十遍，而是錄影後找出最卡的兩個轉折，針對這兩段反覆修正。",
+ t:["學習","回饋","專業"],r:[["feedback-loop","我多快能知道自己做得好不好？"],["circle-of-competence","我的練習在邊界上，還是只在舒適區？"]]},
+{id:"feynman-technique",n:"費曼學習法",en:"Feynman Technique",c:"learn",s:"試著用簡單的話教別人，卡住的地方就是還沒懂的地方。",
+ d:"這個名稱是後人根據物理學家費曼重視「用簡單語言解釋」的態度所取，並不是他本人提出的正式方法。步驟是：選一個概念，假裝教給外行人，在講不清楚的地方回頭查資料，再簡化重講。",
+ e:"想學區塊鏈，就試著向不懂技術的朋友解釋，發現自己講不出「為什麼不能被竄改」，才回頭補這一塊。",
+ t:["學習","教學","自我檢視"],r:[["curse-of-knowledge","我解釋時，用了哪些其實沒定義的術語？"],["dunning-kruger","我覺得我懂，是被檢驗過的懂嗎？"]]},
+{id:"desirable-difficulty",n:"合適的困難",en:"Desirable Difficulties",c:"learn",s:"讓學習稍微吃力一點，長期記得反而更好。",
+ d:"認知心理學家羅伯特·畢約克提出：某些讓學習變慢、變辛苦的做法（如間隔、交錯、自我測驗），短期表現比較差，長期保留卻比較好。關鍵是「合適」：困難要在能力可及的範圍內，太難只會挫折。",
+ e:"把同一類題目混在一起練，每題都要先判斷用哪種方法，比一次連做二十題同類型的題目更累，但考試時更會選方法。",
+ t:["學習","記憶","方法"],r:[["interleaving","混著練，是不是比分類練更辛苦但更有效？"],["fluency-illusion","順暢的感覺，是學會了，還是太容易？"]]},
+{id:"interleaving",n:"交錯練習",en:"Interleaving",c:"learn",s:"不同類型的題目混在一起練，比一次練完一種更能學會分辨。",
+ d:"集中練習（AAA BBB）會讓人知道這一題用什麼方法，只需要執行；交錯練習（ABABAB）則要求每次先判斷情況，因此更接近真實使用。多項研究發現它在數學與動作技能上有長期效益，但練習時感覺會比較差。",
+ e:"練網球時，把正拍、反拍、發球輪流練，而不是先打一百顆正拍。",
+ t:["學習","方法","判斷"],r:[["desirable-difficulty","這個混亂，是對學習有幫助的嗎？"],["spaced-repetition","不同主題之間，有沒有自然拉開複習的間隔？"]]},
+{id:"growth-mindset",n:"成長型心態",en:"Growth Mindset",c:"learn",s:"相信能力可以透過努力與方法成長，會改變你面對失敗的方式。",
+ d:"心理學家卡蘿·德維克提出，把「能力是固定的」與「能力可以發展」兩種信念區分開來。相信後者的人更願意接受挑戰、把失敗當作資訊。不過後續研究顯示，其教育介入的效果大小有爭議，不宜當成萬靈丹。",
+ e:"面對一次失敗的面試，把「我就是不適合」改成「這次哪些題我沒準備好？下次怎麼練？」。",
+ t:["學習","謙遜","心態"],r:[["self-serving","我把失敗歸因於什麼：能力，還是可調整的方法？"],["resulting","我是因為結果不好就否定過程，還是檢視過程本身？"]]},
+{id:"fluency-illusion",n:"流暢錯覺",en:"Illusion of Fluency",c:"learn",s:"覺得「看起來很熟」，不代表你真的會。",
+ d:"重讀、畫螢光筆、看別人示範，都會讓內容變得很順眼，於是誤以為自己已經掌握。真正的檢驗是：合上書之後，你能不能自己重現或應用？熟悉感與可提取的記憶是兩回事。",
+ e:"看完教學影片覺得都懂了，實際動手卻發現連第一步都想不起來。",
+ t:["學習","記憶","偏誤"],r:[["dunning-kruger","我對自己的理解有多少是被測試過的？"],["retrieval-practice","用什麼方式能快速測出我真正會了什麼？"]]},
+{id:"mvp",n:"最小可行產品",en:"Minimum Viable Product",c:"eng",s:"用最少的成本做出能驗證核心假設的版本，先學習再擴張。",
+ d:"這個概念經由艾瑞克·萊斯在精實創業中廣為流傳：MVP 不是品質差的產品，而是能用最少資源回答「使用者是否真的需要這件事」的版本。重點是學到東西，而不是功能少。",
+ e:"想做一個食譜 App，先用一個簡單網頁和表單收集二十位使用者的實際需求，確認有人願意用，再投資開發。",
+ t:["實驗","假設","驗證"],r:[["small-bets","這個版本，是在驗證假設，還是只是縮小版的完整產品？"],["two-way-door","如果發現方向錯了，回頭的成本是多少？"]]},
+{id:"yagni",n:"YAGNI",en:"You Aren't Gonna Need It",c:"eng",s:"還沒有確定的需求，就先不要實作。",
+ d:"源自極限程式設計的原則：不要為了「以後可能會用到」而先寫功能。預先建好的彈性通常用不到，卻要付出維護成本，還會讓系統更難改。需求真的出現時，再用當下的資訊設計，通常更準確。",
+ e:"目前只需要匯出 CSV，就不用先做一套支援十種格式的外掛架構。",
+ t:["簡化","規劃","工程"],r:[["occam","有沒有更簡單、同樣能解決問題的做法？"],["option-value","保留彈性的成本，值得買這個選擇權嗎？"]]},
+{id:"premature-optimization",n:"過早最佳化",en:"Premature Optimization",c:"eng",s:"在還不知道瓶頸在哪之前，就去最佳化，多半是浪費。",
+ d:"電腦科學家高德納有一句常被引用的話：過早最佳化是萬惡之源（原文語境是指不該在小處上花太多心力）。實務上先讓系統正確、可讀，再量測找到真正的瓶頸，通常是更划算的順序。",
+ e:"花兩天把一個只執行一次的函式加速十倍，卻沒發現真正拖慢系統的是資料庫查詢。",
+ t:["效率","工程","優先順序"],r:[["bottleneck","我量到的瓶頸，真的是這一段嗎？"],["pareto","哪少數幾處，決定了大部分的效能？"]]},
+{id:"technical-debt",n:"技術債",en:"Technical Debt",c:"eng",s:"為了現在的速度而選擇的捷徑，之後要連本帶利還。",
+ d:"這個比喻由沃德·坎寧安提出：快速上線的權宜寫法像借錢，可以換來時間，但如果不償還，之後每次修改都要支付「利息」，進度越來越慢。有意識地借債是策略，無意識地累積才是問題。",
+ e:"為了趕發表會，先把設定值寫死在程式裡，三個月後每個新客戶都要手動改程式碼。",
+ t:["技術債","取捨","維護"],r:[["entropy","沒人維護時，這個系統自己會往哪個方向走？"],["opportunity-cost","現在不還債，換來了什麼？未來要付什麼代價？"]]},
+{id:"jobs-to-be-done",n:"待辦任務理論",en:"Jobs To Be Done",c:"eng",s:"人是「雇用」產品來完成一件事，而不是為了產品本身。",
+ d:"這個觀點經克里斯汀生等人推廣：與其問「使用者是誰」，不如問「他想完成什麼任務、目前用什麼替代方案、卡在哪裡」。同樣的產品，在不同情境下可能是在完成不同的任務。",
+ e:"人們買早晨奶昔，要完成的任務可能是「通勤時有東西可以吃又不髒手」，競爭對手是甜甜圈和香蕉，而不是其他奶昔。",
+ t:["需求","市場","競爭"],r:[["disruption","現有產品完成任務的方式，有沒有被便宜但夠用的替代品取代的空間？"],["open-questions","我問過使用者上次是怎麼完成這件事的嗎？"]]},
+{id:"postel-law",n:"波斯特法則",en:"Postel's Law",c:"eng",s:"對自己送出的內容要嚴謹，對別人送來的內容要寬容。",
+ d:"也稱強健性原則，出自網路先驅喬·波斯特對通訊協定的建議。寬容接收能讓不同實作互相相容。但過度寬容也會讓錯誤的輸入被默默接受、長期固化成事實標準，所以要在相容與嚴格之間取捨。",
+ e:"API 回傳格式固定、欄位清楚，但接收時能容忍多餘空白與大小寫差異；同時對無法理解的資料記錄警告。",
+ t:["設計","協調","規則"],r:[["hyrums-law","我寬容的行為，會不會被別人當成約定依賴？"],["schelling-point","大家在沒有溝通的情況下，會自然收斂到哪種格式？"]]},
+{id:"leaky-abstractions",n:"抽象洩漏",en:"Law of Leaky Abstractions",c:"eng",s:"所有不平凡的抽象，多少都會漏出底層的細節。",
+ d:"由軟體工程師喬爾·史波斯基提出：抽象層試圖隱藏複雜度，但在出錯、效能或邊界情況時，底層細節終究會露出來。所以使用抽象的人，仍需要大致知道它底下發生了什麼事。",
+ e:"以為資料庫抽象層讓你不必管 SQL，直到某個查詢慢到逾時，才發現必須理解它實際產生的語法。",
+ t:["架構","簡化","除錯"],r:[["map-territory","我的模型和實際運作的系統，在哪裡開始不一致？"],["circle-of-competence","我依賴的抽象底下，哪一層我完全不懂？"]]},
+{id:"hyrums-law",n:"海拉姆定律",en:"Hyrum's Law",c:"eng",s:"使用者夠多時，你系統所有可觀察的行為，都會有人依賴。",
+ d:"由 Google 工程師海拉姆·萊特命名：不管你在文件裡承諾什麼，只要行為可以被觀察到（包括順序、錯誤訊息、時間差），就會有人把它當成約定。這讓「修改內部實作」比想像中危險。",
+ e:"你把 API 回傳的陣列順序從穩定改成隨機，結果有客戶程式壞掉，因為他們一直假設順序固定。",
+ t:["設計","依賴","可靠度"],r:[["unintended","這個修改，有哪些我沒預料到的使用方式會受影響？"],["path-dependence","已經有人依賴之後，回頭的成本變成多少？"]]},
+{id:"shu-ha-ri",n:"守破離",en:"Shu-Ha-Ri",c:"learn",o:"jp",s:"學習分三階段：先守規矩，再打破，最後離開形式、自成一格。",
+ d:"這個說法常被歸於茶道宗師千利休的詩，十九世紀的茶道家川上不白將它推廣，並參考能樂大師世阿彌的藝論，後來也被合氣道等武道採用。三個階段是：「守」是忠實模仿老師與基本型；「破」是理解之後試著打破或改良；「離」是脫離原有形式，依自己的理解創造。重點是順序：沒有守就直接破，往往只是亂來。軟體界的敏捷教練也常借用它描述團隊的成熟度。",
+ e:"學新框架時，前三個月照官方範例一步步做（守）；熟了之後調整架構以符合自己的專案（破）；最後形成自己的慣用寫法與工具（離）。",
+ t:["學習","方法","專業"],r:[["deliberate-practice","我現在的練習，是在「守」的階段打基礎，還是太早在「破」？"],["chestertons-fence","我想打破的這條規則，真的理解它為什麼存在嗎？"]]},
+{id:"nemawashi",n:"根回し",en:"Nemawashi",c:"org",o:"jp",s:"正式開會之前，先一對一溝通，讓會議成為確認，而不是爭論。",
+ d:"原意是移植大樹前先修整根部的園藝作業。在日本組織裡，指正式決策前先私下向相關的人說明、傾聽疑慮、調整方案，使會議時多數意見已經收斂。好處是減少當場衝突、提高執行意願；代價是過程不透明，可能讓少數意見被提前壓下，也可能拖慢速度。",
+ e:"要提出預算調整案，先分別找財務與兩位部門主管各談十分鐘，了解反對點並修改方案，正式會議時才提出。",
+ t:["共識","溝通","討論"],r:[["abilene-paradox","提前取得的同意，是真的同意，還是沒人敢當面反對？"],["groupthink","事前疏通的過程，有沒有把不同意見提前消音？"]]},
+{id:"honne-tatemae",n:"本音與建前",en:"Honne and Tatemae",c:"comm",o:"jp",s:"檯面上的說法與真實想法常常不同，溝通時要同時讀兩層。",
+ d:"「建前」是公開場合依角色與禮貌表達的立場，「本音」是私下真正的想法。這種區分在許多文化都存在，日語把它講得特別清楚。理解它，可以避免把客氣當成同意；也提醒自己：營造能讓人說出本音的場合，才是團隊溝通的關鍵。不要把它套成對整個民族的刻板印象，個人與情境的差異很大。",
+ e:"客戶說「我們會慎重考慮」，不一定是同意或拒絕；會後可以私下問：「如果要推進，最大的障礙是什麼？」",
+ t:["溝通","情緒","誤會"],r:[["psychological-safety","這個環境，讓人敢說出真實想法嗎？"],["open-questions","我有沒有用問題，幫對方說出顧慮？"]]},
+{id:"kaizen",n:"改善",en:"Kaizen",c:"systems",o:"jp",s:"不等大改革，每天做一個小改進，長期累積成大差異。",
+ d:"「改善」是日本製造業（特別是豐田生產方式）推廣的持續改進文化：第一線人員主動發現浪費與問題，提出小幅調整並立即試行。它強調全員參與與小步快跑，而不是由上而下的一次性改革。與「複利」相通，但更強調現場觀察與習慣。",
+ e:"每週五花十五分鐘，團隊挑一件最煩人的小事（例如重複手動的部署步驟）改掉，半年下來省下大量時間。",
+ t:["效率","累積","流程"],r:[["compounding","小改進有沒有被持續累積，而不是做一次就停？"],["five-whys","這個問題的根本原因找到了嗎，還是只是在貼補丁？"]]},
+{id:"shoshin",n:"初心",en:"Shoshin (Beginner's Mind)",c:"learn",o:"jp",s:"保持新手的心態，不被既有經驗框住。",
+ d:"「初心」在禪宗語境中指不帶成見、保持開放的心態，道元在十三世紀就談過，鈴木俊隆 1970 年的《禪者的初心》將它推廣到西方：專家常因為「已經知道」而看不見新的可能，新手的開放反而容易發現問題。世阿彌在 1424 年也留下「初心忘るべからず」的說法，常被譯為「不忘最初的心意」，側重點與此略有不同，各家解讀不一。",
+ e:"資深工程師接手新專案，先不套用過去的架構，而是像新人一樣問：「這個為什麼要這樣做？」，常能找到被默默接受的舊問題。",
+ t:["學習","謙遜","心態"],r:[["curse-of-knowledge","我是不是因為已經知道，所以不再問基本問題？"],["dunning-kruger","我的自信，有被新的資訊檢驗過嗎？"]]},
+{id:"shi",n:"勢",en:"Shi (Strategic Advantage)",c:"econ",o:"cn",s:"不是硬拚力量，而是創造讓結果自然發生的態勢。",
+ d:"《孫子兵法》有〈勢篇〉，主張善戰者要從「勢」中取得勝利，並以急流能沖走石頭作比喻：同樣的力量，放在不同的位置與條件，效果差很多。可理解為：判斷形勢、順勢布局、借用既有的趨勢與結構，比單靠努力有效。這是古代兵書的觀察，不是可量化的定理，使用時仍要用證據檢驗。",
+ e:"新產品不直接與龍頭比功能，而是切入龍頭忽略的小族群，並借用既有平台的通路，先累積態勢再擴張。",
+ t:["策略","優勢","競爭"],r:[["moat","我是在建立持久的位置優勢，還是只在硬拚？"],["leverage-points","哪個位置，用較小的力量就能推動結果？"]]},
+{id:"buzhan-qubing",n:"不戰而屈人之兵",en:"Winning Without Fighting",c:"econ",o:"cn",s:"最好的勝利，是不必打就讓對方放棄；其次是破壞對方的計畫。",
+ d:"《孫子兵法·謀攻篇》提出「不戰而屈人之兵，善之善者也」，並說最好的用兵是破壞對方的謀略，其次是破壞聯盟，再其次才是出兵，最下策是攻城。直接對抗的成本最高，所以先看能否在謀略、聯盟與談判上取勝。放到現代，就是先問：有沒有不必正面衝突就能達成目標的路？",
+ e:"與其跟競爭對手比價搶客戶，不如找出對方做不到的服務組合，讓客戶根本不需要比價。",
+ t:["策略","競爭","談判"],r:[["positive-sum","這件事有沒有雙方都不必付出代價的做法？"],["prisoners-dilemma","我們是不是被困在兩敗俱傷的競爭裡？"]]},
+{id:"fan-zhe-dao-zhi-dong",n:"反者道之動",en:"Reversal (Wu Ji Bi Fan)",c:"systems",o:"cn",s:"事情發展到極端，常會朝相反方向轉變。",
+ d:"《老子》第四十章說「反者道之動」，後人常以「物極必反」概括：極盛之後常衰，極度壓抑之後常反彈。它提醒我們：趨勢不會直線延伸，要留意極端狀態下的反轉訊號。但它不是預測工具，何時反轉、是否反轉，仍要看具體機制。",
+ e:"某個指標連續創高、所有人都極度樂觀時，先問：支撐它的條件還能維持多久？有哪些自我修正的力量正在累積？",
+ t:["長期","平衡","預測"],r:[["regression-mean","現在的極端值，有多少只是正常波動、之後會回來的？"],["feedback-loop","有沒有平衡的回饋機制，正把極端拉回來？"]]},
+{id:"saiweng",n:"塞翁失馬",en:"Sai Weng Lost His Horse",c:"reason",o:"cn",s:"一件事的好壞，不能只看眼前的結果。",
+ d:"出自《淮南子·人間訓》：邊塞老人的馬跑了，旁人惋惜，他說未必是壞事；後來馬帶回另一匹馬，旁人道賀，他又說未必是好事；兒子騎馬摔斷腿，卻因此免於上戰場。故事的重點不是「壞事會變好事」，而是：在不確定的世界裡，不要太快下結論。",
+ e:"被調去不熟悉的部門，一開始覺得被邊緣化；一年後那個部門成為公司重點。重點不是運氣，而是評估時要留意長期、多面向的影響。",
+ t:["判斷","長期","不確定性"],r:[["resulting","我是因為結果好壞，才判斷決定好壞嗎？"],["second-order","這件事接下來還會連鎖出現什麼好處與代價？"]]},
+{id:"chaxu-geju",n:"差序格局",en:"Differential Mode of Association",c:"org",o:"cn",s:"人際關係像水波一圈圈往外擴，離自己越近，義務與信任越重。",
+ d:"社會學家費孝通在《鄉土中國》（1948）中用這個概念描述傳統中國鄉村社會：每個人以自己為中心，像石頭投入水中形成的波紋，親疏遠近決定相處的規則，而不是人人適用的統一標準。可用來理解為什麼在某些組織裡，「關係」與信任常比正式制度更早發揮作用。這是描述性的理論模型，現代社會並不只有這種模式。",
+ e:"新人加入後發現：同樣的請求，由和主管熟的同事提出比走正式流程快。理解這個現象，才知道要先建立信任關係，同時也要留意它造成的不公平。",
+ t:["關係","制度","人際"],r:[["dunbar","我的信任圈有多大？超過之後靠什麼運作？"],["principal-agent","關係近的人，會不會因此少了該有的監督？"]]},
+{id:"mianzi",n:"面子",en:"Face (Mianzi)",c:"comm",o:"cn",s:"每個人都在乎被尊重的位置，讓人丟臉，往往讓事情更難解決。",
+ d:"華人社會心理學常討論「面子」：它是個人在他人眼中的尊嚴與地位，會因為被稱讚、被公開糾正或被拒絕而增減。溝通時若只顧內容正確、不顧對方面子，對方常進入防衛，而不是修正。做法：私下提醒、先肯定再提出問題、給對方台階。面子不是華人獨有，只是在這個文化裡被特別明確地討論。",
+ e:"發現同事在會議上報錯數據，會後私下告知，並建議他在群組補充更正，而不是當場指出。",
+ t:["溝通","情緒","人際"],r:[["radical-candor","我是在保全面子，還是在迴避該說的話？"],["nonviolent-communication","我能不能用不指責的描述，讓對方保有尊嚴地修正？"]]},
+{id:"yuanqi",n:"緣起",en:"Dependent Origination",c:"systems",o:"other",s:"事物由許多條件共同促成，沒有單獨存在的原因。",
+ d:"佛教的「緣起」說明現象依條件而生、條件改變現象也隨之改變（「此有故彼有，此生故彼生」），常與「無常」並談：沒有固定不變的狀態。從思考工具的角度看，它提醒我們別把問題歸結為單一原因，並留意條件改變時，原本的解法可能失效。這裡取的是思考角度，不涉及宗教主張。",
+ e:"團隊績效下滑時，不只問「是誰的問題」，而是列出條件：人員變動、需求改變、工具老舊、考核方式。條件一起變，結果才會改。",
+ t:["因果","整體","複雜系統"],r:[["emergence","整體出現的行為，是否無法用單一部分解釋？"],["fundamental-attribution","我是不是把結果歸給單一的人，而忽略了條件？"]]},
+{id:"jugaad",n:"節儉式創新",en:"Jugaad",c:"eng",o:"other",s:"資源有限時，用巧思與臨機應變做出夠用的解法。",
+ d:"Jugaad 是印度的口語詞，指在資源不足時即興、省錢、靈活的解決辦法；經由《Jugaad Innovation》（2012）等書傳到商管圈，成為「節儉式創新」的代名詞。優點是快速、低成本、貼近實際需求；風險是品質、安全與長期維護，可能留下技術債。",
+ e:"沒有預算買專用測試設備，就用舊手機和開源軟體組出簡易測試台，先讓團隊每天能驗證；同時記下它的限制，之後再替換。",
+ t:["創新","資源","取捨"],r:[["technical-debt","這個權宜解法的代價，什麼時候要還？"],["mvp","它是在驗證需求，還是已經變成長期解？"]]},
+{id:"six-thinking-hats",n:"六頂思考帽",en:"Six Thinking Hats",c:"decision",s:"把思考拆成六種固定角度，讓大家在同一時間用同一種視角討論，避免各說各話，也避免只看單一面向。",
+ d:"六頂思考帽由愛德華·狄波諾(Edward de Bono)提出，用六種顏色代表六種思考模式：白帽看事實與資料，紅帽談直覺與感受，黑帽找風險與問題，黃帽看價值與好處，綠帽發想新點子與替代方案，藍帽管理流程與做總結。重點在於「同一時間大家戴同一頂帽子」，把角度切換變成有意識的動作，而不是讓樂觀者與悲觀者互相拉扯。這樣能把情緒與事實分開，也讓平常不愛發言的人有明確的切入點。使用時不必六頂全用，可依問題挑選順序。常見做法是藍帽開場定議題，白帽先對齊事實，再依序發散與收斂，最後由藍帽整理結論與下一步。",
+ e:"團隊討論是否要把客服改為自助系統。先由藍帽定下討論目標與順序；白帽整理客訴量與處理時間；黃帽談節省人力與二十四小時服務；黑帽提出年長用戶不會用、出錯無人接手的風險；紅帽讓大家說出對被取代的擔心；綠帽提出先在單一產品線試行、保留轉真人入口的做法；最後藍帽整理成試行方案與檢核指標。",
+ t:["決策", "討論", "多角度", "結構化"],r:[["pre-mortem", "黑帽只想到失敗原因還不夠，能否像事前驗屍一樣，先假設計畫已經失敗，再逐條反推原因？"], ["steelman", "黃帽與黑帽是否都對對立的觀點給了公平的版本，還是只在替自己原本的立場找理由？"], ["confirmation", "這次討論中，哪一頂帽子被我們不自覺地跳過或敷衍，因為它會挑戰我們原本想要的結論？"]],u:1}
+];
+
+const byId=Object.fromEntries(M.map(m=>[m.id,m]));
+const catName=Object.fromEntries(CATS.map(c=>[c.k,c.n]));
+const incoming={};
+M.forEach(m=>m.r.forEach(([to,q])=>{(incoming[to]=incoming[to]||[]).push([m.id,q]);}));
+function related(id){
+  const seen=new Set(), out=[];
+  (byId[id].r||[]).concat(incoming[id]||[]).forEach(([o,q])=>{
+    const other=(o===id)?null:o; if(!other||seen.has(other)||!byId[other])return; seen.add(other); out.push([other,q]);
+  });
+  return out;
+}
+
+const $=s=>document.querySelector(s);
+const grid=$("#grid"), chips=$("#chips"), qEl=$("#q"), countEl=$("#count"), emptyEl=$("#empty");
+const overlay=$("#overlay"), panel=$("#panel"), collideEl=$("#collide");
+let state={cat:"all",q:"",o:"all"}, lastFocus=null;
+
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+
+const tagbar=$("#tagbar");
+const ui={view:"group",sort:"cat",tag:"",lim:{},flat:60,moreTags:false};
+const CI=Object.fromEntries(CATS.map((c,i)=>[c.k,i]));
+const PEEK=8, CHUNK=60;
+const zhCol=(()=>{try{return new Intl.Collator("zh-Hant-TW-u-co-zhuyin");}catch(e){return new Intl.Collator("zh-Hant-TW");}})();
+const isFiltered=()=>!!(ui.tag||state.q.trim()||state.cat!=="all"||state.o!=="all");
+const resetLimits=()=>{ui.lim={}; ui.flat=CHUNK;};
+function matchesBase(m){
+  if(ui.tag&&!m.t.includes(ui.tag))return false;
+  if(state.o!=="all"&&(m.o||"west")!==state.o)return false;
+  const q=state.q.trim().toLowerCase(); if(!q)return true;
+  return [m.n,m.en,m.s,m.d,m.e,m.t.join(" ")].join(" ").toLowerCase().includes(q);
+}
+const matches=m=>(state.cat==="all"||m.c===state.cat)&&matchesBase(m);
+const ORIGINS=[{k:"west",n:"歐美"},{k:"jp",n:"日本"},{k:"cn",n:"華人"},{k:"other",n:"其他"}];
+const originName=Object.fromEntries(ORIGINS.map(o=>[o.k,o.n]));
+const originsEl=$("#origins");
+const oBadge=m=>(m.o&&m.o!=="west"&&originName[m.o])?`<span class="bdg">${originName[m.o]}</span>`:"";
+function renderOrigins(){
+  const base=M.filter(m=>state.cat==="all"||m.c===state.cat);
+  const all=[{k:"all",n:"全部出處"}].concat(ORIGINS);
+  originsEl.innerHTML='<span class="ol">出處</span>'+all.map(o=>{
+    const n=o.k==="all"?base.length:base.filter(m=>(m.o||"west")===o.k).length;
+    return `<button class="chip" type="button" data-o="${o.k}" aria-pressed="${state.o===o.k}">${o.n}<small>${n}</small></button>`;
+  }).join("");
+}
+originsEl.addEventListener("click",e=>{const b=e.target.closest("[data-o]"); if(!b)return; state.o=b.dataset.o; resetLimits(); renderChips(); renderGrid();});
+function renderChips(){
+  const all=[{k:"all",n:"全部"}].concat(CATS);
+  chips.innerHTML=all.map(c=>{
+    const n=M.filter(m=>(c.k==="all"||m.c===c.k)&&matchesBase(m)).length;
+    return `<button class="chip" type="button" data-k="${c.k}" ${c.k!=="all"?`data-cat="${c.k}"`:""} aria-pressed="${state.cat===c.k}">${c.k!=="all"?"<i></i>":""}${c.n}<small>${n}</small></button>`;
+  }).join("");
+  renderOrigins();
+}
+function cardHTML(m){
+  return `<button class="card" type="button" data-id="${m.id}" data-cat="${m.c}">
+    <span class="cat"><i></i>${catName[m.c]}</span>${oBadge(m)}
+    <h3>${esc(m.n)}${m.u?'<span class="bdg">Claude 草稿</span>':""}</h3><span class="en">${esc(m.en)}</span><p>${esc(m.s)}</p></button>`;
+}
+function rowHTML(m){
+  return `<button class="rw" type="button" data-id="${m.id}" data-cat="${m.c}"><i></i><span class="rl"><span class="rn">${esc(m.n)}${oBadge(m)}${m.u?'<span class="bdg">草稿</span>':""}</span><span class="re">${esc(m.en)}</span></span><span class="rs">${esc(m.s)}</span></button>`;
+}
+function itemHTML(m,mode){
+  const on=picked.includes(m.id);
+  return `<div class="cw">${mode==="card"?cardHTML(m):rowHTML(m)}<button class="pick" type="button" data-pick="${m.id}" aria-pressed="${on}" aria-label="${on?"移出":"加入"}碰撞台：${esc(m.n)}">${on?"✓":"+"}</button></div>`;
+}
+function sorted(list){
+  if(ui.sort==="zh")return list.slice().sort((a,b)=>zhCol.compare(a.n,b.n));
+  if(ui.sort==="en")return list.slice().sort((a,b)=>a.en.localeCompare(b.en,"en"));
+  return list;
+}
+function renderTagbar(){
+  const cnt=new Map();
+  M.filter(m=>state.cat==="all"||m.c===state.cat).forEach(m=>m.t.forEach(t=>cnt.set(t,(cnt.get(t)||0)+1)));
+  const tags=[...cnt.entries()].sort((a,b)=>b[1]-a[1]||zhCol.compare(a[0],b[0])).map(x=>x[0]);
+  const TOP=12;
+  let show=ui.moreTags?tags:tags.slice(0,TOP);
+  if(ui.tag&&!show.includes(ui.tag))show=[ui.tag].concat(show);
+  tagbar.innerHTML=`<span class="tl">標籤</span><div class="tgs${ui.moreTags?" scroll":""}">`+
+    `<button class="tg" type="button" data-tg="" aria-pressed="${!ui.tag}">全部<small>${M.filter(m=>state.cat==="all"||m.c===state.cat).length}</small></button>`+
+    show.map(t=>`<button class="tg" type="button" data-tg="${esc(t)}" aria-pressed="${ui.tag===t}">${esc(t)}<small>${cnt.get(t)||0}</small></button>`).join("")+
+    `</div>`+(tags.length>TOP?`<button class="linkbtn" id="moreTags" type="button">${ui.moreTags?"收合標籤":"全部標籤("+tags.length+")"}</button>`:"");
+}
+let io=null;
+function watchMore(){
+  try{
+    if(io){io.disconnect(); io=null;}
+    const b=document.getElementById("moreFlat");
+    if(!b||!("IntersectionObserver" in window))return;
+    io=new IntersectionObserver(es=>{if(es[0].isIntersecting){ui.flat+=CHUNK; renderGrid();}},{rootMargin:"400px"});
+    io.observe(b);
+  }catch(e){}
+}
+function renderGrid(){
+  const list=M.filter(matches), filtered=isFiltered();
+  let html="";
+  if(ui.view==="group"){
+    const cats=state.cat==="all"?CATS:CATS.filter(c=>c.k===state.cat);
+    html=cats.map(c=>{
+      const items=sorted(list.filter(m=>m.c===c.k)); if(!items.length)return "";
+      const lim=ui.lim[c.k]??(filtered?CHUNK:PEEK), shown=items.slice(0,lim), rest=items.length-shown.length;
+      return `<section class="grp" data-cat="${c.k}"><h2 class="gh"><i></i>${c.n}<small>${items.length}</small></h2>
+        <div class="rows">${shown.map(m=>itemHTML(m,"row")).join("")}</div>
+        <div class="gfoot">${rest>0?`<button class="linkbtn" type="button" data-more="${c.k}">顯示更多(還有 ${rest} 個)</button>`:""}${ui.lim[c.k]!==undefined&&lim>PEEK&&items.length>PEEK?`<button class="linkbtn" type="button" data-less="${c.k}">收合</button>`:""}</div></section>`;
+    }).join("");
+  }else{
+    const flat=ui.sort==="cat"?list.slice().sort((a,b)=>CI[a.c]-CI[b.c]):sorted(list);
+    const shown=flat.slice(0,ui.flat), rest=flat.length-shown.length, card=ui.view==="card";
+    html=`<div class="${card?"grid":"rows"}">${shown.map(m=>itemHTML(m,card?"card":"row")).join("")}</div>`+
+      (rest>0?`<div class="gfoot"><button class="linkbtn" id="moreFlat" type="button">顯示更多(還有 ${rest} 個)</button></div>`:"");
+  }
+  grid.innerHTML=html;
+  emptyEl.hidden=list.length>0;
+  countEl.textContent=(ui.view==="group"&&!filtered)?`共 ${M.length} 個模型，每類先顯示前 ${PEEK} 個`:`符合 ${list.length} / ${M.length} 個模型`;
+  document.querySelectorAll("[data-view]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.view===ui.view));
+  renderTagbar(); watchMore();
+}
+function openModel(id,push){
+  const m=byId[id]; if(!m)return;
+  if(overlay.hidden)lastFocus=document.activeElement;
+  const rel=related(id);
+  panel.setAttribute("data-cat",m.c);
+  panel.innerHTML=`<div class="top"><div><span class="cat">${catName[m.c]}</span>${oBadge(m)}
+    <h2 id="pTitle">${esc(m.n)}</h2><div class="en">${esc(m.en)}</div></div>
+    <button class="close" type="button" id="closeBtn">關閉</button></div>
+    <p class="lead">${esc(m.s)}</p>${m.u?'<p class="hint small">這個條目由使用者提出、Claude 草擬，內容尚未逐條查證。</p>':""}
+    <h4>說明</h4><p>${esc(m.d)}</p>
+    <h4>實例</h4><p>${esc(m.e)}</p>
+    <div style="margin-top:18px"><button class="btn ghost long" type="button" data-pick="${id}" aria-pressed="false">加入碰撞台</button></div>
+    <h4>標籤</h4><div class="tags">${m.t.map(t=>`<button class="tag" type="button" data-tag="${esc(t)}">${esc(t)}</button>`).join("")}</div>
+    <h4>搭配思考</h4><div class="rel">${rel.map(([o,q])=>`<button type="button" data-open="${o}" data-cat="${byId[o].c}"><b>${esc(byId[o].n)}</b><span>${esc(q)}</span></button>`).join("")}</div>`;
+  overlay.hidden=false; panel.scrollTop=0; updatePicks(); $("#closeBtn").focus();
+  if(push!==false){try{history.replaceState(null,"","#"+id);}catch(e){}}
+}
+function closeModel(){
+  overlay.hidden=true;
+  try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}
+  if(lastFocus&&lastFocus.focus)lastFocus.focus();
+}
+function allPairs(){
+  const seen=new Set(), out=[];
+  M.forEach(m=>m.r.forEach(([o,q])=>{const k=[m.id,o].sort().join("|"); if(byId[o]&&!seen.has(k)){seen.add(k);out.push([m.id,o,q]);}}));
+  return out;
+}
+const PAIRS=allPairs(); let lastPair=-1;
+function collide(){
+  let i; do{i=Math.floor(Math.random()*PAIRS.length);}while(PAIRS.length>1&&i===lastPair);
+  lastPair=i; const [a,b,q]=PAIRS[i];
+  collideEl.hidden=false;
+  collideEl.innerHTML=`<h2>碰撞</h2><p class="hint">同時用這兩個模型看同一件事，看看會多出什麼問題。</p>
+    <div class="pair">${cardHTML(byId[a])}<span class="x">×</span>${cardHTML(byId[b])}</div>
+    <p class="q">${esc(q)}</p>
+    <div class="row"><button class="btn" type="button" id="again">再抽一組</button><button class="btn ghost" type="button" id="hideCollide">收起</button></div>`;
+}
+
+chips.addEventListener("click",e=>{const b=e.target.closest(".chip"); if(!b)return; state.cat=b.dataset.k; resetLimits(); renderChips(); renderGrid();});
+qEl.addEventListener("input",()=>{state.q=qEl.value; resetLimits(); renderChips(); renderGrid();});
+$("#collideBtn").addEventListener("click",collide);
+document.addEventListener("click",e=>{
+  const card=e.target.closest(".card,.rw"); if(card){openModel(card.dataset.id); return;}
+  const op=e.target.closest("[data-open]"); if(op){openModel(op.dataset.open); return;}
+  const tag=e.target.closest("[data-tag]"); if(tag){ui.tag=tag.dataset.tag; qEl.value=""; state.q=""; state.cat="all"; resetLimits(); renderChips(); renderGrid(); closeModel(); window.scrollTo(0,0); return;}
+  if(e.target.id==="closeBtn"||e.target===overlay){closeModel(); return;}
+  if(e.target.id==="again"){collide(); return;}
+  if(e.target.id==="hideCollide"){collideEl.hidden=true; return;}
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"&&!overlay.hidden)closeModel();
+  if(e.key==="Tab"&&!overlay.hidden){
+    const f=[...panel.querySelectorAll("button")]; if(!f.length)return;
+    const first=f[0], last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault(); last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault(); first.focus();}
+  }
+});
+/* ===== 困境 → 模型（離線關鍵字比對）===== */
+const CUES={
+"opportunity-cost":"取捨 選擇 魚與熊掌 時間不夠 資源有限 該做哪個 犧牲",
+"sunk-cost":"已經投入 捨不得放棄 花了很多 白費 繼續撐 停損 不甘心",
+"second-order":"長遠影響 後續反應 連鎖 短期有效 長期後果 別人會怎麼反應",
+"inversion":"怎樣會失敗 避免失敗 不知道怎麼成功 風險 事前檢討",
+"two-way-door":"不可逆 能不能回頭 要不要試試 做錯能改 猶豫太久 重大決定",
+"safety-margin":"緩衝 預留 估算不準 萬一 最壞情況 排程 趕不上",
+"feedback-loop":"越來越糟 惡性循環 良性循環 愈來愈 自我強化 失控",
+"bottleneck":"卡住 進度慢 變慢 瓶頸 流程塞住 效率上不去 等人",
+"compounding":"長期累積 越早越好 每天一點 慢慢累積 習慣 時間拉長",
+"tipping-point":"突然 臨界 爆發 一夕之間 門檻 轉折",
+"unintended":"副作用 反效果 弄巧成拙 沒想到 適得其反 新制度",
+"path-dependence":"舊系統 歷史包袱 一直都這樣 換不掉 技術債 慣例 轉換成本",
+"confirmation":"只看到 先入為主 認定 偏見 找證據 固執 不聽",
+"anchoring":"報價 開價 談價 第一個數字 討價還價 估價",
+"availability":"最近新聞 聽說 很常發生 擔心 害怕 印象深刻 覺得危險",
+"loss-aversion":"怕失去 不敢 損失 寧可維持 不想放手 取消",
+"survivorship":"成功案例 成功者 都說 創業 成功學 看起來很容易",
+"hindsight":"早就知道 檢討 事後 當初就該 失敗之後 責怪",
+"dunning-kruger":"以為自己懂 新手 剛學 太有自信 自以為",
+"social-proof":"大家都 跟風 別人都 流行 熱門 排隊",
+"fundamental-attribution":"他就是這種人 同事 不負責任 怪別人 歸咎 個性",
+"first-principles":"從頭開始 本質 慣例 為什麼這樣做 重新思考 創新",
+"occam":"找不到原因 除錯 最簡單 想太複雜 問題出在哪",
+"hanlon":"故意 惡意 針對我 誤會 沒回覆 沒回信 被冷落",
+"bayes":"新證據 改變想法 機率 可信 更新看法 判斷",
+"base-rate":"一般來說 通常 類似專案 過去經驗 估計時間 預估",
+"correlation":"因果 同時發生 是不是因為 關聯 數據顯示",
+"circle-of-competence":"不熟 外行 專業 不懂 該不該插手 邊界",
+"map-territory":"報表 儀表板 數字好看 指標 實際不同 簡化",
+"comparative-advantage":"分工 委派 交給別人 自己做 授權 誰來做",
+"prisoners-dilemma":"競爭對手 價格戰 互相 合作 降價 內捲",
+"moat":"競爭優勢 對手追上 差異化 壁壘 護城河",
+"network-effect":"使用者 平台 冷啟動 人越多 社群",
+"diminishing":"投入更多 收穫變少 已經夠好 完美主義 最後一哩",
+"incentives":"獎勵 績效 考核 為什麼他們這樣做 制度 獎金",
+"pareto":"優先順序 太多事 抓重點 少數 最重要 事情太多",
+"goodhart":"kpi 指標被操弄 衝數字 做數字 達標",
+"conway":"團隊溝通 部門牆 介面 架構 跨團隊",
+"peter":"升遷 當主管 晉升 不適任 職涯",
+"parkinson":"拖延 最後一刻 期限 時間用完 趕工",
+"regret-min":"人生選擇 轉職 離職 冒險 安穩 後悔 要不要換工作",
+"pre-mortem":"專案啟動 上線前 風險評估 可能失敗 計畫失敗 團隊討論",
+"satisficing":"選擇太多 比較太久 選擇困難 挑不出來 夠好就好 最佳解",
+"expected-value":"賭一把 機率 期望 報酬 值不值得 勝算 投資",
+"option-value":"保留彈性 先不決定 綁死 供應商 試用 租還是買",
+"decision-journal":"記錄決定 決策紀錄 事後檢討 重要決定 寫下來",
+"small-bets":"先試試看 小實驗 試點 原型 不確定 驗證",
+"eisenhower":"緊急 重要 優先順序 被打斷 救火 沒時間做重要的事",
+"ooda":"快速變化 事故 應變 反應速度 競爭節奏",
+"precommitment":"意志力 自制 忍不住 說到做不到 習慣養成 自動扣款",
+"stocks-flows":"累積 水位 人力 技術債 存款 流入 流出",
+"delay":"沒立刻見效 調整太多 忽冷忽熱 耐心 等待結果 招募 過度調整",
+"emergence":"整體 互動 文化 氣氛 交通 沒人想要 自然出現",
+"redundancy":"備援 備份 保險 冗餘 以防萬一 容錯",
+"leverage-points":"改變很難 事倍功半 根本原因 從哪裡著手 小改動大影響",
+"antifragile":"壓力 衝擊 變強 韌性 故障演練 從失敗中學習",
+"spof":"只有一個人會 全部停擺 單點 依賴 掛掉 壞了就完了",
+"entropy":"過時 腐化 維護 越來越亂 文件過期 沒人整理 衰敗",
+"policy-resistance":"推不動 改革失敗 大家繞過 部門對立 目標不同 阻力",
+"littles-law":"同時進行 在製品 排隊 等很久 太多進行中 交付時間",
+"overconfidence":"很有把握 一定會 太樂觀 預測失準 九成把握",
+"planning-fallacy":"工期 估算 又延誤 低估時間 超時 超支 排程",
+"framing":"換個說法 怎麼表達 說法不同 包裝 溝通方式",
+"endowment":"捨不得丟 我的作品 不想賣 自己寫的 估價偏高",
+"status-quo":"一直都這樣 懶得改 維持現狀 不想換 預設值",
+"halo":"第一印象 他很優秀所以 面試 外表 光環 一個優點",
+"resulting":"結果好所以 運氣 賺錢就是對 失敗就是錯 事後評價決策",
+"recency":"最近的表現 最近幾次 近期 剛發生 年度考核",
+"self-serving":"都是別人的錯 歸功於自己 推卸 外在因素 成功是我的",
+"curse-of-knowledge":"寫文件 教新人 說明看不懂 溝通不良 老手 初學者",
+"illusion-of-control":"我能控制 干預 瞎操心 掌控感 不斷調整 隨機",
+"bias-blind-spot":"別人有偏見 我很客觀 知道偏誤 自我檢視 盲點",
+"steelman":"辯論 吵架 說服 不同意見 對方的論點 技術選型 意見不合",
+"falsifiability":"怎麼都說得通 無法被推翻 驗證 假設 理論 證明我錯",
+"confounding":"是不是另有原因 共同原因 看起來有關 第三個因素 研究",
+"regression-mean":"之後自然變好 最差的一次 極端 運氣 改善不是因為 業績墊底",
+"simpsons-paradox":"整體與分組相反 平均掩蓋 分組 數字矛盾 整體趨勢",
+"small-numbers":"樣本太少 只有幾個人 調查人數 小樣本 以偏概全",
+"chestertons-fence":"舊規則 不知道為什麼 刪掉 接手舊系統 奇怪的檢查 沒人知道原因",
+"five-whys":"根本原因 事故檢討 為什麼會這樣 一直出問題 追問 事後分析",
+"mece":"分類 拆解 問題結構 有遺漏 重複 分析框架 結構化",
+"burden-of-proof":"宣稱 誇大 有證據嗎 十倍 神奇 聽起來太好 行銷說法",
+"signal-noise":"每天波動 數據起伏 小幅下降 要不要反應 隨機 趨勢",
+"fermi":"大概多少 粗估 數量級 估算市場 不知道有多少 快速估計",
+"type-errors":"誤報 漏報 誤判 門檻 警報 過濾 寧可錯殺",
+"supply-demand":"價格 缺貨 供不應求 漲價 過剩 稀缺 票價",
+"economies-of-scale":"量大成本低 規模 攤提 固定成本 單位成本",
+"switching-costs":"換系統 遷移 鎖定 換不掉 轉換 學習成本",
+"winner-takes-most":"贏家通吃 第一名 壟斷 市場龍頭 後來者 平台競爭",
+"marginal-thinking":"多一個 再多做一點 邊際 增量 值不值得多投入",
+"tragedy-commons":"共用資源 共同預算 沒人負責成本 過度使用 搭便車",
+"principal-agent":"代理 委託 外包 業務獎金 衝獎金 獎金制度 承諾做不到 利益不一致 替我做事",
+"adverse-selection":"資訊不對等 篩選 最糟的客戶 劣幣 二手車 保險 招募",
+"moral-hazard":"有人兜底 有保險 不怕出錯 有人把關 放鬆警覺 風險轉嫁",
+"positive-sum":"雙贏 合作 零和 共享 把餅做大 互利",
+"schelling-point":"約定俗成 預設 沒講地點 協調 標準 慣例",
+"disruption":"新進者 低端市場 對手崛起 被取代 創新 便宜夠用",
+"brooks-law":"專案延誤 加人 增援 趕進度 新人 人力不足",
+"communication-paths":"人太多 開會冗長 溝通成本 團隊變大 協調 人數",
+"two-pizza":"小團隊 團隊規模 拆分團隊 自主 小隊",
+"dunbar":"公司變大 默契失效 一百五十 組織成長 不認識 人變多",
+"psychological-safety":"不敢說 怕被罵 犯錯 回報問題 團隊文化 責怪 不敢提問",
+"bikeshedding":"小事吵很久 顏色 細節爭論 會議離題 容易插話 瑣碎",
+"diffusion-responsibility":"沒人回 以為別人會處理 群組 沒人負責 責任不清 沒人處理",
+"groupthink":"大家都同意 沒人反對 一致 氣氛 不敢反對 團體決議",
+"abilene-paradox":"沒人想要卻通過 都以為別人想要 表面共識 其實沒人支持 默默同意",
+"pygmalion":"期望 看好 培養 新人潛力 低期待 帶人",
+"dri":"誰負責 負責人 分工不清 共同負責 追進度 指定一個人",
+"scope-creep":"需求一直加 範圍變大 順便加 又多一個功能 需求變更 專案膨脹",
+"active-listening":"沒在聽 誤會 聽不懂 打斷 先聽完 對方說話 複述",
+"pyramid-principle":"報告 簡報 結論先講 說不清楚 太冗長 主管不耐煩 重點",
+"ladder-of-inference":"他一定是故意的 我覺得他 臆測 沒回訊息 腦補 想太多",
+"nonviolent-communication":"吵架 指責 你總是 情緒化 說話很衝 衝突 溝通不良",
+"radical-candor":"不敢說實話 給回饋 太客氣 太嚴厲 績效面談 指出問題",
+"write-it-down":"會議結論 說好的 各說各話 沒記錄 口頭約定 後來變卦",
+"audience-first":"對象不同 聽不懂 太技術 向客戶說明 跨部門 講重點",
+"open-questions":"訪談 使用者研究 問問題 得不到資訊 只回答是或否 引導",
+"spaced-repetition":"背不起來 一直忘 考試準備 記單字 複習 臨時抱佛腳",
+"retrieval-practice":"讀了就忘 重讀 看書沒用 自我測驗 考試前 筆記",
+"deliberate-practice":"練很久沒進步 瓶頸 停滯 重複練習 練習方法 專家",
+"feynman-technique":"以為自己懂 講不清楚 教別人 解釋 學新東西 懂了沒",
+"desirable-difficulty":"學得很辛苦 太輕鬆 練習很吃力 學習方法 記不久",
+"interleaving":"一次練一種 分類練習 題型 混著練 不知道用什麼方法",
+"growth-mindset":"我就是不行 沒天分 怕失敗 放棄 挑戰 失敗後",
+"fluency-illusion":"看起來很熟 一看就懂 做不出來 看影片 螢光筆 重複閱讀",
+"mvp":"先做出來 驗證需求 做太多 新產品 創業想法 沒人用 上線",
+"yagni":"以後可能會用到 先做好彈性 過度設計 預留 不需要的功能",
+"premature-optimization":"效能 太慢 優化 先最佳化 瓶頸 不知道慢在哪",
+"technical-debt":"先這樣做 之後再改 趕上線 程式越來越難改 暫時寫死 重構",
+"jobs-to-be-done":"使用者需求 為什麼買 競爭對手 產品定位 客戶要什麼",
+"postel-law":"相容 格式 介面設計 輸入驗證 api 協定 太嚴格",
+"leaky-abstractions":"框架 底層 不懂原理 抽象層 黑盒子 出問題才發現",
+"hyrums-law":"改了就壞 客戶依賴 向下相容 api 變更 沒寫在文件 行為改變",
+"shu-ha-ri":"照著做 要不要改規則 基本功 跳過基礎 學新技術 老師教的 想創新",
+"nemawashi":"會議前先溝通 事前協調 先私下說 臨時反對 提案 獲得支持 先找主管談",
+"honne-tatemae":"客氣話 場面話 他沒有說不 慎重考慮 看不出真正想法 不好意思拒絕 含蓄",
+"kaizen":"持續改進 小改善 流程浪費 一直重複 每天進步 不要大改革 現場問題",
+"shoshin":"老經驗 以為都懂 固有想法 資深 看不到新做法 新手視角 重新看",
+"shi":"硬拚 資源不如對手 借力使力 順勢 時機 布局 弱勢怎麼贏",
+"buzhan-qubing":"價格戰 惡性競爭 正面對決 不想吵架 談判 有沒有更省力的方法 競爭對手",
+"fan-zhe-dao-zhi-dong":"過熱 一路上漲 極端 物極必反 盛極而衰 反彈 泡沫",
+"saiweng":"塞翁失馬 禍福 好事壞事 失敗了 被降職 沒選上 運氣",
+"chaxu-geju":"走後門 靠關係 人情 親疏 自己人 不公平 熟人先處理 關係好辦事",
+"mianzi":"丟臉 下不了台 當眾糾正 給面子 傷自尊 台階 當場被指出錯誤",
+"yuanqi":"單一原因 找人負責 為什麼會這樣 多重因素 條件改變 一切都在變 環境變了",
+"jugaad":"預算不夠 資源有限 湊合 土法煉鋼 臨時解法 沒有工具 先用現有的",
+"six-thinking-hats":"吵不完 各說各話 想不周全 開會沒結論 只看缺點 太樂觀 漏掉什麼 換個角度"
+};
+const STOP=new Set("的了是我你他她它在有就也都這那和與及或把被讓嗎呢吧啊".split(""));
+function bigrams(text){
+  const s=String(text).toLowerCase().replace(/[^一-鿿a-z0-9]+/g," ");
+  const set=new Set();
+  s.split(" ").forEach(w=>{for(let i=0;i<w.length-1;i++){const a=w[i],b=w[i+1]; if(STOP.has(a)||STOP.has(b))continue; set.add(a+b);}});
+  return set;
+}
+const IDX=M.map(m=>({id:m.id,name:bigrams(m.n+" "+m.en),cue:bigrams(CUES[m.id]||""),tag:bigrams(m.t.join(" ")),txt:bigrams([m.s,m.d,m.e].join(" "))}));
+const DF=new Map();
+IDX.forEach(x=>{new Set([...x.name,...x.cue,...x.tag,...x.txt]).forEach(b=>DF.set(b,(DF.get(b)||0)+1));});
+const idf=b=>Math.log(1+M.length/(DF.get(b)||1));
+function score(problem){
+  const inp=bigrams(problem), text=problem.toLowerCase();
+  return IDX.map(x=>{
+    let sc=0;
+    inp.forEach(b=>{const w=x.name.has(b)?4:x.cue.has(b)?3:x.tag.has(b)?2:x.txt.has(b)?1:0; if(w)sc+=w*idf(b);});
+    const phrases=(CUES[x.id]||"").split(" ").filter(Boolean);
+    const hit=phrases.filter(p=>text.includes(p.toLowerCase()));
+    sc+=hit.length*6;
+    const near=phrases.filter(p=>!hit.includes(p)&&[...bigrams(p)].some(b=>inp.has(b)));
+    return {id:x.id,sc,why:hit.concat(near).slice(0,2)};
+  }).filter(r=>r.sc>=3).sort((a,b)=>b.sc-a.sc).slice(0,5);
+}
+/* 預留：之後可在這裡接上 AI，傳入困境文字，回傳 [{id, why:[…]}] 的排序結果；回傳 null 則使用上面的關鍵字比對。 */
+async function rankWithAI(problem){return null;}
+const EXAMPLE="這個專案已經投入半年，效果一直不好，我很捨不得放棄，又怕繼續下去更糟。團隊也開始互相責怪，說當初就該早點檢討。";
+async function solve(){
+  const p=$("#problem").value.trim(), box=$("#results");
+  if(p.length<4){box.innerHTML='<p class="hint small">請多描述一點，至少一句話。</p>'; return;}
+  const res=(await rankWithAI(p))||score(p);
+  if(!res.length){box.innerHTML='<p class="q">沒有找到明顯對應的模型。試著寫得更具體：誰、做了什麼、你擔心什麼。也可以按「隨機碰撞」換個角度。</p>'; return;}
+  const ids=res.map(r=>r.id);
+  const pair=PAIRS.find(([a,b])=>ids.includes(a)&&ids.includes(b));
+  let cross="";
+  if(pair)cross=`<b>${esc(byId[pair[0]].n)} × ${esc(byId[pair[1]].n)}</b>:${esc(pair[2])}`;
+  else if(ids.length>1)cross=`先用「${esc(byId[ids[0]].n)}」看一次，再用「${esc(byId[ids[1]].n)}」看一次。兩個結論一致嗎？哪裡互相衝突？`;
+  box.innerHTML=`<h3 class="rt">可能用得上的模型</h3><div class="rel">${res.map(r=>{const m=byId[r.id];
+    return `<button type="button" data-open="${m.id}" data-cat="${m.c}"><b>${esc(m.n)}</b><span>${r.why.length?"對應："+r.why.map(w=>`「${esc(w)}」`).join("")+"。":""}${esc(m.s)}</span></button>`;}).join("")}</div>
+    ${cross?`<p class="q">${cross}</p>`:""}
+    <p class="hint small">目前是關鍵字比對，不是真正理解語意，結果僅供參考。</p>`;
+}
+$("#solveBtn").addEventListener("click",solve);
+$("#exBtn").addEventListener("click",()=>{$("#solveBox").open=true; $("#problem").value=EXAMPLE; solve();});
+
+/* ===== 自選 2–3 個模型的自由碰撞 ===== */
+const LENS={
+"opportunity-cost":"選這個的同時，我放棄了什麼？",
+"sunk-cost":"我現在的理由，有多少只是因為過去已經投入？",
+"second-order":"這個結果之後，別人會怎麼反應，然後又會怎樣？",
+"inversion":"怎樣做一定會失敗？",
+"two-way-door":"這個決定做錯了，能回頭嗎？",
+"safety-margin":"如果估計錯了，我的緩衝夠嗎？",
+"feedback-loop":"有沒有結果回頭加強原因的循環？",
+"bottleneck":"整體被哪一個最窄的環節卡住？",
+"compounding":"這件事做久了，會累積出什麼？",
+"tipping-point":"離質變的門檻還有多遠？",
+"unintended":"這個做法最可能造成什麼沒人想要的副作用？",
+"path-dependence":"現在的限制，有多少只是歷史遺留？",
+"confirmation":"我是不是只在找支持自己的證據？",
+"anchoring":"我的判斷是不是被最先聽到的數字帶著走？",
+"availability":"我覺得常發生，是真的常發生，還是容易想起來？",
+"loss-aversion":"我是怕損失，還是真的覺得值得？",
+"survivorship":"我看到的案例，是不是都是活下來的？",
+"hindsight":"當時的我，真的能知道這件事嗎？",
+"dunning-kruger":"我對這件事的掌握，有外部證據嗎？",
+"social-proof":"別人都這樣做，是因為有效，還是大家互相跟隨？",
+"fundamental-attribution":"我把他的行為歸因於個性，是不是忽略了他所處的情境？",
+"first-principles":"剝掉慣例之後，真正不能違背的限制是什麼？",
+"occam":"有沒有更簡單、需要更少假設的解釋？",
+"hanlon":"這件事能不能用疏忽解釋，而不必假設惡意？",
+"bayes":"新證據出現後，我的看法應該改多少？",
+"base-rate":"這類事情一般多常發生？",
+"correlation":"這兩件事之間，真的有因果嗎？",
+"circle-of-competence":"這件事在我懂的範圍內嗎？",
+"map-territory":"我看的圖（指標、報表），省略了現實中的什麼？",
+"comparative-advantage":"我最該把時間花在哪裡，其他的能交給誰？",
+"prisoners-dilemma":"如果每個人都只顧自己最有利的選擇，整體會變怎樣？",
+"moat":"對手要追上我，需要付出什麼？",
+"network-effect":"多一個人加入，對其他人的價值會增加嗎？",
+"diminishing":"再多投入一單位，新增的收穫還有多少？",
+"incentives":"這些人實際上被獎勵去做什麼？",
+"pareto":"哪少數的因素，造成了大部分的結果？",
+"goodhart":"這個指標被當成目標之後，還能反映真實嗎？",
+"conway":"這個結果，是不是組織溝通結構的投影？",
+"peter":"這個人在新位置上，還在自己擅長的地方嗎？",
+"parkinson":"我給的時間，是不是讓工作自己膨脹了？",
+"regret-min":"八十歲回頭看，哪個選擇比較不會後悔？",
+"pre-mortem":"假設一年後徹底失敗了，最可能的原因是什麼？",
+"satisficing":"什麼程度就算夠好，可以停止比較了？",
+"expected-value":"把機率和報酬相乘後，哪個選項較好，最壞的結果我承受得起嗎？",
+"option-value":"保留彈性的價值，比維持彈性的成本高嗎？",
+"decision-journal":"我現在的判斷、理由和信心，有寫下來嗎？",
+"small-bets":"能不能先用一個便宜的小實驗試試看？",
+"eisenhower":"這件事重要嗎？還是只是緊急？",
+"ooda":"我的觀察與判斷，有跟上現況的變化嗎？",
+"precommitment":"現在能不能先把未來的自己綁住？",
+"stocks-flows":"這裡累積的存量是什麼，流入和流出各是多少？",
+"delay":"行動到結果之間有多長的時間差？",
+"emergence":"整體的現象，是不是來自個體之間的互動，而不是個體本身？",
+"redundancy":"如果這一部分壞了，有備援嗎？",
+"leverage-points":"哪個位置做小改變，會帶來最大的影響？",
+"antifragile":"這個系統遇到壓力時，是會壞、撐住，還是會變強？",
+"spof":"哪個環節壞了，會讓全部停擺？",
+"entropy":"如果不持續維護，這個東西會變成什麼樣？",
+"policy-resistance":"各方有不同的目標嗎？硬推會被抵消嗎？",
+"littles-law":"同時進行的工作量，是不是比處理的速度還多？",
+"overconfidence":"我真的有那麼確定嗎？",
+"planning-fallacy":"類似的事，過去實際花了多少時間？",
+"framing":"換一種說法，我的選擇會改變嗎？",
+"endowment":"如果這東西不是我的，我願意用這個價格買嗎？",
+"status-quo":"我維持現狀，是因為它好，還是因為不想改變？",
+"halo":"我對這個人整體的好印象，是不是來自某一個突出的優點？",
+"resulting":"我評價的是決策本身，還是它的結果？",
+"recency":"我看的是長期的規律，還是最近發生的事？",
+"self-serving":"我對成功與失敗的解釋，對自己和對別人用的是同一把尺嗎？",
+"curse-of-knowledge":"完全不懂的人，看得懂這個說明嗎？",
+"illusion-of-control":"這件事，我真的能影響嗎？",
+"bias-blind-spot":"我有被同樣的偏誤影響，只是自己沒發現嗎？",
+"steelman":"我能不能把對方的論點講得比他自己更好？",
+"falsifiability":"什麼樣的證據會證明我是錯的？",
+"confounding":"有沒有第三個因素，同時影響了這兩件事？",
+"regression-mean":"這次的極端結果，下一次會不會自然回到平均？",
+"simpsons-paradox":"把資料依重要的條件分組後，結論會不會相反？",
+"small-numbers":"這個結論的樣本夠大嗎？",
+"chestertons-fence":"這個規則當初為什麼存在？",
+"five-whys":"再問一次為什麼，會追到什麼原因？",
+"mece":"我的分類，有沒有重疊或遺漏？",
+"burden-of-proof":"提出這個主張的人，拿出了什麼證據？",
+"signal-noise":"這個變化，是真的訊號還是隨機的雜訊？",
+"fermi":"把它拆成幾個能猜的因子，數量級大概是多少？",
+"type-errors":"誤報與漏報，哪一種的代價比較難承受？",
+"supply-demand":"價格反映了什麼樣的稀缺或過剩？",
+"economies-of-scale":"規模變大後，單位成本會下降多少？",
+"switching-costs":"換掉現有的選擇，要付出什麼代價？",
+"winner-takes-most":"這個市場，第一名會拿走大部分的價值嗎？",
+"marginal-thinking":"再多做一單位，新增的成本與收益是多少？",
+"tragedy-commons":"誰在使用共有資源，卻沒有承擔成本？",
+"principal-agent":"代替我做事的人，和我的利益一致嗎？",
+"adverse-selection":"在資訊不對等下，誰最想參與這個交易？",
+"moral-hazard":"有人替他承擔風險後，他的行為改變了嗎？",
+"positive-sum":"這是零和，還是合作能把餅做大？",
+"schelling-point":"在無法溝通的情況下，大家會自然選擇哪一個？",
+"disruption":"有沒有被忽略的低端市場，正在慢慢往上走？",
+"brooks-law":"加人，會不會反而更慢？",
+"communication-paths":"人數增加後，溝通路徑增加了多少？",
+"two-pizza":"這個團隊，小到能快速溝通嗎？",
+"dunbar":"組織大到靠熟悉度運作會失效嗎？",
+"psychological-safety":"成員敢不敢說出疑問或承認錯誤？",
+"bikeshedding":"我們的討論時間，是不是花在容易插話的小事上？",
+"diffusion-responsibility":"這件事，是不是每個人都以為別人會處理？",
+"groupthink":"團隊的一致，是不是壓抑了不同意見？",
+"abilene-paradox":"是大家真的想要，還是都以為別人想要？",
+"pygmalion":"我對他的期待，是不是正在影響他的表現？",
+"dri":"這件事，有一個明確的負責人嗎？",
+"scope-creep":"範圍是不是一點一點變大了？",
+"active-listening":"我能不能用自己的話，把對方剛剛說的複述到讓他點頭？",
+"pyramid-principle":"如果對方只聽我第一句話，他需要知道的結論有沒有講出來？",
+"ladder-of-inference":"我現在的結論，哪些是看到的事實，哪些是我加上的解讀？",
+"nonviolent-communication":"我說的是可觀察的行為，還是對他的評斷？",
+"radical-candor":"我是真的關心他，並且直接說出了需要改的事嗎？",
+"write-it-down":"如果現在把決定寫成三行字，大家會不會發現彼此理解不同？",
+"audience-first":"這個人現在最需要的資訊是什麼，我給的版本符合嗎？",
+"open-questions":"我的問題，是不是已經把答案放進去了？",
+"spaced-repetition":"我下一次複習，安排在什麼時候？",
+"retrieval-practice":"不看資料的話，我現在能自己說出多少？",
+"deliberate-practice":"我練的是自己最弱的那一小段嗎？有人或工具給我回饋嗎？",
+"feynman-technique":"我能不能用外行人聽得懂的話，把這件事講完整？",
+"desirable-difficulty":"這份吃力，是在幫我記得更久，還是只是太難了？",
+"interleaving":"我是不是一直在練同一種題型，所以不需要判斷用什麼方法？",
+"growth-mindset":"這次失敗告訴我哪些可以調整的地方？",
+"fluency-illusion":"我覺得很熟，是因為我會，還是因為我剛看過？",
+"mvp":"要驗證我最關鍵的假設，最小的做法是什麼？",
+"yagni":"這個功能，現在真的有人需要，還是我在預想未來？",
+"premature-optimization":"我量過了嗎？真正的瓶頸是在這裡嗎？",
+"technical-debt":"這個捷徑，我打算什麼時候、用什麼方式還？",
+"jobs-to-be-done":"使用者是想用它完成什麼事？目前用什麼方式在湊合？",
+"postel-law":"我該在哪裡寬容接收，又該在哪裡嚴格拒絕？",
+"leaky-abstractions":"這個抽象壞掉時，我知道要往哪一層去查嗎？",
+"hyrums-law":"如果我改變這個行為，誰可能已經依賴它了？",
+"shu-ha-ri":"我現在在守、破、離的哪一階段？有沒有跳過前面？",
+"nemawashi":"正式會議之前，有哪些關鍵的人應該先聽過、先表達意見？",
+"honne-tatemae":"對方現在說的是公開立場，還是真實想法？我有創造安全的場合讓他說嗎？",
+"kaizen":"今天能做的最小改進是什麼？誰在現場最清楚問題？",
+"shoshin":"如果我完全不知道答案，我會怎麼問這個問題？",
+"shi":"我現在的位置與條件，有沒有哪裡能借力，而不是硬撐？",
+"buzhan-qubing":"有沒有不必正面對抗就達成目標的方式？",
+"fan-zhe-dao-zhi-dong":"這個趨勢走到極端時，哪些力量會把它拉回來？",
+"saiweng":"如果現在看起來的壞（或好）只是第一步，後面可能怎麼發展？",
+"chaxu-geju":"這件事是依規則處理，還是依關係遠近處理？兩者各有什麼代價？",
+"mianzi":"這句話會不會讓對方在別人面前下不了台？有沒有給他台階？",
+"yuanqi":"這個結果是由哪些條件共同促成的？條件改變時會怎樣？",
+"jugaad":"在現有資源下，最快讓它動起來的方式是什麼？代價是什麼？",
+"six-thinking-hats":"我們現在是不是只用了一兩種角度在看這件事？還有哪個視角（事實、感受、風險、價值、創意、流程）被漏掉了？"
+};
+const ROLE={decision:"該怎麼取捨與下決定",systems:"事情之間如何互相牽動",bias:"你的判斷可能在哪裡偏掉",reason:"證據與推論是否站得住",econ:"各方的誘因與競爭",org:"人與組織的運作",comm:"訊息是否被正確傳達與理解",learn:"怎樣學得更牢更有效",eng:"系統與產品該怎麼做才站得住"};
+const lensOf=id=>LENS[id]||byId[id].s;
+const PAIR_T=[
+["並列",(A,B,p)=>`${p}先分別回答兩個鏡頭。「${A.n}」問：${lensOf(A.id)} 「${B.n}」問：${lensOf(B.id)} 兩個答案放在一起，是互相印證，還是互相衝突？`],
+["先後",(A,B,p)=>`${p}先回答：${lensOf(A.id)} 答案確定之後，再問：${lensOf(B.id)} 後一題的答案有改變嗎？`],
+["先後（反過來）",(A,B,p)=>`${p}先回答：${lensOf(B.id)} 答案確定之後，再問：${lensOf(A.id)} 後一題的答案有改變嗎？`],
+["取捨",(A,B,p)=>`${p}假設「${A.n}」與「${B.n}」給出相反的建議，你比較不願意放棄哪一個？為什麼？`],
+["盲點",(A,B,p)=>`${p}用「${A.n}」看這件事時，最容易忽略什麼？「${B.n}」補得上嗎？反過來呢？`],
+["角度",(A,B,p)=>A.c===B.c
+  ?`${p}「${A.n}」與「${B.n}」同屬${catName[A.c]}。如果兩者答案一致，你有多少把握？如果不一致，是哪個前提不同？`
+  :`${p}「${A.n}」偏向看${ROLE[A.c]}，「${B.n}」偏向看${ROLE[B.c]}。合起來看，哪個面向原本沒被你注意到？`],
+["反證",(A,B,p)=>`${p}如果你的結論錯了，最可能是因為「${A.n}」還是「${B.n}」沒有看清楚的地方？`],
+["下一步",(A,B,p)=>`${p}把兩個鏡頭的結論各寫成一句話，再決定：最小、可以回頭的下一步是什麼？`]
+];
+const TRI_T=[
+["三鏡同看",(L,p)=>`${p}三個鏡頭同時看：${L.map(m=>`「${m.n}」問：${lensOf(m.id)}`).join(" ")} 三者指向同一個方向嗎？`],
+["意見不同時",(L,p)=>`${p}如果其中一個鏡頭與另外兩個不同，你會先相信哪一個？寫下理由。`],
+["最大衝突",(L,p)=>`${p}${L.map(m=>m.n).join("、")}之中，哪兩個之間的衝突最大？那個衝突，就是這件事最需要釐清的地方。`],
+["下一步",(L,p)=>`${p}把三個鏡頭的結論各寫成一句話，再決定：最小、可以回頭的下一步是什麼？`]
+];
+function shuffle(a){a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a;}
+function genItems(ids,topic,pairsList){
+  const L=ids.map(i=>byId[i]), p=topic?`針對「${topic}」，`:"", items=[];
+  const pairs=[]; for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++)pairs.push([L[i],L[j]]);
+  pairs.forEach(([A,B])=>{const cur=pairsList.find(([a,b])=>(a===A.id&&b===B.id)||(a===B.id&&b===A.id));
+    if(cur)items.push([`已寫好的交叉問題：${A.n} × ${B.n}`,cur[2]]);});
+  if(L.length===3)shuffle(TRI_T).slice(0,3).forEach(([lab,fn])=>items.push([`${lab}:${L.map(m=>m.n).join(" × ")}`,fn(L,p)]));
+  const pool=shuffle(PAIR_T.map((_,i)=>i)); let k=0;
+  pairs.forEach(([A,B])=>{for(let n=0;n<(L.length===2?4:1);n++){const [lab,fn]=PAIR_T[pool[k++%pool.length]]; items.push([`${lab}:${A.n} × ${B.n}`,fn(A,B,p)]);}});
+  return items;
+}
+let picked=[];
+function updatePicks(){
+  document.querySelectorAll("[data-pick]").forEach(b=>{
+    const on=picked.includes(b.dataset.pick); b.setAttribute("aria-pressed",on);
+    if(b.classList.contains("long"))b.textContent=on?"移出碰撞台":"加入碰撞台";
+    else{b.textContent=on?"✓":"+"; b.setAttribute("aria-label",(on?"移出":"加入")+"碰撞台："+byId[b.dataset.pick].n);}
+  });
+  const tray=$("#tray"); tray.hidden=picked.length===0;
+  $("#trayChips").innerHTML=picked.map(id=>`<span class="tchip" data-cat="${byId[id].c}">${esc(byId[id].n)}<button type="button" data-unpick="${id}" aria-label="移除${esc(byId[id].n)}">×</button></span>`).join("");
+  $("#genBtn").disabled=picked.length<2;
+  $("#trayNote").textContent=picked.length===1?"再選 1–2 個":picked.length===3?"已選滿 3 個":"";
+  document.body.style.paddingBottom=picked.length?"120px":""; document.documentElement.style.setProperty("--tray",picked.length?"84px":"0px");
+  if(picked.length<2)$("#free").hidden=true;
+}
+function showFree(scroll){
+  if(picked.length<2)return;
+  $("#free").hidden=false; genFree();
+  if(scroll){try{$("#free").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}catch(e){}}
+}
+function genFree(){
+  if(picked.length<2)return;
+  $("#freeSel").textContent="目前選擇："+picked.map(i=>byId[i].n).join(" × ");
+  const items=genItems(picked,$("#topic").value.trim(),PAIRS);
+  $("#freeOut").innerHTML=`<div class="qs">${items.map(([l,t])=>`<div class="qi"><small>${esc(l)}</small>${esc(t)}</div>`).join("")}</div>`;
+}
+document.addEventListener("click",e=>{
+  const pk=e.target.closest("[data-pick]");
+  if(pk){const id=pk.dataset.pick, i=picked.indexOf(id);
+    if(i>=0)picked.splice(i,1);
+    else if(picked.length>=3){$("#trayNote").textContent="最多選 3 個，請先移除一個。"; return;}
+    else picked.push(id);
+    updatePicks(); return;}
+  const up=e.target.closest("[data-unpick]"); if(up){picked=picked.filter(x=>x!==up.dataset.unpick); updatePicks(); return;}
+  if(e.target.id==="clearBtn"){picked=[]; updatePicks(); return;}
+  if(e.target.id==="genBtn"){showFree(true); return;}
+  if(e.target.id==="regen"){genFree(); return;}
+});
+
+/* ===== 大量模型的瀏覽 ===== */
+function savePrefs(){try{localStorage.setItem("mm-prefs",JSON.stringify({view:ui.view,sort:ui.sort}));}catch(e){}}
+try{const p=JSON.parse(localStorage.getItem("mm-prefs")||"{}"); if(["group","list","card"].includes(p.view))ui.view=p.view; if(["cat","zh","en"].includes(p.sort))ui.sort=p.sort;}catch(e){}
+$("#sort").value=ui.sort;
+$("#sort").addEventListener("change",e=>{ui.sort=e.target.value; savePrefs(); resetLimits(); renderGrid();});
+document.addEventListener("click",e=>{
+  const v=e.target.closest("[data-view]"); if(v){ui.view=v.dataset.view; savePrefs(); resetLimits(); renderGrid(); return;}
+  const mo=e.target.closest("[data-more]"); if(mo){const k=mo.dataset.more, cur=ui.lim[k]??(isFiltered()?CHUNK:PEEK); ui.lim[k]=cur<=PEEK?CHUNK:cur+CHUNK; renderGrid(); return;}
+  const le=e.target.closest("[data-less]"); if(le){const k=le.dataset.less; ui.lim[k]=PEEK; renderGrid(); const g=document.querySelector(`.grp[data-cat="${k}"]`); if(g)g.scrollIntoView({block:"start"}); return;}
+  const tg=e.target.closest("[data-tg]"); if(tg){ui.tag=ui.tag===tg.dataset.tg?"":tg.dataset.tg; resetLimits(); renderChips(); renderGrid(); return;}
+  if(e.target.id==="moreTags"){ui.moreTags=!ui.moreTags; renderTagbar(); return;}
+  if(e.target.id==="moreFlat"){ui.flat+=CHUNK; renderGrid(); return;}
+  if(e.target.id==="totop"){window.scrollTo(0,0); return;}
+});
+window.addEventListener("scroll",()=>{$("#totop").hidden=window.scrollY<900;},{passive:true});
+document.addEventListener("keydown",e=>{
+  if(e.key==="/"&&!/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)&&overlay.hidden){e.preventDefault(); qEl.focus();}
+});
+
+
+/* ===== 新增模型：提案、Claude 判斷、資料庫儲存 ===== */
+const caps={db:null,sample:null};
+const clip=(v,n)=>String(v==null?"":v).trim().slice(0,n);
+const slug=v=>String(v||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,60);
+function sanitize(x){
+  if(!x||typeof x!=="object")return null;
+  const n=clip(x.n,30), en=clip(x.en,60), s=clip(x.s,80), d=clip(x.d,400), e=clip(x.e,300);
+  const id=slug(x.id)||slug(en);
+  if(!n||!en||!s||!d||!e||!id||!Object.prototype.hasOwnProperty.call(CI,x.c))return null;
+  const t=(Array.isArray(x.t)?x.t:[]).map(v=>clip(v,12)).filter(Boolean).slice(0,5);
+  const r=(Array.isArray(x.r)?x.r:[]).filter(q=>Array.isArray(q)&&typeof q[0]==="string"&&byId[q[0]]).map(q=>[q[0],clip(q[1],120)]).filter(q=>q[1]).slice(0,4);
+  const o=ORIGINS.some(q=>q.k===x.o)?x.o:"west";
+  return {id,n,en,c:x.c,o,s,d,e,t,r,lens:clip(x.lens,120),cues:clip(x.cues,160),u:1};
+}
+function addModel(m){
+  if(!m||byId[m.id])return false;
+  M.push(m); byId[m.id]=m;
+  m.r.forEach(([to,q])=>{(incoming[to]=incoming[to]||[]).push([m.id,q]);});
+  if(m.lens)LENS[m.id]=m.lens;
+  if(m.cues)CUES[m.id]=m.cues;
+  const x={id:m.id,name:bigrams(m.n+" "+m.en),cue:bigrams(CUES[m.id]||""),tag:bigrams(m.t.join(" ")),txt:bigrams([m.s,m.d,m.e].join(" "))};
+  IDX.push(x); new Set([...x.name,...x.cue,...x.tag,...x.txt]).forEach(b=>DF.set(b,(DF.get(b)||0)+1));
+  const seen=new Set(PAIRS.map(q=>[q[0],q[1]].sort().join("|")));
+  m.r.forEach(([o,q])=>{const k=[m.id,o].sort().join("|"); if(!seen.has(k)){seen.add(k);PAIRS.push([m.id,o,q]);}});
+  return true;
+}
+function refreshAll(){renderChips(); renderGrid();}
+const addNote=$("#addNote"), addOut=$("#addOut");
+function updateAddUI(){
+  $("#addJudge").hidden=!caps.sample;
+  $("#addSave").hidden=!caps.db;
+  addNote.textContent=(!caps.sample&&!caps.db)?"目前這個檢視無法使用 Claude 判斷或儲存（可能尚未登入或沒有權限），新增功能暫時停用。":(!caps.sample?"目前無法請 Claude 即時判斷，只能存成待審，之後請 Claude 在對話中處理。":"");
+  $("#addBox").hidden=!caps.sample&&!caps.db;
+}
+async function initCaps(){
+  try{
+    if(!(window.claude&&claude.use)){updateAddUI(); return;}
+    const [db,sample,user]=await Promise.all([claude.use("db").catch(()=>null),claude.use("sample").catch(()=>null),claude.use("user").catch(()=>null)]);
+    /* 只有擁有者或編輯者能看到「新增模型」(判斷與寫入);其他人只讀取共用的模型庫。 */
+    let canAdd=false;
+    if(user){try{canAdd=!!(await user.canEdit())||!!(await user.isOwner());}catch(e){canAdd=false;}}
+    caps.db=(canAdd&&db)||null; caps.sample=(canAdd&&sample&&sample.json)?sample:null;
+    if(db){
+      db.collection("models").onSnapshot(snap=>{
+        let n=0;
+        snap.docs.forEach(d=>{ if(!d.exists)return; const m=sanitize(d.data()); if(m&&addModel(m))n++; });
+        if(n)refreshAll();
+      },()=>{});
+    }
+  }catch(e){}
+  updateAddUI();
+}
+function judgePrompt(name,desc){
+  const catList=CATS.map(c=>c.k+"="+c.n).join(", ");
+  const list=M.map(m=>m.id+"|"+m.n+"|"+m.en+"|"+m.c).join("\n");
+  return `你在協助維護一個繁體中文（台灣用語）的心智模型庫。使用者想加入一個新模型，請判斷並草擬條目。
+分類鍵：${catList}
+現有模型（id|中文|英文|分類）:
+${list}
+
+使用者提案：
+名稱：${name}
+內容：${desc||"（未提供）"}
+
+規則：
+- verdict 只能是 "add"（確實是新的、值得獨立成條）、"duplicate"（現有模型已涵蓋，指出 existingId）、"merge"（是現有模型的子概念或別名，建議併入，指出 existingId）、"reject"（不是可跨情境使用的思考工具，或內容明顯有誤）。
+- 只有 verdict 為 "add" 才需要 entry。entry 用自己的話撰寫，不要抄書中文字，不確定的出處或數字不要寫。
+- entry 欄位：id（英文小寫連字號）、n（中文名，30字內）、en（英文名）、c（分類鍵）、o（出處脈絡：west=歐美、jp=日本、cn=華人、other=其他）、s（一句話摘要，80字內）、d（說明，400字內）、e（一個具體實例，300字內）、t（2-4個短標籤，盡量沿用現有標籤用語）、r(最多3組 [現有模型id, 一個交叉提問（120字內）])、lens（一個「用這個模型看事情時該問的問題」，120字內）、cues（以空白分隔的口語情境詞，例如「做不到 一直加 捨不得」）。
+- reason 用一兩句話說明判斷理由。
+只回傳 JSON:{"verdict":"...","reason":"...","existingId":"可省略","entry":{...}}`;
+}
+let pending=null, busy=false;
+function errCopy(e){
+  const c=e&&e.code;
+  if(c==="not_granted"||c==="sampling_disabled")return "這個檢視不允許使用 Claude，無法判斷。可以改按「存成待審」。";
+  if(c==="rate_limited")return "請求太頻繁，請稍後再試。";
+  if(c==="invalid_json")return "Claude 的回覆格式不對，沒有任何東西被加入。可以再按一次。";
+  return "判斷失敗，沒有任何東西被加入。";
+}
+async function judge(){
+  if(busy||!caps.sample)return;
+  const name=clip($("#addName").value,60), desc=clip($("#addDesc").value,600);
+  if(name.length<2){addOut.innerHTML='<p class="hint small">請至少寫下模型名稱。</p>'; return;}
+  busy=true; pending=null; $("#addJudge").disabled=true; addOut.innerHTML='<p class="hint small">Claude 判斷中…</p>';
+  try{
+    const v=await caps.sample.json(judgePrompt(name,desc),{modelTier:"default",cache:false});
+    renderVerdict(v,name,desc);
+  }catch(e){addOut.innerHTML=`<p class="q">${esc(errCopy(e))}</p>`;}
+  finally{busy=false; $("#addJudge").disabled=false;}
+}
+function renderVerdict(v,name,desc){
+  const verdict=v&&v.verdict, reason=esc(clip(v&&v.reason,300));
+  const ex=v&&byId[v.existingId];
+  if(verdict==="add"){
+    const m=sanitize(v.entry);
+    if(!m){addOut.innerHTML='<p class="q">Claude 草擬的條目缺欄位或分類不合法，沒有加入。可以再試一次，或改存成待審。</p>'; return;}
+    if(byId[m.id]){m.id=slug(m.id+"-2");}
+    if(byId[m.id]){addOut.innerHTML='<p class="q">條目代號與現有模型衝突，沒有加入。</p>'; return;}
+    pending={m,name,desc};
+    addOut.innerHTML=`<div class="vd"><h4>判斷：可以新增</h4><p>${reason}</p>
+      <div class="cw" style="display:block">${cardHTML(m)}</div>
+      <p class="hint small">說明：${esc(m.d)}<br>實例：${esc(m.e)}<br>標籤：${m.t.map(esc).join("、")||"無"}<br>搭配思考：${m.r.map(([o,q])=>esc(byId[o].n)+"("+esc(q)+")").join(";")||"無"}</p>
+      <p class="hint small">這是 Claude 草稿，尚未查證。請自己讀過再決定。</p>
+      <div class="row"><button class="btn" id="addConfirm" type="button"${caps.db?"":" disabled"}>確認加入模型庫</button><button class="btn ghost" id="addCancel" type="button">不加入</button></div></div>`;
+    if(!caps.db)addOut.insertAdjacentHTML("beforeend",'<p class="hint small">目前無法寫入資料庫，所以不能加入。</p>');
+  }else if(verdict==="duplicate"||verdict==="merge"){
+    addOut.innerHTML=`<div class="vd"><h4>判斷：${verdict==="duplicate"?"現有模型已涵蓋":"建議併入現有模型"}</h4><p>${reason}</p>${ex?`<div class="rel"><button type="button" data-open="${ex.id}" data-cat="${ex.c}"><b>${esc(ex.n)}</b><span>${esc(ex.s)}</span></button></div>`:""}
+      <p class="hint small">若你仍認為應獨立成條，可按「存成待審」，附上你的理由。</p></div>`;
+  }else if(verdict==="reject"){
+    addOut.innerHTML=`<div class="vd"><h4>判斷：暫不加入</h4><p>${reason}</p></div>`;
+  }else{
+    addOut.innerHTML='<p class="q">沒有拿到有效的判斷，沒有任何東西被加入。</p>';
+  }
+}
+async function confirmAdd(){
+  if(!pending||!caps.db||busy)return;
+  const {m,name,desc}=pending; busy=true; $("#addConfirm").disabled=true;
+  try{
+    const o={id:m.id,n:m.n,en:m.en,c:m.c,o:m.o,s:m.s,d:m.d,e:m.e,t:m.t,r:m.r,lens:m.lens,cues:m.cues,u:1,proposedName:name,proposedDesc:desc,at:Date.now()};
+    await caps.db.collection("models").doc(m.id).set(o);
+    if(addModel(sanitize(o)))refreshAll();
+    pending=null; addOut.innerHTML=`<p class="q">已加入「${esc(m.n)}」。</p>`;
+    $("#addName").value=""; $("#addDesc").value="";
+  }catch(e){
+    busy=false; addOut.insertAdjacentHTML("beforeend",`<p class="q">寫入失敗${e&&e.code==="permission_denied"?"（你沒有新增權限，需要編輯者身分）":""}，沒有加入。可以改存成待審。</p>`);
+  }
+  busy=false;
+}
+async function saveProposal(){
+  if(busy||!caps.db)return;
+  const name=clip($("#addName").value,60), desc=clip($("#addDesc").value,600);
+  if(name.length<2){addOut.innerHTML='<p class="hint small">請至少寫下模型名稱。</p>'; return;}
+  busy=true;
+  try{
+    await caps.db.collection("proposals").add({name,desc,status:"pending",at:Date.now()});
+    addOut.innerHTML='<p class="q">已存成待審。之後在對話裡請 Claude 看「待審提案」，它會判斷並補上條目。</p>';
+    $("#addName").value=""; $("#addDesc").value="";
+  }catch(e){addOut.innerHTML='<p class="q">儲存失敗，沒有存入。</p>';}
+  busy=false;
+}
+$("#addJudge").addEventListener("click",judge);
+$("#addSave").addEventListener("click",saveProposal);
+addOut.addEventListener("click",e=>{
+  if(e.target.id==="addConfirm")confirmAdd();
+  else if(e.target.id==="addCancel"){pending=null; addOut.innerHTML="";}
+});
+$("#addBox").hidden=true;
+
+renderChips(); renderGrid();
+try{const h=location.hash.slice(1); if(h&&byId[h])openModel(h,false);}catch(e){}
+initCaps();
+</script>
+
+</body></html>

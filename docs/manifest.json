@@ -1,0 +1,25 @@
+{
+  "name": "學習小遊戲",
+  "short_name": "學習小遊戲",
+  "description": "給孩子與大人的離線學習小遊戲",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "zh-Hant-TW",
+  "background_color": "#fbf7f0",
+  "theme_color": "#c0392b",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
