@@ -7,7 +7,7 @@
      （適合需要合併、檢查資料的遊戲，例如成語小達人）
   B. 沒有 build_game.py、只有 index.html：直接複製 index.html；有 assets/ 也一起複製
      （適合單一 HTML 檔就能玩的遊戲）
-game.json 可加 "icon"（一個 emoji，顯示在首頁卡片）。
+game.json 可加 "icon"（一個 emoji，顯示在首頁卡片）、"group"（首頁分區標題，如「玩一局」「腦袋補給站」）。
 game.json 的 "status" 設成 "草稿" 時不打包、不放上首頁。
 任何一個遊戲打包失敗，整個流程就停下來，不會產生不完整的網站。"""
 import hashlib, json, shutil, subprocess, sys
@@ -64,7 +64,7 @@ for m in games:
 shutil.copy2(root / "hub" / "index.html", docs / "index.html")
 shutil.copytree(root / "hub" / "icons", docs / "icons", dirs_exist_ok=True)
 listing = [{"name": m["title"], "description": m.get("description", ""), "path": m["slug"] + "/",
-            "icon": m.get("icon", ""), "audience": m.get("audience", ""), "note": m.get("note", "")} for m in games]
+            "icon": m.get("icon", ""), "group": m.get("group", "玩一局"), "audience": m.get("audience", ""), "note": m.get("note", "")} for m in games]
 (docs / "games.json").write_text(json.dumps(listing, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (docs / "manifest.json").write_text(json.dumps({
     "name": "人生就是場遊戲", "short_name": "人生遊戲", "description": "一個關卡一個關卡玩的小遊戲合集",
