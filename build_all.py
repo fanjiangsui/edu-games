@@ -7,7 +7,7 @@
      （適合需要合併、檢查資料的遊戲，例如成語小達人）
   B. 沒有 build_game.py、只有 index.html：直接複製 index.html；有 assets/ 也一起複製
      （適合單一 HTML 檔就能玩的遊戲）
-game.json 可加 "icon"（一個 emoji，顯示在首頁卡片），並可在遊戲資料夾放 favicon.svg（分頁小圖示）、"group"（首頁分區標題，如「玩一局」「腦袋補給站」）。
+game.json 可加 "icon"（一個 emoji，顯示在首頁卡片），並可在遊戲資料夾放 favicon.svg（分頁小圖示）。"inject_css" 可選：只在打包輸出加一段 CSS，讓「← 首頁」按鈕不擠壞該遊戲的版面（不改遊戲原始檔）、"group"（首頁分區標題，如「玩一局」「腦袋補給站」）。
 game.json 的 "status" 設成 "草稿" 時不打包、不放上首頁。
 任何一個遊戲打包失敗，整個流程就停下來，不會產生不完整的網站。"""
 import hashlib, json, re, shutil, subprocess, sys
@@ -51,11 +51,11 @@ HEAD_ADD = (MARK + '<link rel="manifest" href="../manifest.json"><link rel="appl
 BACK_ADD = '<a id="hub-home" href="../" aria-label="回到首頁">← 首頁</a>'
 BODY_ADD = ('<script>if("serviceWorker"in navigator)addEventListener("load",function(){'
             'navigator.serviceWorker.register("../sw.js",{scope:"../",updateViaCache:"none"}).catch(function(){})})</script>')
-def inject(f):
+def inject(f, extra_css=""):
     t = f.read_text(encoding="utf-8")
     if MARK in t:
         return
-    add = HEAD_ADD + ('<link rel="icon" href="favicon.svg" type="image/svg+xml">' if (f.parent / "favicon.svg").exists() else "")
+    add = HEAD_ADD + (f"<style>{extra_css}</style>" if extra_css else "") + ('<link rel="icon" href="favicon.svg" type="image/svg+xml">' if (f.parent / "favicon.svg").exists() else "")
     h = t.rfind("</head>")
     t = t[:h] + add + t[h:] if h >= 0 else add + t
     mb = re.search(r"<body[^>]*>", t)
@@ -65,7 +65,7 @@ def inject(f):
     f.write_text(t, encoding="utf-8")
 for m in games:
     for f in (docs / m["slug"]).glob("*.html"):
-        inject(f)
+        inject(f, m.get("inject_css", ""))
 
 # 首頁、圖示、games.json、manifest
 shutil.copy2(root / "hub" / "index.html", docs / "index.html")

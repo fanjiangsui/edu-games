@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#091611">
+  <meta name="description" content="瞄準旋轉中的西瓜，把六支飛鏢安全插上外圈，挑戰三個關卡。">
+  <title>西瓜飛鏢</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%232b9a62'/%3E%3Ccircle cx='32' cy='32' r='23' fill='%23ff5668'/%3E%3Cpath d='M22 20l3 7-6-2zm20 0l-3 7 6-2zM32 32l3 7-6-2zM20 41l3 7-6-2zm24 0l-3 7 6-2z' fill='%2320181b'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f8f4e9;
+      --muted: #a9b9b1;
+      --panel: rgba(17, 37, 29, .76);
+      --line: rgba(255, 255, 255, .12);
+      --lime: #b9f86f;
+      --red: #ff4d67;
+      --deep: #07110d;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--deep); }
+    body {
+      min-height: 100svh;
+      overflow-x: hidden;
+      color: var(--ink);
+      font-family: ui-rounded, "SF Pro Rounded", "PingFang TC", "Noto Sans TC", system-ui, sans-serif;
+      background:
+        radial-gradient(circle at 50% 42%, rgba(41, 112, 75, .25), transparent 42%),
+        linear-gradient(155deg, #0d241a 0%, #07110d 54%, #0b1913 100%);
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .22;
+      background-image: radial-gradient(rgba(255,255,255,.12) .6px, transparent .6px);
+      background-size: 8px 8px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+    button { font: inherit; }
+    .app {
+      width: min(100%, 760px); min-height: 100svh; margin: 0 auto;
+      display: grid; grid-template-rows: auto 1fr auto; padding: max(18px, env(safe-area-inset-top)) 18px max(20px, env(safe-area-inset-bottom));
+    }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; z-index: 2; }
+    .brand { display: flex; align-items: center; gap: 11px; }
+    .brand-mark { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: #f04e63; border: 5px solid #55b66f; box-shadow: 0 5px 20px rgba(0,0,0,.3); font-size: 16px; }
+    h1 { margin: 0; font-size: clamp(1.08rem, 4vw, 1.35rem); letter-spacing: .05em; }
+    .rules { margin: 3px 0 0; color: var(--muted); font-size: .78rem; }
+    .soundless { color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 7px 11px; font-size: .75rem; white-space: nowrap; }
+    main { min-height: 0; display: grid; grid-template-rows: auto minmax(330px, 1fr); padding-top: 18px; }
+    .hud { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: stretch; }
+    .hud-card { min-width: 0; padding: 10px 13px; border: 1px solid var(--line); background: var(--panel); border-radius: 15px; backdrop-filter: blur(10px); }
+    .hud-card:last-child { text-align: right; }
+    .label { display: block; color: var(--muted); font-size: .68rem; letter-spacing: .13em; margin-bottom: 3px; }
+    .value { font-weight: 800; font-size: 1.05rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .timer { min-width: 118px; text-align: center; color: var(--lime); }
+    .timer.danger { color: #ff7487; animation: pulse .7s ease-in-out infinite alternate; }
+    @keyframes pulse { to { transform: scale(1.05); } }
+    .stage { position: relative; min-height: 0; display: grid; place-items: center; }
+    canvas { display: block; width: 100%; height: 100%; min-height: 330px; touch-action: manipulation; }
+    .message {
+      position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%) scale(.96);
+      width: min(86%, 390px); padding: 24px; text-align: center; border-radius: 24px;
+      background: rgba(6, 18, 13, .92); border: 1px solid rgba(255,255,255,.16);
+      box-shadow: 0 24px 80px rgba(0,0,0,.48); backdrop-filter: blur(14px);
+      opacity: 0; visibility: hidden; transition: .22s ease; z-index: 4;
+    }
+    .message.show { opacity: 1; visibility: visible; transform: translate(-50%, -50%) scale(1); }
+    .eyebrow { color: var(--lime); font-size: .76rem; font-weight: 800; letter-spacing: .18em; }
+    .message h2 { margin: 8px 0 8px; font-size: clamp(1.75rem, 7vw, 2.5rem); }
+    .message p { margin: 0 auto 19px; max-width: 28ch; color: var(--muted); line-height: 1.6; }
+    .primary, .fire {
+      border: 0; cursor: pointer; font-weight: 900; letter-spacing: .08em; color: #102016;
+      background: var(--lime); box-shadow: 0 7px 0 #5c8e33, 0 15px 34px rgba(122, 211, 73, .23);
+    }
+    .primary { min-width: 170px; padding: 13px 22px; border-radius: 999px; }
+    .primary:active, .fire:active:not(:disabled) { transform: translateY(4px); box-shadow: 0 3px 0 #5c8e33; }
+    footer { display: grid; gap: 11px; z-index: 2; }
+    .dart-row { min-height: 22px; display: flex; justify-content: center; gap: 10px; color: #8da39a; }
+    .picker { display: flex; gap: 7px; justify-content: center; flex-wrap: wrap; }
+    .pick {
+      border: 1px solid var(--line); background: rgba(15, 34, 26, .82); color: var(--muted);
+      border-radius: 999px; padding: 7px 10px; cursor: pointer; font-size: .78rem; line-height: 1;
+      transition: border-color .18s ease, color .18s ease, background .18s ease, transform .18s ease;
+    }
+    .pick:hover { transform: translateY(-1px); color: var(--ink); }
+    .pick.selected { color: #132116; background: var(--lime); border-color: var(--lime); font-weight: 800; }
+    .picker.locked { opacity: .48; pointer-events: none; }
+    .mini-dart { display: inline-block; transform: rotate(-45deg); transition: .2s ease; font-size: 1rem; }
+    .mini-dart.used { opacity: .18; transform: rotate(-45deg) scale(.8); }
+    .fire {
+      width: 100%; min-height: 58px; border-radius: 18px; font-size: 1.08rem;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+    }
+    .fire:disabled { opacity: .45; cursor: not-allowed; box-shadow: none; }
+    .hint { text-align: center; margin: 0; color: #7f958b; font-size: .72rem; }
+    @media (min-width: 680px) {
+      .app { padding-inline: 30px; }
+      main { padding-top: 22px; }
+      .hud-card { padding: 12px 16px; }
+      footer { width: 440px; margin: 0 auto; }
+    }
+    @media (max-height: 680px) {
+      .app { padding-top: 10px; padding-bottom: 10px; }
+      .rules, .soundless, .hint { display: none; }
+      main { padding-top: 8px; grid-template-rows: auto minmax(250px, 1fr); }
+      canvas { min-height: 250px; }
+      .fire { min-height: 48px; }
+      .pick { padding: 6px 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand"><div class="brand-mark" aria-hidden="true">●</div><div><h1>西瓜飛鏢</h1><p class="rules">避開舊物品，射完指定數量就過關</p></div></div>
+      <div class="soundless">三關挑戰</div>
+    </header>
+
+    <main>
+      <section class="hud" aria-label="遊戲狀態">
+        <div class="hud-card"><span class="label">關卡</span><span class="value" id="levelText">1 / 3</span></div>
+        <div class="hud-card timer" id="timerCard"><span class="label">剩餘時間</span><span class="value" id="timerText">03:00</span></div>
+        <div class="hud-card"><span class="label">已命中</span><span class="value" id="scoreText">0 / 6</span></div>
+      </section>
+
+      <section class="stage" id="stage">
+        <canvas id="game" aria-label="旋轉中的西瓜飛鏢遊戲區"></canvas>
+        <div class="message show" id="message" role="dialog" aria-modal="true" aria-labelledby="messageTitle">
+          <div class="eyebrow" id="messageEyebrow">READY?</div>
+          <h2 id="messageTitle">準備好挑戰了嗎？</h2>
+          <p id="messageBody">先選一種物品，抓準空隙射上西瓜外圈。撞到之前的物品就要重來！</p>
+          <button class="primary" id="messageButton">開始遊戲</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="picker" id="projectilePicker" aria-label="選擇發射物品">
+        <button class="pick selected" data-type="dart" aria-pressed="true">🎯 飛鏢</button>
+        <button class="pick" data-type="lipstick" aria-pressed="false">💄 口紅</button>
+        <button class="pick" data-type="knife" aria-pressed="false">🔪 刀子</button>
+        <button class="pick" data-type="pencil" aria-pressed="false">✏️ 鉛筆</button>
+        <button class="pick" data-type="straw" aria-pressed="false">🥤 吸管</button>
+      </div>
+      <div class="dart-row" id="dartRow" aria-label="剩餘飛鏢"></div>
+      <button class="fire" id="fireButton" disabled><span aria-hidden="true">↑</span> <span id="fireLabel">發射飛鏢</span></button>
+      <p class="hint">點按按鈕或按下空白鍵發射</p>
+    </footer>
+  </div>
+
+  <script>
+    (() => {
+      'use strict';
+      const canvas = document.querySelector('#game');
+      const ctx = canvas.getContext('2d');
+      const fireButton = document.querySelector('#fireButton');
+      const message = document.querySelector('#message');
+      const messageEyebrow = document.querySelector('#messageEyebrow');
+      const messageTitle = document.querySelector('#messageTitle');
+      const messageBody = document.querySelector('#messageBody');
+      const messageButton = document.querySelector('#messageButton');
+      const levelText = document.querySelector('#levelText');
+      const timerText = document.querySelector('#timerText');
+      const timerCard = document.querySelector('#timerCard');
+      const scoreText = document.querySelector('#scoreText');
+      const dartRow = document.querySelector('#dartRow');
+      const projectilePicker = document.querySelector('#projectilePicker');
+      const fireLabel = document.querySelector('#fireLabel');
+
+      const LEVELS = [
+        { darts: 6, speed: 0.72, minSwitch: 4.0, maxSwitch: 6.0, variable: false },
+        { darts: 8, speed: 1.12, minSwitch: 2.6, maxSwitch: 4.2, variable: true },
+        { darts: 10, speed: 1.58, minSwitch: 1.5, maxSwitch: 2.9, variable: true }
+      ];
+      const PROJECTILES = {
+        dart: { name: '飛鏢', icon: '➤', gap: .245 },
+        lipstick: { name: '口紅', icon: '💄', gap: .27 },
+        knife: { name: '刀子', icon: '🔪', gap: .235 },
+        pencil: { name: '鉛筆', icon: '✏️', gap: .21 },
+        straw: { name: '吸管', icon: '🥤', gap: .20 }
+      };
+      const LEVEL_TIME = 60;
+      let width = 0, height = 0, dpr = 1;
+      let centerX = 0, centerY = 0, radius = 0;
+      let state = 'ready';
+      let level = 0;
+      let diskAngle = 0;
+      let direction = 1;
+      let angularSpeed = LEVELS[0].speed;
+      let switchAt = Infinity;
+      let timeLeft = LEVEL_TIME;
+      let attached = [];
+      let shot = null;
+      let lastTime = performance.now();
+      let transitionTimer = 0;
+      let projectileType = 'dart';
+
+      const totalDarts = () => LEVELS[level].darts;
+
+      function resize() {
+        const rect = canvas.getBoundingClientRect();
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = Math.max(1, rect.width); height = Math.max(1, rect.height);
+        canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        radius = Math.min(width * .31, height * .265, 158);
+        centerX = width / 2;
+        centerY = Math.max(radius + 40, Math.min(height * .40, height - radius - 145));
+      }
+
+      const randomBetween = (a, b) => a + Math.random() * (b - a);
+      const normalize = a => ((a % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2);
+      const angleDistance = (a, b) => Math.abs(Math.atan2(Math.sin(a - b), Math.cos(a - b)));
+
+      function scheduleSwitch(elapsed = 0) {
+        const cfg = LEVELS[level];
+        switchAt = elapsed + randomBetween(cfg.minSwitch, cfg.maxSwitch);
+      }
+
+      function resetLevel() {
+        attached = []; shot = null; diskAngle = 0; direction = 1;
+        angularSpeed = LEVELS[level].speed; timeLeft = LEVEL_TIME; transitionTimer = 0;
+        scheduleSwitch(0); updateHud();
+      }
+
+      function startGame() {
+        level = 0; resetLevel(); state = 'playing'; message.classList.remove('show');
+        fireButton.disabled = false; projectilePicker.classList.add('locked'); lastTime = performance.now();
+      }
+
+      function updateHud() {
+        levelText.textContent = `${level + 1} / 3`;
+        scoreText.textContent = `${attached.length} / ${totalDarts()}`;
+        const seconds = Math.max(0, Math.ceil(timeLeft));
+        timerText.textContent = `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
+        timerCard.classList.toggle('danger', seconds <= 20 && state === 'playing');
+        const item = PROJECTILES[projectileType];
+        dartRow.setAttribute('aria-label', `剩餘${item.name}`);
+        dartRow.innerHTML = Array.from({ length: totalDarts() }, (_, i) => `<span class="mini-dart ${i < attached.length ? 'used' : ''}" aria-hidden="true">${item.icon}</span>`).join('');
+        fireLabel.textContent = `發射${item.name}`;
+      }
+
+      function showMessage(eyebrow, title, body, button) {
+        messageEyebrow.textContent = eyebrow; messageTitle.textContent = title;
+        messageBody.textContent = body; messageButton.textContent = button;
+        message.classList.add('show');
+      }
+
+      function fail(reason) {
+        state = 'gameover'; fireButton.disabled = true; shot = null;
+        projectilePicker.classList.remove('locked');
+        showMessage('GAME OVER', reason, `你已成功插上 ${attached.length} 個物品。別急，再抓一次節奏！`, '重新挑戰');
+      }
+
+      function clearLevel() {
+        state = 'transition'; fireButton.disabled = true; transitionTimer = 1.25;
+        if (level === LEVELS.length - 1) {
+          showMessage('YOU WIN!', '西瓜飛鏢王', '三個關卡全部完成！你的眼力和反應都太厲害了。', '再玩一次');
+          state = 'win'; projectilePicker.classList.remove('locked');
+        }
+      }
+
+      function nextLevel() {
+        level += 1; resetLevel(); state = 'playing'; fireButton.disabled = false;
+      }
+
+      function fire() {
+        if (state !== 'playing' || shot) return;
+        shot = { y: height - 62, speed: Math.max(620, height * 1.45) };
+        fireButton.disabled = true;
+      }
+
+      function attachShot() {
+        const impactWorld = Math.PI / 2;
+        const local = normalize(impactWorld - diskAngle);
+        const collisionGap = Math.max(PROJECTILES[projectileType].gap, 20 / radius);
+        if (attached.some(a => angleDistance(a, local) < collisionGap)) {
+          fail('撞到飛鏢了！'); return;
+        }
+        attached.push(local); shot = null; updateHud();
+        if (attached.length === totalDarts()) clearLevel();
+        else fireButton.disabled = false;
+      }
+
+      function update(dt) {
+        if (state === 'playing') {
+          timeLeft -= dt;
+          if (timeLeft <= 0) { timeLeft = 0; updateHud(); fail('時間到了！'); return; }
+          diskAngle += angularSpeed * direction * dt;
+          const elapsed = LEVEL_TIME - timeLeft;
+          if (elapsed >= switchAt) {
+            direction *= -1;
+            const cfg = LEVELS[level];
+            angularSpeed = cfg.speed * (cfg.variable ? randomBetween(.72, 1.35) : 1);
+            scheduleSwitch(elapsed);
+          }
+          if (shot) {
+            shot.y -= shot.speed * dt;
+            if (shot.y <= centerY + radius + 3) attachShot();
+          }
+          updateHud();
+        } else if (state === 'transition') {
+          diskAngle += angularSpeed * direction * dt;
+          transitionTimer -= dt;
+          if (transitionTimer <= 0) nextLevel();
+        }
+      }
+
+      function drawSeed(x, y, rotation, size = 1) {
+        ctx.save(); ctx.translate(x, y); ctx.rotate(rotation); ctx.scale(size, size);
+        ctx.beginPath(); ctx.moveTo(0, -8); ctx.bezierCurveTo(6, -2, 5, 6, 0, 9); ctx.bezierCurveTo(-5, 6, -6, -2, 0, -8);
+        ctx.fillStyle = '#261619'; ctx.fill(); ctx.restore();
+      }
+
+      function drawWatermelon() {
+        ctx.save(); ctx.translate(centerX, centerY); ctx.rotate(diskAngle);
+        ctx.shadowColor = 'rgba(0,0,0,.42)'; ctx.shadowBlur = 28; ctx.shadowOffsetY = 16;
+        ctx.beginPath(); ctx.arc(0, 0, radius + 9, 0, Math.PI * 2); ctx.fillStyle = '#173c2c'; ctx.fill();
+        ctx.shadowColor = 'transparent';
+        const rind = ctx.createRadialGradient(-radius*.25, -radius*.3, radius*.15, 0, 0, radius+4);
+        rind.addColorStop(0, '#89e576'); rind.addColorStop(.74, '#41ad62'); rind.addColorStop(1, '#257a4b');
+        ctx.beginPath(); ctx.arc(0, 0, radius + 3, 0, Math.PI * 2); ctx.fillStyle = rind; ctx.fill();
+        ctx.beginPath(); ctx.arc(0, 0, radius - 11, 0, Math.PI * 2); ctx.fillStyle = '#eaf19a'; ctx.fill();
+        const flesh = ctx.createRadialGradient(-radius*.28, -radius*.32, 4, 0, 0, radius);
+        flesh.addColorStop(0, '#ff7180'); flesh.addColorStop(.7, '#f34861'); flesh.addColorStop(1, '#cf2f4c');
+        ctx.beginPath(); ctx.arc(0, 0, radius - 18, 0, Math.PI * 2); ctx.fillStyle = flesh; ctx.fill();
+        ctx.globalAlpha = .16; ctx.beginPath(); ctx.arc(-radius*.22, -radius*.28, radius*.58, Math.PI*1.05, Math.PI*1.75); ctx.strokeStyle = '#fff'; ctx.lineWidth = 7; ctx.stroke(); ctx.globalAlpha = 1;
+        const seeds = [[-.37,-.35,-.6],[.06,-.52,.05],[.42,-.28,.6],[-.5,.05,-1.3],[-.15,.08,-.25],[.25,.04,.3],[.48,.18,1.2],[-.34,.4,-2.6],[.08,.43,3],[.3,.36,2.5]];
+        seeds.forEach(([x,y,r]) => drawSeed(x*radius, y*radius, r, Math.max(.68, radius/155)));
+        ctx.restore();
+      }
+
+      function drawProjectileAt(angle, attachedMode = true) {
+        const inner = radius - 2, outer = radius + Math.min(82, height*.125);
+        const ax = centerX + Math.cos(angle) * inner, ay = centerY + Math.sin(angle) * inner;
+        const bx = centerX + Math.cos(angle) * outer, by = centerY + Math.sin(angle) * outer;
+        const length = outer - inner;
+        ctx.save(); ctx.translate(ax, ay); ctx.rotate(angle - Math.PI / 2); ctx.lineCap = 'round';
+        if (projectileType === 'lipstick') {
+          ctx.fillStyle = '#d8b6aa'; ctx.beginPath(); ctx.roundRect(-8, 0, 16, 22, 5); ctx.fill();
+          ctx.fillStyle = '#d92f68'; ctx.beginPath(); ctx.moveTo(-7, 2); ctx.lineTo(-6, -12); ctx.quadraticCurveTo(1, -21, 7, -13); ctx.lineTo(7, 2); ctx.fill();
+          ctx.fillStyle = '#c8a44e'; ctx.fillRect(-9, 21, 18, 11); ctx.fillStyle = '#d94e75'; ctx.beginPath(); ctx.roundRect(-10, 31, 20, length-22, 5); ctx.fill();
+        } else if (projectileType === 'knife') {
+          ctx.fillStyle = '#ecf1f3'; ctx.beginPath(); ctx.moveTo(0,-12); ctx.lineTo(10,8); ctx.lineTo(7,length*.58); ctx.lineTo(-7,length*.58); ctx.lineTo(-5,7); ctx.closePath(); ctx.fill();
+          ctx.fillStyle = '#26322d'; ctx.beginPath(); ctx.roundRect(-9,length*.54,18,length*.5,6); ctx.fill();
+          ctx.fillStyle = '#aeb8b4'; ctx.beginPath(); ctx.arc(0,length*.7,2.2,0,Math.PI*2); ctx.fill();
+        } else if (projectileType === 'pencil') {
+          ctx.fillStyle = '#e5c39a'; ctx.beginPath(); ctx.moveTo(0,-12); ctx.lineTo(8,5); ctx.lineTo(-8,5); ctx.closePath(); ctx.fill();
+          ctx.fillStyle = '#252a2b'; ctx.beginPath(); ctx.moveTo(0,-12); ctx.lineTo(3,-5); ctx.lineTo(-3,-5); ctx.closePath(); ctx.fill();
+          ctx.fillStyle = '#f2bd3d'; ctx.beginPath(); ctx.roundRect(-7,4,14,length-4,3); ctx.fill();
+          ctx.fillStyle = '#df6e7b'; ctx.fillRect(-7,length-7,14,10);
+        } else if (projectileType === 'straw') {
+          ctx.strokeStyle = '#55d2ee'; ctx.lineWidth = 11; ctx.beginPath(); ctx.moveTo(0,-8); ctx.lineTo(0,length*.34); ctx.lineTo(8,length*.46); ctx.lineTo(8,length); ctx.stroke();
+          ctx.strokeStyle = 'rgba(255,255,255,.55)'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(-2,-7); ctx.lineTo(-2,length*.32); ctx.stroke();
+        } else {
+          ctx.strokeStyle = '#e8edf0'; ctx.lineWidth = Math.max(7, radius*.05); ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(0,length); ctx.stroke();
+          ctx.fillStyle = attachedMode ? '#b9f86f' : '#ffde66'; ctx.beginPath(); ctx.moveTo(0,length-5); ctx.lineTo(-12,length+17); ctx.lineTo(0,length+12); ctx.lineTo(12,length+17); ctx.closePath(); ctx.fill();
+        }
+        ctx.restore();
+      }
+
+      function drawFlyingDart() {
+        if (!shot) return;
+        const savedX = centerX, savedY = centerY, savedR = radius;
+        centerX = savedX; centerY = shot.y; radius = 0;
+        drawProjectileAt(Math.PI / 2, false);
+        centerY = savedY; radius = savedR;
+      }
+
+      function drawGuide() {
+        if (state !== 'playing' || shot) return;
+        const start = centerY + radius + 25, end = height - 74;
+        ctx.save(); ctx.setLineDash([3, 10]); ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(centerX, start); ctx.lineTo(centerX, end);
+        ctx.strokeStyle = 'rgba(185,248,111,.24)'; ctx.lineWidth = 2; ctx.stroke(); ctx.restore();
+      }
+
+      function drawDirection() {
+        const y = centerY - radius - 31;
+        ctx.save(); ctx.fillStyle = 'rgba(230,245,236,.62)'; ctx.font = '700 13px system-ui'; ctx.textAlign = 'center';
+        ctx.fillText(direction > 0 ? '順時針 ↻' : '逆時針 ↺', centerX, Math.max(18, y)); ctx.restore();
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        drawGuide(); drawWatermelon();
+        attached.forEach(local => drawProjectileAt(local + diskAngle));
+        drawFlyingDart(); drawDirection();
+        if (state === 'transition') {
+          ctx.save(); ctx.fillStyle = 'rgba(7,17,13,.66)'; ctx.fillRect(0,0,width,height);
+          ctx.textAlign = 'center'; ctx.fillStyle = '#b9f86f'; ctx.font = `900 ${Math.min(36,width*.09)}px system-ui`;
+          ctx.fillText('關卡完成！', centerX, centerY); ctx.fillStyle = '#f8f4e9'; ctx.font = '700 16px system-ui'; ctx.fillText(`前往第 ${level + 2} 關`, centerX, centerY + 34); ctx.restore();
+        }
+      }
+
+      function frame(now) {
+        const dt = Math.min((now - lastTime) / 1000, .034); lastTime = now;
+        update(dt); draw(); requestAnimationFrame(frame);
+      }
+
+      messageButton.addEventListener('click', startGame);
+      fireButton.addEventListener('click', fire);
+      projectilePicker.addEventListener('click', event => {
+        const button = event.target.closest('[data-type]');
+        if (!button || projectilePicker.classList.contains('locked')) return;
+        projectileType = button.dataset.type;
+        projectilePicker.querySelectorAll('[data-type]').forEach(item => {
+          const selected = item === button;
+          item.classList.toggle('selected', selected); item.setAttribute('aria-pressed', selected ? 'true' : 'false');
+        });
+        updateHud();
+      });
+      canvas.addEventListener('pointerdown', e => { if (state === 'playing') { e.preventDefault(); fire(); } });
+      window.addEventListener('keydown', e => {
+        if (e.code === 'Space') { e.preventDefault(); if (state === 'playing') fire(); else if (message.classList.contains('show')) messageButton.click(); }
+      });
+      window.addEventListener('resize', resize);
+      resize(); updateHud(); requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+</html>

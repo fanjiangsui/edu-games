@@ -1,0 +1,10 @@
+{
+  "title": "西瓜飛鏢",
+  "description": "瞄準旋轉的西瓜，避開舊物品，三關挑戰。",
+  "audience": "",
+  "icon": "🍉",
+  "group": "玩一局",
+  "status": "上線",
+  "note": "點畫面或按空白鍵發射",
+  "inject_css": "body{display:flex;flex-direction:column}.app{flex:1;min-height:0}#hub-home{align-self:flex-start;margin:max(10px,env(safe-area-inset-top)) 0 0 18px;background:#f8f4e9;color:#102016}"
+}

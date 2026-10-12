@@ -16,5 +16,14 @@
     "group": "腦袋補給站",
     "audience": "",
     "note": "內容由 AI 協助整理"
+  },
+  {
+    "name": "西瓜飛鏢",
+    "description": "瞄準旋轉的西瓜，避開舊物品，三關挑戰。",
+    "path": "watermelon-darts/",
+    "icon": "🍉",
+    "group": "玩一局",
+    "audience": "",
+    "note": "點畫面或按空白鍵發射"
   }
 ]
