@@ -67,7 +67,7 @@ listing = [{"name": m["title"], "description": m.get("description", ""), "path":
             "icon": m.get("icon", ""), "audience": m.get("audience", ""), "note": m.get("note", "")} for m in games]
 (docs / "games.json").write_text(json.dumps(listing, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (docs / "manifest.json").write_text(json.dumps({
-    "name": "學習小遊戲", "short_name": "學習小遊戲", "description": "給孩子與大人的離線學習小遊戲",
+    "name": "人生就是場遊戲", "short_name": "人生遊戲", "description": "一個關卡一個關卡玩的小遊戲合集",
     "start_url": "./", "scope": "./", "display": "standalone", "lang": "zh-Hant-TW",
     "background_color": "#fbf7f0", "theme_color": "#c0392b",
     "icons": [{"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},

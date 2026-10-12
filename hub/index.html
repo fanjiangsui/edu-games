@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>學習小遊戲</title>
+<title>人生就是場遊戲</title>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="theme-color" content="#c0392b">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="學習小遊戲">
+<meta name="apple-mobile-web-app-title" content="人生就是場遊戲">
 <style>
 :root { --bg:#fbf7f0; --card:#fff; --ink:#2b2420; --muted:#7a6e64; --line:#e8dfd3; --accent:#c0392b; --accent-soft:#fbe9e6; }
 @media (prefers-color-scheme: dark) { :root { --bg:#1d1916; --card:#2a2420; --ink:#f2ebe3; --muted:#b3a597; --line:#3d342d; --accent:#e8735f; --accent-soft:#3d2622; color-scheme: dark; } }
@@ -30,10 +30,10 @@ footer { margin-top:24px; font-size:14px; color:var(--muted); }
 </head>
 <body>
 <main>
-  <h1>學習小遊戲</h1>
-  <p>用手機或電腦的瀏覽器打開就能玩，安裝到主畫面後可離線使用。</p>
+  <h1>人生就是場遊戲</h1>
+  <p>選一個關卡，玩一局再回來。手機或電腦打開就能玩，加到主畫面後不用網路也能玩。</p>
   <div class="list" id="list"><noscript>請開啟 JavaScript 才能顯示遊戲清單。</noscript></div>
-  <footer>內容由 AI 協助整理，可能有誤；發現錯誤歡迎回報。</footer>
+  <footer>每個關卡的內容由 AI 協助整理，可能有誤；發現問題歡迎告訴我。</footer>
 </main>
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));

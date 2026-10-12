@@ -1,7 +1,7 @@
 {
-  "name": "學習小遊戲",
-  "short_name": "學習小遊戲",
-  "description": "給孩子與大人的離線學習小遊戲",
+  "name": "人生就是場遊戲",
+  "short_name": "人生遊戲",
+  "description": "一個關卡一個關卡玩的小遊戲合集",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
