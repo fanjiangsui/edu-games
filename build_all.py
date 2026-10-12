@@ -10,7 +10,7 @@
 game.json 可加 "icon"（一個 emoji，顯示在首頁卡片）、"group"（首頁分區標題，如「玩一局」「腦袋補給站」）。
 game.json 的 "status" 設成 "草稿" 時不打包、不放上首頁。
 任何一個遊戲打包失敗，整個流程就停下來，不會產生不完整的網站。"""
-import hashlib, json, shutil, subprocess, sys
+import hashlib, json, re, shutil, subprocess, sys
 from pathlib import Path
 
 root = Path(__file__).parent
@@ -42,17 +42,21 @@ for g in sorted((root / "games").iterdir()):
 # 在每個遊戲頁加上 manifest 連結與離線註冊（只改打包結果，不動遊戲原始檔；重複執行不會重複加）
 MARK = "<!--hub-pwa-->"
 HEAD_ADD = (MARK + '<link rel="manifest" href="../manifest.json"><link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">'
-            '<style>#hub-home{position:fixed;z-index:2147483647;left:max(8px,env(safe-area-inset-left));top:max(8px,env(safe-area-inset-top));'
-            'padding:6px 12px;border-radius:999px;background:rgba(43,36,32,.78);color:#fff;font:600 14px/1.4 system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;'
-            'text-decoration:none;box-shadow:0 1px 6px rgba(0,0,0,.3)}#hub-home:focus-visible{outline:3px solid #fff;outline-offset:2px}</style>')
-BODY_ADD = ('<a id="hub-home" href="../" aria-label="回到首頁">← 首頁</a><script>if("serviceWorker"in navigator)addEventListener("load",function(){'
+            '<style>#hub-home{display:block;width:max-content;margin:0 0 12px;padding:6px 12px;border-radius:999px;background:#2b2420;color:#fff;'
+            'font:600 14px/1.4 system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;text-decoration:none}'
+            '#hub-home:focus-visible{outline:3px solid #c0392b;outline-offset:2px}</style>')
+# 「← 首頁」放在 <body> 最前面、跟著頁面捲動（不是浮在上面），才不會蓋到遊戲自己的標題或固定列
+BACK_ADD = '<a id="hub-home" href="../" aria-label="回到首頁">← 首頁</a>'
+BODY_ADD = ('<script>if("serviceWorker"in navigator)addEventListener("load",function(){'
             'navigator.serviceWorker.register("../sw.js",{scope:"../",updateViaCache:"none"}).catch(function(){})})</script>')
 def inject(f):
     t = f.read_text(encoding="utf-8")
     if MARK in t:
         return
-    h, b = t.rfind("</head>"), t.rfind("</body>")
+    h = t.rfind("</head>")
     t = t[:h] + HEAD_ADD + t[h:] if h >= 0 else HEAD_ADD + t
+    mb = re.search(r"<body[^>]*>", t)
+    t = t[:mb.end()] + BACK_ADD + t[mb.end():] if mb else BACK_ADD + t
     b = t.rfind("</body>")
     t = t[:b] + BODY_ADD + t[b:] if b >= 0 else t + BODY_ADD
     f.write_text(t, encoding="utf-8")

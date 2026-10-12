@@ -1,5 +1,5 @@
 /* 由 build_all.py 產生，請勿手改 */
-const VERSION = "edu-games-af293e88f8";
+const VERSION = "edu-games-453d7a5b9a";
 const PRECACHE = [
   "./",
   "chinese-idiom/",

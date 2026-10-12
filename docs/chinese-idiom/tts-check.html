@@ -63,8 +63,8 @@ textarea { width: 100%; min-height: 140px; font: 14px/1.5 ui-monospace, Menlo, m
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
-<!--hub-pwa--><link rel="manifest" href="../manifest.json"><link rel="apple-touch-icon" href="../icons/apple-touch-icon.png"><style>#hub-home{position:fixed;z-index:2147483647;left:max(8px,env(safe-area-inset-left));top:max(8px,env(safe-area-inset-top));padding:6px 12px;border-radius:999px;background:rgba(43,36,32,.78);color:#fff;font:600 14px/1.4 system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;text-decoration:none;box-shadow:0 1px 6px rgba(0,0,0,.3)}#hub-home:focus-visible{outline:3px solid #fff;outline-offset:2px}</style></head>
-<body>
+<!--hub-pwa--><link rel="manifest" href="../manifest.json"><link rel="apple-touch-icon" href="../icons/apple-touch-icon.png"><style>#hub-home{display:block;width:max-content;margin:0 0 12px;padding:6px 12px;border-radius:999px;background:#2b2420;color:#fff;font:600 14px/1.4 system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;text-decoration:none}#hub-home:focus-visible{outline:3px solid #c0392b;outline-offset:2px}</style></head>
+<body><a id="hub-home" href="../" aria-label="回到首頁">← 首頁</a>
 <div class="wrap">
   <h1>成語朗讀檢查</h1>
   <p class="lead">第二輪：預設只列出上次念錯、已改用同音字朗讀的 22 個成語，請再聽一次。逐一按「▶ 念」，聽到讀音和注音不同，就勾「念錯了」。全部聽完後按「產生結果」，把文字複製貼回給 Claude。勾選會記在這台裝置的瀏覽器裡。</p>
@@ -218,5 +218,5 @@ $("#reset").addEventListener("click", () => {
 load(); render();
 </script>
 
-<a id="hub-home" href="../" aria-label="回到首頁">← 首頁</a><script>if("serviceWorker"in navigator)addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../",updateViaCache:"none"}).catch(function(){})})</script></body>
+<script>if("serviceWorker"in navigator)addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../",updateViaCache:"none"}).catch(function(){})})</script></body>
 </html>
