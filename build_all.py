@@ -41,8 +41,11 @@ for g in sorted((root / "games").iterdir()):
 
 # 在每個遊戲頁加上 manifest 連結與離線註冊（只改打包結果，不動遊戲原始檔；重複執行不會重複加）
 MARK = "<!--hub-pwa-->"
-HEAD_ADD = MARK + '<link rel="manifest" href="../manifest.json"><link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">'
-BODY_ADD = ('<script>if("serviceWorker"in navigator)addEventListener("load",function(){'
+HEAD_ADD = (MARK + '<link rel="manifest" href="../manifest.json"><link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">'
+            '<style>#hub-home{position:fixed;z-index:2147483647;left:max(8px,env(safe-area-inset-left));top:max(8px,env(safe-area-inset-top));'
+            'padding:6px 12px;border-radius:999px;background:rgba(43,36,32,.78);color:#fff;font:600 14px/1.4 system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;'
+            'text-decoration:none;box-shadow:0 1px 6px rgba(0,0,0,.3)}#hub-home:focus-visible{outline:3px solid #fff;outline-offset:2px}</style>')
+BODY_ADD = ('<a id="hub-home" href="../" aria-label="回到首頁">← 首頁</a><script>if("serviceWorker"in navigator)addEventListener("load",function(){'
             'navigator.serviceWorker.register("../sw.js",{scope:"../",updateViaCache:"none"}).catch(function(){})})</script>')
 def inject(f):
     t = f.read_text(encoding="utf-8")

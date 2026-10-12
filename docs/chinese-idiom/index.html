@@ -144,7 +144,7 @@ button:disabled { cursor: not-allowed; }
 .pop { animation: pop .25s ease-out; }
 @keyframes pop { from { transform: scale(.96); opacity: .4; } to { transform: none; opacity: 1; } }
 </style>
-<!--hub-pwa--><link rel="manifest" href="../manifest.json"><link rel="apple-touch-icon" href="../icons/apple-touch-icon.png"></head>
+<!--hub-pwa--><link rel="manifest" href="../manifest.json"><link rel="apple-touch-icon" href="../icons/apple-touch-icon.png"><style>#hub-home{position:fixed;z-index:2147483647;left:max(8px,env(safe-area-inset-left));top:max(8px,env(safe-area-inset-top));padding:6px 12px;border-radius:999px;background:rgba(43,36,32,.78);color:#fff;font:600 14px/1.4 system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;text-decoration:none;box-shadow:0 1px 6px rgba(0,0,0,.3)}#hub-home:focus-visible{outline:3px solid #fff;outline-offset:2px}</style></head>
 <body>
 <div class="wrap">
   <header>
@@ -697,5 +697,5 @@ document.getElementById("home-link").addEventListener("click", () => {
 renderLevels();
 showHome();
 </script>
-<script>if("serviceWorker"in navigator)addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../",updateViaCache:"none"}).catch(function(){})})</script></body>
+<a id="hub-home" href="../" aria-label="回到首頁">← 首頁</a><script>if("serviceWorker"in navigator)addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../",updateViaCache:"none"}).catch(function(){})})</script></body>
 </html>
