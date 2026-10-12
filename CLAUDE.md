@@ -24,6 +24,7 @@
 
 ## 提交
 
+- **用戶說「部署」＝同意 commit＋push**（Sui 2026-10-12 決定）：打包與檢查做完就直接 commit、push，上線後確認網址並附證據回報；下面兩條確認步驟可省略。
 - **commit 前先給用戶看 `git diff` 摘要**，用戶確認後才 commit。
 - 不自動 push；push 前再問一次。
 - 用 `git add` 指定檔案，不用 `git add -A`。
