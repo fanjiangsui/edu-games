@@ -329,10 +329,25 @@ if ('wakeLock' in navigator){
 
 $('#draw').addEventListener('click', draw);
 $('#reveal').addEventListener('click', () => { s.revealed = true; render(''); });
+// 朗讀：iOS Safari 的語音清單載入較慢，且 cancel() 後立刻 speak() 會被吃掉，所以明確挑英文語音並稍微延遲
+let enVoice = null;
+function pickEnVoice() {
+  const vs = speechSynthesis.getVoices();
+  enVoice = vs.find(v => v.lang === 'en-US') || vs.find(v => /^en[-_]/i.test(v.lang)) || null;
+}
+if ('speechSynthesis' in window) {
+  pickEnVoice();
+  speechSynthesis.onvoiceschanged = pickEnVoice;
+}
 $('#say').addEventListener('click', () => {
   if (!s.current || !('speechSynthesis' in window)) return;
-  speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(s.current.en); u.lang = 'en-US'; u.rate = 0.9; speechSynthesis.speak(u);
+  if (!enVoice) pickEnVoice();
+  const u = new SpeechSynthesisUtterance(s.current.en);
+  u.lang = 'en-US'; u.rate = 0.9;
+  if (enVoice) u.voice = enVoice;
+  if (speechSynthesis.speaking || speechSynthesis.pending) speechSynthesis.cancel();
+  if (speechSynthesis.paused) speechSynthesis.resume();
+  setTimeout(() => speechSynthesis.speak(u), 60);
 });
 $('#fav').addEventListener('click', () => {
   const c = s.current; if (!c) return;
