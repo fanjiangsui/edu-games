@@ -1,0 +1,10 @@
+{
+  "title": "十萬個為什麼",
+  "description": "生活化的「為什麼」四選一問答，290 題，孩子題與大人題兩層，全家一起玩。",
+  "audience": "",
+  "icon": "🤔",
+  "group": "玩一局",
+  "status": "上線",
+  "note": "題目由 AI 協助產生，未逐題校對",
+  "inject_css": "#hub-home{margin:12px 0 0 max(16px,calc(50% - 304px))}"
+}

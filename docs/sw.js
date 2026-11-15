@@ -1,5 +1,5 @@
 /* 由 build_all.py 產生，請勿手改 */
-const VERSION = "edu-games-a221c54e46";
+const VERSION = "edu-games-17d7357b33";
 const PRECACHE = [
   "./",
   "chinese-idiom/",
@@ -28,7 +28,10 @@ const PRECACHE = [
   "talkbox/manifest.webmanifest",
   "talkbox/questions.js",
   "watermelon-darts/",
-  "watermelon-darts/index.html"
+  "watermelon-darts/index.html",
+  "why-game/",
+  "why-game/index.html",
+  "why-game/questions.js"
 ];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(PRECACHE.map(u => new URL(u, self.registration.scope).href))).then(() => self.skipWaiting()));
