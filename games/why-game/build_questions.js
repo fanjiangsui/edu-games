@@ -44,7 +44,7 @@ for (let i = 0; i < cards.length; i++) for (let j = i + 1; j < cards.length; j++
   const a = grams[i], b = grams[j]; if (!a.size || !b.size) continue;
   let inter = 0; for (const x of a) if (b.has(x)) inter++;
   const jac = inter / (a.size + b.size - inter);
-  if (jac >= 0.6) sims.push(`${(jac * 100).toFixed(0)}%｜${cards[i].q}｜${cards[j].q}`);
+  if (jac >= 0.65) sims.push(`${(jac * 100).toFixed(0)}%｜${cards[i].q}｜${cards[j].q}`);
 }
 if (sims.length) { console.log('相似題 ' + sims.length + ' 組（請改掉其中一題）'); sims.slice(0, 40).forEach(x => console.log('  ' + x)); warns.push('有相似題'); }
 const count = (arr, f) => arr.reduce((m, c) => (m[f(c)] = (m[f(c)] || 0) + 1, m), {});
