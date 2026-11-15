@@ -36,6 +36,17 @@ for (const f of files) {
     cards.push({ id: 'w' + hash(q), level: lv, cat, q, opts, why, longest: ans.length > Math.max(w1.length, w2.length, w3.length), shortest: ans.length < Math.min(w1.length, w2.length, w3.length) });
   });
 }
+// 相似題檢查：把「為什麼」「？」去掉後，用相鄰兩字（bigram）比較；重疊太高就列出來，避免換個說法的重複題
+const gram = t => { const x = t.replace(/為什麼|[？，。\s]/g, ''); const g = new Set(); for (let i = 0; i < x.length - 1; i++) g.add(x.slice(i, i + 2)); return g; };
+const grams = cards.map(c => gram(c.q));
+const sims = [];
+for (let i = 0; i < cards.length; i++) for (let j = i + 1; j < cards.length; j++) {
+  const a = grams[i], b = grams[j]; if (!a.size || !b.size) continue;
+  let inter = 0; for (const x of a) if (b.has(x)) inter++;
+  const jac = inter / (a.size + b.size - inter);
+  if (jac >= 0.6) sims.push(`${(jac * 100).toFixed(0)}%｜${cards[i].q}｜${cards[j].q}`);
+}
+if (sims.length) { console.log('相似題 ' + sims.length + ' 組（請改掉其中一題）'); sims.slice(0, 40).forEach(x => console.log('  ' + x)); warns.push('有相似題'); }
 const count = (arr, f) => arr.reduce((m, c) => (m[f(c)] = (m[f(c)] || 0) + 1, m), {});
 console.log('題數', cards.length);
 console.log('層級', count(cards, c => c.level));
